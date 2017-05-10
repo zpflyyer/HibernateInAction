@@ -1,13 +1,10 @@
 package com.pengfei.intern.domain;
 import java.io.Serializable;
-import java.sql.Date;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.hibernate.annotations.Cache;
-import org.hibernate.annotations.CacheConcurrencyStrategy;
 import javax.persistence.*;
 
 @Getter
@@ -31,8 +28,8 @@ public class Payment
 	@Column(name="pay_amount", nullable=false)
 	private double amount;
 	// 领薪的员工
-	@ManyToOne(targetEntity=Employee.class)
+	@ManyToOne(targetEntity=Intern.class)
 	@JoinColumn(name="emp_id", nullable=false)
-	private Employee employee;
+	private Intern employee;
 
 }

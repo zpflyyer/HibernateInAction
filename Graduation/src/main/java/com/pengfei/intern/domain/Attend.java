@@ -7,8 +7,6 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.hibernate.annotations.Cache;
-import org.hibernate.annotations.CacheConcurrencyStrategy;
 import javax.persistence.*;
 
 @Getter
@@ -41,9 +39,9 @@ public class Attend
 	@JoinColumn(name="type_id", nullable=false)
 	private AttendType type;
 	// 本次出勤关联的员工
-	@ManyToOne(targetEntity=Employee.class)
+	@ManyToOne(targetEntity=Intern.class)
 	@JoinColumn(name="emp_id", nullable=false)
-	private Employee employee;
+	private Intern employee;
 
 	// 根据employee、isCome、dutyDay来重写hashCode()方法
 	@Override

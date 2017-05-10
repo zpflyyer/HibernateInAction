@@ -1,7 +1,7 @@
 package com.pengfei.intern.dao;
 
 import com.pengfei.intern.domain.Application;
-import com.pengfei.intern.domain.Employee;
+import com.pengfei.intern.domain.Intern;
 
 import java.util.*;
 
@@ -14,5 +14,5 @@ public interface ApplicationDao extends BaseDao<Application>
 	 * @param emp 需要查询的员工
 	 * @return 该员工对应的未处理的异动申请
 	 */
-	List<Application> findByEmp(Employee emp);
+	List<Application> findByEmp(Intern emp);
 }

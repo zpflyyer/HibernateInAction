@@ -2,7 +2,7 @@ package com.pengfei.intern.dao;
 
 import com.pengfei.intern.domain.Attend;
 import com.pengfei.intern.domain.AttendType;
-import com.pengfei.intern.domain.Employee;
+import com.pengfei.intern.domain.Intern;
 
 import java.util.*;
 
@@ -15,7 +15,7 @@ public interface AttendDao extends BaseDao<Attend>
 	 * @param month 月份，月份是形如"2012-02"格式的字符串
 	 * @return 该员工、指定月份的全部出勤记录
 	 */
-	List<Attend> findByEmpAndMonth(Employee emp , String month);
+	List<Attend> findByEmpAndMonth(Intern emp , String month);
 
 	/**
 	 * 根据员工、日期查询该员工的打卡记录集合
@@ -23,7 +23,7 @@ public interface AttendDao extends BaseDao<Attend>
 	 * @param dutyDay 日期
 	 * @return 该员工的某天的打卡记录集合
 	 */
-	List<Attend> findByEmpAndDutyDay(Employee emp
+	List<Attend> findByEmpAndDutyDay(Intern emp
 		, String dutyDay);
 
 	/**
@@ -33,7 +33,7 @@ public interface AttendDao extends BaseDao<Attend>
 	 * @param isCome 是否上班
 	 * @return 该员工的某天上班或下班的打卡记录
 	 */
-	Attend findByEmpAndDutyDayAndCome(Employee emp ,
+	Attend findByEmpAndDutyDayAndCome(Intern emp ,
 		String dutyDay , boolean isCome);
 
 	/**
@@ -41,6 +41,6 @@ public interface AttendDao extends BaseDao<Attend>
 	 * @param emp 员工
 	 * @return 该员工的前三天的非正常打卡
 	 */
-	List<Attend> findByEmpUnAttend(Employee emp
+	List<Attend> findByEmpUnAttend(Intern emp
 		, AttendType type);
 }

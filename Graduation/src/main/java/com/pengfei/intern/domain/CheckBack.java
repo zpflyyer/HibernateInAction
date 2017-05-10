@@ -1,14 +1,11 @@
 package com.pengfei.intern.domain;
 
 import java.io.Serializable;
-import java.sql.Date;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.hibernate.annotations.Cache;
-import org.hibernate.annotations.CacheConcurrencyStrategy;
 import javax.persistence.*;
 
 @Getter

@@ -1,7 +1,7 @@
 package com.pengfei.intern.dao.impl;
 
 import com.pengfei.intern.dao.PaymentDao;
-import com.pengfei.intern.domain.Employee;
+import com.pengfei.intern.domain.Intern;
 import com.pengfei.intern.domain.Payment;
 import org.springframework.stereotype.Repository;
 
@@ -16,7 +16,7 @@ public class PaymentDaoHibernate4 extends BaseDaoHibernate4<Payment>
 	 * 根据员工查询月结薪水
 	 * @return 该员工对应的月结薪水集合
 	 */
-	public List<Payment> findByEmp(Employee emp)
+	public List<Payment> findByEmp(Intern emp)
 	{
 		return find("select p from Payment as p where p.employee=?0" , emp);
 	}
@@ -29,7 +29,7 @@ public class PaymentDaoHibernate4 extends BaseDaoHibernate4<Payment>
 	 * @return 指定员工、指定月份的月结薪水
 	 */
 	public Payment findByMonthAndEmp(String payMonth
-		 , Employee emp)
+		 , Intern emp)
 	{
 		List<Payment> pays = find("select p from Payment as p where"
 			+ " p.employee=?0 and p.payMonth=?1" , emp , payMonth);

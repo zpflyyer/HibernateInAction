@@ -1,6 +1,6 @@
 package com.pengfei.intern.schedule;
 
-import com.pengfei.intern.service.EmpManager;
+import com.pengfei.intern.service.ItrManager;
 import org.quartz.JobExecutionContext;
 import org.quartz.JobExecutionException;
 import org.springframework.scheduling.quartz.QuartzJobBean;
@@ -9,8 +9,8 @@ import org.springframework.scheduling.quartz.QuartzJobBean;
 public class PunchJob extends QuartzJobBean
 {
 	private boolean isRunning = false;
-	private EmpManager empMgr;
-	public void setEmpMgr(EmpManager empMgr)
+	private ItrManager empMgr;
+	public void setEmpMgr(ItrManager empMgr)
 	{
 		this.empMgr = empMgr;
 	}

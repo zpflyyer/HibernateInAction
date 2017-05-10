@@ -8,7 +8,7 @@ import java.io.Serializable;
 @NoArgsConstructor
 @Setter
 @Getter
-public class EmpBean implements Serializable
+public class ItrBean implements Serializable
 {
 	private static final long serialVersionUID = 48L;
 	private String empName;

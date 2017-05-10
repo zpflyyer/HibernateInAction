@@ -5,7 +5,7 @@ import com.pengfei.intern.domain.*;
 import com.pengfei.intern.exception.HrException;
 import com.pengfei.intern.service.MgrManager;
 import com.pengfei.intern.vo.AppBean;
-import com.pengfei.intern.vo.EmpBean;
+import com.pengfei.intern.vo.ItrBean;
 import com.pengfei.intern.vo.SalaryBean;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,7 +31,7 @@ public class MgrManagerImpl
 	@Autowired
 	private CheckBackDao checkDao;
 	@Autowired
-	private EmployeeDao empDao;
+	private InternDao empDao;
 	@Autowired
 	private ManagerDao mgrDao;
 	@Autowired
@@ -43,7 +43,7 @@ public class MgrManagerImpl
 	 * @param emp 新增的员工
 	 * @param mgr 员工所属的经理
 	 */
-	public void addEmp(Employee emp , String mgr)throws HrException
+	public void addEmp(Intern emp , String mgr)throws HrException
 	{
 		Manager m = mgrDao.findByName(mgr);
 		if (m == null)
@@ -68,8 +68,8 @@ public class MgrManagerImpl
 	 * 更新员工
 	 */
 	@Override
-	public Employee updEmp(String name,String pass,Double salary) throws HrException {
-		Employee employee = empDao.findByName(name);
+	public Intern updEmp(String name, String pass, Double salary) throws HrException {
+		Intern employee = empDao.findByName(name);
 		if (employee!=null){
 			employee.setPass(pass);
 			employee.setSalary(salary);
@@ -92,7 +92,7 @@ public class MgrManagerImpl
 			throw new HrException("您是经理吗？或你还未登录？");
 		}
 		//查询该经理对应的全部员工
-		Set<Employee> emps = m.getEmployees();
+		Set<Intern> emps = m.getEmployees();
 		//部门依然没有员工
 		if (emps == null || emps.size() < 1)
 		{
@@ -104,7 +104,7 @@ public class MgrManagerImpl
 		String payMonth = sdf.format(c.getTime());
 		List<SalaryBean> result = new ArrayList<SalaryBean>();
 		//遍历本部门每个员工
-		for (Employee e : emps)
+		for (Intern e : emps)
 		{
 			Payment p = payDao.findByMonthAndEmp(payMonth , e);
 			if (p != null)
@@ -121,7 +121,7 @@ public class MgrManagerImpl
 	* @param mgr 经理名
 	* @return 经理的全部下属
 	*/
-	public List<EmpBean> getEmpsByMgr(String mgr)
+	public List<ItrBean> getEmpsByMgr(String mgr)
 		throws HrException
 	{
 		Manager m = mgrDao.findByName(mgr);
@@ -130,17 +130,17 @@ public class MgrManagerImpl
 			throw new HrException("您是经理吗？或你还未登录？");
 		}
 		//查询该经理对应的全部员工
-		Set<Employee> emps = m.getEmployees();
+		Set<Intern> emps = m.getEmployees();
 		//部门依然没有员工
 		if (emps == null || emps.size() < 1)
 		{
 			throw new HrException("您的部门没有员工");
 		}
 		//封装VO集
-		List<EmpBean> result = new ArrayList<EmpBean>();
-		for (Employee e : emps)
+		List<ItrBean> result = new ArrayList<ItrBean>();
+		for (Intern e : emps)
 		{
-				result.add(new EmpBean(e.getName(),
+				result.add(new ItrBean(e.getName(),
 						e.getPass(), e.getSalary()));
 
 		}
@@ -160,7 +160,7 @@ public class MgrManagerImpl
 			throw new HrException("您是经理吗？或你还未登录？");
 		}
 		//查询该经理对应的全部员工
-		Set<Employee> emps = m.getEmployees();
+		Set<Intern> emps = m.getEmployees();
 		//部门依然没有员工
 		if (emps == null || emps.size() < 1)
 		{
@@ -168,7 +168,7 @@ public class MgrManagerImpl
 		}
 		//封装VO集
 		List<AppBean> result = new ArrayList<AppBean>();
-		for (Employee e : emps)
+		for (Intern e : emps)
 		{
 			//查看该员工的全部申请
 			List<Application> apps = appDao.findByEmp(e);

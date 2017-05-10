@@ -85,7 +85,7 @@
                 <value>com.pengfei.intern.domain.Attend</value>
                 <value>com.pengfei.intern.domain.AttendType</value>
                 <value>com.pengfei.intern.domain.CheckBack</value>
-                <value>com.pengfei.intern.domain.Employee</value>
+                <value>com.pengfei.intern.domain.Intern</value>
                 <value>com.pengfei.intern.domain.Manager</value>
                 <value>com.pengfei.intern.domain.Payment</value>
             </list>

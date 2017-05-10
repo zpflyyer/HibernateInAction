@@ -40,7 +40,6 @@
                     <li role="presentation" class="active"><a href="#all" aria-controls="all" role="tab" data-toggle="tab">部门实习生管理</a></li>
                     <li role="presentation"><a href="#customer" aria-controls="customer" role="tab" data-toggle="tab">上月实习生发薪记录</a></li>
                     <li role="presentation"><a href="#employee" aria-controls="employee" role="tab" data-toggle="tab">处理申请</a></li>
-                    <li role="presentation"><a href="#manager" aria-controls="manager" role="tab" data-toggle="tab">经理</a></li>
                 </ul>
 
                 <!-- Tab panes -->
@@ -106,33 +105,36 @@
                         </table>
                     </div>
                     <div role="tabpanel" class="tab-pane" id="employee">
-                        <table class="table table-bordered table-striped" id="app_tb" contenteditable="false">
-                            <thead id="app_tb_head" >
-                                 <tr>
-                                    <th>实习生</th>
-                                    <th>考勤日期</th>
-                                    <th>考勤类型</th>
-                                    <th>申请类型</th>
-                                    <th>申请理由</th>
-                                    <th>处理</th>
-                                </tr>
-                            </thead>
-                            <tbody id="app_tb_body">
-                                <c:forEach var="app" items="${appList}" varStatus="status">
-                                    <tr >
-                                    	<td>${app.emp}</td>
-                                    	<td>${app.date}</td>
-                                        <td>${app.unAttend}</td>
-                                        <td>${app.toAttend}</td>
-                                        <td>${app.reason}</td>
-                                        <td><button class="btn btn-link"  id="${app.id}" data-toggle="modal" data-app_emp="${app.emp}" data-app_date="${app.date}" data-app_id="${app.id}" data-target="#myModal_check">处理</button></td>
+                        <c:if test="${not empty appList}">
+                            <table class="table table-bordered table-striped" id="app_tb" contenteditable="false">
+                                <thead id="app_tb_head" >
+                                     <tr>
+                                        <th>实习生</th>
+                                        <th>考勤日期</th>
+                                        <th>考勤类型</th>
+                                        <th>申请类型</th>
+                                        <th>申请理由</th>
+                                        <th>处理</th>
                                     </tr>
-                               </c:forEach>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div role="tabpanel" class="tab-pane" id="manager">
-
+                                </thead>
+                                <tbody id="app_tb_body">
+                                    <c:forEach var="app" items="${appList}" varStatus="status">
+                                        <tr >
+                                            <td>${app.emp}</td>
+                                            <td>${app.date}</td>
+                                            <td>${app.unAttend}</td>
+                                            <td>${app.toAttend}</td>
+                                            <td>${app.reason}</td>
+                                            <td><button class="btn btn-link"  id="${app.id}_handle" data-toggle="modal" data-app_emp="${app.emp}" data-app_date="${app.date}" data-app_id="${app.id}" data-target="#myModal_check">处理</button></td>
+                                        </tr>
+                                   </c:forEach>
+                                </tbody>
+                            </table>
+                        </c:if>
+                        <c:if test="${empty appList}">
+                            <div class="clearfix" style="margin-bottom: 70px;"></div>
+                            <button class="btn btn-block" id="no" style="padding: 10px;"><span class="glyphicon glyphicon-alert"><a> 尚无申请需要处理</a></span></button>
+                        </c:if>
                     </div>
                 </div>
             </div>
@@ -255,8 +257,8 @@
                 function(data,statusText){
                     var response=eval("(" + data + ")").response;
                     if(statusText=="success"&&response=="updated"){
-                        $("#"+edit_name).find("td").get(1).innerHTML=eval("(" + data + ")").pass;
-                        $("#"+edit_name).find("td").get(2).innerHTML=eval("(" + data + ")").salary;
+                        $("#"+edit_name).find("td").get(1).innerHTML=postData_edit.emp_pass;
+                        $("#"+edit_name).find("td").get(2).innerHTML=postData_edit.emp_salary;
                      }
                      else{
                         alert("更新员工失败");
@@ -287,7 +289,8 @@
                     var response=eval("(" + data + ")").response;
                     if(statusText=="success"&&response=="added"){
                             alert("已申请，待处理");
-                        $("#"+app_id).get(0).innerHTML="已处理";
+                        $("#"+app_id+"_handle").get(0).innerHTML="已处理";
+                        $("#"+app_id+"_handle").attr("disabled",true);
                      }
                      else{
                         alert("提交失败");

@@ -7,7 +7,7 @@ import com.pengfei.intern.vo.PaymentBean;
 
 import java.util.List;
 
-public interface EmpManager
+public interface ItrManager
 {
 	// µÇÂ¼Ê§°Ü
 	public static final int LOGIN_FAIL = 0;

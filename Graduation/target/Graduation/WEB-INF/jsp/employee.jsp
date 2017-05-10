@@ -37,9 +37,8 @@
                 <!-- Nav tabs -->
                 <ul class="nav nav-tabs" role="tablist">
                     <li role="presentation" class="active"><a href="#unAttend" aria-controls="unAttend" role="tab" data-toggle="tab">近三天非正常出勤</a></li>
-                    <li role="presentation"><a href="#mySal" aria-controls="mySal" role="tab" data-toggle="tab">我的发薪记录</a></li>
                     <li role="presentation"><a href="#employee" aria-controls="employee" role="tab" data-toggle="tab">打卡</a></li>
-                    <li role="presentation"><a href="#manager" aria-controls="manager" role="tab" data-toggle="tab">。。</a></li>
+                    <li role="presentation"><a href="#mySal" aria-controls="mySal" role="tab" data-toggle="tab">我的发薪记录</a></li>
                 </ul>
 
                 <!-- Tab panes -->
@@ -50,8 +49,8 @@
                                  <tr>
                                     <th>出勤记录编号</th>
                                     <th>日期</th>
-                                    <th>原因</th>
-                                    <th>时间</th>
+                                    <th>考勤类型</th>
+                                    <th>打卡时间</th>
                                     <th>操作</th>
                                 </tr>
                             </thead>
@@ -61,7 +60,12 @@
                                         <td>${unAtt.id}</td>
                                         <td>${unAtt.dutyDay}</td>
                                         <td>${unAtt.unType}</td>
-                                        <td>${unAtt.time}</td>
+                                        <c:if test="${not empty unAtt.time}">
+                                            <td>${unAtt.time}</td>
+                                        </c:if>
+                                        <c:if test="${empty unAtt.time}">
+                                            <td>未打卡</td>
+                                        </c:if>
                                         <td><button class="btn btn-link"  id="${unAtt.id}_app" data-toggle="modal" data-att_date="${unAtt.dutyDay}" data-att_id="${unAtt.id}" data-target="#myModal_app">申请</button></td>
                                     </tr>
                                </c:forEach>
@@ -101,9 +105,6 @@
                 				<button class="btn btn-block" id="leave_punch" style="padding: 10px;"><span class="glyphicon glyphicon-export"><a> 下班打卡</a></span></button>
                				</c:if>
                 		</div>
-                    </div>
-                    <div role="tabpanel" class="tab-pane" id="manager">
-
                     </div>
                 </div>
             </div>
@@ -164,7 +165,7 @@
                     if(statusText=="success"&&response=="added"){
                     		alert("已申请，待处理");
                         $("#"+att_id+"_app").get(0).innerHTML="已申请，待处理";
-                        $("#"+att_id+"_app").get(0).attr("disabled",true);
+                        $("#"+att_id+"_app").attr("disabled",true);
                      }
                      else{
                         alert("提交失败");

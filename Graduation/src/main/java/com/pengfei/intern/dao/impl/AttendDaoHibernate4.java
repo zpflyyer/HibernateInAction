@@ -3,7 +3,7 @@ package com.pengfei.intern.dao.impl;
 import com.pengfei.intern.dao.AttendDao;
 import com.pengfei.intern.domain.Attend;
 import com.pengfei.intern.domain.AttendType;
-import com.pengfei.intern.domain.Employee;
+import com.pengfei.intern.domain.Intern;
 import org.springframework.stereotype.Repository;
 
 import java.text.SimpleDateFormat;
@@ -20,7 +20,7 @@ public class AttendDaoHibernate4 extends BaseDaoHibernate4<Attend>
 	 * @param month 月份，月份是形如"2012-02"格式的字符串
 	 * @return 该员工、指定月份的全部出勤记录
 	 */
-	public List<Attend> findByEmpAndMonth(Employee emp , String month)
+	public List<Attend> findByEmpAndMonth(Intern emp , String month)
 	{
 		return find("from Attend as a where a.employee=?0 " +
 			"and substring(a.dutyDay , 0 , 7)=?1" , emp , month);
@@ -32,7 +32,7 @@ public class AttendDaoHibernate4 extends BaseDaoHibernate4<Attend>
 	 * @param dutyDay 日期
 	 * @return 该员工的某天的打卡记录集合
 	 */
-	public List<Attend> findByEmpAndDutyDay(Employee emp
+	public List<Attend> findByEmpAndDutyDay(Intern emp
 		, String dutyDay)
 	{
 		return find("from Attend as a where a.employee=?0 and "
@@ -46,7 +46,7 @@ public class AttendDaoHibernate4 extends BaseDaoHibernate4<Attend>
 	 * @param isCome 是否上班
 	 * @return 该员工的某天上班或下班的打卡记录
 	 */
-	public Attend findByEmpAndDutyDayAndCome(Employee emp ,
+	public Attend findByEmpAndDutyDayAndCome(Intern emp ,
 		String dutyDay , boolean isCome)
 	{
 		List<Attend> al = findByEmpAndDutyDay(emp , dutyDay);
@@ -68,7 +68,7 @@ public class AttendDaoHibernate4 extends BaseDaoHibernate4<Attend>
 	 * @param emp 员工
 	 * @return 该员工的前三天的非正常打卡
 	 */
-	public List<Attend> findByEmpUnAttend(Employee emp
+	public List<Attend> findByEmpUnAttend(Intern emp
 		, AttendType type)
 	{
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");

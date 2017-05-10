@@ -5,8 +5,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.*;
-import org.hibernate.annotations.Cache;
-import org.hibernate.annotations.CacheConcurrencyStrategy;
 import javax.persistence.*;
 
 @Getter
@@ -19,7 +17,7 @@ import javax.persistence.*;
 @DiscriminatorColumn(name="emp_type"
 	, discriminatorType=DiscriminatorType.INTEGER)
 @DiscriminatorValue(value="1")
-public class Employee
+public class Intern
 	implements Serializable
 {
 	private static final long serialVersionUID = 48L;
@@ -74,7 +72,7 @@ public class Employee
 		if (this == obj) return true;
 		if (obj == null) return false;
 		if (getClass() != obj.getClass()) return false;
-		Employee other = (Employee) obj;
+		Intern other = (Intern) obj;
 		if (name == null)
 		{
 			if (other.name != null) return false;

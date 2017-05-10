@@ -2,7 +2,7 @@ package com.pengfei.intern.service.impl;
 
 import com.pengfei.intern.dao.*;
 import com.pengfei.intern.domain.*;
-import com.pengfei.intern.service.EmpManager;
+import com.pengfei.intern.service.ItrManager;
 import com.pengfei.intern.vo.AttendBean;
 import com.pengfei.intern.vo.PaymentBean;
 import lombok.Setter;
@@ -17,8 +17,8 @@ import java.util.List;
 
 @Setter
 @Service("empManager")
-public class EmpManagerImpl
-	implements EmpManager
+public class ItrManagerImpl
+	implements ItrManager
 {
 	@Autowired
 	private ApplicationDao appDao;
@@ -29,7 +29,7 @@ public class EmpManagerImpl
 	@Autowired
 	private CheckBackDao checkDao;
 	@Autowired
-	private EmployeeDao empDao;
+	private InternDao empDao;
 	@Autowired
 	private ManagerDao mgrDao;
 	@Autowired
@@ -64,11 +64,11 @@ public class EmpManagerImpl
 	public void autoPunch()
 	{
 		System.out.println("自动插入旷工记录");
-		List<Employee> emps = empDao.findAll(Employee.class);
+		List<Intern> emps = empDao.findAll(Intern.class);
 		// 获取当前时间
 		String dutyDay = new java.sql.Date(
 			System.currentTimeMillis()).toString();
-		for (Employee e : emps)
+		for (Intern e : emps)
 		{
 
 				// 获取旷工对应的出勤类型
@@ -97,14 +97,14 @@ public class EmpManagerImpl
 	public void autoPay()
 	{
 		System.out.println("自动插入工资结算");
-		List<Employee> emps = empDao.findAll(Employee.class);
+		List<Intern> emps = empDao.findAll(Intern.class);
 		// 获取上个月时间
 		Calendar c = Calendar.getInstance();
 		c.add(Calendar.DAY_OF_MONTH, -15);
 		SimpleDateFormat sdf = new  SimpleDateFormat("yyyy-MM");
 		String payMonth = sdf.format(c.getTime());
 		// 为每个员工计算上个月工资
-		for (Employee e : emps)
+		for (Intern e : emps)
 		{
 
 				Payment pay = new Payment();
@@ -134,7 +134,7 @@ public class EmpManagerImpl
 	public int validPunch(String user , String dutyDay)
 	{
 		// 不能查找到对应用户，返回无法打卡
-		Employee emp = empDao.findByName(user);
+		Intern emp = empDao.findByName(user);
 		if (emp == null)
 		{
 			return NO_PUNCH;
@@ -188,7 +188,7 @@ public class EmpManagerImpl
 	 */
 	public int punch(String user , String dutyDay , boolean isCome)
 	{
-		Employee emp = empDao.findByName(user);
+		Intern emp = empDao.findByName(user);
 		if (emp == null)
 		{
 			return PUNCH_FAIL;
@@ -251,7 +251,7 @@ public class EmpManagerImpl
 	public List<PaymentBean> empSalary(String empName)
 	{
 		// 获取当前员工
-		Employee emp = empDao.findByName(empName);
+		Intern emp = empDao.findByName(empName);
 		// 获取该员工的全部工资列表
 		List<Payment> pays = payDao.findByEmp(emp);
 		List<PaymentBean> result = new ArrayList<PaymentBean>();
@@ -273,7 +273,7 @@ public class EmpManagerImpl
 	{
 		// 找出正常上班的出勤类型
 		AttendType type = typeDao.get(AttendType.class , 1);
-		Employee emp = empDao.findByName(empName);
+		Intern emp = empDao.findByName(empName);
 		// 找出非正常上班的出勤记录
 		List<Attend> attends = attendDao.findByEmpUnAttend(emp, type);
 		List<AttendBean> result = new ArrayList<AttendBean>();

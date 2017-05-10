@@ -1,10 +1,9 @@
 package com.pengfei.intern.controller;
 
-import com.pengfei.intern.domain.CheckBack;
-import com.pengfei.intern.domain.Employee;
+import com.pengfei.intern.domain.Intern;
 import com.pengfei.intern.domain.Response;
 import com.pengfei.intern.service.MgrManager;
-import com.pengfei.intern.vo.EmpBean;
+import com.pengfei.intern.vo.ItrBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -32,13 +31,13 @@ public class ManagerController {
      */
     @ResponseBody
     @RequestMapping(method = RequestMethod.POST,value = "/addEmpl")
-    Employee addEmpl(HttpSession session, HttpServletRequest request){
+    Intern addEmpl(HttpSession session, HttpServletRequest request){
         System.out.println("addEmpl() called!");
 
-        Employee employee_add = new Employee();
+        Intern employee_add = new Intern();
         String manager = (String)session.getAttribute("user");
 
-        for (EmpBean emp:
+        for (ItrBean emp:
                 mgrManager.getEmpsByMgr(manager)) {
             if (emp.getEmpName().equals(request.getParameter("emp_name"))){
                 employee_add.setResponse("existed");

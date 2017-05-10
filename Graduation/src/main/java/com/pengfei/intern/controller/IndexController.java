@@ -1,24 +1,20 @@
 package com.pengfei.intern.controller;
 
 
-import com.pengfei.intern.domain.Employee;
 import com.pengfei.intern.domain.Manager;
-import com.pengfei.intern.service.EmpManager;
+import com.pengfei.intern.service.ItrManager;
 import com.pengfei.intern.service.MgrManager;
-import com.pengfei.intern.vo.EmpBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
-import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.List;
 
-import static com.pengfei.intern.service.EmpManager.LOGIN_EMP;
-import static com.pengfei.intern.service.EmpManager.LOGIN_MGR;
+import static com.pengfei.intern.service.ItrManager.LOGIN_EMP;
+import static com.pengfei.intern.service.ItrManager.LOGIN_MGR;
 
 /**
  * Created by zhaopen on 4/30/2017.
@@ -28,7 +24,7 @@ import static com.pengfei.intern.service.EmpManager.LOGIN_MGR;
 public class IndexController {
 
     @Autowired
-    private EmpManager empManager;
+    private ItrManager empManager;
     @Autowired
     private MgrManager mgrManager;
 

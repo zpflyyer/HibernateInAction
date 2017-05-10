@@ -1,34 +1,28 @@
 package com.pengfei.intern.controller;
 
 
-import com.pengfei.intern.domain.Application;
-import com.pengfei.intern.domain.Employee;
-import com.pengfei.intern.domain.Manager;
 import com.pengfei.intern.domain.Response;
-import com.pengfei.intern.service.EmpManager;
-import com.pengfei.intern.service.MgrManager;
+import com.pengfei.intern.service.ItrManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
-import static com.pengfei.intern.service.EmpManager.*;
+import static com.pengfei.intern.service.ItrManager.*;
 
 /**
  * Created by zhaopen on 4/30/2017.
  */
 @Controller
 @RequestMapping(value = "/employee")
-public class EmployeeController {
+public class InternController {
 
     @Autowired
-    private EmpManager empManager;
+    private ItrManager empManager;
 
     /*
     method1:¥¶¿ÌÃÌº”…Í«Î url=${context}/employee/addApp

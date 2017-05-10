@@ -1,6 +1,6 @@
 package com.pengfei.intern.schedule;
 
-import com.pengfei.intern.service.EmpManager;
+import com.pengfei.intern.service.ItrManager;
 import org.quartz.JobExecutionContext;
 import org.quartz.JobExecutionException;
 import org.springframework.scheduling.quartz.QuartzJobBean;
@@ -10,8 +10,8 @@ public class PayJob extends QuartzJobBean
 	// 判断作业是否执行的旗标
 	private boolean isRunning = false;
 	// 该作业类所依赖的业务逻辑组件
-	private EmpManager empMgr;
-	public void setEmpMgr(EmpManager empMgr)
+	private ItrManager empMgr;
+	public void setEmpMgr(ItrManager empMgr)
 	{
 		this.empMgr = empMgr;
 	}
