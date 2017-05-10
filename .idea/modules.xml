@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/BiDirectional/BiDirectional.iml" filepath="$PROJECT_DIR$/BiDirectional/BiDirectional.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CollectionMapping/CollectionMapping.iml" filepath="$PROJECT_DIR$/CollectionMapping/CollectionMapping.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GetStarted/GetStarted.iml" filepath="$PROJECT_DIR$/GetStarted/GetStarted.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Graduation/Graduation.iml" filepath="$PROJECT_DIR$/Graduation/Graduation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HibernateInAction.iml" filepath="$PROJECT_DIR$/HibernateInAction.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JoinedInheritence/JoinedInheritence.iml" filepath="$PROJECT_DIR$/JoinedInheritence/JoinedInheritence.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PerClassInheritence/PerClassInheritence.iml" filepath="$PROJECT_DIR$/PerClassInheritence/PerClassInheritence.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Query/Query.iml" filepath="$PROJECT_DIR$/Query/Query.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SingleTableInheritence/SingleTableInheritence.iml" filepath="$PROJECT_DIR$/SingleTableInheritence/SingleTableInheritence.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Uni_Directional/Uni_Directional.iml" filepath="$PROJECT_DIR$/Uni_Directional/Uni_Directional.iml" />
+    </modules>
+  </component>
+</project>

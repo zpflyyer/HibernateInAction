@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="BiDirectional" />
+        <module name="CollectionMapping" />
+        <module name="GetStarted" />
+        <module name="Graduation" />
+        <module name="InheritenceMapping" />
+        <module name="JoinedInheritence" />
+        <module name="PerClassInheritence" />
+        <module name="Query" />
+        <module name="RelationMapping" />
+        <module name="SingleTableInheritence" />
+        <module name="Uni_Directional" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="BiDirectional" target="1.5" />
+      <module name="CollectionMapping" target="1.5" />
+      <module name="GetStarted" target="1.5" />
+      <module name="Graduation" target="1.7" />
+      <module name="HibernateInAction" target="1.5" />
+      <module name="InheritenceMapping" target="1.5" />
+      <module name="JoinedInheritence" target="1.5" />
+      <module name="PerClassInheritence" target="1.5" />
+      <module name="Query" target="1.5" />
+      <module name="RelationMapping" target="1.5" />
+      <module name="SingleTable" target="1.5" />
+      <module name="SingleTableInheritence" target="1.7" />
+      <module name="Uni_Directional" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

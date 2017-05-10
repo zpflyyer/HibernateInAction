@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" defaultCharsetForPropertiesFiles="GBK">
+    <file url="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/MyQuartzServer.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/TestJob.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/dao/ApplicationDao.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/dao/AttendDao.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/dao/AttendTypeDao.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/dao/BaseDao.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/dao/CheckBackDao.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/dao/EmployeeDao.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/dao/ManagerDao.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/dao/impl/ApplicationDaoHibernate4.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/dao/impl/AttendDaoHibernate4.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/dao/impl/AttendTypeDaoHibernate4.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/dao/impl/BaseDaoHibernate4.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/dao/impl/CheckBackDaoHibernate4.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/dao/impl/EmployeeDaoHibernate4.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/dao/impl/ManagerDaoHibernate4.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/dao/impl/PaymentDaoHibernate4.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/domain/Application.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/domain/Attend.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/domain/AttendType.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/domain/CheckBack.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/domain/Employee.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/domain/Manager.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/domain/Payment.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/exception/HrException.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/schedule/PayJob.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/schedule/PunchJob.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/service/EmpManager.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/service/MgrManager.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/service/impl/EmpManagerImpl.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/service/impl/MgrManagerImpl.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/vo/AppBean.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/vo/AttendBean.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/vo/EmpBean.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/vo/PaymentBean.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/vo/SalaryBean.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/SingleTableInheritence/src/main/java/com/pengfei/inheritence/Controller/IndexController.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SingleTableInheritence/src/main/java/com/pengfei/inheritence/domain/Person.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/SingleTableInheritence/src/main/java/com/pengfei/inheritence/util/SessionUtil.java" charset="UTF-8" />
+    <file url="PROJECT" charset="GBK" />
+  </component>
+</project>
