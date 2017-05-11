@@ -1,9 +1,6 @@
 package com.pengfei.intern.vo;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -17,7 +14,7 @@ public class AttendBean implements Serializable
 	private static final long serialVersionUID = 48L;
 	private int id;
 	private String dutyDay;
-	private String unType;
+	private String type;
 	private Date time;
 
 }

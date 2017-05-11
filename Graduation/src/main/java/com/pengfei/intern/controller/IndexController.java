@@ -1,9 +1,11 @@
 package com.pengfei.intern.controller;
 
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.pengfei.intern.domain.Manager;
 import com.pengfei.intern.service.ItrManager;
 import com.pengfei.intern.service.MgrManager;
+import lombok.SneakyThrows;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -24,7 +26,7 @@ import static com.pengfei.intern.service.ItrManager.LOGIN_MGR;
 public class IndexController {
 
     @Autowired
-    private ItrManager empManager;
+    private ItrManager itrManager;
     @Autowired
     private MgrManager mgrManager;
 
@@ -36,6 +38,7 @@ public class IndexController {
         return modelAndView;
     }
 
+    @SneakyThrows
     @RequestMapping(method = RequestMethod.POST,value = "/login")
     ModelAndView handleLogin(HttpSession session,
                             @RequestParam("username") String username,
@@ -46,7 +49,7 @@ public class IndexController {
         manager.setName(username);
         manager.setPass(password);
         System.out.println(username + ":" + password);
-        int result = empManager.validLogin(manager);
+        int result = itrManager.validLogin(manager);
         if(result == LOGIN_MGR){
             session.setAttribute("user",manager.getName());
             session.setAttribute("user_level","manager");
@@ -59,13 +62,15 @@ public class IndexController {
         else if(result == LOGIN_EMP){
             session.setAttribute("user",manager.getName());
             session.setAttribute("user_level","employee");
-            modelAndView.addObject("valid",empManager.validPunch(username,
+            modelAndView.addObject("valid", itrManager.validPunch(username,
                     new SimpleDateFormat("yyyy-MM-dd").format(new Date()))
             );
-            System.out.println( new SimpleDateFormat("yyyy-MM-dd").format(new Date()));
-            modelAndView.addObject("unAttendList",empManager.unAttend(username));
-            modelAndView.addObject("typeList",empManager.getAllType());
-            modelAndView.addObject("salist",empManager.empSalary(username));
+            //可能有类型转换异常
+            modelAndView.addObject("attList", new ObjectMapper().writeValueAsString(itrManager.allAttendByName(username)));
+            System.out.println(new ObjectMapper().writeValueAsString(itrManager.allAttendByName(username)));
+            modelAndView.addObject("unAttendList", itrManager.unAttend(username));
+            modelAndView.addObject("typeList", itrManager.getAllType());
+            modelAndView.addObject("salist", itrManager.empSalary(username));
             modelAndView.addObject("username",username);
             modelAndView.setViewName("employee");
         }

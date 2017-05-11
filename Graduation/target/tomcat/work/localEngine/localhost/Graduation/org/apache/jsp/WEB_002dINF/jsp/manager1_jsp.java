@@ -107,7 +107,12 @@ public final class manager1_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    <script type=\"text/javascript\" src=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${context}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
       out.write("/js/bootstrap.js\"></script>\n");
-      out.write("\n");
+      out.write("    <script type=\"text/javascript\" src=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${context}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+      out.write("/js/json2.js\"></script>\n");
+      out.write("    <script type=\"text/javascript\" src=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${context}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+      out.write("/js/chart.js\"></script>\n");
       out.write("</head>");
       out.write("\r\n");
       out.write("\t\t<div class=\"clearfix\" style=\"margin-top: 40px;\"></div>\r\n");
@@ -369,7 +374,7 @@ public final class manager1_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                function(data,statusText){\r\n");
       out.write("                    var response=eval(\"(\" + data + \")\").response;\r\n");
       out.write("                    if(statusText==\"success\"&&response==\"added\"){\r\n");
-      out.write("                            alert(\"已申请，待处理\");\r\n");
+      out.write("                        alert(\"已提交\");\r\n");
       out.write("                        $(\"#\"+app_emp+\"_handle\").get(0).innerHTML=\"已处理\";\r\n");
       out.write("                        $(\"#\"+app_emp+\"_handle\").attr(\"disabled\",true);\r\n");
       out.write("                     }\r\n");
@@ -694,9 +699,7 @@ public final class manager1_jsp extends org.apache.jasper.runtime.HttpJspBase
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${app.date}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
           out.write("\" data-app_id=\"");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${app.id}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-          out.write("\" data-target=\"#myModal_check\">处理");
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${app.id}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-          out.write("_handle</button></td>\r\n");
+          out.write("\" data-target=\"#myModal_check\">处理</button></td>\r\n");
           out.write("                                        </tr>\r\n");
           out.write("                                   ");
           int evalDoAfterBody = _jspx_th_c_005fforEach_005f2.doAfterBody();

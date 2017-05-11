@@ -19,5 +19,6 @@
 
     <script type="text/javascript" src="${context}/js/jquery-3.2.0.min.js"></script>
     <script type="text/javascript" src="${context}/js/bootstrap.js"></script>
-
+    <script type="text/javascript" src="${context}/js/json2.js"></script>
+    <script type="text/javascript" src="${context}/js/chart.js"></script>
 </head>

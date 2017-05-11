@@ -9,6 +9,9 @@
 <body>
 <%@include file="head.jsp" %>
 		<div class="clearfix" style="margin-top: 40px;"></div>
+		<div>${attList}</div>
+		<div><canvas id="pie" height="450" width="450"></canvas></div>
+		<button type="button" class="btn" id="look">查看</button>
     <div class="container" style="background-color: whitesmoke;">
     	<div class="clearfix" style="margin-top: 20px;"></div>
         <div><h1 style="text-align: center;padding-bottom: 150px;">欢迎使用实习生管理工作流系统</h1></div>
@@ -145,6 +148,16 @@
 		</div>
 
     <script type="text/javascript">
+        var pieData =
+        [
+            {value: 30,color:"#F38630"},
+            {value : 40,color : "#E0E4CC"},
+            {value : 100,color : "#69D2E7"},
+            {value : 3,color : "#B45637"}
+
+        ];
+        var myPie = new Chart(document.getElementById("pie").getContext("2d")).Pie(pieData);
+        $("#look").off("click").on("click",function(){alert(JSON.stringify(unAttendList));});
         $("#myModal_app").on("show.bs.modal",function(e){
             $(this).find("#app_y").off("click").on("click",function(){
             	var att_id = $(e.relatedTarget).data("att_id");

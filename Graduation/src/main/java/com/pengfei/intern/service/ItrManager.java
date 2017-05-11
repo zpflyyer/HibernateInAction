@@ -95,6 +95,13 @@ public interface ItrManager
 	List<AttendBean> unAttend(String empName);
 
 	/**
+	 * 员工查看自己上个月的全部出勤记录
+	 * @param empName 员工名
+	 * @return 上个月的全部出勤记录
+	 */
+	List<AttendBean> allAttendByName(String empName);
+
+	/**
 	 * 返回全部的出勤类别
 	 * @return 全部的出勤类别
 	 */

@@ -43,4 +43,11 @@ public interface AttendDao extends BaseDao<Attend>
 	 */
 	List<Attend> findByEmpUnAttend(Intern emp
 		, AttendType type);
+
+	/**
+	 * 查看员工所有打卡
+	 * @param emp 员工
+	 * @return 该员工的所有打卡
+	 */
+	List<Attend> findByEmpAll(Intern emp);
 }

@@ -102,7 +102,12 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    <script type=\"text/javascript\" src=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${context}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
       out.write("/js/bootstrap.js\"></script>\n");
-      out.write("\n");
+      out.write("    <script type=\"text/javascript\" src=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${context}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+      out.write("/js/json2.js\"></script>\n");
+      out.write("    <script type=\"text/javascript\" src=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${context}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+      out.write("/js/chart.js\"></script>\n");
       out.write("</head>");
       out.write("\r\n");
       out.write("\t\t<div class=\"clearfix\" style=\"margin-top: 40px;\"></div>\r\n");

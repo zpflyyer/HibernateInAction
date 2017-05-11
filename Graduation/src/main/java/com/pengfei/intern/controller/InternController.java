@@ -22,7 +22,7 @@ import static com.pengfei.intern.service.ItrManager.*;
 public class InternController {
 
     @Autowired
-    private ItrManager empManager;
+    private ItrManager itrManager;
 
     /*
     method1:¥¶¿ÌÃÌº”…Í«Î url=${context}/employee/addApp
@@ -36,7 +36,7 @@ public class InternController {
         String reason = request.getParameter("reason");
         System.out.println(att_id+":"+reason+":"+type_id);
         Response response =  new Response();
-        if (empManager.addApplication(att_id,type_id,reason)){
+        if (itrManager.addApplication(att_id,type_id,reason)){
             response.setResponse("added");
             return response;
         }
@@ -55,7 +55,7 @@ public class InternController {
         String dutyDay =  new java.sql.Date(System.currentTimeMillis()).toString();
         boolean isCome = Boolean.valueOf(request.getParameter("isCome"));
         System.out.println(user+":"+dutyDay+":"+isCome);
-        int result = empManager.punch(user,dutyDay,isCome);
+        int result = itrManager.punch(user,dutyDay,isCome);
         if (result == PUNCH_SUCC){
             return new Response("success");
         }

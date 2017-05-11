@@ -80,4 +80,9 @@ public class AttendDaoHibernate4 extends BaseDaoHibernate4<Attend>
 			+ "a.type != ?1 and a.dutyDay between ?2 and ?3" ,
 			emp , type , start , end);
 	}
+
+	@Override
+	public List<Attend> findByEmpAll(Intern emp) {
+		return find("from Attend as a where a.employee=?0" , emp );
+	}
 }

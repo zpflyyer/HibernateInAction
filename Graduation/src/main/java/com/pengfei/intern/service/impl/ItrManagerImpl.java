@@ -276,12 +276,24 @@ public class ItrManagerImpl
 		Intern emp = empDao.findByName(empName);
 		// 找出非正常上班的出勤记录
 		List<Attend> attends = attendDao.findByEmpUnAttend(emp, type);
-		List<AttendBean> result = new ArrayList<AttendBean>();
+		List<AttendBean> result = new ArrayList<>();
 		// 封装VO集合
 		for (Attend att : attends )
 		{
 			result.add(new AttendBean(att.getId() , att.getDutyDay()
 				, att.getType().getName() , att.getPunchTime()));
+		}
+		return result;
+	}
+
+	@Override
+	public List<AttendBean> allAttendByName(String empName) {
+		Intern itr = empDao.findByName(empName);
+		List<Attend> attendList = attendDao.findByEmpAll(itr);
+		List<AttendBean> result = new ArrayList<>();
+		for (Attend att : attendList){
+			result.add(new AttendBean(att.getId() ,  att.getDutyDay()
+					,  att.getType().getName() , att.getPunchTime()));
 		}
 		return result;
 	}
