@@ -1,5 +1,6 @@
 package com.pengfei.intern.vo;
 
+import com.pengfei.intern.domain.CheckBack;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -8,7 +9,6 @@ import lombok.Setter;
 import java.io.Serializable;
 
 @NoArgsConstructor
-@AllArgsConstructor
 @Setter
 @Getter
 public class AppBean implements Serializable
@@ -21,5 +21,22 @@ public class AppBean implements Serializable
 	private String unAttend;
 	private String toAttend;
 	private String reason;
+	private boolean handled;
+	private CheckBackBean checkBackBean;
+
+	public AppBean(int id,String emp,String date
+			,String unAttend,String toAttend,String reason){
+		this.id = id;
+		this.emp = emp;
+		this.date = date;
+		this.unAttend = unAttend;
+		this.toAttend = toAttend;
+		this.reason = reason;
+	}
+
+	public AppBean(String toAttend,boolean handled){
+		this.toAttend = toAttend;
+		this.handled = handled ;
+	}
 
 }

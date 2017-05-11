@@ -3,6 +3,7 @@ package com.pengfei.intern.vo;
 import lombok.*;
 
 import java.io.Serializable;
+import java.util.List;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -14,4 +15,5 @@ public class ItrBean implements Serializable
 	private String empName;
 	private String empPass;
 	private double amount;
+	private List<AttendBean> attendBeans;
 }

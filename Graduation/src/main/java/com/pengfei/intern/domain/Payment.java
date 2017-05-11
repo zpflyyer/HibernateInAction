@@ -13,7 +13,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Entity
 //@Cache(usage=CacheConcurrencyStrategy.READ_WRITE)
-@Table(name="payment_inf")
+@Table(name="salary_tb")
 public class Payment
 	implements Serializable
 {

@@ -14,7 +14,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name="attend_inf")
+@Table(name="attendence_tb")
 //@Cache(usage=CacheConcurrencyStrategy.READ_WRITE)
 public class Attend
 	implements Serializable

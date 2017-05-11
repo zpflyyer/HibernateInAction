@@ -13,7 +13,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name="attend_type_inf")
+@Table(name="attend_type_tb")
 //@Cache(usage=CacheConcurrencyStrategy.READ_ONLY)
 public class AttendType
 	implements Serializable

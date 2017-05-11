@@ -67,8 +67,8 @@ public class IndexController {
             );
             //可能有类型转换异常
             modelAndView.addObject("attList", new ObjectMapper().writeValueAsString(itrManager.allAttendByName(username)));
-            System.out.println(new ObjectMapper().writeValueAsString(itrManager.allAttendByName(username)));
             modelAndView.addObject("unAttendList", itrManager.unAttend(username));
+            System.out.println(new ObjectMapper().writeValueAsString(itrManager.unAttend(username)));
             modelAndView.addObject("typeList", itrManager.getAllType());
             modelAndView.addObject("salist", itrManager.empSalary(username));
             modelAndView.addObject("username",username);

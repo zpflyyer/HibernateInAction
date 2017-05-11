@@ -5,6 +5,7 @@ import com.pengfei.intern.domain.*;
 import com.pengfei.intern.exception.HrException;
 import com.pengfei.intern.service.MgrManager;
 import com.pengfei.intern.vo.AppBean;
+import com.pengfei.intern.vo.AttendBean;
 import com.pengfei.intern.vo.ItrBean;
 import com.pengfei.intern.vo.SalaryBean;
 import lombok.Setter;
@@ -140,8 +141,12 @@ public class MgrManagerImpl
 		List<ItrBean> result = new ArrayList<ItrBean>();
 		for (Intern e : emps)
 		{
-				result.add(new ItrBean(e.getName(),
-						e.getPass(), e.getSalary()));
+			List<AttendBean> attendBeans = new ArrayList<>();
+			for (Attend a : attendDao.findByEmpAll(e)) {
+				attendBeans.add(new AttendBean(a.getId(),a.getDutyDay(),a.getType().getName(),a.getPunchTime()));
+			}
+			result.add(new ItrBean(e.getName(),
+					e.getPass(), e.getSalary(),attendBeans));
 
 		}
 		return result;

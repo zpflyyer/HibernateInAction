@@ -125,7 +125,7 @@
                                             <td>${app.unAttend}</td>
                                             <td>${app.toAttend}</td>
                                             <td>${app.reason}</td>
-                                            <td><button class="btn btn-link"  id="${app.emp}_handle" data-toggle="modal" data-app_emp="${app.emp}" data-app_date="${app.date}" data-app_id="${app.id}" data-target="#myModal_check">处理${app.id}_handle</button></td>
+                                            <td><button class="btn btn-link"  id="${app.emp}_handle" data-toggle="modal" data-app_emp="${app.emp}" data-app_date="${app.date}" data-app_id="${app.id}" data-target="#myModal_check">处理</button></td>
                                         </tr>
                                    </c:forEach>
                                 </tbody>

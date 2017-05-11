@@ -9,13 +9,10 @@
 <body>
 <%@include file="head.jsp" %>
 		<div class="clearfix" style="margin-top: 40px;"></div>
-		<div>${attList}</div>
-		<div><canvas id="pie" height="450" width="450"></canvas></div>
-		<button type="button" class="btn" id="look">查看</button>
     <div class="container" style="background-color: whitesmoke;">
     	<div class="clearfix" style="margin-top: 20px;"></div>
         <div><h1 style="text-align: center;padding-bottom: 150px;">欢迎使用实习生管理工作流系统</h1></div>
-        <div class="col-lg-8 col-lg-offset-2" style="background-color: seashell;">
+        <div class="col-lg-10 col-lg-offset-1" style="background-color: seashell;">
         	<div class="clearfix" style="padding-top: 15px;"></div>
             <ul class="nav nav-pills" role="tablist">
               <li role="presentation" class="dropdown">
@@ -35,13 +32,14 @@
         </div>
         <div class="clearfix" style="padding-bottom: 30px;"></div>
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
+            <div class="col-lg-10 col-lg-offset-1">
                 <div>
                 <!-- Nav tabs -->
                 <ul class="nav nav-tabs" role="tablist">
                     <li role="presentation" class="active"><a href="#unAttend" aria-controls="unAttend" role="tab" data-toggle="tab">近三天非正常出勤</a></li>
                     <li role="presentation"><a href="#employee" aria-controls="employee" role="tab" data-toggle="tab">打卡</a></li>
                     <li role="presentation"><a href="#mySal" aria-controls="mySal" role="tab" data-toggle="tab">我的发薪记录</a></li>
+                    <li role="presentation"><a href="#manager" aria-controls="manager" role="tab" data-toggle="tab">我的出勤统计</a></li>
                 </ul>
 
                 <!-- Tab panes -->
@@ -55,6 +53,10 @@
                                     <th>考勤类型</th>
                                     <th>打卡时间</th>
                                     <th>操作</th>
+                                    <th>最近一次申请</th>
+                                    <th>处理进度</th>
+                                    <th>处理结果</th>
+                                    <th>处理理由</th>
                                 </tr>
                             </thead>
                             <tbody id="unAttend_tb_body">
@@ -62,7 +64,7 @@
                                     <tr id="${unAtt.id}">
                                         <td>${unAtt.id}</td>
                                         <td>${unAtt.dutyDay}</td>
-                                        <td>${unAtt.unType}</td>
+                                        <td>${unAtt.type}</td>
                                         <c:if test="${not empty unAtt.time}">
                                             <td>${unAtt.time}</td>
                                         </c:if>
@@ -70,28 +72,51 @@
                                             <td>未打卡</td>
                                         </c:if>
                                         <td><button class="btn btn-link"  id="${unAtt.id}_app" data-toggle="modal" data-att_date="${unAtt.dutyDay}" data-att_id="${unAtt.id}" data-target="#myModal_app">申请</button></td>
+                                       //最近申请
+                                        <c:if test="${not empty unAtt.appBean}">
+                                            <td>${unAtt.appBean.toAttend}</td>
+                                            //申请处理进度
+                                            <c:if test="${unAtt.appBean.handled}">
+                                                <td>已处理</td>
+                                                //申请处理结果
+                                                <td>${unAtt.appBean.granted}</td>
+                                                <td>${unAtt.appBean.reason}</td>
+                                            </c:if>
+                                            <c:if test="${!unAtt.appBean.handled}">
+                                                <td colspan="3">尚未处理</td>
+                                            </c:if>
+                                        </c:if>
+                                        <c:if test="${empty unAtt.appBean}">
+                                            <td colspan="4">无相关申请记录</td>
+                                        </c:if>
                                     </tr>
                                </c:forEach>
                             </tbody>
                         </table>
                     </div>
                     <div role="tabpanel" class="tab-pane" id="mySal">
-                        <table class="table table-bordered table-striped" id="sals_tb" contenteditable="false" >
-                            <thead id="sals_tb_head" >
-                                 <tr>
-                                    <th>发薪时间</th>
-                                    <th>工资</th>
-                                </tr>
-                            </thead>
-                            <tbody id="sals_tb_body">
-                                <c:forEach var="sal" items="${salist}" varStatus="status">
-                                    <tr >
-                                        <td>${sal.payMonth}</td>
-                                        <td>${sal.amount}</td>
+                        <c:if test="${not empty salist}">
+                            <table class="table table-bordered table-striped" id="sals_tb" contenteditable="false" >
+                                <thead id="sals_tb_head" >
+                                     <tr>
+                                        <th>发薪时间</th>
+                                        <th>工资</th>
                                     </tr>
-                               </c:forEach>
-                            </tbody>
-                        </table>
+                                </thead>
+                                <tbody id="sals_tb_body">
+                                    <c:forEach var="sal" items="${salist}" varStatus="status">
+                                        <tr >
+                                            <td>${sal.payMonth}</td>
+                                            <td>${sal.amount}</td>
+                                        </tr>
+                                   </c:forEach>
+                                </tbody>
+                            </table>
+                        </c:if>
+                        <c:if test="${empty salist}">
+                            <div class="clearfix" style="margin-bottom: 70px;"></div>
+                            <button class="btn btn-block" id="no" style="padding: 10px;"><span class="glyphicon glyphicon-alert"><a> 尚无发薪记录</a></span></button>
+                        </c:if>
                     </div>
                     <div role="tabpanel" class="tab-pane" id="employee">
                     	<div class="clearfix" style="padding-top: 110px;"></div>
@@ -108,6 +133,21 @@
                 				<button class="btn btn-block" id="leave_punch" style="padding: 10px;"><span class="glyphicon glyphicon-export"><a> 下班打卡</a></span></button>
                				</c:if>
                 		</div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="manager" style="align-items: center;">
+                        <c:if test="${not empty attList}">
+                            <div class="row">
+                                <div class="clearfix" style="padding-top: 30px;"></div>
+                                <canvas id="polar" width="420" height="420"></canvas>
+                                <canvas id="radar" width="440" height="440"></canvas>
+                            </div>
+                        </c:if>
+                        <c:if test="${empty attList}">
+                            <div class="row">
+                                <div class="clearfix" style="margin-bottom: 70px;"></div>
+                                <button class="btn btn-block" id="no" style="padding: 10px;"><span class="glyphicon glyphicon-alert"><a> 尚无出勤记录</a></span></button>
+                            </div>
+                        </c:if>
                     </div>
                 </div>
             </div>
@@ -148,16 +188,63 @@
 		</div>
 
     <script type="text/javascript">
-        var pieData =
-        [
-            {value: 30,color:"#F38630"},
-            {value : 40,color : "#E0E4CC"},
-            {value : 100,color : "#69D2E7"},
-            {value : 3,color : "#B45637"}
+        var typeArray = new Array("正常","事假","病假","迟到","早退","旷工","出差");
 
-        ];
-        var myPie = new Chart(document.getElementById("pie").getContext("2d")).Pie(pieData);
-        $("#look").off("click").on("click",function(){alert(JSON.stringify(unAttendList));});
+        //1.雷达图
+        var radarData = {
+			labels : ["正常","事假","病假","迟到","早退","旷工","出差"],
+			datasets : [
+				{
+					fillColor : "rgba(220,220,220,0.5)",
+					strokeColor : "rgba(0,255,0,1)",
+					pointColor : "rgba(255,0,0,1)",
+					pointStrokeColor : "#fff",
+					data : [0,0,0,0,0,0,0]
+				}
+			]
+		};
+		for(var i = 0; i < ${attList}.length; i++){
+		    radarData.datasets[0].data[typeArray.indexOf(${attList}[i].type)] ++;
+		}
+		var myRadar = new Chart(document.getElementById("radar").getContext("2d")).Radar(radarData);
+
+		//2.极地区域图
+	    var polrData = [
+			{
+				value : 0,
+				color: "#00FF00"
+			},
+			{
+				value : 0,
+				color: "#FF0000"
+			},
+			{
+				value : 0,
+				color: "#0000FF"
+			},
+			{
+				value : 0,
+				color: "#939393"
+			},
+			{
+				value : 0,
+				color: "#FFFF00"
+			},
+			{
+				value : 0,
+				color: "#00FFFF"
+			},
+			{
+				value : 0,
+				color: "#FF00FF"
+			}
+		];
+		for(var i = 0; i < ${attList}.length; i++){
+		    polrData[typeArray.indexOf(${attList}[i].type)].value ++;
+		}
+		var myPolar = new Chart(document.getElementById("polar").getContext("2d")).PolarArea(polrData)
+
+        $("#look").off("click").on("click",function(){alert(JSON.stringify(${attList}));alert(${attList});alert(pieData);});
         $("#myModal_app").on("show.bs.modal",function(e){
             $(this).find("#app_y").off("click").on("click",function(){
             	var att_id = $(e.relatedTarget).data("att_id");

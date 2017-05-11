@@ -13,7 +13,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name="application_inf")
+@Table(name="application_tb")
 //@Cache(usage=CacheConcurrencyStrategy.READ_WRITE)
 public class Application
 	implements Serializable

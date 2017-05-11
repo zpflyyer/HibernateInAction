@@ -12,7 +12,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name="employee_inf")
+@Table(name="intern_tb")
 //@Cache(usage=CacheConcurrencyStrategy.READ_WRITE)
 @DiscriminatorColumn(name="emp_type"
 	, discriminatorType=DiscriminatorType.INTEGER)

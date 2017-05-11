@@ -17,7 +17,8 @@ public interface ItrManager
 	public static final int LOGIN_MGR = 2;
 
 	// 不能打卡
-	public static final int NO_PUNCH = 0;
+	public static final int
+			NO_PUNCH = 0;
 	// 只能上班打卡
 	public static final int COME_PUNCH = 1;
 	// 只能下班打卡

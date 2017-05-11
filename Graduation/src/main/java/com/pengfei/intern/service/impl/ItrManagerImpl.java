@@ -3,7 +3,9 @@ package com.pengfei.intern.service.impl;
 import com.pengfei.intern.dao.*;
 import com.pengfei.intern.domain.*;
 import com.pengfei.intern.service.ItrManager;
+import com.pengfei.intern.vo.AppBean;
 import com.pengfei.intern.vo.AttendBean;
+import com.pengfei.intern.vo.CheckBackBean;
 import com.pengfei.intern.vo.PaymentBean;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -252,7 +254,7 @@ public class ItrManagerImpl
 	{
 		// 获取当前员工
 		Intern emp = empDao.findByName(empName);
-		// 获取该员工的全部工资列表
+		// 获取该员工的全部工资列表:注意，在1对多的关联中，让多的一端控制关联关系
 		List<Payment> pays = payDao.findByEmp(emp);
 		List<PaymentBean> result = new ArrayList<PaymentBean>();
 		// 封装VO集合
@@ -280,8 +282,21 @@ public class ItrManagerImpl
 		// 封装VO集合
 		for (Attend att : attends )
 		{
-			result.add(new AttendBean(att.getId() , att.getDutyDay()
-				, att.getType().getName() , att.getPunchTime()));
+			AttendBean attendBean = new AttendBean(att.getId() , att.getDutyDay()
+					, att.getType().getName() , att.getPunchTime());
+
+			Application app = appDao.findLatestByAtt(att);
+			if (app != null){
+				AppBean appBean = new AppBean(app.getType().getName(),app.isResult());
+				//出勤记录相关的最新的申请记录
+				attendBean.setAppBean(appBean);
+				if(app.isResult()){
+					//最新的申请记录相关的批复
+					CheckBack cb = app.getCheck();
+					appBean.setCheckBackBean(new CheckBackBean( cb.isResult() , cb.getReason() ));
+				}
+			}
+			result.add(attendBean);
 		}
 		return result;
 	}

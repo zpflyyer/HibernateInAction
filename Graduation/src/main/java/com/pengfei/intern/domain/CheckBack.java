@@ -13,7 +13,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name="checkback_inf")
+@Table(name="checkback_tb")
 //@Cache(usage=CacheConcurrencyStrategy.READ_WRITE)
 public class CheckBack
 	implements Serializable
