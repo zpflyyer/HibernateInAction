@@ -1,11 +1,16 @@
 package com.pengfei.intern.service;
 
 import com.pengfei.intern.domain.Intern;
+import com.pengfei.intern.domain.Job;
+import com.pengfei.intern.domain.Manager;
+import com.pengfei.intern.domain.Task;
 import com.pengfei.intern.exception.HrException;
 import com.pengfei.intern.vo.AppBean;
 import com.pengfei.intern.vo.ItrBean;
 import com.pengfei.intern.vo.SalaryBean;
+import com.pengfei.intern.vo.TaskBean;
 
+import java.util.Date;
 import java.util.List;
 
 public interface MgrManager
@@ -59,4 +64,21 @@ public interface MgrManager
 	 */
 	boolean check(int appid, String mgrName, boolean result, String reason);
 
+	/**
+	 * 布置任务
+	 * @param internList take任务的实习生
+	 */
+	boolean assignTask(String mgr,String title, String content, String deadline,String[] internList);
+
+	/**
+	 * 获得该经理布置的所有任务
+	 * @param mgr 经理
+	 */
+	List<TaskBean> getTasksByMgr(String mgr);
+
+	/**
+	 * 审批job
+	 * @param job_id job的id
+	 */
+	boolean judgeJob(int job_id,int grade, boolean finished);
 }

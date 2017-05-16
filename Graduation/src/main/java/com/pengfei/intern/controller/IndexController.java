@@ -2,15 +2,27 @@ package com.pengfei.intern.controller;
 
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.pengfei.intern.domain.Intern;
 import com.pengfei.intern.domain.Manager;
+import com.pengfei.intern.domain.Response;
 import com.pengfei.intern.service.ItrManager;
 import com.pengfei.intern.service.MgrManager;
+import com.pengfei.intern.validator.Task_vo_Validator;
+import com.pengfei.intern.validator.UserValidator;
+import com.pengfei.intern.vo.ItrBean;
+import com.pengfei.intern.vo.form_vo.Task_vo;
 import lombok.SneakyThrows;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.DataBinder;
+import org.springframework.validation.Errors;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -30,24 +42,44 @@ public class IndexController {
     @Autowired
     private MgrManager mgrManager;
 
+    @InitBinder("user")
+    public void initUserBinder(DataBinder dataBinder){
+        dataBinder.addValidators(new UserValidator());
+    }
+
     @RequestMapping(method = RequestMethod.GET)
-    ModelAndView getHome(){
+    String getHome(Model model){
         System.out.println("getHome() called!");
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("index");
-        return modelAndView;
+        model.addAttribute("user",new ItrBean());
+        return "index2";
+    }
+
+    @RequestMapping(value = "/updpwd" , method = RequestMethod.POST)
+    Response updPass(HttpSession session, HttpServletRequest request){
+        Response response = new Response();
+
+
+
+        return response;
     }
 
     @SneakyThrows
     @RequestMapping(method = RequestMethod.POST,value = "/login")
     ModelAndView handleLogin(HttpSession session,
-                            @RequestParam("username") String username,
-                            @RequestParam("password") String password){
+                             @ModelAttribute("user") @Validated ItrBean itrBean,
+                             BindingResult bindingResult){
         System.out.println("handleLogin() called!");
         ModelAndView modelAndView = new ModelAndView();
-        Manager manager = new Manager();
-        manager.setName(username);
-        manager.setPass(password);
+        //校验登录输入
+        if (bindingResult.hasFieldErrors()){
+            modelAndView.setViewName("index2");
+            System.out.println("登录非空校验失败");
+            return modelAndView;
+        }
+        Manager manager= new Manager();
+        String username = itrBean.getEmpName();
+        String password = itrBean.getEmpPass();
+        manager.setName(username);manager.setPass(password);
         System.out.println(username + ":" + password);
         int result = itrManager.validLogin(manager);
         if(result == LOGIN_MGR){
@@ -56,6 +88,8 @@ public class IndexController {
             modelAndView.addObject("employeeList",mgrManager.getEmpsByMgr(username));
             modelAndView.addObject("depSalist",mgrManager.getSalaryByMgr(username));
             modelAndView.addObject("appList",mgrManager.getAppsByMgr(username));
+            modelAndView.addObject("taskList",mgrManager.getTasksByMgr(username));
+            modelAndView.addObject("task_vo",new Task_vo());
             modelAndView.addObject("username",username);
             modelAndView.setViewName("manager1");
         }
@@ -71,11 +105,15 @@ public class IndexController {
             System.out.println(new ObjectMapper().writeValueAsString(itrManager.unAttend(username)));
             modelAndView.addObject("typeList", itrManager.getAllType());
             modelAndView.addObject("salist", itrManager.empSalary(username));
+            modelAndView.addObject("jobList",itrManager.getJobByIntern(username));
             modelAndView.addObject("username",username);
             modelAndView.setViewName("employee");
         }
-        else
-            modelAndView.setViewName("error");
+        else {
+            modelAndView.addObject("message","用户名/密码不匹配");
+            modelAndView.setViewName("index2");
+            modelAndView.addObject("user",new ItrBean());
+        }
         return modelAndView;
     }
 
@@ -83,6 +121,12 @@ public class IndexController {
     String logOut(HttpSession session){
         session.invalidate();
         return "redirect:" + "/";
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "/inter")
+    String testInterceptor(){
+        return "hello";
     }
 }
 

@@ -13,6 +13,7 @@
 
     <!-- stylesheet -->
     <link rel="stylesheet" href="${context}/css/bootstrap.css" type="text/css" media="screen"/>
+    <link rel="stylesheet" href="${context}/css/bootstrapValidator.min.css" type="text/css" media="screen"/>
 
 
     <!-- js code -->
@@ -21,4 +22,5 @@
     <script type="text/javascript" src="${context}/js/bootstrap.js"></script>
     <script type="text/javascript" src="${context}/js/json2.js"></script>
     <script type="text/javascript" src="${context}/js/chart.js"></script>
+    <script type="text/javascript" src="${context}/js/bootstrapValidator.min.js"></script>
 </head>

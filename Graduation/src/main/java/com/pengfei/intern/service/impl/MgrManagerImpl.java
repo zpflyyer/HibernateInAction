@@ -4,19 +4,13 @@ import com.pengfei.intern.dao.*;
 import com.pengfei.intern.domain.*;
 import com.pengfei.intern.exception.HrException;
 import com.pengfei.intern.service.MgrManager;
-import com.pengfei.intern.vo.AppBean;
-import com.pengfei.intern.vo.AttendBean;
-import com.pengfei.intern.vo.ItrBean;
-import com.pengfei.intern.vo.SalaryBean;
+import com.pengfei.intern.vo.*;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 @Setter
 @Service
@@ -37,6 +31,10 @@ public class MgrManagerImpl
 	private ManagerDao mgrDao;
 	@Autowired
 	private PaymentDao payDao;
+	@Autowired
+	private TaskDao taskDao;
+	@Autowired
+	private JobDao jobDao;
 
 
 	/**
@@ -204,8 +202,11 @@ public class MgrManagerImpl
 	public boolean check(int appid, String mgrName, boolean result, String reason)
 	{
 		Application app = appDao.get(Application.class , appid);
-		CheckBack check = new CheckBack();
-		check.setApp(app);
+		CheckBack check = checkDao.getCheckByApp(app);
+		if (check == null){
+			check = new CheckBack();
+			check.setApp(app);
+		}
 		Manager manager = mgrDao.findByName(mgrName);
 		if (manager == null)
 		{
@@ -235,7 +236,57 @@ public class MgrManagerImpl
 			appDao.update(app);
 		}
 		//±£¥Ê…Í«Î≈˙∏¥
-		checkDao.save(check);
+		checkDao.update(check);
 		return true;
+	}
+
+	@Override
+	public boolean assignTask(String mgr,String title, String content, String deadline, String[] internList) {
+		Manager manager = mgrDao.findByName(mgr);
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+		Calendar c = Calendar.getInstance();
+		Task task = new Task(title,content,sdf.format(c.getTime()),deadline);
+		task.setManager(manager);
+		taskDao.save(task);
+		for (String itr:
+			 internList) {
+			Job job = new Job(task,empDao.findByName(itr),0,false);
+			jobDao.save(job);
+		}
+		return true;
+	}
+
+	@Override
+	public List<TaskBean> getTasksByMgr(String manager) {
+		Manager mgr = mgrDao.findByName(manager);
+		List<Task> taskList = taskDao.getAllByManager(mgr);
+		List<TaskBean> taskBeanList = new ArrayList<>();
+		for (Task task :
+				taskList) {
+			TaskBean taskBean = new TaskBean(task.getTitle());
+
+			List<Job> jobList = jobDao.getAllByTask(task);
+			List<JobBean> jobBeanList = new ArrayList<>();
+			for (Job job:
+				 jobList) {
+				JobBean jobBean = new JobBean(job.getId(),job.getGrade(),job.isFinished(),job.getIntern().getName());
+				jobBeanList.add(jobBean);
+			}
+			taskBean.setJobBeanList(jobBeanList);
+			taskBeanList.add(taskBean);
+		}
+		return taskBeanList;
+	}
+
+	@Override
+	public boolean judgeJob(int job_id,int grade,boolean finished) {
+		Job job = jobDao.get(Job.class,job_id);
+		if (job != null){
+			job.setGrade(grade);
+			job.setFinished(finished);
+			jobDao.update(job);
+			return true;
+		}
+		return false;
 	}
 }

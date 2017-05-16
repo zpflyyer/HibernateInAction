@@ -3,10 +3,7 @@ package com.pengfei.intern.service.impl;
 import com.pengfei.intern.dao.*;
 import com.pengfei.intern.domain.*;
 import com.pengfei.intern.service.ItrManager;
-import com.pengfei.intern.vo.AppBean;
-import com.pengfei.intern.vo.AttendBean;
-import com.pengfei.intern.vo.CheckBackBean;
-import com.pengfei.intern.vo.PaymentBean;
+import com.pengfei.intern.vo.*;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -36,6 +33,10 @@ public class ItrManagerImpl
 	private ManagerDao mgrDao;
 	@Autowired
 	private PaymentDao payDao;
+	@Autowired
+	private JobDao jobDao;
+	@Autowired
+	private TaskDao taskDao;
 
 	/**
 	 * 以经理身份来验证登录
@@ -350,4 +351,30 @@ public class ItrManagerImpl
 		appDao.save(app);
 		return true;
 	}
+
+	@Override
+	public List<JobBean> getJobByIntern(String itr) {
+		Intern intern = empDao.findByName(itr);
+		List<Job> jobList= jobDao.getAllByIntern(intern);
+		List<JobBean> jobBeanList = new ArrayList<>();
+		for (Job job :
+				jobList) {
+			Task task = job.getTask();
+			JobBean jobBean = new JobBean(job.getId(),job.getGrade(),job.isFinished()
+					, task.getTitle(),task.getContent(),task.getAssign_date(),task.getDeadline()
+					,itr);
+			jobBeanList.add(jobBean);
+		}
+		return jobBeanList;
+	}
+
+	@Override
+	public boolean finishJob(int job_id, boolean finished) {
+		Job job = jobDao.get(Job.class,job_id);
+		job.setFinished(finished);
+		jobDao.update(job);
+		return true;
+	}
+
+
 }

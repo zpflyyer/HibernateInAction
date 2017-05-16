@@ -1,5 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html>
 <!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
 <!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
@@ -40,6 +41,9 @@
                     <li role="presentation" class="active"><a href="#all" aria-controls="all" role="tab" data-toggle="tab">部门实习生管理</a></li>
                     <li role="presentation"><a href="#customer" aria-controls="customer" role="tab" data-toggle="tab">上月实习生发薪记录</a></li>
                     <li role="presentation"><a href="#employee" aria-controls="employee" role="tab" data-toggle="tab">处理申请</a></li>
+<!--                    <li role="presentation"><a href="#attends" aria-controls="attends" role="tab" data-toggle="tab">出勤统计</a></li>
+-->
+                        <li role="presentation"><a href="#command" aria-controls="command" role="tab" data-toggle="tab">分配任务</a></li>
                 </ul>
 
                 <!-- Tab panes -->
@@ -125,7 +129,7 @@
                                             <td>${app.unAttend}</td>
                                             <td>${app.toAttend}</td>
                                             <td>${app.reason}</td>
-                                            <td><button class="btn btn-link"  id="${app.emp}_handle" data-toggle="modal" data-app_emp="${app.emp}" data-app_date="${app.date}" data-app_id="${app.id}" data-target="#myModal_check">处理</button></td>
+                                            <td><button class="btn btn-link"  id="${app.emp}_${app.date}" data-toggle="modal" data-app_emp="${app.emp}" data-app_date="${app.date}" data-app_id="${app.id}" data-target="#myModal_check">处理</button></td>
                                         </tr>
                                    </c:forEach>
                                 </tbody>
@@ -135,6 +139,100 @@
                             <div class="clearfix" style="margin-bottom: 70px;"></div>
                             <button class="btn btn-block" id="no" style="padding: 10px;"><span class="glyphicon glyphicon-alert"><a> 尚无申请需要处理</a></span></button>
                         </c:if>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="attends">
+                        <table class="table table-bordered table-striped" id="depSal_tb" contenteditable="false" >
+                            <thead id="depSal_tb_head" >
+                                 <tr>
+                                    <th>实习生</th>
+                                    <th>出勤</th>
+                                </tr>
+                            </thead>
+                            <tbody id="depSal_tb_body">
+                                <c:forEach var="sal" items="${depSalist}" varStatus="status">
+                                    <tr id="${sal.empName}">
+                                        <td>${sal.empName}</td>
+                                        <td>${sal.amount}</td>
+                                    </tr>
+                               </c:forEach>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="command">
+                        <!--
+                        <form:form modelAttribute = "task_vo" action="${context}/manager/assign" method="post">
+                            <table class="table table-bordered table-striped" >
+                                <tr>
+                                    <td>任务标题</td>
+                                    <td><form:input path = "title"/></td>
+                                    <td><font color="red"><form:errors path="title"/></font></td>
+                                </tr>
+                                <tr>
+                                    <td>描述</td>
+                                    <td><form:textarea path = "content"/></td>
+                                    <td><font color="red"><form:errors path="content"/></font></td>
+                                </tr>
+                                <tr>
+                                    <td>截止日期</td>
+                                    <td><form:input path = "deadline"/></td>
+                                    <td><font color="red"><form:errors path="deadline"/></font></td>
+                                </tr>
+                                 <tr>
+                                     <td>分配目标</td>
+                                     <td>
+                                        <c:forEach var="emp" items="${employeeList}" varStatus="status">
+                                            <form:checkbox value="${emp.empName}" path="internList" /> ${emp.empName}
+                                        </c:forEach>
+                                     <td>
+                                     <td><font color="red"><form:errors path="internList"/></font></td>
+                                 </tr>
+                                <tr>
+                                    <td><input type = "submit" value = "提交"/></td>
+                                </tr>
+                            </table>
+                        </form:form>
+                        -->
+                        <form:form modelAttribute = "task_vo"  class="form-horizontal" action="${context}/manager/assign" method="post" style="padding: 35px;">
+                            <font color="red"><form:errors path="title"/></font>
+                            <div class="form-group">
+                                <div class="input-group ">
+                                  <span class="input-group-addon" id="title_icon">
+                                    <span class="glyphicon glyphicon-header"></span>
+                                  </span>
+                                  <form:input path="title" type="text" class="form-control" placeholder="题目" aria-describedby="title_icon"/>
+                                </div>
+                            </div>
+                            <font color="red"><form:errors path="content"/></font>
+                            <div class="form-group">
+                                <div class="input-group ">
+                                  <span class="input-group-addon" id="content_icon">
+                                    <span class="glyphicon glyphicon-book"></span>
+                                  </span>
+                                  <form:textarea path="content" type="text" class="form-control" placeholder="内容" aria-describedby="content_icon"/>
+                                </div>
+                            </div>
+                            <font color="red"><form:errors path="deadline"/></font>
+                            <div class="form-group">
+                                <div class="input-group ">
+                                  <span class="input-group-addon" id="deadline_icon">
+                                    <span class="glyphicon glyphicon-time"></span>
+                                  </span>
+                                  <form:input path="deadline" type="text" class="form-control" placeholder="截止日期" aria-describedby="deadline_icon"/>
+                                </div>
+                            </div>
+                            <font color="red"><form:errors path="internList"/></font>
+                            <div class="form-group">
+                                <div class="input-group ">
+                                <span class="input-group-addon" id="deadline_icon">
+                                   <span class="glyphicon glyphicon-user" ></span>
+                                </span>
+                                  <c:forEach var="emp" items="${employeeList}" varStatus="status">
+                                      <form:checkbox value="${emp.empName}" path="internList" style="margin-left:15px;"/> ${emp.empName}
+                                  </c:forEach>
+                                </div>
+                            </div>
+                            <button type="submit"  class="btn btn-success btn-block">提 交</button>
+                        </form:form>
                     </div>
                 </div>
             </div>
@@ -287,16 +385,17 @@
             $.post("${context}/manager/check",postData_check,
                 function(data,statusText){
                     var response=eval("(" + data + ")").response;
-                    if(statusText=="success"&&response=="added"){
-                        alert("已提交");
-                        $("#"+app_emp+"_handle").get(0).innerHTML="已处理";
-                        $("#"+app_emp+"_handle").attr("disabled",true);
+                    alert(response);
+                    if(statusText=="success"&&response=="checked"){
+                        alert("#"+app_emp);
+                        $("#"+app_emp+"_"+app_date).get(0).innerHTML="已处理";
+                        $("#"+app_emp+"_"+app_date).attr("disabled",true);
                      }
                      else{
                         alert("提交失败");
                      }
                 },
-
+                "text"
             );
             });
         });

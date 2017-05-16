@@ -2,71 +2,76 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4ccc5db9-1bda-42f7-9de9-4fa520d49f8c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/vo/CheckBackBean.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/MyQuartzServer.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/TestJob.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Graduation/target/Graduation/WEB-INF/classes/com/pengfei/intern/dao/impl/ApplicationDaoHibernate4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Graduation/target/Graduation/WEB-INF/classes/com/pengfei/intern/dao/impl/AttendDaoHibernate4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Graduation/target/Graduation/WEB-INF/classes/com/pengfei/intern/dao/impl/AttendTypeDaoHibernate4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Graduation/target/Graduation/WEB-INF/classes/com/pengfei/intern/dao/impl/BaseDaoHibernate4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Graduation/target/Graduation/WEB-INF/classes/com/pengfei/intern/dao/impl/CheckBackDaoHibernate4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Graduation/target/Graduation/WEB-INF/classes/com/pengfei/intern/dao/impl/InternDaoHibernate4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Graduation/target/Graduation/WEB-INF/classes/com/pengfei/intern/dao/impl/ManagerDaoHibernate4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Graduation/target/Graduation/WEB-INF/classes/com/pengfei/intern/dao/impl/PaymentDaoHibernate4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Graduation/target/classes/com/pengfei/intern/dao/impl/ApplicationDaoHibernate4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Graduation/target/classes/com/pengfei/intern/dao/impl/AttendDaoHibernate4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Graduation/target/classes/com/pengfei/intern/dao/impl/AttendTypeDaoHibernate4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Graduation/target/classes/com/pengfei/intern/dao/impl/BaseDaoHibernate4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Graduation/target/classes/com/pengfei/intern/dao/impl/CheckBackDaoHibernate4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Graduation/target/classes/com/pengfei/intern/dao/impl/InternDaoHibernate4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Graduation/target/classes/com/pengfei/intern/dao/impl/ManagerDaoHibernate4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Graduation/target/classes/com/pengfei/intern/dao/impl/PaymentDaoHibernate4.class" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/dao/impl/ApplicationDaoHibernate4.java" afterPath="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/dao/impl/ApplicationDaoImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/dao/impl/AttendDaoHibernate4.java" afterPath="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/dao/impl/AttendDaoImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/dao/impl/AttendTypeDaoHibernate4.java" afterPath="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/dao/impl/AttendTypeDaoImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/dao/impl/BaseDaoHibernate4.java" afterPath="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/dao/impl/BaseDaoImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/dao/impl/CheckBackDaoHibernate4.java" afterPath="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/dao/impl/CheckBackDaoImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/dao/impl/InternDaoHibernate4.java" afterPath="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/dao/impl/InternDaoImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/dao/impl/ManagerDaoHibernate4.java" afterPath="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/dao/impl/ManagerDaoImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/dao/impl/PaymentDaoHibernate4.java" afterPath="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/dao/impl/PaymentDaoImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/dao/JobDao.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/dao/TaskDao.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/dao/impl/JobDaoImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/dao/impl/TaskDaoImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/domain/Job.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/domain/Task.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/interceptor/AuthInterceptor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/validator/Task_vo_Validator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/validator/UserValidator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/vo/JobBean.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/vo/TaskBean.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/vo/form_vo/Task_vo.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Graduation/src/main/webapp/WEB-INF/css/bootstrapValidator.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Graduation/src/main/webapp/WEB-INF/js/bootstrapValidator.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Graduation/src/main/webapp/WEB-INF/jsp/index1.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Graduation/src/main/webapp/WEB-INF/jsp/index2.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Graduation/src/test/java/com/pengfei/intern/dao/impl/TaskDaoImplTest.groovy" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Graduation/target/Graduation/WEB-INF/classes/com/pengfei/intern/MyQuartzServer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Graduation/target/Graduation/WEB-INF/classes/com/pengfei/intern/TestJob.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Graduation/target/tomcat/work/localEngine/localhost/Graduation/org/apache/jsp/WEB_002dINF/jsp/index_jsp.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Graduation/target/tomcat/work/localEngine/localhost/Graduation/org/apache/jsp/WEB_002dINF/jsp/index_jsp.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Graduation/target/Graduation.war" afterPath="$PROJECT_DIR$/Graduation/target/Graduation.war" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Graduation/target/Graduation/WEB-INF/classes/com/pengfei/intern/domain/Application.class" afterPath="$PROJECT_DIR$/Graduation/target/Graduation/WEB-INF/classes/com/pengfei/intern/domain/Application.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Graduation/target/Graduation/WEB-INF/classes/com/pengfei/intern/domain/Attend.class" afterPath="$PROJECT_DIR$/Graduation/target/Graduation/WEB-INF/classes/com/pengfei/intern/domain/Attend.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Graduation/target/Graduation/WEB-INF/classes/com/pengfei/intern/domain/AttendType.class" afterPath="$PROJECT_DIR$/Graduation/target/Graduation/WEB-INF/classes/com/pengfei/intern/domain/AttendType.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Graduation/target/Graduation/WEB-INF/classes/com/pengfei/intern/domain/CheckBack.class" afterPath="$PROJECT_DIR$/Graduation/target/Graduation/WEB-INF/classes/com/pengfei/intern/domain/CheckBack.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Graduation/target/Graduation/WEB-INF/classes/com/pengfei/intern/controller/IndexController.class" afterPath="$PROJECT_DIR$/Graduation/target/Graduation/WEB-INF/classes/com/pengfei/intern/controller/IndexController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Graduation/target/Graduation/WEB-INF/classes/com/pengfei/intern/controller/InternController.class" afterPath="$PROJECT_DIR$/Graduation/target/Graduation/WEB-INF/classes/com/pengfei/intern/controller/InternController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Graduation/target/Graduation/WEB-INF/classes/com/pengfei/intern/controller/ManagerController.class" afterPath="$PROJECT_DIR$/Graduation/target/Graduation/WEB-INF/classes/com/pengfei/intern/controller/ManagerController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Graduation/target/Graduation/WEB-INF/classes/com/pengfei/intern/dao/CheckBackDao.class" afterPath="$PROJECT_DIR$/Graduation/target/Graduation/WEB-INF/classes/com/pengfei/intern/dao/CheckBackDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Graduation/target/Graduation/WEB-INF/classes/com/pengfei/intern/dao/impl/CheckBackDaoImpl.class" afterPath="$PROJECT_DIR$/Graduation/target/Graduation/WEB-INF/classes/com/pengfei/intern/dao/impl/CheckBackDaoImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Graduation/target/Graduation/WEB-INF/classes/com/pengfei/intern/domain/Intern.class" afterPath="$PROJECT_DIR$/Graduation/target/Graduation/WEB-INF/classes/com/pengfei/intern/domain/Intern.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Graduation/target/Graduation/WEB-INF/classes/com/pengfei/intern/domain/Payment.class" afterPath="$PROJECT_DIR$/Graduation/target/Graduation/WEB-INF/classes/com/pengfei/intern/domain/Payment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Graduation/target/Graduation/WEB-INF/classes/com/pengfei/intern/domain/Manager.class" afterPath="$PROJECT_DIR$/Graduation/target/Graduation/WEB-INF/classes/com/pengfei/intern/domain/Manager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Graduation/target/Graduation/WEB-INF/classes/com/pengfei/intern/service/ItrManager.class" afterPath="$PROJECT_DIR$/Graduation/target/Graduation/WEB-INF/classes/com/pengfei/intern/service/ItrManager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Graduation/target/Graduation/WEB-INF/classes/com/pengfei/intern/service/MgrManager.class" afterPath="$PROJECT_DIR$/Graduation/target/Graduation/WEB-INF/classes/com/pengfei/intern/service/MgrManager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Graduation/target/Graduation/WEB-INF/classes/com/pengfei/intern/service/impl/ItrManagerImpl.class" afterPath="$PROJECT_DIR$/Graduation/target/Graduation/WEB-INF/classes/com/pengfei/intern/service/impl/ItrManagerImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Graduation/target/Graduation/WEB-INF/classes/com/pengfei/intern/service/impl/MgrManagerImpl.class" afterPath="$PROJECT_DIR$/Graduation/target/Graduation/WEB-INF/classes/com/pengfei/intern/service/impl/MgrManagerImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Graduation/target/Graduation/WEB-INF/classes/com/pengfei/intern/vo/ItrBean.class" afterPath="$PROJECT_DIR$/Graduation/target/Graduation/WEB-INF/classes/com/pengfei/intern/vo/ItrBean.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Graduation/target/classes/com/pengfei/intern/domain/Application.class" afterPath="$PROJECT_DIR$/Graduation/target/classes/com/pengfei/intern/domain/Application.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Graduation/target/classes/com/pengfei/intern/domain/Attend.class" afterPath="$PROJECT_DIR$/Graduation/target/classes/com/pengfei/intern/domain/Attend.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Graduation/target/classes/com/pengfei/intern/domain/AttendType.class" afterPath="$PROJECT_DIR$/Graduation/target/classes/com/pengfei/intern/domain/AttendType.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Graduation/target/classes/com/pengfei/intern/domain/CheckBack.class" afterPath="$PROJECT_DIR$/Graduation/target/classes/com/pengfei/intern/domain/CheckBack.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Graduation/target/classes/com/pengfei/intern/controller/IndexController.class" afterPath="$PROJECT_DIR$/Graduation/target/classes/com/pengfei/intern/controller/IndexController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Graduation/target/classes/com/pengfei/intern/controller/InternController.class" afterPath="$PROJECT_DIR$/Graduation/target/classes/com/pengfei/intern/controller/InternController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Graduation/target/classes/com/pengfei/intern/controller/ManagerController.class" afterPath="$PROJECT_DIR$/Graduation/target/classes/com/pengfei/intern/controller/ManagerController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Graduation/target/classes/com/pengfei/intern/dao/CheckBackDao.class" afterPath="$PROJECT_DIR$/Graduation/target/classes/com/pengfei/intern/dao/CheckBackDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Graduation/target/classes/com/pengfei/intern/dao/impl/CheckBackDaoImpl.class" afterPath="$PROJECT_DIR$/Graduation/target/classes/com/pengfei/intern/dao/impl/CheckBackDaoImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Graduation/target/classes/com/pengfei/intern/domain/Intern.class" afterPath="$PROJECT_DIR$/Graduation/target/classes/com/pengfei/intern/domain/Intern.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Graduation/target/classes/com/pengfei/intern/domain/Payment.class" afterPath="$PROJECT_DIR$/Graduation/target/classes/com/pengfei/intern/domain/Payment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Graduation/target/classes/com/pengfei/intern/domain/Manager.class" afterPath="$PROJECT_DIR$/Graduation/target/classes/com/pengfei/intern/domain/Manager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Graduation/target/classes/com/pengfei/intern/service/ItrManager.class" afterPath="$PROJECT_DIR$/Graduation/target/classes/com/pengfei/intern/service/ItrManager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Graduation/target/classes/com/pengfei/intern/service/MgrManager.class" afterPath="$PROJECT_DIR$/Graduation/target/classes/com/pengfei/intern/service/MgrManager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Graduation/target/classes/com/pengfei/intern/service/impl/ItrManagerImpl.class" afterPath="$PROJECT_DIR$/Graduation/target/classes/com/pengfei/intern/service/impl/ItrManagerImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Graduation/target/classes/com/pengfei/intern/service/impl/MgrManagerImpl.class" afterPath="$PROJECT_DIR$/Graduation/target/classes/com/pengfei/intern/service/impl/MgrManagerImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Graduation/target/classes/com/pengfei/intern/vo/ItrBean.class" afterPath="$PROJECT_DIR$/Graduation/target/classes/com/pengfei/intern/vo/ItrBean.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Graduation/target/tomcat/work/localEngine/localhost/Graduation/org/apache/jsp/WEB_002dINF/jsp/employee_jsp.class" afterPath="$PROJECT_DIR$/Graduation/target/tomcat/work/localEngine/localhost/Graduation/org/apache/jsp/WEB_002dINF/jsp/employee_jsp.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/controller/IndexController.java" afterPath="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/controller/IndexController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/dao/ApplicationDao.java" afterPath="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/dao/ApplicationDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/controller/InternController.java" afterPath="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/controller/InternController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/controller/ManagerController.java" afterPath="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/controller/ManagerController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/dao/CheckBackDao.java" afterPath="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/dao/CheckBackDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/domain/Application.java" afterPath="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/domain/Application.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/domain/Attend.java" afterPath="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/domain/Attend.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/domain/AttendType.java" afterPath="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/domain/AttendType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/domain/CheckBack.java" afterPath="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/domain/CheckBack.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/dao/impl/CheckBackDaoImpl.java" afterPath="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/dao/impl/CheckBackDaoImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/domain/Intern.java" afterPath="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/domain/Intern.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/domain/Payment.java" afterPath="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/domain/Payment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/domain/Manager.java" afterPath="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/domain/Manager.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/service/ItrManager.java" afterPath="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/service/ItrManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/service/MgrManager.java" afterPath="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/service/MgrManager.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/service/impl/ItrManagerImpl.java" afterPath="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/service/impl/ItrManagerImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/service/impl/MgrManagerImpl.java" afterPath="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/service/impl/MgrManagerImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/vo/AppBean.java" afterPath="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/vo/AppBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/vo/AttendBean.java" afterPath="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/vo/AttendBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/vo/ItrBean.java" afterPath="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/vo/ItrBean.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Graduation/src/main/webapp/WEB-INF/jsp/employee.jsp" afterPath="$PROJECT_DIR$/Graduation/src/main/webapp/WEB-INF/jsp/employee.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Graduation/src/main/webapp/WEB-INF/jsp/error.jsp" afterPath="$PROJECT_DIR$/Graduation/src/main/webapp/WEB-INF/jsp/error.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Graduation/src/main/webapp/WEB-INF/jsp/head.jsp" afterPath="$PROJECT_DIR$/Graduation/src/main/webapp/WEB-INF/jsp/head.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Graduation/src/main/webapp/WEB-INF/jsp/manager1.jsp" afterPath="$PROJECT_DIR$/Graduation/src/main/webapp/WEB-INF/jsp/manager1.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Graduation/src/main/webapp/WEB-INF/spring/app.xml" afterPath="$PROJECT_DIR$/Graduation/src/main/webapp/WEB-INF/spring/app.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Graduation/src/main/webapp/WEB-INF/spring/mvc.xml" afterPath="$PROJECT_DIR$/Graduation/src/main/webapp/WEB-INF/spring/mvc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Graduation/target/Graduation/WEB-INF/jsp/employee.jsp" afterPath="$PROJECT_DIR$/Graduation/target/Graduation/WEB-INF/jsp/employee.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Graduation/target/Graduation/WEB-INF/jsp/error.jsp" afterPath="$PROJECT_DIR$/Graduation/target/Graduation/WEB-INF/jsp/error.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Graduation/target/Graduation/WEB-INF/jsp/head.jsp" afterPath="$PROJECT_DIR$/Graduation/target/Graduation/WEB-INF/jsp/head.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Graduation/target/Graduation/WEB-INF/jsp/manager1.jsp" afterPath="$PROJECT_DIR$/Graduation/target/Graduation/WEB-INF/jsp/manager1.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Graduation/target/Graduation/WEB-INF/spring/app.xml" afterPath="$PROJECT_DIR$/Graduation/target/Graduation/WEB-INF/spring/app.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Graduation/target/Graduation/WEB-INF/spring/mvc.xml" afterPath="$PROJECT_DIR$/Graduation/target/Graduation/WEB-INF/spring/mvc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Graduation/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/Graduation/target/maven-archiver/pom.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Graduation/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/Graduation/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Graduation/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/Graduation/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
@@ -103,46 +108,88 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="IndexController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/controller/IndexController.java">
+    <leaf>
+      <file leaf-file-name="ManagerController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/controller/ManagerController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="314">
-              <caret line="70" column="88" lean-forward="false" selection-start-line="70" selection-start-column="80" selection-end-line="70" selection-end-column="88" />
+            <state relative-caret-position="96">
+              <caret line="76" column="0" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#1120#1121#0" expanded="true" />
+                <element signature="e#1185#1186#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ItrManagerImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/service/impl/ItrManagerImpl.java">
+      <file leaf-file-name="manager1.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Graduation/src/main/webapp/WEB-INF/jsp/manager1.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="383">
-              <caret line="298" column="35" lean-forward="true" selection-start-line="298" selection-start-column="35" selection-end-line="298" selection-end-column="35" />
-              <folding>
-                <element signature="e#5429#5442#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="employee.jsp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Graduation/src/main/webapp/WEB-INF/jsp/employee.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="103" column="32" lean-forward="true" selection-start-line="103" selection-start-column="32" selection-end-line="103" selection-end-column="32" />
+            <state relative-caret-position="287">
+              <caret line="76" column="59" lean-forward="false" selection-start-line="76" selection-start-column="59" selection-end-line="76" selection-end-column="59" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AppBean.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/vo/AppBean.java">
+      <file leaf-file-name="index2.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Graduation/src/main/webapp/WEB-INF/jsp/index2.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="24" column="39" lean-forward="false" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="39" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="14" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IndexController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/controller/IndexController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="90" column="56" lean-forward="false" selection-start-line="90" selection-start-column="46" selection-end-line="90" selection-end-column="56" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MgrManagerImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/service/impl/MgrManagerImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="259" column="26" lean-forward="false" selection-start-line="259" selection-start-column="26" selection-end-line="259" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TaskBean.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/vo/TaskBean.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="20" column="27" lean-forward="true" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
+              <folding>
+                <element signature="e#370#371#0" expanded="true" />
+                <element signature="e#404#405#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JobBean.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/vo/JobBean.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="14" column="19" lean-forward="false" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MgrManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/service/MgrManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="70" column="12" lean-forward="false" selection-start-line="70" selection-start-column="12" selection-end-line="70" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -160,36 +207,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>come_punch</find>
-      <find>leave_punch</find>
-      <find>upd</find>
-      <find>已申请</find>
-      <find>updE</find>
-      <find>manager</find>
-      <find>抱歉</find>
-      <find>app_id</find>
-      <find>申请</find>
-      <find>c:if</find>
-      <find>length</find>
-      <find>employee</find>
-      <find>处理</find>
-      <find>app_emp</find>
-      <find>_handle</find>
-      <find>look</find>
-      <find>untype</find>
-      <find>unType</find>
-      <find>attList</find>
-      <find>pie</find>
-      <find>polar</find>
       <find>handle</find>
       <find>radar</find>
       <find>innerHTML</find>
-      <find>已处理</find>
       <find>attlist</find>
       <find>autoPunch</find>
       <find>getEmpsByMgr</find>
       <find>validPunch</find>
       <find>unatte</find>
+      <find>look</find>
+      <find>attends</find>
+      <find>已处理</find>
+      <find>app.emp</find>
+      <find>check</find>
+      <find>getAppsByMgr</find>
+      <find>valid</find>
+      <find>{context}</find>
+      <find>app_emp</find>
+      <find>Authen</find>
+      <find>add</find>
+      <find>session</find>
+      <find>myModalLabel_app</find>
+      <find>form:</find>
+      <find>simple</find>
+      <find>command</find>
+      <find>empName</find>
+      <find>jobBeanList</find>
+      <find>initUserBinder</find>
+      <find>task_tip_y</find>
+      <find>check_finished</find>
+      <find>评价</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -204,57 +251,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/SingleTableInheritence/src/main/java/com/pengfei/inheritence/Dao/DaoImpl/PersonDaoImpl.java" />
-        <option value="$PROJECT_DIR$/SingleTableInheritence/src/main/webapp/WEB-INF/jsp/head.jsp" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/Graduation/src/main/webapp/WEB-INF/spring/mvc.xml" />
-        <option value="$PROJECT_DIR$/Graduation/src/main/webapp/WEB-INF/spring/app.xml" />
-        <option value="$PROJECT_DIR$/Graduation/src/main/webapp/WEB-INF/jsp/manager.jsp" />
-        <option value="$PROJECT_DIR$/Graduation/pom.xml" />
-        <option value="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/dao/impl/BaseDaoHibernate4.java" />
-        <option value="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/dao/impl/ManagerDaoHibernate4.java" />
-        <option value="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/dao/ManagerDao.java" />
-        <option value="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/dao/impl/EmployeeDaoHibernate4.java" />
-        <option value="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/dao/EmployeeDao.java" />
-        <option value="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/schedule/PunchJob.java" />
-        <option value="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/domain/Administrator.java" />
-        <option value="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/vo/EmpBean.java" />
-        <option value="$PROJECT_DIR$/Graduation/src/main/webapp/WEB-INF/jsp/error.jsp" />
-        <option value="$PROJECT_DIR$/JoinedInheritence/src/main/java/com/pengfei/joinedinheritence/DateTest.java" />
-        <option value="$PROJECT_DIR$/Graduation/src/main/webapp/WEB-INF/jsp/index.jsp" />
-        <option value="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/service/MgrManager.java" />
-        <option value="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/service/impl/EmpManagerImpl.java" />
-        <option value="$PROJECT_DIR$/Graduation/target/Graduation/WEB-INF/jsp/employee.jsp" />
-        <option value="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/domain/Response.java" />
         <option value="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/dao/AdminDao.java" />
         <option value="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/controller/EmployeeController.java" />
-        <option value="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/controller/ManagerController.java" />
         <option value="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/dao/impl/ApplicationDaoHibernate4.java" />
         <option value="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/domain/Employee.java" />
-        <option value="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/domain/Manager.java" />
-        <option value="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/controller/InternController.java" />
         <option value="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/dao/AttendDao.java" />
         <option value="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/dao/impl/AttendDaoHibernate4.java" />
-        <option value="$PROJECT_DIR$/Graduation/src/main/webapp/WEB-INF/jsp/head.jsp" />
-        <option value="$PROJECT_DIR$/Graduation/src/main/webapp/WEB-INF/jsp/manager1.jsp" />
         <option value="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/vo/ItrBean.java" />
-        <option value="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/service/impl/MgrManagerImpl.java" />
         <option value="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/domain/Application.java" />
         <option value="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/domain/Attend.java" />
         <option value="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/domain/AttendType.java" />
         <option value="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/domain/CheckBack.java" />
-        <option value="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/domain/Intern.java" />
         <option value="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/domain/Payment.java" />
-        <option value="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/service/ItrManager.java" />
         <option value="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/dao/ApplicationDao.java" />
         <option value="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/dao/impl/ApplicationDaoImpl.java" />
-        <option value="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/dao/CheckBackDao.java" />
         <option value="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/vo/CheckBackBean.java" />
         <option value="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/vo/AttendBean.java" />
         <option value="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/vo/AppBean.java" />
-        <option value="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/controller/IndexController.java" />
-        <option value="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/service/impl/ItrManagerImpl.java" />
+        <option value="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/dao/CheckBackDao.java" />
+        <option value="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/dao/impl/CheckBackDaoImpl.java" />
+        <option value="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/validator/UserValidator.java" />
+        <option value="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/Interceptor/AuthInterceptor.java" />
+        <option value="$PROJECT_DIR$/Graduation/src/main/webapp/WEB-INF/spring/mvc.xml" />
+        <option value="$PROJECT_DIR$/Graduation/src/main/webapp/WEB-INF/jsp/error.jsp" />
+        <option value="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/interceptor/AuthInterceptor.java" />
         <option value="$PROJECT_DIR$/Graduation/src/main/webapp/WEB-INF/jsp/employee.jsp" />
+        <option value="$PROJECT_DIR$/Graduation/src/main/webapp/WEB-INF/jsp/head.jsp" />
+        <option value="$PROJECT_DIR$/Graduation/src/main/webapp/WEB-INF/jsp/index2.jsp" />
+        <option value="$PROJECT_DIR$/Graduation/src/main/webapp/WEB-INF/jsp/index1.jsp" />
+        <option value="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/domain/Message.java" />
+        <option value="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/domain/Manager.java" />
+        <option value="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/domain/Intern.java" />
+        <option value="$PROJECT_DIR$/Graduation/src/test/java/com/pengfei/intern/dao/impl/TaskDaoImplTest.groovy" />
+        <option value="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/dao/TaskDao.java" />
+        <option value="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/domain/Job.java" />
+        <option value="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/vo/TaskBean.java" />
+        <option value="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/dao/JobDao.java" />
+        <option value="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/vo/JobBean.java" />
+        <option value="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/service/ItrManager.java" />
+        <option value="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/service/impl/ItrManagerImpl.java" />
+        <option value="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/service/MgrManager.java" />
+        <option value="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/service/impl/MgrManagerImpl.java" />
+        <option value="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/controller/InternController.java" />
+        <option value="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/vo/form_vo/Task_vo.java" />
+        <option value="$PROJECT_DIR$/Graduation/src/main/webapp/WEB-INF/spring/app.xml" />
+        <option value="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/dao/impl/JobDaoImpl.java" />
+        <option value="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/dao/impl/TaskDaoImpl.java" />
+        <option value="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/domain/Task.java" />
+        <option value="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/validator/Task_vo_Validator.java" />
+        <option value="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/controller/ManagerController.java" />
+        <option value="$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/controller/IndexController.java" />
+        <option value="$PROJECT_DIR$/Graduation/src/main/webapp/WEB-INF/jsp/manager1.jsp" />
       </list>
     </option>
   </component>
@@ -393,6 +440,40 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="spring" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HibernateInAction" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HibernateInAction" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Graduation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="jsp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -416,6 +497,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -450,6 +535,36 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="vo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HibernateInAction" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HibernateInAction" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Graduation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="intern" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -554,6 +669,10 @@
               <option name="myItemId" value="intern" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="interceptor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -619,14 +738,238 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="dao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HibernateInAction" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HibernateInAction" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Graduation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="intern" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="impl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HibernateInAction" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HibernateInAction" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Graduation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="intern" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HibernateInAction" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HibernateInAction" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BiDirectional" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HibernateInAction" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HibernateInAction" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BiDirectional" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HibernateInAction" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HibernateInAction" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BiDirectional" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HibernateInAction" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HibernateInAction" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BiDirectional" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bidirectional" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HibernateInAction" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HibernateInAction" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BiDirectional" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bidirectional" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="util" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HibernateInAction" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HibernateInAction" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BiDirectional" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bidirectional" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="domain" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -638,24 +981,32 @@
     <property name="project.structure.side.proportion" value="0.25742576" />
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/zhaopen/IdeaProjects/HibernateInAction/Uni_Directional/src/main/java/com/pengfei/uni_irectional/domain/Toy.java" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="Groovy JUnit" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.pengfei.intern.dao.impl" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\zhaopen\IdeaProjects\HibernateInAction\Graduation\src\main\java\com\pengfei\intern\dao\impl" />
       <recent name="C:\Users\zhaopen\IdeaProjects\HibernateInAction\Graduation\src\main\java\com\pengfei\intern\dao" />
       <recent name="C:\Users\zhaopen\IdeaProjects\HibernateInAction\SingleTable\src\main\resources" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="groovy.util.GroovyTestCase" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.pengfei.intern.validator" />
       <recent name="com.pengfei.intern.controller" />
       <recent name="com.pengfei.HibernateQuery" />
       <recent name="com.pengfei.relation.util" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\zhaopen\IdeaProjects\HibernateInAction\Graduation\src\main\webapp\WEB-INF\js" />
       <recent name="C:\Users\zhaopen\IdeaProjects\HibernateInAction\Graduation\src\main\webapp\WEB-INF\jsp" />
+      <recent name="C:\Users\zhaopen\IdeaProjects\HibernateInAction\Graduation\src\main\webapp\WEB-INF\css" />
+      <recent name="C:\Users\zhaopen\IdeaProjects\HibernateInAction\Graduation\src\main\webapp\WEB-INF\js" />
       <recent name="C:\Users\zhaopen\IdeaProjects\HibernateInAction\Graduation\src\main\webapp\WEB-INF" />
       <recent name="C:\Users\zhaopen\IdeaProjects\HibernateInAction\SingleTableInheritence\src\main\webapp\WEB-INF\js" />
-      <recent name="C:\Users\zhaopen\IdeaProjects\HibernateInAction\SingleTableInheritence\src\main\webapp\WEB-INF\jsp" />
     </key>
   </component>
   <component name="RunManager" selected="Maven.tomcat-graduation">
@@ -1261,27 +1612,34 @@
     </task>
     <servers />
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1040" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2857143" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5241758" sideWeight="0.5021322" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3868132" sideWeight="0.4978678" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27142859" sideWeight="0.4978678" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7098901" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34462366" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45714286" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21290323" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1292,9 +1650,11 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2857143" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" x="92" y="92" width="1736" height="856" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295699" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2967033" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1333,7 +1693,9 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="antWorkspaceConfiguration">
@@ -1341,333 +1703,111 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/dao/AdminDao.java">
+    <entry file="file://$PROJECT_DIR$/Graduation/src/main/webapp/WEB-INF/jsp/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="8" column="42" lean-forward="false" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/dao/impl/AdminDaoHibernate4.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Graduation/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-130">
-          <caret line="71" column="20" lean-forward="true" selection-start-line="71" selection-start-column="20" selection-end-line="71" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Graduation/src/main/webapp/WEB-INF/jsp/manager.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="14" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/dao/impl/AttendTypeDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/dao/impl/CheckBackDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/dao/impl/InternDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="17" column="56" lean-forward="false" selection-start-line="17" selection-start-column="56" selection-end-line="17" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/dao/impl/ManagerDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="39">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/schedule/PayJob.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/exception/HrException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="1" column="13" lean-forward="false" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/controller/InternController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="24" column="33" lean-forward="false" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Graduation/src/main/webapp/WEB-INF/js/json2.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Graduation/src/main/webapp/WEB-INF/js/chart.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="14" column="4" lean-forward="true" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
-          <folding />
+        <state relative-caret-position="365">
+          <caret line="25" column="56" lean-forward="true" selection-start-line="25" selection-start-column="56" selection-end-line="25" selection-end-column="56" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Graduation/src/main/webapp/WEB-INF/jsp/head.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="22" column="73" lean-forward="true" selection-start-line="22" selection-start-column="73" selection-end-line="22" selection-end-column="73" />
+        <state relative-caret-position="420">
+          <caret line="21" column="77" lean-forward="true" selection-start-line="21" selection-start-column="77" selection-end-line="21" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/dao/ManagerDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="9" column="18" lean-forward="false" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Graduation/src/main/webapp/WEB-INF/jsp/manager1.jsp">
+    <entry file="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/dao/InternDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="291" column="72" lean-forward="true" selection-start-line="291" selection-start-column="72" selection-end-line="291" selection-end-column="72" />
+        <state relative-caret-position="80">
+          <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/dao/AttendDao.java">
+    <entry file="file://$PROJECT_DIR$/Graduation/src/main/webapp/WEB-INF/jsp/employee.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="640">
-          <caret line="51" column="42" lean-forward="true" selection-start-line="51" selection-start-column="42" selection-end-line="51" selection-end-column="42" />
-          <folding />
+        <state relative-caret-position="854">
+          <caret line="256" column="12" lean-forward="false" selection-start-line="256" selection-start-column="12" selection-end-line="256" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/controller/ManagerController.java">
+    <entry file="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/domain/Application.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="39" column="13" lean-forward="false" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/vo/ItrBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Uni_Directional/src/main/java/com/pengfei/uni_irectional/PersonManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="39" column="32" lean-forward="false" selection-start-line="39" selection-start-column="32" selection-end-line="39" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SingleTableInheritence/src/main/java/com/pengfei/inheritence/Dao/DaoImpl/PersonDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CollectionMapping/src/main/java/lee/PersonManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="12" lean-forward="true" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/dao/impl/AttendDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="507">
-          <caret line="85" column="67" lean-forward="false" selection-start-line="85" selection-start-column="67" selection-end-line="85" selection-end-column="67" />
-          <folding>
-            <element signature="e#2029#2030#0" expanded="true" />
-            <element signature="e#2094#2095#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Graduation/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Graduation/src/main/webapp/WEB-INF/spring/mvc.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="33" column="12" lean-forward="false" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Graduation/src/main/webapp/WEB-INF/spring/app.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-285">
-          <caret line="87" column="55" lean-forward="false" selection-start-line="87" selection-start-column="49" selection-end-line="87" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/domain/Response.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="14" column="21" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/domain/Manager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/domain/Intern.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="14" column="22" lean-forward="false" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/domain/AttendType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
+        <state relative-caret-position="35">
           <caret line="15" column="27" lean-forward="false" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/domain/CheckBack.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/domain/Attend.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
+        <state relative-caret-position="-40">
           <caret line="16" column="26" lean-forward="false" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/MyQuartzServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-249">
-          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/TestJob.java">
+    <entry file="file://$PROJECT_DIR$/BiDirectional/src/main/java/com/pengfei/bidirectional/domain/Teacher.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-249">
+        <state relative-caret-position="500">
+          <caret line="30" column="58" lean-forward="false" selection-start-line="25" selection-start-column="4" selection-end-line="30" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BiDirectional/src/main/java/com/pengfei/bidirectional/domain/Person.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
           <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/service/MgrManager.java">
+    <entry file="file://$PROJECT_DIR$/BiDirectional/src/main/java/com/pengfei/bidirectional/Application.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="44" column="30" lean-forward="false" selection-start-line="44" selection-start-column="18" selection-end-line="44" selection-end-column="30" />
+        <state relative-caret-position="-400">
+          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/dao/impl/BaseDaoImpl.java">
+    <entry file="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/domain/Intern.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="82" column="22" lean-forward="false" selection-start-line="82" selection-start-column="22" selection-end-line="82" selection-end-column="22" />
+        <state relative-caret-position="441">
+          <caret line="60" column="20" lean-forward="false" selection-start-line="60" selection-start-column="20" selection-end-line="60" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/dao/CheckBackDao.java">
+    <entry file="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/domain/Manager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="4" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+        <state relative-caret-position="540">
+          <caret line="37" column="48" lean-forward="false" selection-start-line="37" selection-start-column="48" selection-end-line="37" selection-end-column="48" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/dao/impl/PaymentDaoImpl.java">
+    <entry file="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/dao/PaymentDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/domain/Payment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="15" column="19" lean-forward="false" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/dao/ApplicationDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="18" column="45" lean-forward="false" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
+          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
           <folding />
         </state>
       </provider>
@@ -1680,104 +1820,308 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/dao/impl/ApplicationDaoImpl.java">
+    <entry file="file://$PROJECT_DIR$/Graduation/src/test/java/com/pengfei/intern/dao/impl/TaskDaoImplTest.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="518">
-          <caret line="37" column="26" lean-forward="false" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/domain/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="15" column="27" lean-forward="false" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/vo/AttendBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="17" column="27" lean-forward="false" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="27" />
+        <state relative-caret-position="100">
+          <caret line="5" column="57" lean-forward="false" selection-start-line="5" selection-start-column="57" selection-end-line="5" selection-end-column="57" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/domain/CheckBack.java">
+    <entry file="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/dao/impl/CheckBackDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        <state relative-caret-position="240">
+          <caret line="17" column="59" lean-forward="false" selection-start-line="17" selection-start-column="59" selection-end-line="17" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/dao/TaskDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="12" column="35" lean-forward="false" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/vo/CheckBackBean.java">
+    <entry file="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/dao/impl/PaymentDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/dao/JobDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
-          <caret line="15" column="27" lean-forward="false" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="27" />
+          <caret line="15" column="38" lean-forward="true" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/vo/ItrBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.7.0_80/src.zip!/java/text/SimpleDateFormat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="557" column="11" lean-forward="false" selection-start-line="557" selection-start-column="11" selection-end-line="557" selection-end-column="11" />
+          <folding>
+            <element signature="e#21767#21768#0" expanded="false" />
+            <element signature="e#21839#21840#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/dao/AttendDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-140">
+          <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/dao/impl/AttendDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-953">
+          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/controller/InternController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="509">
+          <caret line="86" column="24" lean-forward="false" selection-start-line="86" selection-start-column="24" selection-end-line="86" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/service/ItrManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="95" column="21" lean-forward="false" selection-start-line="95" selection-start-column="21" selection-end-line="95" selection-end-column="21" />
+        <state relative-caret-position="429">
+          <caret line="127" column="0" lean-forward="true" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/service/impl/MgrManagerImpl.java">
+    <entry file="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/vo/form_vo/Task_vo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-880">
-          <caret line="124" column="37" lean-forward="false" selection-start-line="124" selection-start-column="25" selection-end-line="124" selection-end-column="37" />
+        <state relative-caret-position="260">
+          <caret line="13" column="18" lean-forward="false" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
           <folding>
-            <element signature="e#3029#3038#0" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/controller/IndexController.java">
+    <entry file="file://$PROJECT_DIR$/Graduation/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="70" column="88" lean-forward="false" selection-start-line="70" selection-start-column="80" selection-end-line="70" selection-end-column="88" />
+        <state relative-caret-position="-120">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Graduation/src/main/webapp/WEB-INF/spring/app.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1840">
+          <caret line="92" column="52" lean-forward="false" selection-start-line="92" selection-start-column="52" selection-end-line="92" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Graduation/src/main/webapp/WEB-INF/spring/mvc.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/dao/impl/InternDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="20" column="43" lean-forward="false" selection-start-line="19" selection-start-column="21" selection-end-line="20" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/dao/impl/JobDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="13" column="11" lean-forward="false" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#592#593#0" expanded="false" />
+            <element signature="e#666#667#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/dao/impl/TaskDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="13" column="11" lean-forward="false" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/domain/Job.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="33" column="26" lean-forward="false" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.5.RELEASE/spring-web-4.3.5.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="131" column="0" lean-forward="false" selection-start-line="131" selection-start-column="0" selection-end-line="131" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Graduation/src/main/webapp/WEB-INF/jsp/index1.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="24" column="16" lean-forward="true" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/validator/UserValidator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="19" column="53" lean-forward="false" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/validator/Task_vo_Validator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="22" column="75" lean-forward="false" selection-start-line="22" selection-start-column="75" selection-end-line="22" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/interceptor/AuthInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-169">
+          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/service/impl/ItrManagerImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
-          <caret line="298" column="35" lean-forward="true" selection-start-line="298" selection-start-column="35" selection-end-line="298" selection-end-column="35" />
-          <folding>
-            <element signature="e#5429#5442#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/vo/AppBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="24" column="39" lean-forward="false" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="39" />
+        <state relative-caret-position="329">
+          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Graduation/src/main/webapp/WEB-INF/jsp/employee.jsp">
+    <entry file="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/dao/impl/ManagerDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="103" column="32" lean-forward="true" selection-start-line="103" selection-start-column="32" selection-end-line="103" selection-end-column="32" />
+        <state relative-caret-position="100">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/dao/impl/BaseDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="89">
+          <caret line="92" column="0" lean-forward="false" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/domain/Task.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="36" column="29" lean-forward="false" selection-start-line="36" selection-start-column="29" selection-end-line="36" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/service/MgrManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="70" column="12" lean-forward="false" selection-start-line="70" selection-start-column="12" selection-end-line="70" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/vo/TaskBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="27" lean-forward="true" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
+          <folding>
+            <element signature="e#370#371#0" expanded="true" />
+            <element signature="e#404#405#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/service/impl/MgrManagerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="259" column="26" lean-forward="false" selection-start-line="259" selection-start-column="26" selection-end-line="259" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/vo/JobBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="14" column="19" lean-forward="false" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/controller/IndexController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="90" column="56" lean-forward="false" selection-start-line="90" selection-start-column="46" selection-end-line="90" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Graduation/src/main/java/com/pengfei/intern/controller/ManagerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="76" column="0" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+          <folding>
+            <element signature="e#1120#1121#0" expanded="true" />
+            <element signature="e#1185#1186#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Graduation/src/main/webapp/WEB-INF/jsp/index2.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="14" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Graduation/src/main/webapp/WEB-INF/jsp/manager1.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="76" column="59" lean-forward="false" selection-start-line="76" selection-start-column="59" selection-end-line="76" selection-end-column="59" />
           <folding />
         </state>
       </provider>

@@ -1,8 +1,10 @@
 package com.pengfei.intern.service;
 
 import com.pengfei.intern.domain.AttendType;
+import com.pengfei.intern.domain.Intern;
 import com.pengfei.intern.domain.Manager;
 import com.pengfei.intern.vo.AttendBean;
+import com.pengfei.intern.vo.JobBean;
 import com.pengfei.intern.vo.PaymentBean;
 
 import java.util.List;
@@ -116,4 +118,19 @@ public interface ItrManager
 	 * @return 添加的结果
 	 */
 	boolean addApplication(int attId , int typeId , String reason);
+
+	/**
+	 * 根据实习生获得工作列表
+	 * @param itr 实习生
+	 * @return 添加的结果
+	 */
+	List<JobBean> getJobByIntern(String itr);
+
+	/**
+	 * 完成/未完成任务
+	 * @param job_id
+	 * @return 完成的结果
+	 */
+	boolean finishJob(int job_id,boolean finished);
+
 }

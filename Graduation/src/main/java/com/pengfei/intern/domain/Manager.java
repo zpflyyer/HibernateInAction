@@ -3,6 +3,7 @@ package com.pengfei.intern.domain;
 import java.io.Serializable;
 import java.util.*;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -31,4 +32,8 @@ public class Manager
 	// 该经理签署的所有批复
 	@OneToMany(targetEntity=CheckBack.class , mappedBy="manager")
 	private Set<CheckBack> checks = new HashSet<>();
+	//该经理布置的全部任务
+	@JsonBackReference
+	@OneToMany(targetEntity = Task.class,mappedBy = "manager")
+	private Set<Task> taskSet = new HashSet<>();
 }

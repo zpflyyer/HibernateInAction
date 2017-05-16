@@ -45,54 +45,63 @@
                 <!-- Tab panes -->
                 <div class="tab-content">
                     <div role="tabpanel" class="tab-pane active" id="unAttend">
-                        <table class="table table-bordered table-striped" id="unAttend_tb" contenteditable="false">
-                            <thead id="unAttend_tb_head" >
-                                 <tr>
-                                    <th>出勤记录编号</th>
-                                    <th>日期</th>
-                                    <th>考勤类型</th>
-                                    <th>打卡时间</th>
-                                    <th>操作</th>
-                                    <th>最近一次申请</th>
-                                    <th>处理进度</th>
-                                    <th>处理结果</th>
-                                    <th>处理理由</th>
-                                </tr>
-                            </thead>
-                            <tbody id="unAttend_tb_body">
-                                <c:forEach var="unAtt" items="${unAttendList}" varStatus="status">
-                                    <tr id="${unAtt.id}">
-                                        <td>${unAtt.id}</td>
-                                        <td>${unAtt.dutyDay}</td>
-                                        <td>${unAtt.type}</td>
-                                        <c:if test="${not empty unAtt.time}">
-                                            <td>${unAtt.time}</td>
-                                        </c:if>
-                                        <c:if test="${empty unAtt.time}">
-                                            <td>未打卡</td>
-                                        </c:if>
-                                        <td><button class="btn btn-link"  id="${unAtt.id}_app" data-toggle="modal" data-att_date="${unAtt.dutyDay}" data-att_id="${unAtt.id}" data-target="#myModal_app">申请</button></td>
-                                       //最近申请
-                                        <c:if test="${not empty unAtt.appBean}">
-                                            <td>${unAtt.appBean.toAttend}</td>
-                                            //申请处理进度
-                                            <c:if test="${unAtt.appBean.handled}">
-                                                <td>已处理</td>
-                                                //申请处理结果
-                                                <td>${unAtt.appBean.granted}</td>
-                                                <td>${unAtt.appBean.reason}</td>
-                                            </c:if>
-                                            <c:if test="${!unAtt.appBean.handled}">
-                                                <td colspan="3">尚未处理</td>
-                                            </c:if>
-                                        </c:if>
-                                        <c:if test="${empty unAtt.appBean}">
-                                            <td colspan="4">无相关申请记录</td>
-                                        </c:if>
+                        <c:if test="${not empty unAttendList}">
+                            <table class="table table-bordered table-striped" id="unAttend_tb" contenteditable="false">
+                                <thead id="unAttend_tb_head" >
+                                     <tr>
+                                        <th>出勤记录编号</th>
+                                        <th>日期</th>
+                                        <th>考勤类型</th>
+                                        <th>打卡时间</th>
+                                        <th>操作</th>
+                                        <th>最近一次申请</th>
+                                        <th>处理进度</th>
+                                        <th>处理结果</th>
+                                        <th>处理理由</th>
                                     </tr>
-                               </c:forEach>
-                            </tbody>
-                        </table>
+                                </thead>
+                                <tbody id="unAttend_tb_body">
+                                    <c:forEach var="unAtt" items="${unAttendList}" varStatus="status">
+                                        <tr id="${unAtt.id}">
+                                            <td>${unAtt.id}</td>
+                                            <td>${unAtt.dutyDay}</td>
+                                            <td>${unAtt.type}</td>
+                                            <c:if test="${not empty unAtt.time}">
+                                                <td>${unAtt.time}</td>
+                                            </c:if>
+                                            <c:if test="${empty unAtt.time}">
+                                                <td>未打卡</td>
+                                            </c:if>
+                                            <td><button class="btn btn-link"  id="${unAtt.id}_app" data-toggle="modal" data-att_date="${unAtt.dutyDay}" data-att_id="${unAtt.id}" data-target="#myModal_app">申请</button></td>
+
+                                            <c:if test="${not empty unAtt.appBean}">
+                                                <td>${unAtt.appBean.toAttend}</td>
+                                                <c:if test="${unAtt.appBean.handled}">
+                                                    <td>已处理</td>
+                                                    <c:if test="${unAtt.appBean.checkBackBean.granted}">
+                                                        <td>同意</td>
+                                                    </c:if>
+                                                    <c:if test="${!unAtt.appBean.checkBackBean.granted}">
+                                                        <td>被驳回</td>
+                                                    </c:if>
+                                                    <td>${unAtt.appBean.checkBackBean.reason}</td>
+                                                </c:if>
+                                                <c:if test="${!unAtt.appBean.handled}">
+                                                    <td colspan="3">尚未处理</td>
+                                                </c:if>
+                                            </c:if>
+                                            <c:if test="${empty unAtt.appBean}">
+                                                <td colspan="4">无相关申请记录</td>
+                                            </c:if>
+                                        </tr>
+                                   </c:forEach>
+                                </tbody>
+                            </table>
+                        </c:if>
+                        <c:if test="${empty unAttendList}">
+                            <div class="clearfix" style="margin-bottom: 70px;"></div>
+                            <button class="btn btn-block" id="no" style="padding: 10px;"><span class="glyphicon glyphicon-alert"><a> 您最近没有考勤异常</a></span></button>
+                         </c:if>
                     </div>
                     <div role="tabpanel" class="tab-pane" id="mySal">
                         <c:if test="${not empty salist}">
@@ -244,15 +253,14 @@
 		}
 		var myPolar = new Chart(document.getElementById("polar").getContext("2d")).PolarArea(polrData)
 
-        $("#look").off("click").on("click",function(){alert(JSON.stringify(${attList}));alert(${attList});alert(pieData);});
         $("#myModal_app").on("show.bs.modal",function(e){
+            var att_date = $(e.relatedTarget).data("att_date");
+            $("#myModalLabel_app span").get(0).innerHTML=att_date;
             $(this).find("#app_y").off("click").on("click",function(){
             	var att_id = $(e.relatedTarget).data("att_id");
-	            var att_date = $(e.relatedTarget).data("att_date");
 	            var att_type = $("#type_select").val();
 	            var reason = $("#app_reason").val();
 
-	            $("#myModalLabel_app span").get(0).innerHTML=att_date;
                 var postData_app = {
                     "att_id" : att_id,
                     "type_id" : att_type,

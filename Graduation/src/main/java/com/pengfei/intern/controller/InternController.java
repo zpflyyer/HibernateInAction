@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
@@ -64,6 +65,26 @@ public class InternController {
         }
         else
             return new Response("failed");
+    }
+
+    /*
+    method3:处理完成工作 url=${context}/employee/finishjob
+     */
+    @ResponseBody
+    @RequestMapping(method = RequestMethod.POST,value = "/finishjob")
+    Response finishJob(HttpSession session,
+                       @RequestParam("job_id") int job_id,
+                       @RequestParam("finished") boolean finished){
+        System.out.println("finishJob() called!");
+        Response response = new Response();
+        String user = (String) session.getAttribute("user");
+
+        if(itrManager.finishJob(job_id,finished)){
+            response.setResponse("succeed");
+            return response;
+        }
+        response.setResponse("failed");
+        return response;
     }
 }
 

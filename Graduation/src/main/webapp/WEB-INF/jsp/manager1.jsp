@@ -1,5 +1,11 @@
+<%--
+  User: yy
+  Date: 3/11/14
+  Time: 4:37 PM
+--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html>
 <!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
 <!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
@@ -37,14 +43,49 @@
                 <div>
                 <!-- Nav tabs -->
                 <ul class="nav nav-tabs" role="tablist">
-                    <li role="presentation" class="active"><a href="#all" aria-controls="all" role="tab" data-toggle="tab">部门实习生管理</a></li>
+                    <li role="presentation"><a href="#all" aria-controls="all" role="tab" data-toggle="tab">部门实习生管理</a></li>
                     <li role="presentation"><a href="#customer" aria-controls="customer" role="tab" data-toggle="tab">上月实习生发薪记录</a></li>
                     <li role="presentation"><a href="#employee" aria-controls="employee" role="tab" data-toggle="tab">处理申请</a></li>
+<!--                    <li role="presentation"><a href="#attends" aria-controls="attends" role="tab" data-toggle="tab">出勤统计</a></li>
+-->
+                    <li role="presentation" class="active"><a href="#command" aria-controls="command" role="tab" data-toggle="tab">分配任务</a></li>
+                    <li role="presentation"><a href="#tasks" aria-controls="tasks" role="tab" data-toggle="tab">任务进度</a></li>
                 </ul>
 
                 <!-- Tab panes -->
                 <div class="tab-content">
-                    <div role="tabpanel" class="tab-pane active" id="all">
+                    <div role="tabpanel" class="tab-pane" id="tasks">
+                        <table class="table table-bordered table-striped" id="tasks_tb" contenteditable="false">
+                            <thead id="tasks_tb_head" >
+                                 <tr>
+                                    <th>任务</th>
+                                    <th>实习生</th>
+                                    <th>进度</th>
+                                    <th>分数</th>
+                                    <th>操作</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tasks_tb_body">
+                                <c:forEach var="task" items="${taskList}" varStatus="status">
+                                    <c:forEach var="job" items="${task.jobBeanList}" varStatus="status">
+                                        <tr>
+                                            <td>${task.title}</td>
+                                            <td>${job.intern}</td>
+                                            <c:if test="${job.finished}">
+                                                <td>已完成</td>
+                                            </c:if>
+                                            <c:if test="${!job.finished}">
+                                                <td>尚未完成</td>
+                                            </c:if>
+                                            <td>${job.grade}</td>
+                                            <td><button class="btn btn-link"  id="${job.job_id}" data-toggle="modal" data-job_id="${job.job_id}" data-intern="${job.intern}" data-target="#myModal_task">评价</button></td>
+                                        </tr>
+                                    </c:forEach>
+                               </c:forEach>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="all">
                         <table class="table table-bordered table-striped" id="employee_tb" contenteditable="false">
                             <thead id="employee_tb_head" >
                                  <tr>
@@ -125,7 +166,7 @@
                                             <td>${app.unAttend}</td>
                                             <td>${app.toAttend}</td>
                                             <td>${app.reason}</td>
-                                            <td><button class="btn btn-link"  id="${app.emp}_handle" data-toggle="modal" data-app_emp="${app.emp}" data-app_date="${app.date}" data-app_id="${app.id}" data-target="#myModal_check">处理</button></td>
+                                            <td><button class="btn btn-link"  id="${app.emp}_${app.date}" data-toggle="modal" data-app_emp="${app.emp}" data-app_date="${app.date}" data-app_id="${app.id}" data-target="#myModal_check">处理</button></td>
                                         </tr>
                                    </c:forEach>
                                 </tbody>
@@ -135,6 +176,100 @@
                             <div class="clearfix" style="margin-bottom: 70px;"></div>
                             <button class="btn btn-block" id="no" style="padding: 10px;"><span class="glyphicon glyphicon-alert"><a> 尚无申请需要处理</a></span></button>
                         </c:if>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="attends">
+                        <table class="table table-bordered table-striped" id="depSal_tb" contenteditable="false" >
+                            <thead id="depSal_tb_head" >
+                                 <tr>
+                                    <th>实习生</th>
+                                    <th>出勤</th>
+                                </tr>
+                            </thead>
+                            <tbody id="depSal_tb_body">
+                                <c:forEach var="sal" items="${depSalist}" varStatus="status">
+                                    <tr id="${sal.empName}">
+                                        <td>${sal.empName}</td>
+                                        <td>${sal.amount}</td>
+                                    </tr>
+                               </c:forEach>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div role="tabpanel" class="tab-pane active" id="command">
+                        <!--
+                        <form:form modelAttribute = "task_vo" action="${context}/manager/assign" method="post">
+                            <table class="table table-bordered table-striped" >
+                                <tr>
+                                    <td>任务标题</td>
+                                    <td><form:input path = "title"/></td>
+                                    <td><font color="red"><form:errors path="title"/></font></td>
+                                </tr>
+                                <tr>
+                                    <td>描述</td>
+                                    <td><form:textarea path = "content"/></td>
+                                    <td><font color="red"><form:errors path="content"/></font></td>
+                                </tr>
+                                <tr>
+                                    <td>截止日期</td>
+                                    <td><form:input path = "deadline"/></td>
+                                    <td><font color="red"><form:errors path="deadline"/></font></td>
+                                </tr>
+                                 <tr>
+                                     <td>分配目标</td>
+                                     <td>
+                                        <c:forEach var="emp" items="${employeeList}" varStatus="status">
+                                            <form:checkbox value="${emp.empName}" path="internList" /> ${emp.empName}
+                                        </c:forEach>
+                                     <td>
+                                     <td><font color="red"><form:errors path="internList"/></font></td>
+                                 </tr>
+                                <tr>
+                                    <td><input type = "submit" value = "提交"/></td>
+                                </tr>
+                            </table>
+                        </form:form>
+                        -->
+                        <form:form modelAttribute = "task_vo"  class="form-horizontal" action="${context}/manager/assign" method="post" style="padding: 35px;">
+                            <font color="red"><form:errors path="title"/></font>
+                            <div class="form-group">
+                                <div class="input-group ">
+                                  <span class="input-group-addon" id="title_icon">
+                                    <span class="glyphicon glyphicon-header"></span>
+                                  </span>
+                                  <form:input path="title" type="text" class="form-control" placeholder="题目" aria-describedby="title_icon"/>
+                                </div>
+                            </div>
+                            <font color="red"><form:errors path="content"/></font>
+                            <div class="form-group">
+                                <div class="input-group ">
+                                  <span class="input-group-addon" id="content_icon">
+                                    <span class="glyphicon glyphicon-book"></span>
+                                  </span>
+                                  <form:textarea path="content" type="text" class="form-control" placeholder="内容" aria-describedby="content_icon"/>
+                                </div>
+                            </div>
+                            <font color="red"><form:errors path="deadline"/></font>
+                            <div class="form-group">
+                                <div class="input-group ">
+                                  <span class="input-group-addon" id="deadline_icon">
+                                    <span class="glyphicon glyphicon-time"></span>
+                                  </span>
+                                  <form:input path="deadline" type="text" class="form-control" placeholder="截止日期" aria-describedby="deadline_icon"/>
+                                </div>
+                            </div>
+                            <font color="red"><form:errors path="internList"/></font>
+                            <div class="form-group">
+                                <div class="input-group ">
+                                <span class="input-group-addon" id="deadline_icon">
+                                   <span class="glyphicon glyphicon-user" ></span>
+                                </span>
+                                  <c:forEach var="emp" items="${employeeList}" varStatus="status">
+                                      <form:checkbox value="${emp.empName}" path="internList" style="margin-left:15px;"/> ${emp.empName}
+                                  </c:forEach>
+                                </div>
+                            </div>
+                            <button type="submit"  class="btn btn-success btn-block">提 交</button>
+                        </form:form>
                     </div>
                 </div>
             </div>
@@ -187,6 +322,36 @@
               </div>
             </div>
           </div>
+    </div>
+    
+    <div class="modal fade" id="myModal_task" tabindex="-1" role="dialog" aria-labelledby="myModalLabel_task">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title text-danger" id="myModalLabel_task" >批阅实习生<span></span>的任务完成情况</h4>
+          </div>
+          <div class="modal-body" id="task_tip">
+             <form>
+                <div class="form-group">
+                    <label for="input_grade" class="control-label">分数:</label>
+                    <input type="number" class="form-control" id="input_grade">
+                </div>
+                <div class="form-group">
+                	<label for="check_finished" class="control-label">申请类型</label>
+                    <select class="form-control" name="check_finished" id="check_finished">
+				    	<option value=true>完成</option>
+				    	<option value=false>未完成</option>
+					</select>
+                </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+            <button type="button" id="task_tip_y" class="btn btn-primary btn-warning" data-dismiss="modal">提交更新</button>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="modal fade" id="myModal_check" tabindex="-1" role="dialog" aria-labelledby="myModalLabel_check">
@@ -287,25 +452,59 @@
             $.post("${context}/manager/check",postData_check,
                 function(data,statusText){
                     var response=eval("(" + data + ")").response;
-                    if(statusText=="success"&&response=="added"){
-                        alert("已提交");
-                        $("#"+app_emp+"_handle").get(0).innerHTML="已处理";
-                        $("#"+app_emp+"_handle").attr("disabled",true);
+                    alert(response);
+                    if(statusText=="success"&&response=="checked"){
+                        alert("#"+app_emp);
+                        $("#"+app_emp+"_"+app_date).get(0).innerHTML="已处理";
+                        $("#"+app_emp+"_"+app_date).attr("disabled",true);
                      }
                      else{
                         alert("提交失败");
                      }
                 },
-
+                "text"
             );
             });
         });
+        $("#myModal_task").on("show.bs.modal",function(e){
+            var job_id = $(e.relatedTarget).data("job_id");
+            var intern = $(e.relatedTarget).data("intern");
+            $("#myModalLabel_task span").get(0).innerHTML=intern;
+            
+            $(this).find("#task_tip_y").off("click").on("click"
+            ,function(){
+	            var finished = $("#check_finished").val();
+	            var grade = $("#input_grade").val();
+	            var postData_task = {
+	                "job_id" : job_id,
+	                "grade" : grade,
+	                "finished" : finished
+	            };
+	            alert(job_id+":"+grade+":"+finished)
+	            $.post("${context}/manager/judge",postData_task,
+	                function(data,statusText){
+	                    var response=eval("(" + data + ")").response;
+	                    alert(response);
+	                    if(statusText=="success"&&response=="succeed"){
+	                        $("#"+job_id).get(0).innerHTML="已评价";
+	                        $("#"+job_id).attr("disabled",true);
+	                     }
+	                     else{
+	                        alert("提交失败");
+	                     }
+	                },
+	                "text"
+	            );
+           });
+        });        
         $("#employee_tb_head tr:only-child").find("th").css("text-align","center");
         $("#employee_tb_body").css("text-align","center");
         $("#depSal_tb_head tr:only-child").find("th").css("text-align","center");
         $("#depSal_tb_body").css("text-align","center");
         $("#app_tb_head tr:only-child").find("th").css("text-align","center");
         $("#app_tb_body").css("text-align","center");
+        $("#tasks_tb_head tr:only-child").find("th").css("text-align","center");
+        $("#tasks_tb_body").css("text-align","center");
         $("#employee_tb_body tr:last-child").each(
             function(i)
             {

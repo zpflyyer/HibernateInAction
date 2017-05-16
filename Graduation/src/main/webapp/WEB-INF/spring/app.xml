@@ -14,7 +14,8 @@
                            http://www.springframework.org/schema/context/spring-context.xsd">
 
     <context:component-scan base-package="com.pengfei.intern.dao.impl,
-                                          com.pengfei.intern.service.impl"/>
+                                          com.pengfei.intern.service.impl,
+                                          com.pengfei.intern.validator,"/>
 
     <!-- cronExpression指定Cron表达式：每月3日2时启动 -->
     <bean id="cronTriggerPay"
@@ -88,6 +89,8 @@
                 <value>com.pengfei.intern.domain.Intern</value>
                 <value>com.pengfei.intern.domain.Manager</value>
                 <value>com.pengfei.intern.domain.Payment</value>
+                <value>com.pengfei.intern.domain.Task</value>
+                <value>com.pengfei.intern.domain.Job</value>
             </list>
         </property>
 

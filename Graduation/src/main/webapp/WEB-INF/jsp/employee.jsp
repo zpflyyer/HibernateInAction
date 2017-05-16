@@ -253,15 +253,14 @@
 		}
 		var myPolar = new Chart(document.getElementById("polar").getContext("2d")).PolarArea(polrData)
 
-        $("#look").off("click").on("click",function(){alert(JSON.stringify(${attList}));alert(${attList});alert(pieData);});
         $("#myModal_app").on("show.bs.modal",function(e){
+            var att_date = $(e.relatedTarget).data("att_date");
+            $("#myModalLabel_app span").get(0).innerHTML=att_date;
             $(this).find("#app_y").off("click").on("click",function(){
             	var att_id = $(e.relatedTarget).data("att_id");
-	            var att_date = $(e.relatedTarget).data("att_date");
 	            var att_type = $("#type_select").val();
 	            var reason = $("#app_reason").val();
 
-	            $("#myModalLabel_app span").get(0).innerHTML=att_date;
                 var postData_app = {
                     "att_id" : att_id,
                     "type_id" : att_type,

@@ -3,15 +3,21 @@ package com.pengfei.intern.controller;
 import com.pengfei.intern.domain.Intern;
 import com.pengfei.intern.domain.Response;
 import com.pengfei.intern.service.MgrManager;
+import com.pengfei.intern.validator.Task_vo_Validator;
 import com.pengfei.intern.vo.ItrBean;
+import com.pengfei.intern.vo.TaskBean;
+import com.pengfei.intern.vo.form_vo.Task_vo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.DataBinder;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import java.util.List;
 
 /**
  * Created by zhaopen on 5/8/2017.
@@ -26,8 +32,13 @@ public class ManagerController {
     @Autowired
     private MgrManager mgrManager;
 
+    @InitBinder("task_vo")
+    public void initTaskBinder(DataBinder dataBinder){
+        dataBinder.addValidators(new Task_vo_Validator());
+    }
+
     /*
-    method1:澶勭悊娣诲姞鐢ㄦ埛 url=${context}/manager/addEmpl
+    method1:处理添加用户 url=${context}/manager/addEmpl
      */
     @ResponseBody
     @RequestMapping(method = RequestMethod.POST,value = "/addEmpl")
@@ -56,7 +67,7 @@ public class ManagerController {
     }
 
     /*
-    method2:澶勭悊鍒犻櫎鐢ㄦ埛 url=${context}/manager/delEmpl
+    method2:处理删除用户 url=${context}/manager/delEmpl
      */
     @ResponseBody
     @RequestMapping(method = RequestMethod.POST,value = "/delEmpl")
@@ -72,7 +83,7 @@ public class ManagerController {
     }
 
     /*
-    method3:澶勭悊鏇存柊鐢ㄦ埛 url=${context}/manager/updEmpl
+    method3:处理更新用户 url=${context}/manager/updEmpl
      */
     @ResponseBody
     @RequestMapping(method = RequestMethod.POST,value = "/updEmpl")
@@ -94,7 +105,7 @@ public class ManagerController {
     }
 
     /*
-    method4:澶勭悊鐢宠 url=${context}/manager/check
+    method4:处理申请 url=${context}/manager/check
      */
     @ResponseBody
     @RequestMapping(method = RequestMethod.POST,value = "/check")
@@ -114,6 +125,56 @@ public class ManagerController {
         }
         response.setResponse("denied");
         System.out.println("---check() denied---");
+        return response;
+    }
+
+    /*
+    moethod5:处理布置任务 url = ${context}/manager/assign
+     */
+    @RequestMapping(method = RequestMethod.POST,value = "/assign")
+    ModelAndView assign(HttpSession session, HttpServletRequest request,
+                        @Validated @ModelAttribute("task_vo") Task_vo task_vo,
+                        BindingResult bindingResult){
+        System.out.println("assign() called!");
+        ModelAndView modelAndView = new ModelAndView();
+        String username = (String) session.getAttribute("user");
+        //校分配任务输入
+        if (bindingResult.hasFieldErrors()){
+            modelAndView.addObject("employeeList",mgrManager.getEmpsByMgr(username));
+            modelAndView.addObject("depSalist",mgrManager.getSalaryByMgr(username));
+            modelAndView.addObject("appList",mgrManager.getAppsByMgr(username));
+            modelAndView.addObject("taskList",mgrManager.getTasksByMgr(username));
+            modelAndView.addObject("username",username);
+            modelAndView.setViewName("manager1");
+            System.out.println("分配任务非空校验失败");
+            return modelAndView;
+        }
+
+        String mgr = (String) session.getAttribute("user");
+
+        if(mgrManager.assignTask(mgr,task_vo.getTitle(),task_vo.getContent(),task_vo.getDeadline(),task_vo.getInternList())){
+            modelAndView.setViewName("manager1.jsp");
+        }
+        return modelAndView;
+    }
+
+    /*
+    method6:处理批阅任务 url = ${context}/manager/judge
+     */
+    @ResponseBody
+    @RequestMapping(method = RequestMethod.POST,value = "/judge")
+    Response judge(HttpSession session, HttpServletRequest request,
+                    @RequestParam("job_id") int job_id,
+                    @RequestParam("grade") int grade,
+                    @RequestParam("finished") boolean finished){
+        System.out.println("jufge() called!");
+        Response response = new Response();
+
+        if(mgrManager.judgeJob(job_id,grade,finished)){
+            response.setResponse("succeed");
+            return response;
+        }
+        response.setResponse("failed");
         return response;
     }
 }
