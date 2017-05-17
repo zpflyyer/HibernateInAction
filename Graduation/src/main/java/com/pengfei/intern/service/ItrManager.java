@@ -133,4 +133,6 @@ public interface ItrManager
 	 */
 	boolean finishJob(int job_id,boolean finished);
 
+	boolean askLeave(String from,String to,String itr,int type,String reason);
+
 }

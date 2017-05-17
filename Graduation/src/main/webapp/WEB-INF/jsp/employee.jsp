@@ -40,6 +40,7 @@
                     <li role="presentation"><a href="#employee" aria-controls="employee" role="tab" data-toggle="tab">打卡</a></li>
                     <li role="presentation"><a href="#mySal" aria-controls="mySal" role="tab" data-toggle="tab">我的发薪记录</a></li>
                     <li role="presentation"><a href="#manager" aria-controls="manager" role="tab" data-toggle="tab">我的出勤统计</a></li>
+                    <li role="presentation"><a href="#job" aria-controls="job" role="tab" data-toggle="tab">我的任务</a></li>
                 </ul>
 
                 <!-- Tab panes -->
@@ -125,6 +126,43 @@
                         <c:if test="${empty salist}">
                             <div class="clearfix" style="margin-bottom: 70px;"></div>
                             <button class="btn btn-block" id="no" style="padding: 10px;"><span class="glyphicon glyphicon-alert"><a> 尚无发薪记录</a></span></button>
+                        </c:if>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="job">
+                        <c:if test="${not empty jobList}">
+                            <table class="table table-bordered table-striped" id="job_tb" contenteditable="false" >
+                                <thead id="job_tb_head" >
+                                     <tr>
+                                        <th>任务</th>
+                                        <th>内容</th>
+                                        <th>分派日期</th>
+                                        <th>进度</th>
+                                        <th>得分</th>
+                                        <th>截止日期</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="job_tb_body">
+                                    <c:forEach var="job" items="${jobList}" varStatus="status">
+                                        <tr >
+                                            <td>${job.task_title}</td>
+                                            <td>${job.task_content}</td>
+                                            <td>${job.assign_date}</td>
+                                            <c:if test="${job.finished}">
+                                                <td>已经完成</td>
+                                            </c:if>
+                                            <c:if test="${!job.finished}">
+                                                <td>进行中</td>
+                                            </c:if>
+                                            <td>${job.grade}</td>
+                                            <td>${job.deadline}</td>
+                                        </tr>
+                                   </c:forEach>
+                                </tbody>
+                            </table>
+                        </c:if>
+                        <c:if test="${empty jobList}">
+                            <div class="clearfix" style="margin-bottom: 70px;"></div>
+                            <button class="btn btn-block" id="no" style="padding: 10px;"><span class="glyphicon glyphicon-alert"><a> 尚无新的任务</a></span></button>
                         </c:if>
                     </div>
                     <div role="tabpanel" class="tab-pane" id="employee">
@@ -287,6 +325,8 @@
         $("#unAttend_tb_body").css("text-align","center");
         $("#sals_tb_head tr:only-child").find("th").css("text-align","center");
         $("#sals_tb_body").css("text-align","center");
+        $("#job_tb_head tr:only-child").find("th").css("text-align","center");
+        $("#job_tb_body").css("text-align","center");
         $("#come_punch").on("click"
         	,function(){
         		var postData_come = {

@@ -137,7 +137,7 @@
                             </thead>
                             <tbody id="depSal_tb_body">
                                 <c:forEach var="sal" items="${depSalist}" varStatus="status">
-                                    <tr id="${sal.empName}">
+                                    <tr>
                                         <td>${sal.empName}</td>
                                         <td>${sal.amount}</td>
                                     </tr>

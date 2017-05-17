@@ -1,10 +1,12 @@
 package com.pengfei.intern.service.impl;
 
+import com.pengfei.intern.Helper.Helper;
 import com.pengfei.intern.dao.*;
 import com.pengfei.intern.domain.*;
 import com.pengfei.intern.service.ItrManager;
 import com.pengfei.intern.vo.*;
 import lombok.Setter;
+import lombok.SneakyThrows;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -73,24 +75,26 @@ public class ItrManagerImpl
 			System.currentTimeMillis()).toString();
 		for (Intern e : emps)
 		{
-
-				// 获取旷工对应的出勤类型
-				AttendType atype = typeDao.get(AttendType.class, 6);
-				Attend a = new Attend();
-				a.setDutyDay(dutyDay);
-				a.setType(atype);
-				// 如果当前时间是是早上，对应于上班打卡
-				if (Calendar.getInstance()
-						.get(Calendar.HOUR_OF_DAY) < AM_LIMIT) {
-					// 上班打卡
-					a.setCome(true);
-				} else {
-					// 下班打卡
-					a.setCome(false);
-				}
-				a.setEmployee(e);
-				attendDao.save(a);
-
+			//如果已经有了出勤记录（请假，就不再为其自动插入出勤记录）
+			if (!attendDao.findByEmpAndDutyDay(e,dutyDay).isEmpty()){
+				continue;
+			}
+			// 获取旷工对应的出勤类型
+			AttendType atype = typeDao.get(AttendType.class, 6);
+			Attend a = new Attend();
+			a.setDutyDay(dutyDay);
+			a.setType(atype);
+			// 如果当前时间是是早上，对应于上班打卡
+			if (Calendar.getInstance()
+					.get(Calendar.HOUR_OF_DAY) < AM_LIMIT) {
+				// 上班打卡
+				a.setCome(true);
+			} else {
+				// 下班打卡
+				a.setCome(false);
+			}
+			a.setEmployee(e);
+			attendDao.save(a);
 		}
 	}
 
@@ -374,6 +378,32 @@ public class ItrManagerImpl
 		job.setFinished(finished);
 		jobDao.update(job);
 		return true;
+	}
+
+	@Override
+	@SneakyThrows
+	public boolean askLeave(String from, String to, String itr, int type, String reason) {
+		List<String> leaveList = Helper.getBetweenDates(from,to);
+		Intern intern = empDao.findByName(itr);
+		AttendType leaveType = typeDao.get(AttendType.class,type);
+		for (String date:
+			 leaveList) {
+			Attend come_att = new Attend();
+			come_att.setDutyDay(date);
+			come_att.setCome(true);
+			come_att.setEmployee(intern);
+			come_att.setType(leaveType);
+
+			Attend leave_att = new Attend();
+			leave_att.setDutyDay(date);
+			leave_att.setCome(false);
+			leave_att.setEmployee(intern);
+			leave_att.setType(leaveType);
+
+			attendDao.save(come_att);
+			attendDao.save(leave_att);
+		}
+		return false;
 	}
 
 
