@@ -138,14 +138,15 @@ public class ManagerController {
         System.out.println("assign() called!");
         ModelAndView modelAndView = new ModelAndView();
         String username = (String) session.getAttribute("user");
+
+        modelAndView.addObject("employeeList",mgrManager.getEmpsByMgr(username));
+        modelAndView.addObject("depSalist",mgrManager.getSalaryByMgr(username));
+        modelAndView.addObject("appList",mgrManager.getAppsByMgr(username));
+        modelAndView.addObject("taskList",mgrManager.getTasksByMgr(username));
+        modelAndView.addObject("username",username);
+        modelAndView.setViewName("manager1");
         //校分配任务输入
         if (bindingResult.hasFieldErrors()){
-            modelAndView.addObject("employeeList",mgrManager.getEmpsByMgr(username));
-            modelAndView.addObject("depSalist",mgrManager.getSalaryByMgr(username));
-            modelAndView.addObject("appList",mgrManager.getAppsByMgr(username));
-            modelAndView.addObject("taskList",mgrManager.getTasksByMgr(username));
-            modelAndView.addObject("username",username);
-            modelAndView.setViewName("manager1");
             System.out.println("分配任务非空校验失败");
             return modelAndView;
         }
@@ -153,7 +154,7 @@ public class ManagerController {
         String mgr = (String) session.getAttribute("user");
 
         if(mgrManager.assignTask(mgr,task_vo.getTitle(),task_vo.getContent(),task_vo.getDeadline(),task_vo.getInternList())){
-            modelAndView.setViewName("manager1.jsp");
+            modelAndView.setViewName("manager1");
         }
         return modelAndView;
     }

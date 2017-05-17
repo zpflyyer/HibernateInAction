@@ -57,8 +57,8 @@ public class Intern
 
 	// 员工对应的任务
 	@JsonBackReference
-	@OneToOne(targetEntity=Job.class, mappedBy="intern")
-	private Job job;
+	@OneToMany(targetEntity=Job.class, mappedBy="intern")
+	private Set<Job> jobSet = new HashSet<>();
 
 	// 根据name、pass来重写hashCode()方法
 	@Override

@@ -6,6 +6,7 @@ com\pengfei\intern\vo\TaskBean.class
 com\pengfei\intern\vo\JobBean.class
 com\pengfei\intern\domain\AttendType.class
 com\pengfei\intern\controller\ManagerController.class
+com\pengfei\intern\Helper\Helper.class
 com\pengfei\intern\dao\CheckBackDao.class
 com\pengfei\intern\dao\ManagerDao.class
 com\pengfei\intern\domain\Manager.class

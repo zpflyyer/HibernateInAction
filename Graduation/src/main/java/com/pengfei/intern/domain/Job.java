@@ -34,7 +34,7 @@ public class Job {
     @JoinColumn(name = "task_id",nullable = false)
     private Task task;
 
-    @OneToOne(targetEntity = Intern.class)
+    @ManyToOne(targetEntity = Intern.class)
     @JoinColumn(name = "intern_id",nullable = false)
     private Intern intern;
 
