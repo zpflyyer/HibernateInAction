@@ -25,7 +25,8 @@ public class JobBean {
 
     private String intern;
 
-    public JobBean(int job_id,int grade,boolean finished,String intern){
+    public JobBean(String task_title,int job_id,int grade,boolean finished,String intern){
+        this.task_title = task_title;
         this.job_id = job_id;
         this.grade = grade;
         this.finished = finished;

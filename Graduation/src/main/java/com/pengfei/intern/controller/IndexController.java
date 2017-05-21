@@ -87,9 +87,6 @@ public class IndexController {
             session.setAttribute("user",manager.getName());
             session.setAttribute("user_level","manager");
             modelAndView.addObject("employeeList",mgrManager.getEmpsByMgr(username));
-            modelAndView.addObject("depSalist",mgrManager.getSalaryByMgr(username));
-            modelAndView.addObject("appList",mgrManager.getAppsByMgr(username));
-            modelAndView.addObject("taskList",mgrManager.getTasksByMgr(username));
             modelAndView.addObject("task_vo",new Task_vo());
             modelAndView.addObject("username",username);
             modelAndView.addObject("role","æ≠¿Ì");

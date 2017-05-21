@@ -3,7 +3,7 @@
     <!-- Basic Page Needs -->
     <meta charset="utf-8"/>
 
-    <title>Working Flow System</title>
+    <title>Intern Management System</title>
     <meta name="author" content="pengfei.zhao">
     <link rel="shortcut icon" href="${context}/images/favicon.ico" type="image/x-icon">
     <link rel="icon" href="${context}/images/favicon.ico" type="image/x-icon">

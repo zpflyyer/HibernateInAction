@@ -4,8 +4,7 @@ import com.pengfei.intern.domain.Intern;
 import com.pengfei.intern.domain.Response;
 import com.pengfei.intern.service.MgrManager;
 import com.pengfei.intern.validator.Task_vo_Validator;
-import com.pengfei.intern.vo.ItrBean;
-import com.pengfei.intern.vo.TaskBean;
+import com.pengfei.intern.vo.*;
 import com.pengfei.intern.vo.form_vo.Task_vo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -171,7 +170,7 @@ public class ManagerController {
                     @RequestParam("job_id") int job_id,
                     @RequestParam("grade") int grade,
                     @RequestParam("finished") boolean finished){
-        System.out.println("jufge() called!");
+        System.out.println("judge() called!");
         Response response = new Response();
 
         if(mgrManager.judgeJob(job_id,grade,finished)){
@@ -193,5 +192,27 @@ public class ManagerController {
         return mgrManager.getEmpsByMgr(manager);
     }
 
+    @ResponseBody
+    @RequestMapping(method = RequestMethod.POST,value = "/getSalByMgr")
+    List<SalaryBean> getSalByMgr(HttpSession session, HttpServletRequest request){
+        System.out.println("getSalByMgr() called!");
+        String manager = (String)session.getAttribute("user");
+        return mgrManager.getSalaryByMgr(manager);
+    }
 
+    @ResponseBody
+    @RequestMapping(method = RequestMethod.POST,value = "/getAppByMgr")
+    List<AppBean> getAppByMgr(HttpSession session, HttpServletRequest request){
+        System.out.println("getAppByMgr() called!");
+        String manager = (String)session.getAttribute("user");
+        return mgrManager.getAppsByMgr(manager);
+    }
+
+    @ResponseBody
+    @RequestMapping(method = RequestMethod.POST,value = "/getTaskByMgr")
+    List<JobBean> getTaskByMgr(HttpSession session, HttpServletRequest request){
+        System.out.println("getTaskByMgr() called!");
+        String manager = (String)session.getAttribute("user");
+        return mgrManager.getTasksByMgr(manager);
+    }
 }

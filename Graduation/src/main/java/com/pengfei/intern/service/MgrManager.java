@@ -5,10 +5,7 @@ import com.pengfei.intern.domain.Job;
 import com.pengfei.intern.domain.Manager;
 import com.pengfei.intern.domain.Task;
 import com.pengfei.intern.exception.HrException;
-import com.pengfei.intern.vo.AppBean;
-import com.pengfei.intern.vo.ItrBean;
-import com.pengfei.intern.vo.SalaryBean;
-import com.pengfei.intern.vo.TaskBean;
+import com.pengfei.intern.vo.*;
 
 import java.util.Date;
 import java.util.List;
@@ -74,7 +71,7 @@ public interface MgrManager
 	 * 获得该经理布置的所有任务
 	 * @param mgr 经理
 	 */
-	List<TaskBean> getTasksByMgr(String mgr);
+	List<JobBean> getTasksByMgr(String mgr);
 
 	/**
 	 * 审批job

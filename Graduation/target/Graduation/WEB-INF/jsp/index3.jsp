@@ -49,11 +49,11 @@
                     <sf:form class="m-t" modelAttribute = "user" role="form" action="${context}/login" method="post">
                         <font color="red"><sf:errors path="empName"/></font>
                         <div class="form-group">
-                            <sf:input path="empName" type="text" class="form-control" placeholder="用户名" required="">
+                            <sf:input path="empName" type="text" class="form-control" placeholder="用户名" required=""/>
                         </div>
                         <font color="red"><sf:errors path="empPass"/></font>
                         <div class="form-group">
-                            <sf:input path="empPass" type="password" class="form-control" placeholder="密码" required="">
+                            <sf:input path="empPass" type="password" class="form-control" placeholder="密码" required=""/>
                         </div>
                         <button type="submit" class="btn btn-primary block full-width m-b">登录</button>
 

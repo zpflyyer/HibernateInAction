@@ -14,7 +14,7 @@ import java.util.Set;
  * Created by zhaopen on 5/13/2017.
  */
 public class AuthInterceptor implements HandlerInterceptor {
-    private static String[] IGNORE_URI = {"/login","/"};
+    private static String[] IGNORE_URI = {"/login","/","/logout"};
     @Override
     public boolean preHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o) throws Exception {
         String servletPath = httpServletRequest.getServletPath();

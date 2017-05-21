@@ -110,8 +110,31 @@ public class MgrManagerImpl
 			Payment p = payDao.findByMonthAndEmp(payMonth , e);
 			if (p != null)
 			{
-				result.add(new SalaryBean(e.getName()
-					, p.getAmount()));
+				SalaryBean salaryBean = new SalaryBean(e.getId(),e.getReal_name(), p.getAmount(), e.getSalary());
+				List<Attend> attendList = attendDao.findByEmpAndMonth(e,payMonth);
+				for (Attend attend:
+					 attendList) {
+					if (attend.getType().getId() == 2){
+						salaryBean.setIssue_pay(salaryBean.getIssue_pay()+attend.getType().getAmerce());
+					}
+					else if (attend.getType().getId() == 3){
+						salaryBean.setSick_pay(salaryBean.getSick_pay()+attend.getType().getAmerce());
+					}
+					else if (attend.getType().getId() == 4){
+						salaryBean.setLate_pay(salaryBean.getLate_pay()+attend.getType().getAmerce());
+					}
+					else if (attend.getType().getId() == 5){
+						salaryBean.setEarly_pay(salaryBean.getEarly_pay()+attend.getType().getAmerce());
+					}
+					else if (attend.getType().getId() == 6){
+						salaryBean.setUnAttend_pay(salaryBean.getUnAttend_pay()+attend.getType().getAmerce());
+					}
+					else if (attend.getType().getId() == 7){
+						salaryBean.setWork_pay(salaryBean.getWork_pay()+attend.getType().getAmerce());
+					}
+					else {}
+				}
+				result.add(salaryBean);
 			}
 		}
 		return result;
@@ -145,8 +168,8 @@ public class MgrManagerImpl
 			for (Attend a : attendDao.findByEmpAll(e)) {
 				attendBeans.add(new AttendBean(a.getId(),a.getDutyDay(),a.getType().getName(),a.getPunchTime()));
 			}
-			result.add(new ItrBean(e.getName(),
-					e.getPass(), e.getSalary(),e.getTel(),e.getEmail(),e.getBoard(),attendBeans));
+			result.add(new ItrBean(e.getId(),e.getName(),
+					e.getPass(), e.getSalary(),e.getTel(),e.getEmail(),e.getBoard(),e.getReal_name(),e.getId_num(),attendBeans));
 
 		}
 		return result;
@@ -186,7 +209,7 @@ public class MgrManagerImpl
 					{
 						Attend attend = app.getAttend();
 						result.add(new AppBean(app.getId() ,
-							e.getName(), attend.getDutyDay(),attend.getType().getName(),
+							e.getReal_name(), e.getId(),attend.getDutyDay(),attend.getType().getName(),
 							app.getType().getName(), app.getReason()));
 					}
 				}
@@ -259,25 +282,20 @@ public class MgrManagerImpl
 	}
 
 	@Override
-	public List<TaskBean> getTasksByMgr(String manager) {
+	public List<JobBean> getTasksByMgr(String manager) {
 		Manager mgr = mgrDao.findByName(manager);
 		List<Task> taskList = taskDao.getAllByManager(mgr);
-		List<TaskBean> taskBeanList = new ArrayList<>();
+		List<JobBean> jobBeanList = new ArrayList<>();
 		for (Task task :
 				taskList) {
-			TaskBean taskBean = new TaskBean(task.getTitle());
-
 			List<Job> jobList = jobDao.getAllByTask(task);
-			List<JobBean> jobBeanList = new ArrayList<>();
 			for (Job job:
 				 jobList) {
-				JobBean jobBean = new JobBean(job.getId(),job.getGrade(),job.isFinished(),job.getIntern().getName());
+				JobBean jobBean = new JobBean(task.getTitle(),job.getId(),job.getGrade(),job.isFinished(),job.getIntern().getReal_name());
 				jobBeanList.add(jobBean);
 			}
-			taskBean.setJobBeanList(jobBeanList);
-			taskBeanList.add(taskBean);
 		}
-		return taskBeanList;
+		return jobBeanList;
 	}
 
 	@Override

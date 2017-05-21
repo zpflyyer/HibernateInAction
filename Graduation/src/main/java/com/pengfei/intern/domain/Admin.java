@@ -30,21 +30,27 @@ public class Admin implements Serializable{
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     // 标识属性
     private Integer id;
-    // 管理员姓名
+    // 管理员登录名
     @Column(name="emp_name", nullable=false, length=50 , unique=true)
     private String name;
+    // 管理员姓名
+    @Column(name="emp_real_name", nullable=false, length=50 , unique=true)
+    private String real_name;
     // 管理员密码
     @Column(name="emp_pass", nullable=false, length=50)
     private String pass;
-    // 管理员姓名
+
     @Column(name="emp_mail", length=50)
     private String email;
-    // 管理员密码
+
     @Column(name="emp_board", length=50)
     private Date board;
-    // 管理员密码
+
     @Column(name="emp_tel", length=50)
     private String tel;
+
+    @Column(name="emp_id_num", length=50)
+    private String id_num;
 
     // 根据name、pass来重写hashCode()方法
     @Override

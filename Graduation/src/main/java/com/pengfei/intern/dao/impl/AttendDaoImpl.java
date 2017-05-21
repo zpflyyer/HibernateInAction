@@ -20,10 +20,16 @@ public class AttendDaoImpl extends BaseDaoImpl<Attend>
 	 * @param month 月份，月份是形如"2012-02"格式的字符串
 	 * @return 该员工、指定月份的全部出勤记录
 	 */
+//	public List<Attend> findByEmpAndMonth(Intern emp , String month)
+//	{
+//		return find("from Attend as a where a.employee=?0 " +
+//			"and substring(a.dutyDay , 0 , 7)=?1" , emp , month);
+//	}
+
 	public List<Attend> findByEmpAndMonth(Intern emp , String month)
 	{
 		return find("from Attend as a where a.employee=?0 " +
-			"and substring(a.dutyDay , 0 , 7)=?1" , emp , month);
+				"and a.dutyDay like ?1" , emp , month+"%");
 	}
 
 	/**

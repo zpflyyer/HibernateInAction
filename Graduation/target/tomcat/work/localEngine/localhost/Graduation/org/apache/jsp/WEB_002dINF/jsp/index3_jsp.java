@@ -85,7 +85,7 @@ public final class index3_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    <!-- Basic Page Needs -->\n");
       out.write("    <meta charset=\"utf-8\"/>\n");
       out.write("\n");
-      out.write("    <title>Working Flow System</title>\n");
+      out.write("    <title>Intern Management System</title>\n");
       out.write("    <meta name=\"author\" content=\"pengfei.zhao\">\n");
       out.write("    <link rel=\"shortcut icon\" href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${context}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));

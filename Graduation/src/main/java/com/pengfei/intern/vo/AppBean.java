@@ -17,6 +17,7 @@ public class AppBean implements Serializable
 
 	private int id;
 	private String emp;
+	private int emp_id;
 	private String date;
 	private String unAttend;
 	private String toAttend;
@@ -24,10 +25,11 @@ public class AppBean implements Serializable
 	private boolean handled;
 	private CheckBackBean checkBackBean;
 
-	public AppBean(int id,String emp,String date
+	public AppBean(int id,String emp,int emp_id,String date
 			,String unAttend,String toAttend,String reason){
 		this.id = id;
 		this.emp = emp;
+		this.emp_id = emp_id;
 		this.date = date;
 		this.unAttend = unAttend;
 		this.toAttend = toAttend;
