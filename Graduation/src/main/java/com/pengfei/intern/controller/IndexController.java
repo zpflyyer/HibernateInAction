@@ -5,6 +5,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.pengfei.intern.domain.Intern;
 import com.pengfei.intern.domain.Manager;
 import com.pengfei.intern.domain.Response;
+import com.pengfei.intern.service.AdmManager;
 import com.pengfei.intern.service.ItrManager;
 import com.pengfei.intern.service.MgrManager;
 import com.pengfei.intern.validator.Task_vo_Validator;
@@ -27,6 +28,7 @@ import javax.servlet.http.HttpSession;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import static com.pengfei.intern.service.ItrManager.LOGIN_ADM;
 import static com.pengfei.intern.service.ItrManager.LOGIN_EMP;
 import static com.pengfei.intern.service.ItrManager.LOGIN_MGR;
 
@@ -41,6 +43,8 @@ public class IndexController {
     private ItrManager itrManager;
     @Autowired
     private MgrManager mgrManager;
+    @Autowired
+    private AdmManager admManager;
 
     @InitBinder("user")
     public void initUserBinder(DataBinder dataBinder){
@@ -51,15 +55,12 @@ public class IndexController {
     String getHome(Model model){
         System.out.println("getHome() called!");
         model.addAttribute("user",new ItrBean());
-        return "index2";
+        return "index3";
     }
 
     @RequestMapping(value = "/updpwd" , method = RequestMethod.POST)
     Response updPass(HttpSession session, HttpServletRequest request){
         Response response = new Response();
-
-
-
         return response;
     }
 
@@ -72,7 +73,7 @@ public class IndexController {
         ModelAndView modelAndView = new ModelAndView();
         //校验登录输入
         if (bindingResult.hasFieldErrors()){
-            modelAndView.setViewName("index2");
+            modelAndView.setViewName("index3");
             System.out.println("登录非空校验失败");
             return modelAndView;
         }
@@ -91,7 +92,8 @@ public class IndexController {
             modelAndView.addObject("taskList",mgrManager.getTasksByMgr(username));
             modelAndView.addObject("task_vo",new Task_vo());
             modelAndView.addObject("username",username);
-            modelAndView.setViewName("manager1");
+            modelAndView.addObject("role","经理");
+            modelAndView.setViewName("manager2");
         }
         else if(result == LOGIN_EMP){
             session.setAttribute("user",manager.getName());
@@ -107,11 +109,21 @@ public class IndexController {
             modelAndView.addObject("salist", itrManager.empSalary(username));
             modelAndView.addObject("jobList",itrManager.getJobByIntern(username));
             modelAndView.addObject("username",username);
+            modelAndView.addObject("role","intern");
             modelAndView.setViewName("employee");
+        }
+        else if(result == LOGIN_ADM){
+            session.setAttribute("user",manager.getName());
+            session.setAttribute("user_level","admin");
+            modelAndView.addObject("employeeList",admManager.getAllItr());
+            modelAndView.addObject("mgrList",admManager.getAllMgr());
+            modelAndView.addObject("username",username);
+            modelAndView.addObject("role","admin");
+            modelAndView.setViewName("admin");
         }
         else {
             modelAndView.addObject("message","用户名/密码不匹配");
-            modelAndView.setViewName("index2");
+            modelAndView.setViewName("index3");
             modelAndView.addObject("user",new ItrBean());
         }
         return modelAndView;

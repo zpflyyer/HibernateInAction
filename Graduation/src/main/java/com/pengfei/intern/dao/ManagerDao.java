@@ -11,4 +11,8 @@ public interface ManagerDao extends BaseDao<Manager>
 
 
 	Manager findByName(String name);
+
+	Manager findByDept(String dept);
+
+	boolean deleteByName(String name);
 }

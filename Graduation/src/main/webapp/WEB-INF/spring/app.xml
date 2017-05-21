@@ -91,6 +91,7 @@
                 <value>com.pengfei.intern.domain.Payment</value>
                 <value>com.pengfei.intern.domain.Task</value>
                 <value>com.pengfei.intern.domain.Job</value>
+                <value>com.pengfei.intern.domain.Admin</value>
             </list>
         </property>
 

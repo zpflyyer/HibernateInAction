@@ -87,14 +87,17 @@ public class ManagerController {
      */
     @ResponseBody
     @RequestMapping(method = RequestMethod.POST,value = "/updEmpl")
-    Response updEmpl(HttpSession session, HttpServletRequest request){
+    Response updEmpl(HttpSession session, HttpServletRequest request,
+                     @RequestParam("empName") String empName,
+                     @RequestParam("empPass") String empPass,
+                     @RequestParam("amount") double amount,
+                     @RequestParam("email") String email,
+                     @RequestParam("tel") String tel
+                     ){
         System.out.println("updEmpl() called!");
-        String name = request.getParameter("emp_name");
-        String pass = request.getParameter("emp_pass");
-        Double salary = Double.valueOf(request.getParameter("emp_salary"));
-        System.out.println(name+":"+pass+":"+salary);
+        System.out.println(empName+":"+empPass+":"+amount);
         Response response = new Response();
-        if (mgrManager.updEmp(name,pass,salary)!=null){
+        if (mgrManager.updEmp(empName,empPass,amount,email,tel)!=null){
             response.setResponse("updated");
             return response;
         }
@@ -144,7 +147,7 @@ public class ManagerController {
         modelAndView.addObject("appList",mgrManager.getAppsByMgr(username));
         modelAndView.addObject("taskList",mgrManager.getTasksByMgr(username));
         modelAndView.addObject("username",username);
-        modelAndView.setViewName("manager1");
+        modelAndView.setViewName("manager2");
         //校分配任务输入
         if (bindingResult.hasFieldErrors()){
             System.out.println("分配任务非空校验失败");
@@ -154,7 +157,7 @@ public class ManagerController {
         String mgr = (String) session.getAttribute("user");
 
         if(mgrManager.assignTask(mgr,task_vo.getTitle(),task_vo.getContent(),task_vo.getDeadline(),task_vo.getInternList())){
-            modelAndView.setViewName("manager1");
+            modelAndView.setViewName("manager2");
         }
         return modelAndView;
     }
@@ -178,4 +181,17 @@ public class ManagerController {
         response.setResponse("failed");
         return response;
     }
+
+    /*
+    method7:
+     */
+    @ResponseBody
+    @RequestMapping(method = RequestMethod.POST,value = "/getEmpByMgr")
+    List<ItrBean> getEmpByMgr(HttpSession session, HttpServletRequest request){
+        System.out.println("getEmpByMgr() called!");
+        String manager = (String)session.getAttribute("user");
+        return mgrManager.getEmpsByMgr(manager);
+    }
+
+
 }

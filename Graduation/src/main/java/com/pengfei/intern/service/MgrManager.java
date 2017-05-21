@@ -33,7 +33,7 @@ public interface MgrManager
 	/**
 	 * 更新员工
 	 */
-	Intern updEmp(String name, String pass, Double salary)
+	Intern updEmp(String name,String pass, Double salary,String email,String tel)
 			throws HrException;
 	/**
 	 * 根据经理返回所有的部门上个月工资

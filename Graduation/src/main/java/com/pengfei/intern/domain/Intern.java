@@ -12,29 +12,13 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name="intern_tb")
 //@Cache(usage=CacheConcurrencyStrategy.READ_WRITE)
-@DiscriminatorColumn(name="emp_type"
-	, discriminatorType=DiscriminatorType.INTEGER)
 @DiscriminatorValue(value="1")
-public class Intern
+public class Intern extends Admin
 	implements Serializable
 {
-	private static final long serialVersionUID = 48L;
-
-	@JsonBackReference
-	@Id @Column(name="emp_id")
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	// 标识属性
-	private Integer id;
-	// 员工姓名
-	@Column(name="emp_name", nullable=false, length=50 , unique=true)
-	private String name;
-	// 员工密码
-	@Column(name="emp_pass", nullable=false, length=50)
-	private String pass;
 	// 员工工资
-	@Column(name="emp_salary", nullable=false)
+	@Column(name="emp_salary")
 	private double salary;
 	// 反馈前端Ajax请求
 	@Transient
@@ -60,39 +44,4 @@ public class Intern
 	@OneToMany(targetEntity=Job.class, mappedBy="intern")
 	private Set<Job> jobSet = new HashSet<>();
 
-	// 根据name、pass来重写hashCode()方法
-	@Override
-	public int hashCode()
-	{
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + ((name == null) ? 0 : name.hashCode());
-		result = prime * result + ((pass == null) ? 0 : pass.hashCode());
-		return result;
-	}
-	// 根据name、pass来重写equals()方法，只要name、pass相同的员工即认为相等。
-	@Override
-	public boolean equals(Object obj)
-	{
-		if (this == obj) return true;
-		if (obj == null) return false;
-		if (getClass() != obj.getClass()) return false;
-		Intern other = (Intern) obj;
-		if (name == null)
-		{
-			if (other.name != null) return false;
-		}
-		else if (!name.equals(other.name)) return false;
-		if (pass == null)
-		{
-			if (other.pass != null) return false;
-		}
-		else if (!pass.equals(other.pass)) return false;
-		return true;
-	}
-
-	@Override
-	public String toString(){
-		return "name:" + name + "pass:" + pass + "salary:" + salary;
-	}
 }

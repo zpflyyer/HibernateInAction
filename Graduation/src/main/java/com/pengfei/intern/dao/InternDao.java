@@ -12,5 +12,5 @@ public interface InternDao extends BaseDao<Intern>
 
 	Intern findByName(String name);
 
-	void deleteByName(String name);
+	boolean deleteByName(String name);
 }

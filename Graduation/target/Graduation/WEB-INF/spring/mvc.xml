@@ -16,6 +16,7 @@
     <mvc:resources mapping="/images/**" location="WEB-INF/images/" cache-period="31556926"/>
     <mvc:resources mapping="/js/**" location="WEB-INF/js/" cache-period="31556926"/>
     <mvc:resources mapping="/fonts/**" location="WEB-INF/fonts/" cache-period="31556926"/>
+    <mvc:resources mapping="/img/**" location="WEB-INF/img/" cache-period="31556926"/>
 
     <bean id="contentNegotiationManager" class="org.springframework.web.accept.ContentNegotiationManagerFactoryBean">
         <!-- Turn off working out content type based on URL file extension, should fall back to looking at the Accept headers -->

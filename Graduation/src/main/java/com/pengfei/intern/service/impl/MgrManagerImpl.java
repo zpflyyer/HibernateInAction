@@ -67,11 +67,13 @@ public class MgrManagerImpl
 	 * 更新员工
 	 */
 	@Override
-	public Intern updEmp(String name, String pass, Double salary) throws HrException {
+	public Intern updEmp( String name,String pass, Double salary,String email,String tel) throws HrException {
 		Intern employee = empDao.findByName(name);
 		if (employee!=null){
 			employee.setPass(pass);
 			employee.setSalary(salary);
+			employee.setEmail(email);
+			employee.setTel(tel);
 			empDao.update(employee);
 			return employee;
 		}
@@ -144,7 +146,7 @@ public class MgrManagerImpl
 				attendBeans.add(new AttendBean(a.getId(),a.getDutyDay(),a.getType().getName(),a.getPunchTime()));
 			}
 			result.add(new ItrBean(e.getName(),
-					e.getPass(), e.getSalary(),attendBeans));
+					e.getPass(), e.getSalary(),e.getTel(),e.getEmail(),e.getBoard(),attendBeans));
 
 		}
 		return result;

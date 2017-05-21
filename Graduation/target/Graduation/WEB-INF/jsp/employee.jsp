@@ -27,6 +27,18 @@
                 </ul>
               </li>
               <li role="presentation" class="active"><a href="${context}/logout">登出</a></li>
+              <li role="presentation" ><a>
+              当前身份:
+              	<c:if test="${role == 'admin'}">
+              		管理员
+              	</c:if>
+              	<c:if test="${role == 'manager'}">
+              		经理
+              	</c:if>
+              	<c:if test="${role == 'intern'}">
+              		实习生
+              	</c:if>
+              </a></li>
            </ul>
            <div class="clearfix" style="padding-top: 15px;"></div>
         </div>

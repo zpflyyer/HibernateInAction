@@ -129,8 +129,21 @@ public final class manager1_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    <link rel=\"stylesheet\" href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${context}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
       out.write("/css/bootstrapValidator.min.css\" type=\"text/css\" media=\"screen\"/>\n");
-      out.write("\n");
-      out.write("\n");
+      out.write("    <link rel=\"stylesheet\" href=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${context}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+      out.write("/css/bootstrap-table.css\" type=\"text/css\" media=\"screen\"/>\n");
+      out.write("    <link rel=\"stylesheet\" href=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${context}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+      out.write("/css/bootstrap-editable.css\" type=\"text/css\" media=\"screen\"/>\n");
+      out.write("    <link rel=\"stylesheet\" href=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${context}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+      out.write("/css/animate.css\" >\n");
+      out.write("    <link rel=\"stylesheet\" href=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${context}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+      out.write("/css/style.css\">\n");
+      out.write("    <link rel=\"stylesheet\" href=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${context}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+      out.write("/fonts/font-awesome/css/font-awesome.css\">\n");
       out.write("    <!-- js code -->\n");
       out.write("\n");
       out.write("    <script type=\"text/javascript\" src=\"");
@@ -148,156 +161,252 @@ public final class manager1_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    <script type=\"text/javascript\" src=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${context}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
       out.write("/js/bootstrapValidator.min.js\"></script>\n");
+      out.write("    <script type=\"text/javascript\" src=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${context}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+      out.write("/js/metisMenu/jquery.metisMenu.js\"></script>\n");
+      out.write("    <script type=\"text/javascript\" src=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${context}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+      out.write("/js/slimscroll/jquery.slimscroll.min.js\"></script>\n");
+      out.write("    <script type=\"text/javascript\" src=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${context}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+      out.write("/js/jeditable/jquery.jeditable.js\"></script>\n");
+      out.write("    <script type=\"text/javascript\" src=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${context}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+      out.write("/js/pace/pace.min.js\"></script>\n");
+      out.write("    <script type=\"text/javascript\" src=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${context}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+      out.write("/js/inspinia.js\"></script>\n");
+      out.write("    <script type=\"text/javascript\" src=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${context}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+      out.write("/js/bootstrap-editable.js\"></script>\n");
+      out.write("    <script type=\"text/javascript\" src=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${context}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+      out.write("/js/bootstrap-table.min.js\"></script>\n");
+      out.write("    <script type=\"text/javascript\" src=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${context}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+      out.write("/js/bootstrap-table-zh-CN.min.js\"></script>\n");
+      out.write("    <script type=\"text/javascript\" src=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${context}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+      out.write("/js/bootstrap-table-editable.js\"></script>\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("    <style>\n");
+      out.write("    /* Custom Styles */\n");
+      out.write("        ul.nav-tabs{\n");
+      out.write("            width:180px;\n");
+      out.write("            height: auto;\n");
+      out.write("            margin-top: 30px;\n");
+      out.write("            margin-left: 40px;\n");
+      out.write("            border-radius: 4px;\n");
+      out.write("            border: 1px solid #ddd;\n");
+      out.write("            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.067);\n");
+      out.write("        }\n");
+      out.write("        ul.nav-tabs li{\n");
+      out.write("            margin: 0;\n");
+      out.write("            border-top: 1px solid #ddd;\n");
+      out.write("        }\n");
+      out.write("        ul.nav-tabs li:first-child{\n");
+      out.write("            border-top: none;\n");
+      out.write("        }\n");
+      out.write("        ul.nav-tabs li a{\n");
+      out.write("            margin: 0;\n");
+      out.write("            padding: 8px 16px;\n");
+      out.write("            border-radius: 0;\n");
+      out.write("        }\n");
+      out.write("        ul.nav-tabs li.active a, ul.nav-tabs li.active a:hover{\n");
+      out.write("            color: #fff;\n");
+      out.write("            background: #0088cc;\n");
+      out.write("            border: 1px solid #0088cc;\n");
+      out.write("        }\n");
+      out.write("        ul.nav-tabs li:first-child a{\n");
+      out.write("            border-radius: 4px 4px 0 0;\n");
+      out.write("        }\n");
+      out.write("        ul.nav-tabs li:last-child a{\n");
+      out.write("            border-radius: 0 0 4px 4px;\n");
+      out.write("        }\n");
+      out.write("        ul.nav-tabs.affix{\n");
+      out.write("            top: 30px; /* Set the top position of pinned element */\n");
+      out.write("        }\n");
+      out.write("    </style>\n");
+      out.write("\n");
       out.write("</head>");
       out.write("\r\n");
-      out.write("\t\t<div class=\"clearfix\" style=\"margin-top: 40px;\"></div>\r\n");
-      out.write("    <div class=\"container\" style=\"background-color: whitesmoke;\">\r\n");
-      out.write("    \t<div class=\"clearfix\" style=\"margin-top: 20px;\"></div>\r\n");
-      out.write("        <div><h1 style=\"text-align: center;padding-bottom: 100px;\">欢迎使用实习生管理工作流系统</h1></div>\r\n");
-      out.write("\t\t<div ><br><br></div>\r\n");
-      out.write("        <div class=\"col-lg-8 col-lg-offset-2\" style=\"background-color: seashell;\">\r\n");
-      out.write("        \t<div><br></div>\r\n");
-      out.write("            <ul class=\"nav nav-pills\" role=\"tablist\">\r\n");
-      out.write("              <li role=\"presentation\" class=\"dropdown\">\r\n");
-      out.write("                <a id=\"drop4\" href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n");
-      out.write("                     <span class=\"glyphicon glyphicon-user\" style=\"margin-right: 10px;\"></span>");
+      out.write("\t<div class=\"navbar navbar-inverse navbar-fixed-top\" role=\"navigation\">\r\n");
+      out.write("\t\t <div class=\"navbar-header\">\r\n");
+      out.write("\t\t\t 　<!-- .navbar-toggle样式用于toggle收缩的内容，即nav-collapse collapse样式所在元素 -->\r\n");
+      out.write("\t\t\t <button class=\"navbar-toggle\" type=\"button\" data-toggle=\"collapse\" data-target=\".navbar-responsive-collapse\">\r\n");
+      out.write("\t\t\t\t <span class=\"sr-only\">Toggle Navigation</span>\r\n");
+      out.write("\t\t\t\t <span class=\"icon-bar\"></span>\r\n");
+      out.write("\t\t\t\t <span class=\"icon-bar\"></span>\r\n");
+      out.write("\t\t\t\t <span class=\"icon-bar\"></span>\r\n");
+      out.write("\t\t\t </button>\r\n");
+      out.write("\t\t\t <!-- 确保无论是宽屏还是窄屏，navbar-brand都显示 -->\r\n");
+      out.write("\t\t\t <a href=\"##\" class=\"navbar-brand\">实习生管理系统</a>\r\n");
+      out.write("\t\t </div>\r\n");
+      out.write("\t\t <!-- 屏幕宽度小于768px时，div.navbar-responsive-collapse容器里的内容都会隐藏，显示icon-bar图标，当点击icon-bar图标时，再展开。屏幕大于768px时，默认显示。 -->\r\n");
+      out.write("\t\t <div class=\"collapse navbar-collapse navbar-responsive-collapse\">\r\n");
+      out.write("\t\t\t <ul class=\"nav navbar-nav\">\r\n");
+      out.write("\t            <li role=\"presentation\"><a href=\"#all\" aria-controls=\"all\" role=\"tab\" data-toggle=\"tab\">部门实习生管理</a></li>\r\n");
+      out.write("\t            <li role=\"presentation\"><a href=\"#customer\" aria-controls=\"customer\" role=\"tab\" data-toggle=\"tab\">上月实习生发薪记录</a></li>\r\n");
+      out.write("\t            <li role=\"presentation\"><a href=\"#employee\" aria-controls=\"employee\" role=\"tab\" data-toggle=\"tab\">处理申请</a></li>\r\n");
+      out.write("\t<!--                    <li role=\"presentation\"><a href=\"#attends\" aria-controls=\"attends\" role=\"tab\" data-toggle=\"tab\">出勤统计</a></li>\r\n");
+      out.write("\t-->\r\n");
+      out.write("\t            <li role=\"presentation\" class=\"active\"><a href=\"#command\" aria-controls=\"command\" role=\"tab\" data-toggle=\"tab\">分配任务</a></li>\r\n");
+      out.write("\t            <li role=\"presentation\"><a href=\"#tasks\" aria-controls=\"tasks\" role=\"tab\" data-toggle=\"tab\">任务进度</a></li>\r\n");
+      out.write("\t            <li class=\"dropdown\">\r\n");
+      out.write("\t\t\t\t\t <a href=\"##\" data-toggle=\"dropdown\" class=\"dropdown-toggle\">");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${username}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-      out.write("\r\n");
-      out.write("                  <span class=\"caret\"></span>\r\n");
-      out.write("                </a>\r\n");
-      out.write("                <ul id=\"menu1\" class=\"dropdown-menu\" aria-labelledby=\"drop4\">\r\n");
-      out.write("                  <li><a href=\"#\">修改密码</a></li>\r\n");
-      out.write("                  <li role=\"separator\" class=\"divider\"></li>\r\n");
-      out.write("                  <li><a href=\"#\">完善个人信息</a></li>\r\n");
-      out.write("                </ul>\r\n");
-      out.write("              </li>\r\n");
-      out.write("              <li role=\"presentation\" class=\"active\"><a href=\"");
+      out.write("<span class=\"caret\"></span></a>\r\n");
+      out.write("\t\t\t\t\t <ul class=\"dropdown-menu\">\r\n");
+      out.write("\t\t\t\t\t\t <li><a href=\"##\">密码修改</a></li>\r\n");
+      out.write("\t\t\t\t\t\t <li><a href=\"##\">个人信息管理</a></li>\r\n");
+      out.write("\t\t\t\t\t\t <li><a href=\"##\">我的通知</a></li>\r\n");
+      out.write("\t\t\t\t\t\t <li><a href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${context}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
       out.write("/logout\">登出</a></li>\r\n");
-      out.write("           </ul>\r\n");
-      out.write("           <div><br></div>\r\n");
-      out.write("        </div>\r\n");
-      out.write("        <div class=\"clearfix\" style=\"margin-bottom: 50px;\"></div>\r\n");
-      out.write("        <div class=\"row\">\r\n");
-      out.write("            <div class=\"col-lg-8 col-lg-offset-2\">\r\n");
-      out.write("                <div>\r\n");
-      out.write("                <!-- Nav tabs -->\r\n");
-      out.write("                <ul class=\"nav nav-tabs\" role=\"tablist\">\r\n");
-      out.write("                    <li role=\"presentation\"><a href=\"#all\" aria-controls=\"all\" role=\"tab\" data-toggle=\"tab\">部门实习生管理</a></li>\r\n");
-      out.write("                    <li role=\"presentation\"><a href=\"#customer\" aria-controls=\"customer\" role=\"tab\" data-toggle=\"tab\">上月实习生发薪记录</a></li>\r\n");
-      out.write("                    <li role=\"presentation\"><a href=\"#employee\" aria-controls=\"employee\" role=\"tab\" data-toggle=\"tab\">处理申请</a></li>\r\n");
-      out.write("<!--                    <li role=\"presentation\"><a href=\"#attends\" aria-controls=\"attends\" role=\"tab\" data-toggle=\"tab\">出勤统计</a></li>\r\n");
-      out.write("-->\r\n");
-      out.write("                    <li role=\"presentation\" class=\"active\"><a href=\"#command\" aria-controls=\"command\" role=\"tab\" data-toggle=\"tab\">分配任务</a></li>\r\n");
-      out.write("                    <li role=\"presentation\"><a href=\"#tasks\" aria-controls=\"tasks\" role=\"tab\" data-toggle=\"tab\">任务进度</a></li>\r\n");
-      out.write("                </ul>\r\n");
+      out.write("\t\t\t\t\t </ul>\r\n");
+      out.write("\t\t\t    </li>\r\n");
+      out.write("\t\t\t </ul>\r\n");
+      out.write("\t\t </div>\r\n");
+      out.write("\t</div>\r\n");
+      out.write("\t<div class=\"clearfix\" style=\"margin-bottom: 50px;\"></div>\r\n");
       out.write("\r\n");
-      out.write("                <!-- Tab panes -->\r\n");
-      out.write("                <div class=\"tab-content\">\r\n");
-      out.write("                    <div role=\"tabpanel\" class=\"tab-pane\" id=\"tasks\">\r\n");
-      out.write("                        <table class=\"table table-bordered table-striped\" id=\"tasks_tb\" contenteditable=\"false\">\r\n");
-      out.write("                            <thead id=\"tasks_tb_head\" >\r\n");
-      out.write("                                 <tr>\r\n");
-      out.write("                                    <th>任务</th>\r\n");
-      out.write("                                    <th>实习生</th>\r\n");
-      out.write("                                    <th>进度</th>\r\n");
-      out.write("                                    <th>分数</th>\r\n");
-      out.write("                                    <th>操作</th>\r\n");
-      out.write("                                </tr>\r\n");
-      out.write("                            </thead>\r\n");
-      out.write("                            <tbody id=\"tasks_tb_body\">\r\n");
-      out.write("                                ");
+      out.write("    <div class=\"container-fluid\" style=\"background-color: whitesmoke;\">\r\n");
+      out.write("    \t<div class=\"clearfix\" style=\"margin-bottom: 100px;\"></div>\r\n");
+      out.write("        <div class=\"row\">\r\n");
+      out.write("        \t<div class=\"col-md-3\">\r\n");
+      out.write("\t    \t\t<ul class=\"nav nav-tabs nav-stacked affix\" data-spy=\"affix\"\r\n");
+      out.write("\t\t\t\t    data-offset-top=\"70\">\r\n");
+      out.write("\t\t\t\t\t    <li role=\"presentation\" class=\"active\"><a href=\"#all\" aria-controls=\"all\" role=\"tab\" data-toggle=\"tab\">部门实习生管理</a></li>\r\n");
+      out.write("\t\t\t\t\t    <li role=\"presentation\"><a href=\"#customer\" aria-controls=\"customer\" role=\"tab\" data-toggle=\"tab\">上月实习生发薪记录</a></li>\r\n");
+      out.write("\t\t\t\t\t    <li role=\"presentation\"><a href=\"#employee\" aria-controls=\"employee\" role=\"tab\" data-toggle=\"tab\">处理申请</a></li>\r\n");
+      out.write("\t\t\t\t\t    <li role=\"presentation\"><a href=\"#command\" aria-controls=\"command\" role=\"tab\" data-toggle=\"tab\">分配任务</a></li>\r\n");
+      out.write("\t\t\t\t\t    <li role=\"presentation\"><a href=\"#tasks\" aria-controls=\"tasks\" role=\"tab\" data-toggle=\"tab\">任务进度</a></li>\r\n");
+      out.write("\t    \t            <li class=\"dropdown\">\r\n");
+      out.write("\t\t\t\t\t\t\t <a href=\"##\" data-toggle=\"dropdown\" class=\"dropdown-toggle\">");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${username}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+      out.write("<span class=\"caret\"></span></a>\r\n");
+      out.write("\t\t\t\t\t\t\t <ul class=\"dropdown-menu\">\r\n");
+      out.write("\t\t\t\t\t\t\t\t <li><a href=\"##\">密码修改</a></li>\r\n");
+      out.write("\t\t\t\t\t\t\t\t <li><a href=\"##\">个人信息管理</a></li>\r\n");
+      out.write("\t\t\t\t\t\t\t\t <li><a href=\"##\">我的通知</a></li>\r\n");
+      out.write("\t\t\t\t\t\t\t\t <li><a href=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${context}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+      out.write("/logout\">登出</a></li>\r\n");
+      out.write("\t\t\t\t\t\t\t </ul>\r\n");
+      out.write("\t\t\t\t\t    </li>\r\n");
+      out.write("\t\t\t\t</ul>\r\n");
+      out.write("\t\t\t</div>\t\r\n");
+      out.write("\t\t\t<div class=\"col-md-6 col-md-offset-1\">\r\n");
+      out.write("\t            \t\t<div class=\"tab-content\">\r\n");
+      out.write("\t                <div role=\"tabpanel\" class=\"tab-pane\" id=\"tasks\">\r\n");
+      out.write("\t                    <table class=\"table table-bordered table-striped\" id=\"tasks_tb\" contenteditable=\"false\">\r\n");
+      out.write("\t                        <thead id=\"tasks_tb_head\" >\r\n");
+      out.write("\t                             <tr>\r\n");
+      out.write("\t                                <th>任务</th>\r\n");
+      out.write("\t                                <th>实习生</th>\r\n");
+      out.write("\t                                <th>进度</th>\r\n");
+      out.write("\t                                <th>分数</th>\r\n");
+      out.write("\t                                <th>删除/编辑</th>\r\n");
+      out.write("\t                            </tr>\r\n");
+      out.write("\t                        </thead>\r\n");
+      out.write("\t                        <tbody id=\"tasks_tb_body\">\r\n");
+      out.write("\t                            ");
       if (_jspx_meth_c_005fforEach_005f0(_jspx_page_context))
         return;
       out.write("\r\n");
-      out.write("                            </tbody>\r\n");
-      out.write("                        </table>\r\n");
-      out.write("                    </div>\r\n");
-      out.write("                    <div role=\"tabpanel\" class=\"tab-pane\" id=\"all\">\r\n");
-      out.write("                        <table class=\"table table-bordered table-striped\" id=\"employee_tb\" contenteditable=\"false\">\r\n");
-      out.write("                            <thead id=\"employee_tb_head\" >\r\n");
-      out.write("                                 <tr>\r\n");
-      out.write("                                    <th>姓名</th>\r\n");
-      out.write("                                    <th>密码</th>\r\n");
-      out.write("                                    <th>工资</th>\r\n");
-      out.write("                                    <th>删除/编辑</th>\r\n");
-      out.write("                                </tr>\r\n");
-      out.write("                            </thead>\r\n");
-      out.write("                            <tbody id=\"employee_tb_body\">\r\n");
-      out.write("                                ");
+      out.write("\t                        </tbody>\r\n");
+      out.write("\t                    </table>\r\n");
+      out.write("\t                </div>\r\n");
+      out.write("\t                <div role=\"tabpanel\" class=\"tab-pane\" id=\"all\">\r\n");
+      out.write("\t                    <table id=\"table\"></table>\r\n");
+      out.write("\t                    <!-- <table class=\"table table-bordered table-striped\" id=\"employee_tb\" contenteditable=\"false\">\r\n");
+      out.write("\t                        <thead id=\"employee_tb_head\" >\r\n");
+      out.write("\t                             <tr>\r\n");
+      out.write("\t                                <th>姓名</th>\r\n");
+      out.write("\t                                <th>密码</th>\r\n");
+      out.write("\t                                <th>工资</th>\r\n");
+      out.write("\t                                <th>电话</th>\r\n");
+      out.write("\t                                <th>邮箱</th>\r\n");
+      out.write("\t                                <th>入职日期</th>\r\n");
+      out.write("\t                                <th>删除/编辑</th>\r\n");
+      out.write("\t                            </tr>\r\n");
+      out.write("\t                        </thead>\r\n");
+      out.write("\t                        <tbody id=\"employee_tb_body\">\r\n");
+      out.write("\t                            ");
       if (_jspx_meth_c_005fforEach_005f2(_jspx_page_context))
         return;
       out.write("\r\n");
-      out.write("                                <tr id=\"emp_add\">\r\n");
-      out.write("                                    <td></td>\r\n");
-      out.write("                                    <td></td>\r\n");
-      out.write("                                    <td></td>\r\n");
-      out.write("                                    <td>\r\n");
-      out.write("                                        <button type=\"button\" class=\"btn btn-sm btn-default\" >\r\n");
-      out.write("                                          <span class=\"glyphicon glyphicon-plus\"></span>\r\n");
-      out.write("                                        </button>\r\n");
-      out.write("                                        <button type=\"button\" class=\"btn btn-sm btn-info\" >\r\n");
-      out.write("                                          <span class=\"glyphicon glyphicon-refresh\"></span>\r\n");
-      out.write("                                        </button>\r\n");
-      out.write("                                    </td>\r\n");
-      out.write("                                </tr>\r\n");
-      out.write("                            </tbody>\r\n");
-      out.write("                        </table>\r\n");
-      out.write("                    </div>\r\n");
-      out.write("                    <div role=\"tabpanel\" class=\"tab-pane\" id=\"customer\">\r\n");
-      out.write("                        <table class=\"table table-bordered table-striped\" id=\"depSal_tb\" contenteditable=\"false\" >\r\n");
-      out.write("                            <thead id=\"depSal_tb_head\" >\r\n");
-      out.write("                                 <tr>\r\n");
-      out.write("                                    <th>实习生</th>\r\n");
-      out.write("                                    <th>工资</th>\r\n");
-      out.write("                                </tr>\r\n");
-      out.write("                            </thead>\r\n");
-      out.write("                            <tbody id=\"depSal_tb_body\">\r\n");
-      out.write("                                ");
+      out.write("\t                            <tr id=\"emp_add\">\r\n");
+      out.write("\t                                <td></td>\r\n");
+      out.write("\t                                <td></td>\r\n");
+      out.write("\t                                <td></td>\r\n");
+      out.write("\t                                <td>\r\n");
+      out.write("\t                                    <button type=\"button\" class=\"btn btn-sm btn-default\" >\r\n");
+      out.write("\t                                      <span class=\"glyphicon glyphicon-plus\"></span>\r\n");
+      out.write("\t                                    </button>\r\n");
+      out.write("\t                                    <button type=\"button\" class=\"btn btn-sm btn-info\" >\r\n");
+      out.write("\t                                      <span class=\"glyphicon glyphicon-refresh\"></span>\r\n");
+      out.write("\t                                    </button>\r\n");
+      out.write("\t                                </td>\r\n");
+      out.write("\t                            </tr>\r\n");
+      out.write("\t                        </tbody>\r\n");
+      out.write("\t                    </table> -->\r\n");
+      out.write("\t                </div>\r\n");
+      out.write("\t                <div role=\"tabpanel\" class=\"tab-pane\" id=\"customer\">\r\n");
+      out.write("\t                    <table class=\"table table-bordered table-striped\" id=\"depSal_tb\" contenteditable=\"false\" >\r\n");
+      out.write("\t                        <thead id=\"depSal_tb_head\" >\r\n");
+      out.write("\t                             <tr>\r\n");
+      out.write("\t                                <th>实习生</th>\r\n");
+      out.write("\t                                <th>工资</th>\r\n");
+      out.write("\t                            </tr>\r\n");
+      out.write("\t                        </thead>\r\n");
+      out.write("\t                        <tbody id=\"depSal_tb_body\">\r\n");
+      out.write("\t                            ");
       if (_jspx_meth_c_005fforEach_005f3(_jspx_page_context))
         return;
       out.write("\r\n");
-      out.write("                            </tbody>\r\n");
-      out.write("                        </table>\r\n");
-      out.write("                    </div>\r\n");
-      out.write("                    <div role=\"tabpanel\" class=\"tab-pane\" id=\"employee\">\r\n");
-      out.write("                        ");
-      if (_jspx_meth_c_005fif_005f2(_jspx_page_context))
+      out.write("\t                        </tbody>\r\n");
+      out.write("\t                    </table>\r\n");
+      out.write("\t                </div>\r\n");
+      out.write("\t                <div role=\"tabpanel\" class=\"tab-pane\" id=\"employee\">\r\n");
+      out.write("\t                    ");
+      if (_jspx_meth_c_005fif_005f0(_jspx_page_context))
         return;
       out.write("\r\n");
-      out.write("                        ");
-      if (_jspx_meth_c_005fif_005f3(_jspx_page_context))
+      out.write("\t                    ");
+      if (_jspx_meth_c_005fif_005f1(_jspx_page_context))
         return;
       out.write("\r\n");
-      out.write("                    </div>\r\n");
-      out.write("                    <div role=\"tabpanel\" class=\"tab-pane\" id=\"attends\">\r\n");
-      out.write("                        <table class=\"table table-bordered table-striped\" id=\"depSal_tb\" contenteditable=\"false\" >\r\n");
-      out.write("                            <thead id=\"depSal_tb_head\" >\r\n");
-      out.write("                                 <tr>\r\n");
-      out.write("                                    <th>实习生</th>\r\n");
-      out.write("                                    <th>出勤</th>\r\n");
-      out.write("                                </tr>\r\n");
-      out.write("                            </thead>\r\n");
-      out.write("                            <tbody id=\"depSal_tb_body\">\r\n");
-      out.write("                                ");
+      out.write("\t                </div>\r\n");
+      out.write("\t                <div role=\"tabpanel\" class=\"tab-pane\" id=\"attends\">\r\n");
+      out.write("\t                    <table class=\"table table-bordered table-striped\" id=\"depSal_tb\" contenteditable=\"false\" >\r\n");
+      out.write("\t                        <thead id=\"depSal_tb_head\" >\r\n");
+      out.write("\t                             <tr>\r\n");
+      out.write("\t                                <th>实习生</th>\r\n");
+      out.write("\t                                <th>出勤</th>\r\n");
+      out.write("\t                            </tr>\r\n");
+      out.write("\t                        </thead>\r\n");
+      out.write("\t                        <tbody id=\"depSal_tb_body\">\r\n");
+      out.write("\t                            ");
       if (_jspx_meth_c_005fforEach_005f5(_jspx_page_context))
         return;
       out.write("\r\n");
-      out.write("                            </tbody>\r\n");
-      out.write("                        </table>\r\n");
-      out.write("                    </div>\r\n");
-      out.write("                    <div role=\"tabpanel\" class=\"tab-pane active\" id=\"command\">\r\n");
-      out.write("                        <!--\r\n");
-      out.write("                        ");
+      out.write("\t                        </tbody>\r\n");
+      out.write("\t                    </table>\r\n");
+      out.write("\t                </div>\r\n");
+      out.write("\t                <div role=\"tabpanel\" class=\"tab-pane active\" id=\"command\">\r\n");
+      out.write("\t                    <!--\r\n");
+      out.write("\t                    ");
       //  form:form
       org.springframework.web.servlet.tags.form.FormTag _jspx_th_form_005fform_005f0 = (org.springframework.web.servlet.tags.form.FormTag) _005fjspx_005ftagPool_005fform_005fform_0026_005fmodelAttribute_005fmethod_005faction.get(org.springframework.web.servlet.tags.form.FormTag.class);
       _jspx_th_form_005fform_005f0.setPageContext(_jspx_page_context);
       _jspx_th_form_005fform_005f0.setParent(null);
-      // /WEB-INF/jsp/manager1.jsp(200,24) name = modelAttribute type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /WEB-INF/jsp/manager1.jsp(222,21) name = modelAttribute type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_form_005fform_005f0.setModelAttribute("task_vo");
-      // /WEB-INF/jsp/manager1.jsp(200,24) name = action type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /WEB-INF/jsp/manager1.jsp(222,21) name = action type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_form_005fform_005f0.setAction((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${context}/manager/assign", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-      // /WEB-INF/jsp/manager1.jsp(200,24) name = method type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /WEB-INF/jsp/manager1.jsp(222,21) name = method type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_form_005fform_005f0.setMethod("post");
       int[] _jspx_push_body_count_form_005fform_005f0 = new int[] { 0 };
       try {
@@ -305,19 +414,19 @@ public final class manager1_jsp extends org.apache.jasper.runtime.HttpJspBase
         if (_jspx_eval_form_005fform_005f0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
           do {
             out.write("\r\n");
-            out.write("                            <table class=\"table table-bordered table-striped\" >\r\n");
-            out.write("                                <tr>\r\n");
-            out.write("                                    <td>任务标题</td>\r\n");
-            out.write("                                    <td>");
+            out.write("\t                        <table class=\"table table-bordered table-striped\" >\r\n");
+            out.write("\t                            <tr>\r\n");
+            out.write("\t                                <td>任务标题</td>\r\n");
+            out.write("\t                                <td>");
             if (_jspx_meth_form_005finput_005f0(_jspx_th_form_005fform_005f0, _jspx_page_context, _jspx_push_body_count_form_005fform_005f0))
               return;
             out.write("</td>\r\n");
-            out.write("                                    <td><font color=\"red\">");
+            out.write("\t                                <td><font color=\"red\">");
             //  form:errors
             org.springframework.web.servlet.tags.form.ErrorsTag _jspx_th_form_005ferrors_005f0 = (org.springframework.web.servlet.tags.form.ErrorsTag) _005fjspx_005ftagPool_005fform_005ferrors_0026_005fpath_005fnobody.get(org.springframework.web.servlet.tags.form.ErrorsTag.class);
             _jspx_th_form_005ferrors_005f0.setPageContext(_jspx_page_context);
             _jspx_th_form_005ferrors_005f0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_005fform_005f0);
-            // /WEB-INF/jsp/manager1.jsp(205,58) name = path type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+            // /WEB-INF/jsp/manager1.jsp(227,55) name = path type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
             _jspx_th_form_005ferrors_005f0.setPath("title");
             int[] _jspx_push_body_count_form_005ferrors_005f0 = new int[] { 0 };
             try {
@@ -334,19 +443,19 @@ public final class manager1_jsp extends org.apache.jasper.runtime.HttpJspBase
               _005fjspx_005ftagPool_005fform_005ferrors_0026_005fpath_005fnobody.reuse(_jspx_th_form_005ferrors_005f0);
             }
             out.write("</font></td>\r\n");
-            out.write("                                </tr>\r\n");
-            out.write("                                <tr>\r\n");
-            out.write("                                    <td>描述</td>\r\n");
-            out.write("                                    <td>");
+            out.write("\t                            </tr>\r\n");
+            out.write("\t                            <tr>\r\n");
+            out.write("\t                                <td>描述</td>\r\n");
+            out.write("\t                                <td>");
             if (_jspx_meth_form_005ftextarea_005f0(_jspx_th_form_005fform_005f0, _jspx_page_context, _jspx_push_body_count_form_005fform_005f0))
               return;
             out.write("</td>\r\n");
-            out.write("                                    <td><font color=\"red\">");
+            out.write("\t                                <td><font color=\"red\">");
             //  form:errors
             org.springframework.web.servlet.tags.form.ErrorsTag _jspx_th_form_005ferrors_005f1 = (org.springframework.web.servlet.tags.form.ErrorsTag) _005fjspx_005ftagPool_005fform_005ferrors_0026_005fpath_005fnobody.get(org.springframework.web.servlet.tags.form.ErrorsTag.class);
             _jspx_th_form_005ferrors_005f1.setPageContext(_jspx_page_context);
             _jspx_th_form_005ferrors_005f1.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_005fform_005f0);
-            // /WEB-INF/jsp/manager1.jsp(210,58) name = path type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+            // /WEB-INF/jsp/manager1.jsp(232,55) name = path type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
             _jspx_th_form_005ferrors_005f1.setPath("content");
             int[] _jspx_push_body_count_form_005ferrors_005f1 = new int[] { 0 };
             try {
@@ -363,19 +472,19 @@ public final class manager1_jsp extends org.apache.jasper.runtime.HttpJspBase
               _005fjspx_005ftagPool_005fform_005ferrors_0026_005fpath_005fnobody.reuse(_jspx_th_form_005ferrors_005f1);
             }
             out.write("</font></td>\r\n");
-            out.write("                                </tr>\r\n");
-            out.write("                                <tr>\r\n");
-            out.write("                                    <td>截止日期</td>\r\n");
-            out.write("                                    <td>");
+            out.write("\t                            </tr>\r\n");
+            out.write("\t                            <tr>\r\n");
+            out.write("\t                                <td>截止日期</td>\r\n");
+            out.write("\t                                <td>");
             if (_jspx_meth_form_005finput_005f1(_jspx_th_form_005fform_005f0, _jspx_page_context, _jspx_push_body_count_form_005fform_005f0))
               return;
             out.write("</td>\r\n");
-            out.write("                                    <td><font color=\"red\">");
+            out.write("\t                                <td><font color=\"red\">");
             //  form:errors
             org.springframework.web.servlet.tags.form.ErrorsTag _jspx_th_form_005ferrors_005f2 = (org.springframework.web.servlet.tags.form.ErrorsTag) _005fjspx_005ftagPool_005fform_005ferrors_0026_005fpath_005fnobody.get(org.springframework.web.servlet.tags.form.ErrorsTag.class);
             _jspx_th_form_005ferrors_005f2.setPageContext(_jspx_page_context);
             _jspx_th_form_005ferrors_005f2.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_005fform_005f0);
-            // /WEB-INF/jsp/manager1.jsp(215,58) name = path type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+            // /WEB-INF/jsp/manager1.jsp(237,55) name = path type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
             _jspx_th_form_005ferrors_005f2.setPath("deadline");
             int[] _jspx_push_body_count_form_005ferrors_005f2 = new int[] { 0 };
             try {
@@ -392,21 +501,21 @@ public final class manager1_jsp extends org.apache.jasper.runtime.HttpJspBase
               _005fjspx_005ftagPool_005fform_005ferrors_0026_005fpath_005fnobody.reuse(_jspx_th_form_005ferrors_005f2);
             }
             out.write("</font></td>\r\n");
-            out.write("                                </tr>\r\n");
-            out.write("                                 <tr>\r\n");
-            out.write("                                     <td>分配目标</td>\r\n");
-            out.write("                                     <td>\r\n");
-            out.write("                                        ");
+            out.write("\t                            </tr>\r\n");
+            out.write("\t                             <tr>\r\n");
+            out.write("\t                                 <td>分配目标</td>\r\n");
+            out.write("\t                                 <td>\r\n");
+            out.write("\t                                    ");
             if (_jspx_meth_c_005fforEach_005f6(_jspx_th_form_005fform_005f0, _jspx_page_context, _jspx_push_body_count_form_005fform_005f0))
               return;
             out.write("\r\n");
-            out.write("                                     <td>\r\n");
-            out.write("                                     <td><font color=\"red\">");
+            out.write("\t                                 <td>\r\n");
+            out.write("\t                                 <td><font color=\"red\">");
             //  form:errors
             org.springframework.web.servlet.tags.form.ErrorsTag _jspx_th_form_005ferrors_005f3 = (org.springframework.web.servlet.tags.form.ErrorsTag) _005fjspx_005ftagPool_005fform_005ferrors_0026_005fpath_005fnobody.get(org.springframework.web.servlet.tags.form.ErrorsTag.class);
             _jspx_th_form_005ferrors_005f3.setPageContext(_jspx_page_context);
             _jspx_th_form_005ferrors_005f3.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_005fform_005f0);
-            // /WEB-INF/jsp/manager1.jsp(224,59) name = path type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+            // /WEB-INF/jsp/manager1.jsp(246,56) name = path type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
             _jspx_th_form_005ferrors_005f3.setPath("internList");
             int[] _jspx_push_body_count_form_005ferrors_005f3 = new int[] { 0 };
             try {
@@ -423,12 +532,12 @@ public final class manager1_jsp extends org.apache.jasper.runtime.HttpJspBase
               _005fjspx_005ftagPool_005fform_005ferrors_0026_005fpath_005fnobody.reuse(_jspx_th_form_005ferrors_005f3);
             }
             out.write("</font></td>\r\n");
-            out.write("                                 </tr>\r\n");
-            out.write("                                <tr>\r\n");
-            out.write("                                    <td><input type = \"submit\" value = \"提交\"/></td>\r\n");
-            out.write("                                </tr>\r\n");
-            out.write("                            </table>\r\n");
-            out.write("                        ");
+            out.write("\t                             </tr>\r\n");
+            out.write("\t                            <tr>\r\n");
+            out.write("\t                                <td><input type = \"submit\" value = \"提交\"/></td>\r\n");
+            out.write("\t                            </tr>\r\n");
+            out.write("\t                        </table>\r\n");
+            out.write("\t                    ");
             int evalDoAfterBody = _jspx_th_form_005fform_005f0.doAfterBody();
             if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
               break;
@@ -446,21 +555,21 @@ public final class manager1_jsp extends org.apache.jasper.runtime.HttpJspBase
         _005fjspx_005ftagPool_005fform_005fform_0026_005fmodelAttribute_005fmethod_005faction.reuse(_jspx_th_form_005fform_005f0);
       }
       out.write("\r\n");
-      out.write("                        -->\r\n");
-      out.write("                        ");
+      out.write("\t                    -->\r\n");
+      out.write("\t                    ");
       //  form:form
       org.springframework.web.servlet.tags.form.FormTag _jspx_th_form_005fform_005f1 = (org.springframework.web.servlet.tags.form.FormTag) _005fjspx_005ftagPool_005fform_005fform_0026_005fstyle_005fmodelAttribute_005fmethod_005fclass_005faction.get(org.springframework.web.servlet.tags.form.FormTag.class);
       _jspx_th_form_005fform_005f1.setPageContext(_jspx_page_context);
       _jspx_th_form_005fform_005f1.setParent(null);
-      // /WEB-INF/jsp/manager1.jsp(232,24) name = modelAttribute type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /WEB-INF/jsp/manager1.jsp(254,21) name = modelAttribute type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_form_005fform_005f1.setModelAttribute("task_vo");
-      // /WEB-INF/jsp/manager1.jsp(232,24) null
+      // /WEB-INF/jsp/manager1.jsp(254,21) null
       _jspx_th_form_005fform_005f1.setDynamicAttribute(null, "class", new String("form-horizontal"));
-      // /WEB-INF/jsp/manager1.jsp(232,24) name = action type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /WEB-INF/jsp/manager1.jsp(254,21) name = action type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_form_005fform_005f1.setAction((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${context}/manager/assign", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-      // /WEB-INF/jsp/manager1.jsp(232,24) name = method type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /WEB-INF/jsp/manager1.jsp(254,21) name = method type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_form_005fform_005f1.setMethod("post");
-      // /WEB-INF/jsp/manager1.jsp(232,24) null
+      // /WEB-INF/jsp/manager1.jsp(254,21) null
       _jspx_th_form_005fform_005f1.setDynamicAttribute(null, "style", new String("padding: 35px;"));
       int[] _jspx_push_body_count_form_005fform_005f1 = new int[] { 0 };
       try {
@@ -468,12 +577,12 @@ public final class manager1_jsp extends org.apache.jasper.runtime.HttpJspBase
         if (_jspx_eval_form_005fform_005f1 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
           do {
             out.write("\r\n");
-            out.write("                            <font color=\"red\">");
+            out.write("\t                        <font color=\"red\">");
             //  form:errors
             org.springframework.web.servlet.tags.form.ErrorsTag _jspx_th_form_005ferrors_005f4 = (org.springframework.web.servlet.tags.form.ErrorsTag) _005fjspx_005ftagPool_005fform_005ferrors_0026_005fpath_005fnobody.get(org.springframework.web.servlet.tags.form.ErrorsTag.class);
             _jspx_th_form_005ferrors_005f4.setPageContext(_jspx_page_context);
             _jspx_th_form_005ferrors_005f4.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_005fform_005f1);
-            // /WEB-INF/jsp/manager1.jsp(233,46) name = path type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+            // /WEB-INF/jsp/manager1.jsp(255,43) name = path type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
             _jspx_th_form_005ferrors_005f4.setPath("title");
             int[] _jspx_push_body_count_form_005ferrors_005f4 = new int[] { 0 };
             try {
@@ -490,23 +599,23 @@ public final class manager1_jsp extends org.apache.jasper.runtime.HttpJspBase
               _005fjspx_005ftagPool_005fform_005ferrors_0026_005fpath_005fnobody.reuse(_jspx_th_form_005ferrors_005f4);
             }
             out.write("</font>\r\n");
-            out.write("                            <div class=\"form-group\">\r\n");
-            out.write("                                <div class=\"input-group \">\r\n");
-            out.write("                                  <span class=\"input-group-addon\" id=\"title_icon\">\r\n");
-            out.write("                                    <span class=\"glyphicon glyphicon-header\"></span>\r\n");
-            out.write("                                  </span>\r\n");
-            out.write("                                  ");
+            out.write("\t                        <div class=\"form-group\">\r\n");
+            out.write("\t                            <div class=\"input-group \">\r\n");
+            out.write("\t                              <span class=\"input-group-addon\" id=\"title_icon\">\r\n");
+            out.write("\t                                <span class=\"glyphicon glyphicon-header\"></span>\r\n");
+            out.write("\t                              </span>\r\n");
+            out.write("\t                              ");
             if (_jspx_meth_form_005finput_005f2(_jspx_th_form_005fform_005f1, _jspx_page_context, _jspx_push_body_count_form_005fform_005f1))
               return;
             out.write("\r\n");
-            out.write("                                </div>\r\n");
-            out.write("                            </div>\r\n");
-            out.write("                            <font color=\"red\">");
+            out.write("\t                            </div>\r\n");
+            out.write("\t                        </div>\r\n");
+            out.write("\t                        <font color=\"red\">");
             //  form:errors
             org.springframework.web.servlet.tags.form.ErrorsTag _jspx_th_form_005ferrors_005f5 = (org.springframework.web.servlet.tags.form.ErrorsTag) _005fjspx_005ftagPool_005fform_005ferrors_0026_005fpath_005fnobody.get(org.springframework.web.servlet.tags.form.ErrorsTag.class);
             _jspx_th_form_005ferrors_005f5.setPageContext(_jspx_page_context);
             _jspx_th_form_005ferrors_005f5.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_005fform_005f1);
-            // /WEB-INF/jsp/manager1.jsp(242,46) name = path type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+            // /WEB-INF/jsp/manager1.jsp(264,43) name = path type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
             _jspx_th_form_005ferrors_005f5.setPath("content");
             int[] _jspx_push_body_count_form_005ferrors_005f5 = new int[] { 0 };
             try {
@@ -523,23 +632,23 @@ public final class manager1_jsp extends org.apache.jasper.runtime.HttpJspBase
               _005fjspx_005ftagPool_005fform_005ferrors_0026_005fpath_005fnobody.reuse(_jspx_th_form_005ferrors_005f5);
             }
             out.write("</font>\r\n");
-            out.write("                            <div class=\"form-group\">\r\n");
-            out.write("                                <div class=\"input-group \">\r\n");
-            out.write("                                  <span class=\"input-group-addon\" id=\"content_icon\">\r\n");
-            out.write("                                    <span class=\"glyphicon glyphicon-book\"></span>\r\n");
-            out.write("                                  </span>\r\n");
-            out.write("                                  ");
+            out.write("\t                        <div class=\"form-group\">\r\n");
+            out.write("\t                            <div class=\"input-group \">\r\n");
+            out.write("\t                              <span class=\"input-group-addon\" id=\"content_icon\">\r\n");
+            out.write("\t                                <span class=\"glyphicon glyphicon-book\"></span>\r\n");
+            out.write("\t                              </span>\r\n");
+            out.write("\t                              ");
             if (_jspx_meth_form_005ftextarea_005f1(_jspx_th_form_005fform_005f1, _jspx_page_context, _jspx_push_body_count_form_005fform_005f1))
               return;
             out.write("\r\n");
-            out.write("                                </div>\r\n");
-            out.write("                            </div>\r\n");
-            out.write("                            <font color=\"red\">");
+            out.write("\t                            </div>\r\n");
+            out.write("\t                        </div>\r\n");
+            out.write("\t                        <font color=\"red\">");
             //  form:errors
             org.springframework.web.servlet.tags.form.ErrorsTag _jspx_th_form_005ferrors_005f6 = (org.springframework.web.servlet.tags.form.ErrorsTag) _005fjspx_005ftagPool_005fform_005ferrors_0026_005fpath_005fnobody.get(org.springframework.web.servlet.tags.form.ErrorsTag.class);
             _jspx_th_form_005ferrors_005f6.setPageContext(_jspx_page_context);
             _jspx_th_form_005ferrors_005f6.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_005fform_005f1);
-            // /WEB-INF/jsp/manager1.jsp(251,46) name = path type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+            // /WEB-INF/jsp/manager1.jsp(273,43) name = path type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
             _jspx_th_form_005ferrors_005f6.setPath("deadline");
             int[] _jspx_push_body_count_form_005ferrors_005f6 = new int[] { 0 };
             try {
@@ -556,23 +665,23 @@ public final class manager1_jsp extends org.apache.jasper.runtime.HttpJspBase
               _005fjspx_005ftagPool_005fform_005ferrors_0026_005fpath_005fnobody.reuse(_jspx_th_form_005ferrors_005f6);
             }
             out.write("</font>\r\n");
-            out.write("                            <div class=\"form-group\">\r\n");
-            out.write("                                <div class=\"input-group \">\r\n");
-            out.write("                                  <span class=\"input-group-addon\" id=\"deadline_icon\">\r\n");
-            out.write("                                    <span class=\"glyphicon glyphicon-time\"></span>\r\n");
-            out.write("                                  </span>\r\n");
-            out.write("                                  ");
+            out.write("\t                        <div class=\"form-group\">\r\n");
+            out.write("\t                            <div class=\"input-group \">\r\n");
+            out.write("\t                              <span class=\"input-group-addon\" id=\"deadline_icon\">\r\n");
+            out.write("\t                                <span class=\"glyphicon glyphicon-time\"></span>\r\n");
+            out.write("\t                              </span>\r\n");
+            out.write("\t                              ");
             if (_jspx_meth_form_005finput_005f3(_jspx_th_form_005fform_005f1, _jspx_page_context, _jspx_push_body_count_form_005fform_005f1))
               return;
             out.write("\r\n");
-            out.write("                                </div>\r\n");
-            out.write("                            </div>\r\n");
-            out.write("                            <font color=\"red\">");
+            out.write("\t                            </div>\r\n");
+            out.write("\t                        </div>\r\n");
+            out.write("\t                        <font color=\"red\">");
             //  form:errors
             org.springframework.web.servlet.tags.form.ErrorsTag _jspx_th_form_005ferrors_005f7 = (org.springframework.web.servlet.tags.form.ErrorsTag) _005fjspx_005ftagPool_005fform_005ferrors_0026_005fpath_005fnobody.get(org.springframework.web.servlet.tags.form.ErrorsTag.class);
             _jspx_th_form_005ferrors_005f7.setPageContext(_jspx_page_context);
             _jspx_th_form_005ferrors_005f7.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_005fform_005f1);
-            // /WEB-INF/jsp/manager1.jsp(260,46) name = path type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+            // /WEB-INF/jsp/manager1.jsp(282,43) name = path type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
             _jspx_th_form_005ferrors_005f7.setPath("internList");
             int[] _jspx_push_body_count_form_005ferrors_005f7 = new int[] { 0 };
             try {
@@ -589,19 +698,19 @@ public final class manager1_jsp extends org.apache.jasper.runtime.HttpJspBase
               _005fjspx_005ftagPool_005fform_005ferrors_0026_005fpath_005fnobody.reuse(_jspx_th_form_005ferrors_005f7);
             }
             out.write("</font>\r\n");
-            out.write("                            <div class=\"form-group\">\r\n");
-            out.write("                                <div class=\"input-group \">\r\n");
-            out.write("                                <span class=\"input-group-addon\" id=\"deadline_icon\">\r\n");
-            out.write("                                   <span class=\"glyphicon glyphicon-user\" ></span>\r\n");
-            out.write("                                </span>\r\n");
-            out.write("                                  ");
+            out.write("\t                        <div class=\"form-group\">\r\n");
+            out.write("\t                            <div class=\"input-group \">\r\n");
+            out.write("\t                            <span class=\"input-group-addon\" id=\"deadline_icon\">\r\n");
+            out.write("\t                               <span class=\"glyphicon glyphicon-user\" ></span>\r\n");
+            out.write("\t                            </span>\r\n");
+            out.write("\t                              ");
             if (_jspx_meth_c_005fforEach_005f7(_jspx_th_form_005fform_005f1, _jspx_page_context, _jspx_push_body_count_form_005fform_005f1))
               return;
             out.write("\r\n");
-            out.write("                                </div>\r\n");
-            out.write("                            </div>\r\n");
-            out.write("                            <button type=\"submit\"  class=\"btn btn-success btn-block\">提 交</button>\r\n");
-            out.write("                        ");
+            out.write("\t                            </div>\r\n");
+            out.write("\t                        </div>\r\n");
+            out.write("\t                        <button type=\"submit\"  class=\"btn btn-success btn-block\">提 交</button>\r\n");
+            out.write("\t                    ");
             int evalDoAfterBody = _jspx_th_form_005fform_005f1.doAfterBody();
             if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
               break;
@@ -619,13 +728,13 @@ public final class manager1_jsp extends org.apache.jasper.runtime.HttpJspBase
         _005fjspx_005ftagPool_005fform_005fform_0026_005fstyle_005fmodelAttribute_005fmethod_005fclass_005faction.reuse(_jspx_th_form_005fform_005f1);
       }
       out.write("\r\n");
-      out.write("                    </div>\r\n");
-      out.write("                </div>\r\n");
-      out.write("            </div>\r\n");
-      out.write("        </div>\r\n");
-      out.write("        <div class=\"clearfix\" style=\"margin-bottom: 170px;\"></div>\r\n");
-      out.write("        <div id=\"text_area\"></div>\r\n");
-      out.write("    </div>\r\n");
+      out.write("\t                </div>\r\n");
+      out.write("\t            </div>\r\n");
+      out.write("\t    \t\t\t</div>\r\n");
+      out.write("\t\t\r\n");
+      out.write("            <div class=\"clearfix\" style=\"margin-bottom: 170px;\"></div>\r\n");
+      out.write("   \t\t</div>\r\n");
+      out.write("\t </div>\r\n");
       out.write("\r\n");
       out.write("    <!-- Modal -->\r\n");
       out.write("    <div class=\"modal fade\" id=\"myModal_del\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myModalLabel_del\">\r\n");
@@ -657,7 +766,7 @@ public final class manager1_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                 <form>\r\n");
       out.write("                    <div class=\"form-group\">\r\n");
       out.write("                        <label for=\"edit-pass\" class=\"control-label\">密码:</label>\r\n");
-      out.write("                        <input type=\"text\" class=\"form-control\" id=\"edit_pass\">\r\n");
+      out.write("                        <input type=\"password\" class=\"form-control\" id=\"edit_pass\">\r\n");
       out.write("                    </div>\r\n");
       out.write("                    <div class=\"form-group\">\r\n");
       out.write("                        <label for=\"edit-salary\" class=\"control-label\">薪水:</label>\r\n");
@@ -672,7 +781,7 @@ public final class manager1_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            </div>\r\n");
       out.write("          </div>\r\n");
       out.write("    </div>\r\n");
-      out.write("    \r\n");
+      out.write("\r\n");
       out.write("    <div class=\"modal fade\" id=\"myModal_task\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myModalLabel_task\">\r\n");
       out.write("      <div class=\"modal-dialog\" role=\"document\">\r\n");
       out.write("        <div class=\"modal-content\">\r\n");
@@ -688,7 +797,7 @@ public final class manager1_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                </div>\r\n");
       out.write("                <div class=\"form-group\">\r\n");
       out.write("                \t<label for=\"check_finished\" class=\"control-label\">申请类型</label>\r\n");
-      out.write("                    <select class=\"form-control\" name=\"check_finished\" id=\"check_finished\">\r\n");
+      out.write("                    <select class=\"form-control\" name=\"check_finished\" id=\"type_select\">\r\n");
       out.write("\t\t\t\t    \t<option value=true>完成</option>\r\n");
       out.write("\t\t\t\t    \t<option value=false>未完成</option>\r\n");
       out.write("\t\t\t\t\t</select>\r\n");
@@ -732,88 +841,227 @@ public final class manager1_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        </div>\r\n");
       out.write("      </div>\r\n");
       out.write("\t</div>\r\n");
+      out.write("\t");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${empData}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+      out.write("\r\n");
       out.write("    <script type=\"text/javascript\">\r\n");
-      out.write("        $(\"#myModal_del\").on(\"show.bs.modal\",function(e){\r\n");
-      out.write("            var del_name = $(e.relatedTarget).data(\"name\");\r\n");
-      out.write("            $(\"#del_warn span\").get(0).innerHTML=del_name;\r\n");
-      out.write("            $(this).find(\"#del_warn_y\").off(\"click\").on(\"click\",function(){\r\n");
-      out.write("                var postData_del = {\r\n");
-      out.write("                \t\"emp_name\" : del_name\r\n");
-      out.write("                };\r\n");
-      out.write("                $.post(\"");
+      out.write("        $('.container-fluid').height($(window).height());\r\n");
+      out.write("        $(\"#table\").bootstrapTable({\r\n");
+      out.write("            columns: [{\r\n");
+      out.write("                checkbox:true\r\n");
+      out.write("            },\r\n");
+      out.write("            {\r\n");
+      out.write("                field: 'empName',\r\n");
+      out.write("                title: '姓名',\r\n");
+      out.write("                align:'center'\r\n");
+      out.write("            }, {\r\n");
+      out.write("                field: 'empPass',\r\n");
+      out.write("                title: '密码',\r\n");
+      out.write("                align:'center',\r\n");
+      out.write("                editable: {\r\n");
+      out.write("                    type: 'password',\r\n");
+      out.write("                    title: '密码',\r\n");
+      out.write("                    validate: function (v) {\r\n");
+      out.write("                        if (!v) return '密码不能为空';\r\n");
+      out.write("                        if (v.legnth < 8) return '密码长度不得小于8位';\r\n");
+      out.write("                    }\r\n");
+      out.write("                 },\r\n");
+      out.write("            }, {\r\n");
+      out.write("                field: 'amount',\r\n");
+      out.write("                title: '薪水',\r\n");
+      out.write("                align:'center',\r\n");
+      out.write("                  editable: {\r\n");
+      out.write("                        type: 'number',\r\n");
+      out.write("                        title: '薪水',\r\n");
+      out.write("                        validate: function (v) {\r\n");
+      out.write("                            if (!v) return '薪水不能为空';\r\n");
+      out.write("                            if (isNaN(v)) return '薪水必须是数字';\r\n");
+      out.write("                            var age = parseInt(v);\r\n");
+      out.write("                            if (age <= 0) return '薪水必须是正整数';\r\n");
+      out.write("                        }\r\n");
+      out.write("                   },\r\n");
+      out.write("            }, {\r\n");
+      out.write("                 field: 'tel',\r\n");
+      out.write("                 title: '电话',\r\n");
+      out.write("                 align:'center',\r\n");
+      out.write("                   editable: {\r\n");
+      out.write("                         type: 'number',\r\n");
+      out.write("                         title: '电话',\r\n");
+      out.write("                         validate: function (v) {\r\n");
+      out.write("                             if (!v) return '电话不能为空';\r\n");
+      out.write("                         }\r\n");
+      out.write("                    },\r\n");
+      out.write("            }, {\r\n");
+      out.write("                  field: 'email',\r\n");
+      out.write("                  title: '邮箱',\r\n");
+      out.write("                  align:'center',\r\n");
+      out.write("                    editable: {\r\n");
+      out.write("                          type: 'email',\r\n");
+      out.write("                          title: '邮箱',\r\n");
+      out.write("                          validate: function (v) {\r\n");
+      out.write("                              if (!v) return '邮箱不能为空';\r\n");
+      out.write("                          }\r\n");
+      out.write("                     },\r\n");
+      out.write("            }, {\r\n");
+      out.write("                 field: 'board',\r\n");
+      out.write("                 title: '入职日期',\r\n");
+      out.write("                 align:'center'\r\n");
+      out.write("            }],\r\n");
+      out.write("            url: '");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${context}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-      out.write("/manager/delEmpl\",postData_del,\r\n");
-      out.write("                function(data,statusText){\r\n");
-      out.write("                    var response=eval(\"(\" + data + \")\").response;\r\n");
-      out.write("                    if(statusText==\"success\"&&response==\"deleted\"){\r\n");
-      out.write("                    \t$(\"#\"+del_name).remove();\r\n");
-      out.write("                    \talert(\"删除成功\");\r\n");
-      out.write("                     }\r\n");
-      out.write("                     else if(statusText==\"success\"&&response==\"referenced\"){\r\n");
-      out.write("                        alert(\"无法删除\");\r\n");
-      out.write("                     }\r\n");
-      out.write("                     else{\r\n");
-      out.write("                        alert(\"删除员工失败\");\r\n");
-      out.write("                     }\r\n");
-      out.write("                },\r\n");
-      out.write("                \"text\"\r\n");
-      out.write("            );\r\n");
-      out.write("            })\r\n");
-      out.write("        });\r\n");
-      out.write("        $(\"#myModal_edit\").on(\"show.bs.modal\",function(e){\r\n");
-      out.write("            var edit_name = $(e.relatedTarget).data(\"name\");\r\n");
-      out.write("            $(\"#myModalLabel_edit span\").get(0).innerHTML=edit_name;\r\n");
-      out.write("            $(this).find(\"#edit_tip_y\").off(\"click\").on(\"click\",function(){\r\n");
-      out.write("                var postData_edit = {\r\n");
-      out.write("                    \"emp_name\" : edit_name,\r\n");
-      out.write("                    \"emp_pass\" : $(\"#edit_pass\").get(0).value,\r\n");
-      out.write("                    \"emp_salary\" : $(\"#edit_salary\").get(0).value\r\n");
-      out.write("                };\r\n");
-      out.write("                $.post(\"");
+      out.write("/manager/getEmpByMgr',\r\n");
+      out.write("            method: 'post',\r\n");
+      out.write("            search:true,\r\n");
+      out.write("            striped:true,\r\n");
+      out.write("            sortName: \"amount\",\r\n");
+      out.write("            sortOrder:\"desc\",\r\n");
+      out.write("            pageList:'[3,5,10]',\r\n");
+      out.write("            pagination:true,\r\n");
+      out.write("            searchOnEnterKey:true,\r\n");
+      out.write("            showColumns:true,\r\n");
+      out.write("            showToggle:true,\r\n");
+      out.write("            showPaginationSwitch:true,\r\n");
+      out.write("            searchAlign:'left',\r\n");
+      out.write("            paginationHAlign:'right',\r\n");
+      out.write("            paginationPreText:'<',\r\n");
+      out.write("            paginationNextText:'>',\r\n");
+      out.write("            clickToSelect:false,\r\n");
+      out.write("            maintainSelected:false,\r\n");
+      out.write("　　　　　　 onEditableSave: function (field, row, oldValue, $el) {\r\n");
+      out.write("                $.ajax({\r\n");
+      out.write("                    type: \"post\",\r\n");
+      out.write("                    url: '");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${context}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-      out.write("/manager/updEmpl\",postData_edit,\r\n");
-      out.write("                function(data,statusText){\r\n");
-      out.write("                    var response=eval(\"(\" + data + \")\").response;\r\n");
-      out.write("                    if(statusText==\"success\"&&response==\"updated\"){\r\n");
-      out.write("                        $(\"#\"+edit_name).find(\"td\").get(1).innerHTML=postData_edit.emp_pass;\r\n");
-      out.write("                        $(\"#\"+edit_name).find(\"td\").get(2).innerHTML=postData_edit.emp_salary;\r\n");
-      out.write("                     }\r\n");
-      out.write("                     else{\r\n");
-      out.write("                        alert(\"更新员工失败\");\r\n");
-      out.write("                     }\r\n");
-      out.write("                },\r\n");
-      out.write("                \"text\"\r\n");
-      out.write("            );\r\n");
-      out.write("            });\r\n");
+      out.write("/manager/updEmpl',\r\n");
+      out.write("                    data: row,\r\n");
+      out.write("                    success: function (data, status) {\r\n");
+      out.write("                        if (status == \"success\") {\r\n");
+      out.write("                            alert(\"编辑成功\");\r\n");
+      out.write("                        }\r\n");
+      out.write("                    },\r\n");
+      out.write("                    error: function () {\r\n");
+      out.write("                        alert(\"Error\");\r\n");
+      out.write("                    },\r\n");
+      out.write("                    complete: function () {\r\n");
+      out.write("                    }\r\n");
+      out.write("                });\r\n");
+      out.write("            }\r\n");
+      out.write("\r\n");
       out.write("        });\r\n");
-      out.write("        $(\"#myModal_check\").on(\"show.bs.modal\",function(e){\r\n");
-      out.write("            var app_emp = $(e.relatedTarget).data(\"app_emp\");\r\n");
-      out.write("            var app_date = $(e.relatedTarget).data(\"app_date\");\r\n");
-      out.write("            $(\"#myModalLabel_check span\").get(0).innerHTML=app_emp;\r\n");
-      out.write("            $(\"#myModalLabel_check span\").get(1).innerHTML=app_date;\r\n");
-      out.write("            $(this).find(\"#check_y\").off(\"click\").on(\"click\",function(){\r\n");
-      out.write("            var app_id = $(e.relatedTarget).data(\"app_id\");\r\n");
-      out.write("            var result = $(\"#check_result\").val();\r\n");
-      out.write("            var reason = $(\"#check_reason\").val();\r\n");
-      out.write("            var postData_check = {\r\n");
-      out.write("                \"app_id\" : app_id,\r\n");
-      out.write("                \"mgr\" : \"");
-      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${username}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-      out.write("\",\r\n");
-      out.write("                \"result\" : result,\r\n");
-      out.write("                \"reason\" : reason\r\n");
+      out.write("    $(\"#myModal_del\").on(\"show.bs.modal\",function(e){\r\n");
+      out.write("        var del_name = $(e.relatedTarget).data(\"name\");\r\n");
+      out.write("        $(\"#del_warn span\").get(0).innerHTML=del_name;\r\n");
+      out.write("        $(this).find(\"#del_warn_y\").off(\"click\").on(\"click\",function(){\r\n");
+      out.write("            var postData_del = {\r\n");
+      out.write("            \t\"emp_name\" : del_name\r\n");
       out.write("            };\r\n");
-      out.write("            alert(app_id+\":\"+\"");
-      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${username}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-      out.write("\"+\":\"+result+\":\"+reason)\r\n");
       out.write("            $.post(\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${context}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+      out.write("/manager/delEmpl\",postData_del,\r\n");
+      out.write("            function(data,statusText){\r\n");
+      out.write("                var response=eval(\"(\" + data + \")\").response;\r\n");
+      out.write("                if(statusText==\"success\"&&response==\"deleted\"){\r\n");
+      out.write("                \t$(\"#\"+del_name).remove();\r\n");
+      out.write("                \talert(\"删除成功\");\r\n");
+      out.write("                 }\r\n");
+      out.write("                 else if(statusText==\"success\"&&response==\"referenced\"){\r\n");
+      out.write("                    alert(\"无法删除\");\r\n");
+      out.write("                 }\r\n");
+      out.write("                 else{\r\n");
+      out.write("                    alert(\"删除员工失败\");\r\n");
+      out.write("                 }\r\n");
+      out.write("            },\r\n");
+      out.write("            \"text\"\r\n");
+      out.write("        );\r\n");
+      out.write("        })\r\n");
+      out.write("    });\r\n");
+      out.write("    $(\"#myModal_edit\").on(\"show.bs.modal\",function(e){\r\n");
+      out.write("        var edit_name = $(e.relatedTarget).data(\"name\");\r\n");
+      out.write("        $(\"#myModalLabel_edit span\").get(0).innerHTML=edit_name;\r\n");
+      out.write("        $(this).find(\"#edit_tip_y\").off(\"click\").on(\"click\",function(){\r\n");
+      out.write("            var postData_edit = {\r\n");
+      out.write("                \"emp_name\" : edit_name,\r\n");
+      out.write("                \"emp_pass\" : $(\"#edit_pass\").get(0).value,\r\n");
+      out.write("                \"emp_salary\" : $(\"#edit_salary\").get(0).value\r\n");
+      out.write("            };\r\n");
+      out.write("            $.post(\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${context}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+      out.write("/manager/updEmpl\",postData_edit,\r\n");
+      out.write("            function(data,statusText){\r\n");
+      out.write("                var response=eval(\"(\" + data + \")\").response;\r\n");
+      out.write("                if(statusText==\"success\"&&response==\"updated\"){\r\n");
+      out.write("                    $(\"#\"+edit_name).find(\"td\").get(1).innerHTML=postData_edit.emp_pass;\r\n");
+      out.write("                    $(\"#\"+edit_name).find(\"td\").get(2).innerHTML=postData_edit.emp_salary;\r\n");
+      out.write("                 }\r\n");
+      out.write("                 else{\r\n");
+      out.write("                    alert(\"更新员工失败\");\r\n");
+      out.write("                 }\r\n");
+      out.write("            },\r\n");
+      out.write("            \"text\"\r\n");
+      out.write("        );\r\n");
+      out.write("        });\r\n");
+      out.write("    });\r\n");
+      out.write("    $(\"#myModal_check\").on(\"show.bs.modal\",function(e){\r\n");
+      out.write("        var app_emp = $(e.relatedTarget).data(\"app_emp\");\r\n");
+      out.write("        var app_date = $(e.relatedTarget).data(\"app_date\");\r\n");
+      out.write("        $(\"#myModalLabel_check span\").get(0).innerHTML=app_emp;\r\n");
+      out.write("        $(\"#myModalLabel_check span\").get(1).innerHTML=app_date;\r\n");
+      out.write("        $(this).find(\"#check_y\").off(\"click\").on(\"click\",function(){\r\n");
+      out.write("        var app_id = $(e.relatedTarget).data(\"app_id\");\r\n");
+      out.write("        var result = $(\"#check_result\").val();\r\n");
+      out.write("        var reason = $(\"#check_reason\").val();\r\n");
+      out.write("        var postData_check = {\r\n");
+      out.write("            \"app_id\" : app_id,\r\n");
+      out.write("            \"mgr\" : \"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${username}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+      out.write("\",\r\n");
+      out.write("            \"result\" : result,\r\n");
+      out.write("            \"reason\" : reason\r\n");
+      out.write("        };\r\n");
+      out.write("        alert(app_id+\":\"+\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${username}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+      out.write("\"+\":\"+result+\":\"+reason)\r\n");
+      out.write("        $.post(\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${context}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
       out.write("/manager/check\",postData_check,\r\n");
+      out.write("            function(data,statusText){\r\n");
+      out.write("                var response=eval(\"(\" + data + \")\").response;\r\n");
+      out.write("                alert(response);\r\n");
+      out.write("                if(statusText==\"success\"&&response==\"checked\"){\r\n");
+      out.write("                    alert(\"#\"+app_emp);\r\n");
+      out.write("                    $(\"#\"+app_emp+\"_\"+app_date).get(0).innerHTML=\"已处理\";\r\n");
+      out.write("                    $(\"#\"+app_emp+\"_\"+app_date).attr(\"disabled\",true);\r\n");
+      out.write("                 }\r\n");
+      out.write("                 else{\r\n");
+      out.write("                    alert(\"提交失败\");\r\n");
+      out.write("                 }\r\n");
+      out.write("            },\r\n");
+      out.write("            \"text\"\r\n");
+      out.write("        );\r\n");
+      out.write("        });\r\n");
+      out.write("    });\r\n");
+      out.write("    $(\"#myModal_task\").on(\"show.bs.modal\",function(e){\r\n");
+      out.write("        var job_id = $(e.relatedTarget).data(\"job_id\");\r\n");
+      out.write("        var intern = $(e.relatedTarget).data(\"intern\");\r\n");
+      out.write("        $(\"#myModalLabel_task span\").get(0).innerHTML=intern;\r\n");
+      out.write("\r\n");
+      out.write("        $(this).find(\"#task_tip_y\").off(\"click\").on(\"click\"\r\n");
+      out.write("        ,function(){\r\n");
+      out.write("            var finished = $(\"#check_finished\").val();\r\n");
+      out.write("            var grade = $(\"#input_grade\").val();\r\n");
+      out.write("            var postData_task = {\r\n");
+      out.write("                \"job_id\" : job_id,\r\n");
+      out.write("                \"grade\" : grade,\r\n");
+      out.write("                \"finished\" : finished\r\n");
+      out.write("            };\r\n");
+      out.write("            alert(job_id+\":\"+grade+\":\"+finished)\r\n");
+      out.write("            $.post(\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${context}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+      out.write("/manager/judge\",postData_task,\r\n");
       out.write("                function(data,statusText){\r\n");
       out.write("                    var response=eval(\"(\" + data + \")\").response;\r\n");
       out.write("                    alert(response);\r\n");
-      out.write("                    if(statusText==\"success\"&&response==\"checked\"){\r\n");
-      out.write("                        alert(\"#\"+app_emp);\r\n");
+      out.write("                    if(statusText==\"success\"&&response==\"succeed\"){\r\n");
       out.write("                        $(\"#\"+app_emp+\"_\"+app_date).get(0).innerHTML=\"已处理\";\r\n");
       out.write("                        $(\"#\"+app_emp+\"_\"+app_date).attr(\"disabled\",true);\r\n");
       out.write("                     }\r\n");
@@ -823,116 +1071,83 @@ public final class manager1_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                },\r\n");
       out.write("                \"text\"\r\n");
       out.write("            );\r\n");
-      out.write("            });\r\n");
-      out.write("        });\r\n");
-      out.write("        $(\"#myModal_task\").on(\"show.bs.modal\",function(e){\r\n");
-      out.write("            var job_id = $(e.relatedTarget).data(\"job_id\");\r\n");
-      out.write("            var intern = $(e.relatedTarget).data(\"intern\");\r\n");
-      out.write("            $(\"#myModalLabel_task span\").get(0).innerHTML=intern;\r\n");
-      out.write("            \r\n");
-      out.write("            $(this).find(\"#task_tip_y\").off(\"click\").on(\"click\"\r\n");
-      out.write("            ,function(){\r\n");
-      out.write("\t            var finished = $(\"#check_finished\").val();\r\n");
-      out.write("\t            var grade = $(\"#input_grade\").val();\r\n");
-      out.write("\t            var postData_task = {\r\n");
-      out.write("\t                \"job_id\" : job_id,\r\n");
-      out.write("\t                \"grade\" : grade,\r\n");
-      out.write("\t                \"finished\" : finished\r\n");
-      out.write("\t            };\r\n");
-      out.write("\t            alert(job_id+\":\"+grade+\":\"+finished)\r\n");
-      out.write("\t            $.post(\"");
-      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${context}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-      out.write("/manager/judge\",postData_task,\r\n");
-      out.write("\t                function(data,statusText){\r\n");
-      out.write("\t                    var response=eval(\"(\" + data + \")\").response;\r\n");
-      out.write("\t                    alert(response);\r\n");
-      out.write("\t                    if(statusText==\"success\"&&response==\"succeed\"){\r\n");
-      out.write("\t                        $(\"#\"+job_id).get(0).innerHTML=\"已评价\";\r\n");
-      out.write("\t                        $(\"#\"+job_id).attr(\"disabled\",true);\r\n");
-      out.write("\t                     }\r\n");
-      out.write("\t                     else{\r\n");
-      out.write("\t                        alert(\"提交失败\");\r\n");
-      out.write("\t                     }\r\n");
-      out.write("\t                },\r\n");
-      out.write("\t                \"text\"\r\n");
-      out.write("\t            );\r\n");
-      out.write("           });\r\n");
-      out.write("        });        \r\n");
-      out.write("        $(\"#employee_tb_head tr:only-child\").find(\"th\").css(\"text-align\",\"center\");\r\n");
-      out.write("        $(\"#employee_tb_body\").css(\"text-align\",\"center\");\r\n");
-      out.write("        $(\"#depSal_tb_head tr:only-child\").find(\"th\").css(\"text-align\",\"center\");\r\n");
-      out.write("        $(\"#depSal_tb_body\").css(\"text-align\",\"center\");\r\n");
-      out.write("        $(\"#app_tb_head tr:only-child\").find(\"th\").css(\"text-align\",\"center\");\r\n");
-      out.write("        $(\"#app_tb_body\").css(\"text-align\",\"center\");\r\n");
-      out.write("        $(\"#tasks_tb_head tr:only-child\").find(\"th\").css(\"text-align\",\"center\");\r\n");
-      out.write("        $(\"#tasks_tb_body\").css(\"text-align\",\"center\");\r\n");
-      out.write("        $(\"#employee_tb_body tr:last-child\").each(\r\n");
-      out.write("            function(i)\r\n");
-      out.write("            {\r\n");
-      out.write("                $(this).find(\"td:last-child\").each(\r\n");
-      out.write("                    function(i)\r\n");
-      out.write("                    {\r\n");
-      out.write("                        $(this).find(\".btn-default\").on(\"click\"\r\n");
-      out.write("                            ,function(event)\r\n");
-      out.write("                            {\r\n");
-      out.write("                                $(\"#emp_add\").find(\"td:not('#emp_add td:last-child')\").attr(\"contenteditable\",\"true\");\r\n");
-      out.write("                            }\r\n");
-      out.write("                        );\r\n");
-      out.write("                        $(this).find(\".btn-info\").on(\"click\"\r\n");
-      out.write("                            ,function(event)\r\n");
-      out.write("                            {\r\n");
-      out.write("                                $(\"#emp_add\").find(\"td\").attr(\"contenteditable\",\"false\");\r\n");
-      out.write("                                var name=$(\"#emp_add\").find(\"td\").get(0).innerHTML;\r\n");
-      out.write("                                var pass=$(\"#emp_add\").find(\"td\").get(1).innerHTML;\r\n");
-      out.write("                                var salary=$(\"#emp_add\").find(\"td\").get(2).innerHTML;\r\n");
-      out.write("                                var postData_add = {\r\n");
-      out.write("                                    \"emp_name\" : name,\r\n");
-      out.write("                                    \"emp_pass\": pass,\r\n");
-      out.write("                                    \"emp_salary\" : salary\r\n");
-      out.write("                                };\r\n");
-      out.write("                                $.post(\"");
+      out.write("       });\r\n");
+      out.write("    });\r\n");
+      out.write("    $(\"#employee_tb_head tr:only-child\").find(\"th\").css(\"text-align\",\"center\");\r\n");
+      out.write("    $(\"#employee_tb_body\").css(\"text-align\",\"center\");\r\n");
+      out.write("    $(\"#depSal_tb_head tr:only-child\").find(\"th\").css(\"text-align\",\"center\");\r\n");
+      out.write("    $(\"#depSal_tb_body\").css(\"text-align\",\"center\");\r\n");
+      out.write("    $(\"#app_tb_head tr:only-child\").find(\"th\").css(\"text-align\",\"center\");\r\n");
+      out.write("    $(\"#app_tb_body\").css(\"text-align\",\"center\");\r\n");
+      out.write("    $(\"#tasks_tb_head tr:only-child\").find(\"th\").css(\"text-align\",\"center\");\r\n");
+      out.write("    $(\"#tasks_tb_body\").css(\"text-align\",\"center\");\r\n");
+      out.write("    $(\"#employee_tb_body tr:last-child\").each(\r\n");
+      out.write("        function(i)\r\n");
+      out.write("        {\r\n");
+      out.write("            $(this).find(\"td:last-child\").each(\r\n");
+      out.write("                function(i)\r\n");
+      out.write("                {\r\n");
+      out.write("                    $(this).find(\".btn-default\").on(\"click\"\r\n");
+      out.write("                        ,function(event)\r\n");
+      out.write("                        {\r\n");
+      out.write("                            $(\"#emp_add\").find(\"td:not('#emp_add td:last-child')\").attr(\"contenteditable\",\"true\");\r\n");
+      out.write("                        }\r\n");
+      out.write("                    );\r\n");
+      out.write("                    $(this).find(\".btn-info\").on(\"click\"\r\n");
+      out.write("                        ,function(event)\r\n");
+      out.write("                        {\r\n");
+      out.write("                            $(\"#emp_add\").find(\"td\").attr(\"contenteditable\",\"false\");\r\n");
+      out.write("                            var name=$(\"#emp_add\").find(\"td\").get(0).innerHTML;\r\n");
+      out.write("                            var pass=$(\"#emp_add\").find(\"td\").get(1).innerHTML;\r\n");
+      out.write("                            var salary=$(\"#emp_add\").find(\"td\").get(2).innerHTML;\r\n");
+      out.write("                            var postData_add = {\r\n");
+      out.write("                                \"emp_name\" : name,\r\n");
+      out.write("                                \"emp_pass\": pass,\r\n");
+      out.write("                                \"emp_salary\" : salary\r\n");
+      out.write("                            };\r\n");
+      out.write("                            $.post(\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${context}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
       out.write("/manager/addEmpl\",postData_add,\r\n");
-      out.write("                                    function(data,statusText){\r\n");
-      out.write("                                        $(\"#text_area\").innerHTML=statusText;\r\n");
-      out.write("                                        var response=eval(\"(\" + data + \")\").response;\r\n");
-      out.write("                                        if(statusText==\"success\"&&response==\"added\"){\r\n");
-      out.write("                                             var name_add=eval(\"(\" + data + \")\").name;\r\n");
-      out.write("                                             var pass_add=eval(\"(\" + data + \")\").pass;\r\n");
-      out.write("                                             var salary_add=eval(\"(\" + data + \")\").salary;\r\n");
-      out.write("                                             var new_row = $(\"#employee_tb_body\").find(\"tr:first-child\").clone();\r\n");
-      out.write("                                             new_row.find(\"td\").get(0).innerHTML=name_add;\r\n");
-      out.write("                                             new_row.find(\"td\").get(1).innerHTML=pass_add;\r\n");
-      out.write("                                             new_row.find(\"td\").get(2).innerHTML=salary_add;\r\n");
-      out.write("                                             $(new_row).find(\"td:last-child\").each(\r\n");
-      out.write("                                                function(i)\r\n");
-      out.write("                                                {\r\n");
-      out.write("                                                   $(this).find(\".btn-danger\").attr(\"data-name\",name);\r\n");
-      out.write("                                                   $(this).find(\".btn-warning\").attr(\"data-name\",name);\r\n");
-      out.write("                                                   $(this).find(\".btn-danger\").parents(\"tr\").attr(\"id\",name);\r\n");
-      out.write("                                                }\r\n");
-      out.write("                                            );\r\n");
-      out.write("                                             $(\"#employee_tb_body\").find(\"tr:last-child\").before(new_row);\r\n");
-      out.write("                                             $(\"#emp_add\").find(\"td\").get(0).innerHTML=\"\";\r\n");
-      out.write("                                             $(\"#emp_add\").find(\"td\").get(1).innerHTML=\"\";\r\n");
-      out.write("                                             $(\"#emp_add\").find(\"td\").get(2).innerHTML=\"\";\r\n");
-      out.write("                                         }\r\n");
-      out.write("                                         else if(statusText==\"success\"&&response==\"existed\"){\r\n");
-      out.write("                                            alert(\"该员工已经存在\");\r\n");
-      out.write("                                         }\r\n");
-      out.write("                                         else {\r\n");
-      out.write("                                            alert(\"添加员工失败\");\r\n");
-      out.write("                                         }\r\n");
-      out.write("                                    },\r\n");
-      out.write("                                    \"text\"\r\n");
-      out.write("                                );\r\n");
-      out.write("                            }\r\n");
-      out.write("                        );\r\n");
-      out.write("                    }\r\n");
-      out.write("                );\r\n");
-      out.write("            }\r\n");
-      out.write("        );\r\n");
-      out.write("    </script>\r\n");
+      out.write("                                function(data,statusText){\r\n");
+      out.write("                                    $(\"#text_area\").innerHTML=statusText;\r\n");
+      out.write("                                    var response=eval(\"(\" + data + \")\").response;\r\n");
+      out.write("                                    if(statusText==\"success\"&&response==\"added\"){\r\n");
+      out.write("                                         var name_add=eval(\"(\" + data + \")\").name;\r\n");
+      out.write("                                         var pass_add=eval(\"(\" + data + \")\").pass;\r\n");
+      out.write("                                         var salary_add=eval(\"(\" + data + \")\").salary;\r\n");
+      out.write("                                         var new_row = $(\"#employee_tb_body\").find(\"tr:first-child\").clone();\r\n");
+      out.write("                                         new_row.find(\"td\").get(0).innerHTML=name_add;\r\n");
+      out.write("                                         new_row.find(\"td\").get(1).innerHTML=pass_add;\r\n");
+      out.write("                                         new_row.find(\"td\").get(2).innerHTML=salary_add;\r\n");
+      out.write("                                         $(new_row).find(\"td:last-child\").each(\r\n");
+      out.write("                                            function(i)\r\n");
+      out.write("                                            {\r\n");
+      out.write("                                               $(this).find(\".btn-danger\").attr(\"data-name\",name);\r\n");
+      out.write("                                               $(this).find(\".btn-warning\").attr(\"data-name\",name);\r\n");
+      out.write("                                               $(this).find(\".btn-danger\").parents(\"tr\").attr(\"id\",name);\r\n");
+      out.write("                                            }\r\n");
+      out.write("                                        );\r\n");
+      out.write("                                         $(\"#employee_tb_body\").find(\"tr:last-child\").before(new_row);\r\n");
+      out.write("                                         $(\"#emp_add\").find(\"td\").get(0).innerHTML=\"\";\r\n");
+      out.write("                                         $(\"#emp_add\").find(\"td\").get(1).innerHTML=\"\";\r\n");
+      out.write("                                         $(\"#emp_add\").find(\"td\").get(2).innerHTML=\"\";\r\n");
+      out.write("                                     }\r\n");
+      out.write("                                     else if(statusText==\"success\"&&response==\"existed\"){\r\n");
+      out.write("                                        alert(\"该员工已经存在\");\r\n");
+      out.write("                                     }\r\n");
+      out.write("                                     else {\r\n");
+      out.write("                                        alert(\"添加员工失败\");\r\n");
+      out.write("                                     }\r\n");
+      out.write("                                },\r\n");
+      out.write("                                \"text\"\r\n");
+      out.write("                            );\r\n");
+      out.write("                        }\r\n");
+      out.write("                    );\r\n");
+      out.write("                }\r\n");
+      out.write("            );\r\n");
+      out.write("        }\r\n");
+      out.write("    );\r\n");
+      out.write("</script>\r\n");
       out.write("</body>\r\n");
       out.write("</html>");
     } catch (Throwable t) {
@@ -976,11 +1191,11 @@ public final class manager1_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_005fforEach_005f0 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _005fjspx_005ftagPool_005fc_005fforEach_0026_005fvarStatus_005fvar_005fitems.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
     _jspx_th_c_005fforEach_005f0.setPageContext(_jspx_page_context);
     _jspx_th_c_005fforEach_005f0.setParent(null);
-    // /WEB-INF/jsp/manager1.jsp(69,32) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/jsp/manager1.jsp(89,29) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_c_005fforEach_005f0.setVar("task");
-    // /WEB-INF/jsp/manager1.jsp(69,32) name = items type = java.lang.Object reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/jsp/manager1.jsp(89,29) name = items type = java.lang.Object reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_c_005fforEach_005f0.setItems((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${taskList}", java.lang.Object.class, (PageContext)_jspx_page_context, null, false));
-    // /WEB-INF/jsp/manager1.jsp(69,32) name = varStatus type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/jsp/manager1.jsp(89,29) name = varStatus type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_c_005fforEach_005f0.setVarStatus("status");
     int[] _jspx_push_body_count_c_005fforEach_005f0 = new int[] { 0 };
     try {
@@ -988,11 +1203,11 @@ public final class manager1_jsp extends org.apache.jasper.runtime.HttpJspBase
       if (_jspx_eval_c_005fforEach_005f0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
         do {
           out.write("\r\n");
-          out.write("                                    ");
+          out.write("\t                                ");
           if (_jspx_meth_c_005fforEach_005f1(_jspx_th_c_005fforEach_005f0, _jspx_page_context, _jspx_push_body_count_c_005fforEach_005f0))
             return true;
           out.write("\r\n");
-          out.write("                               ");
+          out.write("\t                           ");
           int evalDoAfterBody = _jspx_th_c_005fforEach_005f0.doAfterBody();
           if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
             break;
@@ -1020,11 +1235,11 @@ public final class manager1_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_005fforEach_005f1 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _005fjspx_005ftagPool_005fc_005fforEach_0026_005fvarStatus_005fvar_005fitems.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
     _jspx_th_c_005fforEach_005f1.setPageContext(_jspx_page_context);
     _jspx_th_c_005fforEach_005f1.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_005fforEach_005f0);
-    // /WEB-INF/jsp/manager1.jsp(70,36) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/jsp/manager1.jsp(90,33) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_c_005fforEach_005f1.setVar("job");
-    // /WEB-INF/jsp/manager1.jsp(70,36) name = items type = java.lang.Object reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/jsp/manager1.jsp(90,33) name = items type = java.lang.Object reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_c_005fforEach_005f1.setItems((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${task.jobBeanList}", java.lang.Object.class, (PageContext)_jspx_page_context, null, false));
-    // /WEB-INF/jsp/manager1.jsp(70,36) name = varStatus type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/jsp/manager1.jsp(90,33) name = varStatus type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_c_005fforEach_005f1.setVarStatus("status");
     int[] _jspx_push_body_count_c_005fforEach_005f1 = new int[] { 0 };
     try {
@@ -1032,33 +1247,28 @@ public final class manager1_jsp extends org.apache.jasper.runtime.HttpJspBase
       if (_jspx_eval_c_005fforEach_005f1 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
         do {
           out.write("\r\n");
-          out.write("                                        <tr>\r\n");
-          out.write("                                            <td>");
+          out.write("\t                                    <tr>\r\n");
+          out.write("\t                                        <td>");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${task.title}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
           out.write("</td>\r\n");
-          out.write("                                            <td>");
+          out.write("\t                                        <td>");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${job.intern}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
           out.write("</td>\r\n");
-          out.write("                                            ");
-          if (_jspx_meth_c_005fif_005f0(_jspx_th_c_005fforEach_005f1, _jspx_page_context, _jspx_push_body_count_c_005fforEach_005f1))
-            return true;
-          out.write("\r\n");
-          out.write("                                            ");
-          if (_jspx_meth_c_005fif_005f1(_jspx_th_c_005fforEach_005f1, _jspx_page_context, _jspx_push_body_count_c_005fforEach_005f1))
-            return true;
-          out.write("\r\n");
-          out.write("                                            <td>");
+          out.write("\t                                        <td>");
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${job.finished}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+          out.write("</td>\r\n");
+          out.write("\t                                        <td>");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${job.grade}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
           out.write("</td>\r\n");
-          out.write("                                            <td><button class=\"btn btn-link\"  id=\"");
+          out.write("\t                                        <td><button class=\"btn btn-link\"  id=\"");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${job.job_id}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
           out.write("\" data-toggle=\"modal\" data-job_id=\"");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${job.job_id}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
           out.write("\" data-intern=\"");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${job.intern}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
           out.write("\" data-target=\"#myModal_task\">评价</button></td>\r\n");
-          out.write("                                        </tr>\r\n");
-          out.write("                                    ");
+          out.write("\t                                    </tr>\r\n");
+          out.write("\t                                ");
           int evalDoAfterBody = _jspx_th_c_005fforEach_005f1.doAfterBody();
           if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
             break;
@@ -1078,64 +1288,6 @@ public final class manager1_jsp extends org.apache.jasper.runtime.HttpJspBase
     return false;
   }
 
-  private boolean _jspx_meth_c_005fif_005f0(javax.servlet.jsp.tagext.JspTag _jspx_th_c_005fforEach_005f1, PageContext _jspx_page_context, int[] _jspx_push_body_count_c_005fforEach_005f1)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  c:if
-    org.apache.taglibs.standard.tag.rt.core.IfTag _jspx_th_c_005fif_005f0 = (org.apache.taglibs.standard.tag.rt.core.IfTag) _005fjspx_005ftagPool_005fc_005fif_0026_005ftest.get(org.apache.taglibs.standard.tag.rt.core.IfTag.class);
-    _jspx_th_c_005fif_005f0.setPageContext(_jspx_page_context);
-    _jspx_th_c_005fif_005f0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_005fforEach_005f1);
-    // /WEB-INF/jsp/manager1.jsp(74,44) name = test type = boolean reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-    _jspx_th_c_005fif_005f0.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${job.finished}", java.lang.Boolean.class, (PageContext)_jspx_page_context, null, false)).booleanValue());
-    int _jspx_eval_c_005fif_005f0 = _jspx_th_c_005fif_005f0.doStartTag();
-    if (_jspx_eval_c_005fif_005f0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
-      do {
-        out.write("\r\n");
-        out.write("                                                <td>已完成</td>\r\n");
-        out.write("                                            ");
-        int evalDoAfterBody = _jspx_th_c_005fif_005f0.doAfterBody();
-        if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
-          break;
-      } while (true);
-    }
-    if (_jspx_th_c_005fif_005f0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-      _005fjspx_005ftagPool_005fc_005fif_0026_005ftest.reuse(_jspx_th_c_005fif_005f0);
-      return true;
-    }
-    _005fjspx_005ftagPool_005fc_005fif_0026_005ftest.reuse(_jspx_th_c_005fif_005f0);
-    return false;
-  }
-
-  private boolean _jspx_meth_c_005fif_005f1(javax.servlet.jsp.tagext.JspTag _jspx_th_c_005fforEach_005f1, PageContext _jspx_page_context, int[] _jspx_push_body_count_c_005fforEach_005f1)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  c:if
-    org.apache.taglibs.standard.tag.rt.core.IfTag _jspx_th_c_005fif_005f1 = (org.apache.taglibs.standard.tag.rt.core.IfTag) _005fjspx_005ftagPool_005fc_005fif_0026_005ftest.get(org.apache.taglibs.standard.tag.rt.core.IfTag.class);
-    _jspx_th_c_005fif_005f1.setPageContext(_jspx_page_context);
-    _jspx_th_c_005fif_005f1.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_005fforEach_005f1);
-    // /WEB-INF/jsp/manager1.jsp(77,44) name = test type = boolean reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-    _jspx_th_c_005fif_005f1.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${!job.finished}", java.lang.Boolean.class, (PageContext)_jspx_page_context, null, false)).booleanValue());
-    int _jspx_eval_c_005fif_005f1 = _jspx_th_c_005fif_005f1.doStartTag();
-    if (_jspx_eval_c_005fif_005f1 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
-      do {
-        out.write("\r\n");
-        out.write("                                                <td>尚未完成</td>\r\n");
-        out.write("                                            ");
-        int evalDoAfterBody = _jspx_th_c_005fif_005f1.doAfterBody();
-        if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
-          break;
-      } while (true);
-    }
-    if (_jspx_th_c_005fif_005f1.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-      _005fjspx_005ftagPool_005fc_005fif_0026_005ftest.reuse(_jspx_th_c_005fif_005f1);
-      return true;
-    }
-    _005fjspx_005ftagPool_005fc_005fif_0026_005ftest.reuse(_jspx_th_c_005fif_005f1);
-    return false;
-  }
-
   private boolean _jspx_meth_c_005fforEach_005f2(PageContext _jspx_page_context)
           throws Throwable {
     PageContext pageContext = _jspx_page_context;
@@ -1144,11 +1296,11 @@ public final class manager1_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_005fforEach_005f2 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _005fjspx_005ftagPool_005fc_005fforEach_0026_005fvarStatus_005fvar_005fitems.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
     _jspx_th_c_005fforEach_005f2.setPageContext(_jspx_page_context);
     _jspx_th_c_005fforEach_005f2.setParent(null);
-    // /WEB-INF/jsp/manager1.jsp(99,32) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/jsp/manager1.jsp(118,29) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_c_005fforEach_005f2.setVar("employee");
-    // /WEB-INF/jsp/manager1.jsp(99,32) name = items type = java.lang.Object reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/jsp/manager1.jsp(118,29) name = items type = java.lang.Object reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_c_005fforEach_005f2.setItems((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${employeeList}", java.lang.Object.class, (PageContext)_jspx_page_context, null, false));
-    // /WEB-INF/jsp/manager1.jsp(99,32) name = varStatus type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/jsp/manager1.jsp(118,29) name = varStatus type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_c_005fforEach_005f2.setVarStatus("status");
     int[] _jspx_push_body_count_c_005fforEach_005f2 = new int[] { 0 };
     try {
@@ -1156,32 +1308,41 @@ public final class manager1_jsp extends org.apache.jasper.runtime.HttpJspBase
       if (_jspx_eval_c_005fforEach_005f2 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
         do {
           out.write("\r\n");
-          out.write("                                    <tr id=\"");
+          out.write("\t                                <tr id=\"");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${employee.empName}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
           out.write("\">\r\n");
-          out.write("                                        <td>");
+          out.write("\t                                    <td>");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${employee.empName}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
           out.write("</td>\r\n");
-          out.write("                                        <td>");
+          out.write("\t                                    <td>");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${employee.empPass}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
           out.write("</td>\r\n");
-          out.write("                                        <td>");
+          out.write("\t                                    <td>");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${employee.amount}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
           out.write("</td>\r\n");
-          out.write("                                        <td>\r\n");
-          out.write("                                            <button type=\"button\" class=\"btn btn-sm btn-danger\"  data-toggle=\"modal\" data-name=\"");
+          out.write("\t                                    <td>");
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${employee.tel}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+          out.write("</td>\r\n");
+          out.write("\t                                    <td>");
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${employee.email}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+          out.write("</td>\r\n");
+          out.write("\t                                    <td>");
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${employee.board}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+          out.write("</td>\r\n");
+          out.write("\t                                    <td>\r\n");
+          out.write("\t                                        <button type=\"button\" class=\"btn btn-sm btn-danger\"  data-toggle=\"modal\" data-name=\"");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${employee.empName}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
           out.write("\" data-target=\"#myModal_del\">\r\n");
-          out.write("                                              <span class=\"glyphicon glyphicon-remove\"></span>\r\n");
-          out.write("                                            </button>\r\n");
-          out.write("                                            <button type=\"button\" class=\"btn btn-sm btn-warning\" data-toggle=\"modal\" data-name=\"");
+          out.write("\t                                          <span class=\"glyphicon glyphicon-remove\"></span>\r\n");
+          out.write("\t                                        </button>\r\n");
+          out.write("\t                                        <button type=\"button\" class=\"btn btn-sm btn-warning\" data-toggle=\"modal\" data-name=\"");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${employee.empName}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
           out.write("\" data-target=\"#myModal_edit\">\r\n");
-          out.write("                                              <span class=\"glyphicon glyphicon-edit\"></span>\r\n");
-          out.write("                                            </button>\r\n");
-          out.write("                                        </td>\r\n");
-          out.write("                                    </tr>\r\n");
-          out.write("                               ");
+          out.write("\t                                          <span class=\"glyphicon glyphicon-edit\"></span>\r\n");
+          out.write("\t                                        </button>\r\n");
+          out.write("\t                                    </td>\r\n");
+          out.write("\t                                </tr>\r\n");
+          out.write("\t                           ");
           int evalDoAfterBody = _jspx_th_c_005fforEach_005f2.doAfterBody();
           if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
             break;
@@ -1209,11 +1370,11 @@ public final class manager1_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_005fforEach_005f3 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _005fjspx_005ftagPool_005fc_005fforEach_0026_005fvarStatus_005fvar_005fitems.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
     _jspx_th_c_005fforEach_005f3.setPageContext(_jspx_page_context);
     _jspx_th_c_005fforEach_005f3.setParent(null);
-    // /WEB-INF/jsp/manager1.jsp(139,32) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/jsp/manager1.jsp(161,29) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_c_005fforEach_005f3.setVar("sal");
-    // /WEB-INF/jsp/manager1.jsp(139,32) name = items type = java.lang.Object reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/jsp/manager1.jsp(161,29) name = items type = java.lang.Object reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_c_005fforEach_005f3.setItems((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${depSalist}", java.lang.Object.class, (PageContext)_jspx_page_context, null, false));
-    // /WEB-INF/jsp/manager1.jsp(139,32) name = varStatus type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/jsp/manager1.jsp(161,29) name = varStatus type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_c_005fforEach_005f3.setVarStatus("status");
     int[] _jspx_push_body_count_c_005fforEach_005f3 = new int[] { 0 };
     try {
@@ -1221,15 +1382,17 @@ public final class manager1_jsp extends org.apache.jasper.runtime.HttpJspBase
       if (_jspx_eval_c_005fforEach_005f3 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
         do {
           out.write("\r\n");
-          out.write("                                    <tr>\r\n");
-          out.write("                                        <td>");
+          out.write("\t                                <tr id=\"");
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${sal.empName}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+          out.write("\">\r\n");
+          out.write("\t                                    <td>");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${sal.empName}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
           out.write("</td>\r\n");
-          out.write("                                        <td>");
+          out.write("\t                                    <td>");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${sal.amount}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
           out.write("</td>\r\n");
-          out.write("                                    </tr>\r\n");
-          out.write("                               ");
+          out.write("\t                                </tr>\r\n");
+          out.write("\t                           ");
           int evalDoAfterBody = _jspx_th_c_005fforEach_005f3.doAfterBody();
           if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
             break;
@@ -1249,65 +1412,65 @@ public final class manager1_jsp extends org.apache.jasper.runtime.HttpJspBase
     return false;
   }
 
-  private boolean _jspx_meth_c_005fif_005f2(PageContext _jspx_page_context)
+  private boolean _jspx_meth_c_005fif_005f0(PageContext _jspx_page_context)
           throws Throwable {
     PageContext pageContext = _jspx_page_context;
     JspWriter out = _jspx_page_context.getOut();
     //  c:if
-    org.apache.taglibs.standard.tag.rt.core.IfTag _jspx_th_c_005fif_005f2 = (org.apache.taglibs.standard.tag.rt.core.IfTag) _005fjspx_005ftagPool_005fc_005fif_0026_005ftest.get(org.apache.taglibs.standard.tag.rt.core.IfTag.class);
-    _jspx_th_c_005fif_005f2.setPageContext(_jspx_page_context);
-    _jspx_th_c_005fif_005f2.setParent(null);
-    // /WEB-INF/jsp/manager1.jsp(149,24) name = test type = boolean reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-    _jspx_th_c_005fif_005f2.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${not empty appList}", java.lang.Boolean.class, (PageContext)_jspx_page_context, null, false)).booleanValue());
-    int _jspx_eval_c_005fif_005f2 = _jspx_th_c_005fif_005f2.doStartTag();
-    if (_jspx_eval_c_005fif_005f2 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+    org.apache.taglibs.standard.tag.rt.core.IfTag _jspx_th_c_005fif_005f0 = (org.apache.taglibs.standard.tag.rt.core.IfTag) _005fjspx_005ftagPool_005fc_005fif_0026_005ftest.get(org.apache.taglibs.standard.tag.rt.core.IfTag.class);
+    _jspx_th_c_005fif_005f0.setPageContext(_jspx_page_context);
+    _jspx_th_c_005fif_005f0.setParent(null);
+    // /WEB-INF/jsp/manager1.jsp(171,21) name = test type = boolean reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    _jspx_th_c_005fif_005f0.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${not empty appList}", java.lang.Boolean.class, (PageContext)_jspx_page_context, null, false)).booleanValue());
+    int _jspx_eval_c_005fif_005f0 = _jspx_th_c_005fif_005f0.doStartTag();
+    if (_jspx_eval_c_005fif_005f0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
       do {
         out.write("\r\n");
-        out.write("                            <table class=\"table table-bordered table-striped\" id=\"app_tb\" contenteditable=\"false\">\r\n");
-        out.write("                                <thead id=\"app_tb_head\" >\r\n");
-        out.write("                                     <tr>\r\n");
-        out.write("                                        <th>实习生</th>\r\n");
-        out.write("                                        <th>考勤日期</th>\r\n");
-        out.write("                                        <th>考勤类型</th>\r\n");
-        out.write("                                        <th>申请类型</th>\r\n");
-        out.write("                                        <th>申请理由</th>\r\n");
-        out.write("                                        <th>处理</th>\r\n");
-        out.write("                                    </tr>\r\n");
-        out.write("                                </thead>\r\n");
-        out.write("                                <tbody id=\"app_tb_body\">\r\n");
-        out.write("                                    ");
-        if (_jspx_meth_c_005fforEach_005f4(_jspx_th_c_005fif_005f2, _jspx_page_context))
+        out.write("\t                        <table class=\"table table-bordered table-striped\" id=\"app_tb\" contenteditable=\"false\">\r\n");
+        out.write("\t                            <thead id=\"app_tb_head\" >\r\n");
+        out.write("\t                                 <tr>\r\n");
+        out.write("\t                                    <th>实习生</th>\r\n");
+        out.write("\t                                    <th>考勤日期</th>\r\n");
+        out.write("\t                                    <th>考勤类型</th>\r\n");
+        out.write("\t                                    <th>申请类型</th>\r\n");
+        out.write("\t                                    <th>申请理由</th>\r\n");
+        out.write("\t                                    <th>处理</th>\r\n");
+        out.write("\t                                </tr>\r\n");
+        out.write("\t                            </thead>\r\n");
+        out.write("\t                            <tbody id=\"app_tb_body\">\r\n");
+        out.write("\t                                ");
+        if (_jspx_meth_c_005fforEach_005f4(_jspx_th_c_005fif_005f0, _jspx_page_context))
           return true;
         out.write("\r\n");
-        out.write("                                </tbody>\r\n");
-        out.write("                            </table>\r\n");
-        out.write("                        ");
-        int evalDoAfterBody = _jspx_th_c_005fif_005f2.doAfterBody();
+        out.write("\t                            </tbody>\r\n");
+        out.write("\t                        </table>\r\n");
+        out.write("\t                    ");
+        int evalDoAfterBody = _jspx_th_c_005fif_005f0.doAfterBody();
         if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
           break;
       } while (true);
     }
-    if (_jspx_th_c_005fif_005f2.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-      _005fjspx_005ftagPool_005fc_005fif_0026_005ftest.reuse(_jspx_th_c_005fif_005f2);
+    if (_jspx_th_c_005fif_005f0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _005fjspx_005ftagPool_005fc_005fif_0026_005ftest.reuse(_jspx_th_c_005fif_005f0);
       return true;
     }
-    _005fjspx_005ftagPool_005fc_005fif_0026_005ftest.reuse(_jspx_th_c_005fif_005f2);
+    _005fjspx_005ftagPool_005fc_005fif_0026_005ftest.reuse(_jspx_th_c_005fif_005f0);
     return false;
   }
 
-  private boolean _jspx_meth_c_005fforEach_005f4(javax.servlet.jsp.tagext.JspTag _jspx_th_c_005fif_005f2, PageContext _jspx_page_context)
+  private boolean _jspx_meth_c_005fforEach_005f4(javax.servlet.jsp.tagext.JspTag _jspx_th_c_005fif_005f0, PageContext _jspx_page_context)
           throws Throwable {
     PageContext pageContext = _jspx_page_context;
     JspWriter out = _jspx_page_context.getOut();
     //  c:forEach
     org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_005fforEach_005f4 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _005fjspx_005ftagPool_005fc_005fforEach_0026_005fvarStatus_005fvar_005fitems.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
     _jspx_th_c_005fforEach_005f4.setPageContext(_jspx_page_context);
-    _jspx_th_c_005fforEach_005f4.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_005fif_005f2);
-    // /WEB-INF/jsp/manager1.jsp(162,36) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    _jspx_th_c_005fforEach_005f4.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_005fif_005f0);
+    // /WEB-INF/jsp/manager1.jsp(184,33) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_c_005fforEach_005f4.setVar("app");
-    // /WEB-INF/jsp/manager1.jsp(162,36) name = items type = java.lang.Object reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/jsp/manager1.jsp(184,33) name = items type = java.lang.Object reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_c_005fforEach_005f4.setItems((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${appList}", java.lang.Object.class, (PageContext)_jspx_page_context, null, false));
-    // /WEB-INF/jsp/manager1.jsp(162,36) name = varStatus type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/jsp/manager1.jsp(184,33) name = varStatus type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_c_005fforEach_005f4.setVarStatus("status");
     int[] _jspx_push_body_count_c_005fforEach_005f4 = new int[] { 0 };
     try {
@@ -1315,23 +1478,23 @@ public final class manager1_jsp extends org.apache.jasper.runtime.HttpJspBase
       if (_jspx_eval_c_005fforEach_005f4 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
         do {
           out.write("\r\n");
-          out.write("                                        <tr >\r\n");
-          out.write("                                            <td>");
+          out.write("\t                                    <tr >\r\n");
+          out.write("\t                                        <td>");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${app.emp}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
           out.write("</td>\r\n");
-          out.write("                                            <td>");
+          out.write("\t                                        <td>");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${app.date}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
           out.write("</td>\r\n");
-          out.write("                                            <td>");
+          out.write("\t                                        <td>");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${app.unAttend}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
           out.write("</td>\r\n");
-          out.write("                                            <td>");
+          out.write("\t                                        <td>");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${app.toAttend}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
           out.write("</td>\r\n");
-          out.write("                                            <td>");
+          out.write("\t                                        <td>");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${app.reason}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
           out.write("</td>\r\n");
-          out.write("                                            <td><button class=\"btn btn-link\"  id=\"");
+          out.write("\t                                        <td><button class=\"btn btn-link\"  id=\"");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${app.emp}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
           out.write('_');
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${app.date}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
@@ -1342,8 +1505,8 @@ public final class manager1_jsp extends org.apache.jasper.runtime.HttpJspBase
           out.write("\" data-app_id=\"");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${app.id}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
           out.write("\" data-target=\"#myModal_check\">处理</button></td>\r\n");
-          out.write("                                        </tr>\r\n");
-          out.write("                                   ");
+          out.write("\t                                    </tr>\r\n");
+          out.write("\t                               ");
           int evalDoAfterBody = _jspx_th_c_005fforEach_005f4.doAfterBody();
           if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
             break;
@@ -1363,33 +1526,33 @@ public final class manager1_jsp extends org.apache.jasper.runtime.HttpJspBase
     return false;
   }
 
-  private boolean _jspx_meth_c_005fif_005f3(PageContext _jspx_page_context)
+  private boolean _jspx_meth_c_005fif_005f1(PageContext _jspx_page_context)
           throws Throwable {
     PageContext pageContext = _jspx_page_context;
     JspWriter out = _jspx_page_context.getOut();
     //  c:if
-    org.apache.taglibs.standard.tag.rt.core.IfTag _jspx_th_c_005fif_005f3 = (org.apache.taglibs.standard.tag.rt.core.IfTag) _005fjspx_005ftagPool_005fc_005fif_0026_005ftest.get(org.apache.taglibs.standard.tag.rt.core.IfTag.class);
-    _jspx_th_c_005fif_005f3.setPageContext(_jspx_page_context);
-    _jspx_th_c_005fif_005f3.setParent(null);
-    // /WEB-INF/jsp/manager1.jsp(175,24) name = test type = boolean reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-    _jspx_th_c_005fif_005f3.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${empty appList}", java.lang.Boolean.class, (PageContext)_jspx_page_context, null, false)).booleanValue());
-    int _jspx_eval_c_005fif_005f3 = _jspx_th_c_005fif_005f3.doStartTag();
-    if (_jspx_eval_c_005fif_005f3 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+    org.apache.taglibs.standard.tag.rt.core.IfTag _jspx_th_c_005fif_005f1 = (org.apache.taglibs.standard.tag.rt.core.IfTag) _005fjspx_005ftagPool_005fc_005fif_0026_005ftest.get(org.apache.taglibs.standard.tag.rt.core.IfTag.class);
+    _jspx_th_c_005fif_005f1.setPageContext(_jspx_page_context);
+    _jspx_th_c_005fif_005f1.setParent(null);
+    // /WEB-INF/jsp/manager1.jsp(197,21) name = test type = boolean reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    _jspx_th_c_005fif_005f1.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${empty appList}", java.lang.Boolean.class, (PageContext)_jspx_page_context, null, false)).booleanValue());
+    int _jspx_eval_c_005fif_005f1 = _jspx_th_c_005fif_005f1.doStartTag();
+    if (_jspx_eval_c_005fif_005f1 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
       do {
         out.write("\r\n");
-        out.write("                            <div class=\"clearfix\" style=\"margin-bottom: 70px;\"></div>\r\n");
-        out.write("                            <button class=\"btn btn-block\" id=\"no\" style=\"padding: 10px;\"><span class=\"glyphicon glyphicon-alert\"><a> 尚无申请需要处理</a></span></button>\r\n");
-        out.write("                        ");
-        int evalDoAfterBody = _jspx_th_c_005fif_005f3.doAfterBody();
+        out.write("\t                        <div class=\"clearfix\" style=\"margin-bottom: 70px;\"></div>\r\n");
+        out.write("\t                        <button class=\"btn btn-block\" id=\"no\" style=\"padding: 10px;\"><span class=\"glyphicon glyphicon-alert\"><a> 尚无申请需要处理</a></span></button>\r\n");
+        out.write("\t                    ");
+        int evalDoAfterBody = _jspx_th_c_005fif_005f1.doAfterBody();
         if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
           break;
       } while (true);
     }
-    if (_jspx_th_c_005fif_005f3.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-      _005fjspx_005ftagPool_005fc_005fif_0026_005ftest.reuse(_jspx_th_c_005fif_005f3);
+    if (_jspx_th_c_005fif_005f1.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _005fjspx_005ftagPool_005fc_005fif_0026_005ftest.reuse(_jspx_th_c_005fif_005f1);
       return true;
     }
-    _005fjspx_005ftagPool_005fc_005fif_0026_005ftest.reuse(_jspx_th_c_005fif_005f3);
+    _005fjspx_005ftagPool_005fc_005fif_0026_005ftest.reuse(_jspx_th_c_005fif_005f1);
     return false;
   }
 
@@ -1401,11 +1564,11 @@ public final class manager1_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_005fforEach_005f5 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _005fjspx_005ftagPool_005fc_005fforEach_0026_005fvarStatus_005fvar_005fitems.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
     _jspx_th_c_005fforEach_005f5.setPageContext(_jspx_page_context);
     _jspx_th_c_005fforEach_005f5.setParent(null);
-    // /WEB-INF/jsp/manager1.jsp(189,32) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/jsp/manager1.jsp(211,29) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_c_005fforEach_005f5.setVar("sal");
-    // /WEB-INF/jsp/manager1.jsp(189,32) name = items type = java.lang.Object reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/jsp/manager1.jsp(211,29) name = items type = java.lang.Object reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_c_005fforEach_005f5.setItems((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${depSalist}", java.lang.Object.class, (PageContext)_jspx_page_context, null, false));
-    // /WEB-INF/jsp/manager1.jsp(189,32) name = varStatus type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/jsp/manager1.jsp(211,29) name = varStatus type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_c_005fforEach_005f5.setVarStatus("status");
     int[] _jspx_push_body_count_c_005fforEach_005f5 = new int[] { 0 };
     try {
@@ -1413,17 +1576,17 @@ public final class manager1_jsp extends org.apache.jasper.runtime.HttpJspBase
       if (_jspx_eval_c_005fforEach_005f5 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
         do {
           out.write("\r\n");
-          out.write("                                    <tr id=\"");
+          out.write("\t                                <tr id=\"");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${sal.empName}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
           out.write("\">\r\n");
-          out.write("                                        <td>");
+          out.write("\t                                    <td>");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${sal.empName}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
           out.write("</td>\r\n");
-          out.write("                                        <td>");
+          out.write("\t                                    <td>");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${sal.amount}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
           out.write("</td>\r\n");
-          out.write("                                    </tr>\r\n");
-          out.write("                               ");
+          out.write("\t                                </tr>\r\n");
+          out.write("\t                           ");
           int evalDoAfterBody = _jspx_th_c_005fforEach_005f5.doAfterBody();
           if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
             break;
@@ -1451,7 +1614,7 @@ public final class manager1_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.springframework.web.servlet.tags.form.InputTag _jspx_th_form_005finput_005f0 = (org.springframework.web.servlet.tags.form.InputTag) _005fjspx_005ftagPool_005fform_005finput_0026_005fpath_005fnobody.get(org.springframework.web.servlet.tags.form.InputTag.class);
     _jspx_th_form_005finput_005f0.setPageContext(_jspx_page_context);
     _jspx_th_form_005finput_005f0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_005fform_005f0);
-    // /WEB-INF/jsp/manager1.jsp(204,40) name = path type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/jsp/manager1.jsp(226,37) name = path type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_form_005finput_005f0.setPath("title");
     int[] _jspx_push_body_count_form_005finput_005f0 = new int[] { 0 };
     try {
@@ -1478,7 +1641,7 @@ public final class manager1_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.springframework.web.servlet.tags.form.TextareaTag _jspx_th_form_005ftextarea_005f0 = (org.springframework.web.servlet.tags.form.TextareaTag) _005fjspx_005ftagPool_005fform_005ftextarea_0026_005fpath_005fnobody.get(org.springframework.web.servlet.tags.form.TextareaTag.class);
     _jspx_th_form_005ftextarea_005f0.setPageContext(_jspx_page_context);
     _jspx_th_form_005ftextarea_005f0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_005fform_005f0);
-    // /WEB-INF/jsp/manager1.jsp(209,40) name = path type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/jsp/manager1.jsp(231,37) name = path type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_form_005ftextarea_005f0.setPath("content");
     int[] _jspx_push_body_count_form_005ftextarea_005f0 = new int[] { 0 };
     try {
@@ -1505,7 +1668,7 @@ public final class manager1_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.springframework.web.servlet.tags.form.InputTag _jspx_th_form_005finput_005f1 = (org.springframework.web.servlet.tags.form.InputTag) _005fjspx_005ftagPool_005fform_005finput_0026_005fpath_005fnobody.get(org.springframework.web.servlet.tags.form.InputTag.class);
     _jspx_th_form_005finput_005f1.setPageContext(_jspx_page_context);
     _jspx_th_form_005finput_005f1.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_005fform_005f0);
-    // /WEB-INF/jsp/manager1.jsp(214,40) name = path type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/jsp/manager1.jsp(236,37) name = path type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_form_005finput_005f1.setPath("deadline");
     int[] _jspx_push_body_count_form_005finput_005f1 = new int[] { 0 };
     try {
@@ -1532,11 +1695,11 @@ public final class manager1_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_005fforEach_005f6 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _005fjspx_005ftagPool_005fc_005fforEach_0026_005fvarStatus_005fvar_005fitems.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
     _jspx_th_c_005fforEach_005f6.setPageContext(_jspx_page_context);
     _jspx_th_c_005fforEach_005f6.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_005fform_005f0);
-    // /WEB-INF/jsp/manager1.jsp(220,40) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/jsp/manager1.jsp(242,37) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_c_005fforEach_005f6.setVar("emp");
-    // /WEB-INF/jsp/manager1.jsp(220,40) name = items type = java.lang.Object reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/jsp/manager1.jsp(242,37) name = items type = java.lang.Object reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_c_005fforEach_005f6.setItems((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${employeeList}", java.lang.Object.class, (PageContext)_jspx_page_context, null, false));
-    // /WEB-INF/jsp/manager1.jsp(220,40) name = varStatus type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/jsp/manager1.jsp(242,37) name = varStatus type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_c_005fforEach_005f6.setVarStatus("status");
     int[] _jspx_push_body_count_c_005fforEach_005f6 = new int[] { 0 };
     try {
@@ -1544,13 +1707,13 @@ public final class manager1_jsp extends org.apache.jasper.runtime.HttpJspBase
       if (_jspx_eval_c_005fforEach_005f6 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
         do {
           out.write("\r\n");
-          out.write("                                            ");
+          out.write("\t                                        ");
           if (_jspx_meth_form_005fcheckbox_005f0(_jspx_th_c_005fforEach_005f6, _jspx_page_context, _jspx_push_body_count_c_005fforEach_005f6))
             return true;
           out.write(' ');
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${emp.empName}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
           out.write("\r\n");
-          out.write("                                        ");
+          out.write("\t                                    ");
           int evalDoAfterBody = _jspx_th_c_005fforEach_005f6.doAfterBody();
           if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
             break;
@@ -1578,9 +1741,9 @@ public final class manager1_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.springframework.web.servlet.tags.form.CheckboxTag _jspx_th_form_005fcheckbox_005f0 = (org.springframework.web.servlet.tags.form.CheckboxTag) _005fjspx_005ftagPool_005fform_005fcheckbox_0026_005fvalue_005fpath_005fnobody.get(org.springframework.web.servlet.tags.form.CheckboxTag.class);
     _jspx_th_form_005fcheckbox_005f0.setPageContext(_jspx_page_context);
     _jspx_th_form_005fcheckbox_005f0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_005fforEach_005f6);
-    // /WEB-INF/jsp/manager1.jsp(221,44) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/jsp/manager1.jsp(243,41) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_form_005fcheckbox_005f0.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${emp.empName}", java.lang.Object.class, (PageContext)_jspx_page_context, null, false));
-    // /WEB-INF/jsp/manager1.jsp(221,44) name = path type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/jsp/manager1.jsp(243,41) name = path type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_form_005fcheckbox_005f0.setPath("internList");
     int[] _jspx_push_body_count_form_005fcheckbox_005f0 = new int[] { 0 };
     try {
@@ -1607,15 +1770,15 @@ public final class manager1_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.springframework.web.servlet.tags.form.InputTag _jspx_th_form_005finput_005f2 = (org.springframework.web.servlet.tags.form.InputTag) _005fjspx_005ftagPool_005fform_005finput_0026_005ftype_005fplaceholder_005fpath_005fclass_005faria_002ddescribedby_005fnobody.get(org.springframework.web.servlet.tags.form.InputTag.class);
     _jspx_th_form_005finput_005f2.setPageContext(_jspx_page_context);
     _jspx_th_form_005finput_005f2.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_005fform_005f1);
-    // /WEB-INF/jsp/manager1.jsp(239,34) name = path type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/jsp/manager1.jsp(261,31) name = path type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_form_005finput_005f2.setPath("title");
-    // /WEB-INF/jsp/manager1.jsp(239,34) null
+    // /WEB-INF/jsp/manager1.jsp(261,31) null
     _jspx_th_form_005finput_005f2.setDynamicAttribute(null, "type", new String("text"));
-    // /WEB-INF/jsp/manager1.jsp(239,34) null
+    // /WEB-INF/jsp/manager1.jsp(261,31) null
     _jspx_th_form_005finput_005f2.setDynamicAttribute(null, "class", new String("form-control"));
-    // /WEB-INF/jsp/manager1.jsp(239,34) null
+    // /WEB-INF/jsp/manager1.jsp(261,31) null
     _jspx_th_form_005finput_005f2.setDynamicAttribute(null, "placeholder", new String("题目"));
-    // /WEB-INF/jsp/manager1.jsp(239,34) null
+    // /WEB-INF/jsp/manager1.jsp(261,31) null
     _jspx_th_form_005finput_005f2.setDynamicAttribute(null, "aria-describedby", new String("title_icon"));
     int[] _jspx_push_body_count_form_005finput_005f2 = new int[] { 0 };
     try {
@@ -1642,15 +1805,15 @@ public final class manager1_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.springframework.web.servlet.tags.form.TextareaTag _jspx_th_form_005ftextarea_005f1 = (org.springframework.web.servlet.tags.form.TextareaTag) _005fjspx_005ftagPool_005fform_005ftextarea_0026_005ftype_005fplaceholder_005fpath_005fclass_005faria_002ddescribedby_005fnobody.get(org.springframework.web.servlet.tags.form.TextareaTag.class);
     _jspx_th_form_005ftextarea_005f1.setPageContext(_jspx_page_context);
     _jspx_th_form_005ftextarea_005f1.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_005fform_005f1);
-    // /WEB-INF/jsp/manager1.jsp(248,34) name = path type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/jsp/manager1.jsp(270,31) name = path type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_form_005ftextarea_005f1.setPath("content");
-    // /WEB-INF/jsp/manager1.jsp(248,34) null
+    // /WEB-INF/jsp/manager1.jsp(270,31) null
     _jspx_th_form_005ftextarea_005f1.setDynamicAttribute(null, "type", new String("text"));
-    // /WEB-INF/jsp/manager1.jsp(248,34) null
+    // /WEB-INF/jsp/manager1.jsp(270,31) null
     _jspx_th_form_005ftextarea_005f1.setDynamicAttribute(null, "class", new String("form-control"));
-    // /WEB-INF/jsp/manager1.jsp(248,34) null
+    // /WEB-INF/jsp/manager1.jsp(270,31) null
     _jspx_th_form_005ftextarea_005f1.setDynamicAttribute(null, "placeholder", new String("内容"));
-    // /WEB-INF/jsp/manager1.jsp(248,34) null
+    // /WEB-INF/jsp/manager1.jsp(270,31) null
     _jspx_th_form_005ftextarea_005f1.setDynamicAttribute(null, "aria-describedby", new String("content_icon"));
     int[] _jspx_push_body_count_form_005ftextarea_005f1 = new int[] { 0 };
     try {
@@ -1677,15 +1840,15 @@ public final class manager1_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.springframework.web.servlet.tags.form.InputTag _jspx_th_form_005finput_005f3 = (org.springframework.web.servlet.tags.form.InputTag) _005fjspx_005ftagPool_005fform_005finput_0026_005ftype_005fplaceholder_005fpath_005fclass_005faria_002ddescribedby_005fnobody.get(org.springframework.web.servlet.tags.form.InputTag.class);
     _jspx_th_form_005finput_005f3.setPageContext(_jspx_page_context);
     _jspx_th_form_005finput_005f3.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_005fform_005f1);
-    // /WEB-INF/jsp/manager1.jsp(257,34) name = path type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/jsp/manager1.jsp(279,31) name = path type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_form_005finput_005f3.setPath("deadline");
-    // /WEB-INF/jsp/manager1.jsp(257,34) null
+    // /WEB-INF/jsp/manager1.jsp(279,31) null
     _jspx_th_form_005finput_005f3.setDynamicAttribute(null, "type", new String("text"));
-    // /WEB-INF/jsp/manager1.jsp(257,34) null
+    // /WEB-INF/jsp/manager1.jsp(279,31) null
     _jspx_th_form_005finput_005f3.setDynamicAttribute(null, "class", new String("form-control"));
-    // /WEB-INF/jsp/manager1.jsp(257,34) null
+    // /WEB-INF/jsp/manager1.jsp(279,31) null
     _jspx_th_form_005finput_005f3.setDynamicAttribute(null, "placeholder", new String("截止日期"));
-    // /WEB-INF/jsp/manager1.jsp(257,34) null
+    // /WEB-INF/jsp/manager1.jsp(279,31) null
     _jspx_th_form_005finput_005f3.setDynamicAttribute(null, "aria-describedby", new String("deadline_icon"));
     int[] _jspx_push_body_count_form_005finput_005f3 = new int[] { 0 };
     try {
@@ -1712,11 +1875,11 @@ public final class manager1_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_005fforEach_005f7 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _005fjspx_005ftagPool_005fc_005fforEach_0026_005fvarStatus_005fvar_005fitems.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
     _jspx_th_c_005fforEach_005f7.setPageContext(_jspx_page_context);
     _jspx_th_c_005fforEach_005f7.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_005fform_005f1);
-    // /WEB-INF/jsp/manager1.jsp(266,34) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/jsp/manager1.jsp(288,31) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_c_005fforEach_005f7.setVar("emp");
-    // /WEB-INF/jsp/manager1.jsp(266,34) name = items type = java.lang.Object reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/jsp/manager1.jsp(288,31) name = items type = java.lang.Object reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_c_005fforEach_005f7.setItems((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${employeeList}", java.lang.Object.class, (PageContext)_jspx_page_context, null, false));
-    // /WEB-INF/jsp/manager1.jsp(266,34) name = varStatus type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/jsp/manager1.jsp(288,31) name = varStatus type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_c_005fforEach_005f7.setVarStatus("status");
     int[] _jspx_push_body_count_c_005fforEach_005f7 = new int[] { 0 };
     try {
@@ -1724,13 +1887,13 @@ public final class manager1_jsp extends org.apache.jasper.runtime.HttpJspBase
       if (_jspx_eval_c_005fforEach_005f7 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
         do {
           out.write("\r\n");
-          out.write("                                      ");
+          out.write("\t                                  ");
           if (_jspx_meth_form_005fcheckbox_005f1(_jspx_th_c_005fforEach_005f7, _jspx_page_context, _jspx_push_body_count_c_005fforEach_005f7))
             return true;
           out.write(' ');
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${emp.empName}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
           out.write("\r\n");
-          out.write("                                  ");
+          out.write("\t                              ");
           int evalDoAfterBody = _jspx_th_c_005fforEach_005f7.doAfterBody();
           if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
             break;
@@ -1758,11 +1921,11 @@ public final class manager1_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.springframework.web.servlet.tags.form.CheckboxTag _jspx_th_form_005fcheckbox_005f1 = (org.springframework.web.servlet.tags.form.CheckboxTag) _005fjspx_005ftagPool_005fform_005fcheckbox_0026_005fvalue_005fstyle_005fpath_005fnobody.get(org.springframework.web.servlet.tags.form.CheckboxTag.class);
     _jspx_th_form_005fcheckbox_005f1.setPageContext(_jspx_page_context);
     _jspx_th_form_005fcheckbox_005f1.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_005fforEach_005f7);
-    // /WEB-INF/jsp/manager1.jsp(267,38) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/jsp/manager1.jsp(289,35) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_form_005fcheckbox_005f1.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${emp.empName}", java.lang.Object.class, (PageContext)_jspx_page_context, null, false));
-    // /WEB-INF/jsp/manager1.jsp(267,38) name = path type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/jsp/manager1.jsp(289,35) name = path type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_form_005fcheckbox_005f1.setPath("internList");
-    // /WEB-INF/jsp/manager1.jsp(267,38) null
+    // /WEB-INF/jsp/manager1.jsp(289,35) null
     _jspx_th_form_005fcheckbox_005f1.setDynamicAttribute(null, "style", new String("margin-left:15px;"));
     int[] _jspx_push_body_count_form_005fcheckbox_005f1 = new int[] { 0 };
     try {

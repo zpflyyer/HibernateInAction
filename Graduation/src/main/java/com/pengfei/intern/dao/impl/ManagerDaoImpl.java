@@ -36,4 +36,27 @@ public class ManagerDaoImpl extends BaseDaoImpl<Manager>
 		}
 		return null;
 	}
+
+	@Override
+	public Manager findByDept(String dept) {
+		List<Manager> ml = find("select m from Manager m where m.dept=?0"
+				, dept);
+		if (ml != null && ml.size() > 0)
+		{
+			return ml.get(0);
+		}
+		return null;
+	}
+
+	@Override
+	public boolean deleteByName(String name) {
+		Manager manager = findByName(name);
+		if (manager != null){
+			delete(manager);
+			return true;
+		}
+		else{
+			return false;
+		}
+	}
 }

@@ -43,10 +43,14 @@ public class InternDaoImpl extends BaseDaoImpl<Intern>
 	 * @return 符合用户名的员工
 	 */
 	@Override
-	public void deleteByName(String name) {
+	public boolean deleteByName(String name) {
 		Intern emp = findByName(name);
 		if (emp!=null){
 			delete(emp);
+			return true;
+		}
+		else {
+			return false;
 		}
 	}
 }

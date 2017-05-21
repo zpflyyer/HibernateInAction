@@ -39,6 +39,8 @@ public class ItrManagerImpl
 	private JobDao jobDao;
 	@Autowired
 	private TaskDao taskDao;
+	@Autowired
+	private AdminDao adminDao;
 
 	/**
 	 * 以经理身份来验证登录
@@ -56,6 +58,9 @@ public class ItrManagerImpl
 		else if (empDao.findByNameAndPass(mgr).size() >= 1)
 		{
 			return LOGIN_EMP;
+		}
+		else if (adminDao.findByNameAndPass(mgr).size() >= 1){
+			return LOGIN_ADM;
 		}
 		else
 		{

@@ -17,6 +17,8 @@ public interface ItrManager
 	public static final int LOGIN_EMP = 1;
 	// 以经理登录
 	public static final int LOGIN_MGR = 2;
+	// 以管理员登录
+	public static final int LOGIN_ADM = 3;
 
 	// 不能打卡
 	public static final int
