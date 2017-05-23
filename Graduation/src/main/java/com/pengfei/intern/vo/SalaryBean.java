@@ -19,7 +19,13 @@ public class SalaryBean
 	private String real_name;
 	//Ω·”‡
 	private double amount;
+	private String month;
 
+	public SalaryBean(double amount,String month,double base){
+		this.amount = amount;
+		this.month = month;
+		this.base = base;
+	}
 	public SalaryBean(int id,String real_name,double amount,double base){
 		this.id = id;
 		this.real_name = real_name;

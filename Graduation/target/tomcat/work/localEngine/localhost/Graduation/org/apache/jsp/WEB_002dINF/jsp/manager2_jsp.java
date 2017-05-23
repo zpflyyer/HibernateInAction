@@ -21,7 +21,6 @@ public final class manager2_jsp extends org.apache.jasper.runtime.HttpJspBase
   private org.apache.jasper.runtime.TagHandlerPool _005fjspx_005ftagPool_005fform_005ferrors_0026_005fpath_005fnobody;
   private org.apache.jasper.runtime.TagHandlerPool _005fjspx_005ftagPool_005fform_005finput_0026_005ftype_005fplaceholder_005fpath_005fclass_005faria_002ddescribedby_005fnobody;
   private org.apache.jasper.runtime.TagHandlerPool _005fjspx_005ftagPool_005fform_005ftextarea_0026_005ftype_005fplaceholder_005fpath_005fclass_005faria_002ddescribedby_005fnobody;
-  private org.apache.jasper.runtime.TagHandlerPool _005fjspx_005ftagPool_005fform_005finput_0026_005ftype_005fstyle_005fplaceholder_005fpath_005fclass_005faria_002ddescribedby_005fnobody;
   private org.apache.jasper.runtime.TagHandlerPool _005fjspx_005ftagPool_005fc_005fforEach_0026_005fvarStatus_005fvar_005fitems;
   private org.apache.jasper.runtime.TagHandlerPool _005fjspx_005ftagPool_005fform_005fcheckbox_0026_005fvalue_005fstyle_005fpath_005fnobody;
 
@@ -38,7 +37,6 @@ public final class manager2_jsp extends org.apache.jasper.runtime.HttpJspBase
     _005fjspx_005ftagPool_005fform_005ferrors_0026_005fpath_005fnobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _005fjspx_005ftagPool_005fform_005finput_0026_005ftype_005fplaceholder_005fpath_005fclass_005faria_002ddescribedby_005fnobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _005fjspx_005ftagPool_005fform_005ftextarea_0026_005ftype_005fplaceholder_005fpath_005fclass_005faria_002ddescribedby_005fnobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
-    _005fjspx_005ftagPool_005fform_005finput_0026_005ftype_005fstyle_005fplaceholder_005fpath_005fclass_005faria_002ddescribedby_005fnobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _005fjspx_005ftagPool_005fc_005fforEach_0026_005fvarStatus_005fvar_005fitems = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _005fjspx_005ftagPool_005fform_005fcheckbox_0026_005fvalue_005fstyle_005fpath_005fnobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _el_expressionfactory = _jspxFactory.getJspApplicationContext(getServletConfig().getServletContext()).getExpressionFactory();
@@ -51,7 +49,6 @@ public final class manager2_jsp extends org.apache.jasper.runtime.HttpJspBase
     _005fjspx_005ftagPool_005fform_005ferrors_0026_005fpath_005fnobody.release();
     _005fjspx_005ftagPool_005fform_005finput_0026_005ftype_005fplaceholder_005fpath_005fclass_005faria_002ddescribedby_005fnobody.release();
     _005fjspx_005ftagPool_005fform_005ftextarea_0026_005ftype_005fplaceholder_005fpath_005fclass_005faria_002ddescribedby_005fnobody.release();
-    _005fjspx_005ftagPool_005fform_005finput_0026_005ftype_005fstyle_005fplaceholder_005fpath_005fclass_005faria_002ddescribedby_005fnobody.release();
     _005fjspx_005ftagPool_005fc_005fforEach_0026_005fvarStatus_005fvar_005fitems.release();
     _005fjspx_005ftagPool_005fform_005fcheckbox_0026_005fvalue_005fstyle_005fpath_005fnobody.release();
   }
@@ -1407,7 +1404,7 @@ public final class manager2_jsp extends org.apache.jasper.runtime.HttpJspBase
     PageContext pageContext = _jspx_page_context;
     JspWriter out = _jspx_page_context.getOut();
     //  form:input
-    org.springframework.web.servlet.tags.form.InputTag _jspx_th_form_005finput_005f1 = (org.springframework.web.servlet.tags.form.InputTag) _005fjspx_005ftagPool_005fform_005finput_0026_005ftype_005fstyle_005fplaceholder_005fpath_005fclass_005faria_002ddescribedby_005fnobody.get(org.springframework.web.servlet.tags.form.InputTag.class);
+    org.springframework.web.servlet.tags.form.InputTag _jspx_th_form_005finput_005f1 = (org.springframework.web.servlet.tags.form.InputTag) _005fjspx_005ftagPool_005fform_005finput_0026_005ftype_005fplaceholder_005fpath_005fclass_005faria_002ddescribedby_005fnobody.get(org.springframework.web.servlet.tags.form.InputTag.class);
     _jspx_th_form_005finput_005f1.setPageContext(_jspx_page_context);
     _jspx_th_form_005finput_005f1.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_005fform_005f0);
     // /WEB-INF/jsp/manager2.jsp(417,37) name = path type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
@@ -1420,8 +1417,6 @@ public final class manager2_jsp extends org.apache.jasper.runtime.HttpJspBase
     _jspx_th_form_005finput_005f1.setDynamicAttribute(null, "placeholder", new String("截止日期"));
     // /WEB-INF/jsp/manager2.jsp(417,37) null
     _jspx_th_form_005finput_005f1.setDynamicAttribute(null, "aria-describedby", new String("deadline_icon"));
-    // /WEB-INF/jsp/manager2.jsp(417,37) null
-    _jspx_th_form_005finput_005f1.setDynamicAttribute(null, "style", new String("text-align:center;"));
     int[] _jspx_push_body_count_form_005finput_005f1 = new int[] { 0 };
     try {
       int _jspx_eval_form_005finput_005f1 = _jspx_th_form_005finput_005f1.doStartTag();
@@ -1434,7 +1429,7 @@ public final class manager2_jsp extends org.apache.jasper.runtime.HttpJspBase
       _jspx_th_form_005finput_005f1.doCatch(_jspx_exception);
     } finally {
       _jspx_th_form_005finput_005f1.doFinally();
-      _005fjspx_005ftagPool_005fform_005finput_0026_005ftype_005fstyle_005fplaceholder_005fpath_005fclass_005faria_002ddescribedby_005fnobody.reuse(_jspx_th_form_005finput_005f1);
+      _005fjspx_005ftagPool_005fform_005finput_0026_005ftype_005fplaceholder_005fpath_005fclass_005faria_002ddescribedby_005fnobody.reuse(_jspx_th_form_005finput_005f1);
     }
     return false;
   }

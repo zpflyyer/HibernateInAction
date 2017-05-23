@@ -99,15 +99,12 @@ public class IndexController {
                     new SimpleDateFormat("yyyy-MM-dd").format(new Date()))
             );
             //可能有类型转换异常
-            modelAndView.addObject("attList", new ObjectMapper().writeValueAsString(itrManager.allAttendByName(username)));
-            modelAndView.addObject("unAttendList", itrManager.unAttend(username));
-            System.out.println(new ObjectMapper().writeValueAsString(itrManager.unAttend(username)));
             modelAndView.addObject("typeList", itrManager.getAllType());
             modelAndView.addObject("salist", itrManager.empSalary(username));
             modelAndView.addObject("jobList",itrManager.getJobByIntern(username));
             modelAndView.addObject("username",username);
-            modelAndView.addObject("role","intern");
-            modelAndView.setViewName("employee");
+            modelAndView.addObject("role","实习生");
+            modelAndView.setViewName("employee2");
         }
         else if(result == LOGIN_ADM){
             session.setAttribute("user",manager.getName());

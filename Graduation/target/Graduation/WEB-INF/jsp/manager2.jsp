@@ -414,7 +414,7 @@
 							                              <span class="input-group-addon" id="deadline_icon">
 							                                <span class="glyphicon glyphicon-time"></span>
 							                              </span>
-							                              <form:input path="deadline" type="text" class="form-control" placeholder="截止日期" aria-describedby="deadline_icon"/>
+							                              <form:input path="deadline" type="date" class="form-control" placeholder="截止日期" aria-describedby="deadline_icon"/>
 							                            </div>
 							                        </div>
 							                        <font color="red"><form:errors path="internList"/></font>

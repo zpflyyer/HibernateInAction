@@ -3,6 +3,9 @@ package com.pengfei.intern.controller;
 
 import com.pengfei.intern.domain.Response;
 import com.pengfei.intern.service.ItrManager;
+import com.pengfei.intern.vo.AttendBean;
+import com.pengfei.intern.vo.JobBean;
+import com.pengfei.intern.vo.SalaryBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,6 +15,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+
+import java.util.List;
 
 import static com.pengfei.intern.service.ItrManager.*;
 
@@ -86,5 +91,30 @@ public class InternController {
         response.setResponse("failed");
         return response;
     }
+
+    @ResponseBody
+    @RequestMapping(method = RequestMethod.POST,value = "/getUnAttByItr")
+    List<AttendBean> getUnAttByItr(HttpSession session){
+        System.out.println("getUnAttByItr() called!");
+        String itr = (String)session.getAttribute("user");
+        return itrManager.unAttend(itr);
+    }
+
+    @ResponseBody
+    @RequestMapping(method = RequestMethod.POST,value = "/getSalHistotyByItr")
+    List<SalaryBean> getSalHistotyByItr(HttpSession session){
+        System.out.println("getSalHistotyByItr() called!");
+        String itr = (String)session.getAttribute("user");
+        return itrManager.empSalary(itr);
+    }
+
+    @ResponseBody
+    @RequestMapping(method = RequestMethod.POST,value = "/getJobByItr")
+    List<JobBean> getJobByItr(HttpSession session){
+        System.out.println("getJobByItr() called!");
+        String itr = (String)session.getAttribute("user");
+        return itrManager.getJobByIntern(itr);
+    }
+
 }
 

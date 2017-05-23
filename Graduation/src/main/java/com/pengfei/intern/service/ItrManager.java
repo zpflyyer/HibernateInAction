@@ -6,6 +6,7 @@ import com.pengfei.intern.domain.Manager;
 import com.pengfei.intern.vo.AttendBean;
 import com.pengfei.intern.vo.JobBean;
 import com.pengfei.intern.vo.PaymentBean;
+import com.pengfei.intern.vo.SalaryBean;
 
 import java.util.List;
 
@@ -90,7 +91,7 @@ public interface ItrManager
 	 * @param empName 员工名
 	 * @return 该员工的工资列表
 	 */
-	List<PaymentBean> empSalary(String empName);
+	List<SalaryBean> empSalary(String empName);
 
 	/**
  	 * 员工查看自己的最近三天非正常打卡

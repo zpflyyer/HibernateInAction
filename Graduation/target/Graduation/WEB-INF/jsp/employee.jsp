@@ -244,7 +244,7 @@
           </div>
         </div>
       </div>
-		</div>
+    </div>
 
     <script type="text/javascript">
         var typeArray = new Array("正常","事假","病假","迟到","早退","旷工","出差");

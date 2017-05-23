@@ -260,18 +260,41 @@ public class ItrManagerImpl
 	 * @param empName 员工名
 	 * @return 该员工的工资列表
 	 */
-	public List<PaymentBean> empSalary(String empName)
+	public List<SalaryBean> empSalary(String empName)
 	{
 		// 获取当前员工
 		Intern emp = empDao.findByName(empName);
 		// 获取该员工的全部工资列表:注意，在1对多的关联中，让多的一端控制关联关系
 		List<Payment> pays = payDao.findByEmp(emp);
-		List<PaymentBean> result = new ArrayList<PaymentBean>();
+		List<SalaryBean> result = new ArrayList<>();
 		// 封装VO集合
 		for (Payment p : pays )
 		{
-			result.add(new PaymentBean(p.getPayMonth()
-				,p.getAmount()));
+			SalaryBean salaryBean = new SalaryBean(p.getAmount(),p.getPayMonth(),emp.getSalary());
+			List<Attend> attendList = attendDao.findByEmpAndMonth(emp,p.getPayMonth());
+			for (Attend attend:
+					attendList) {
+				if (attend.getType().getId() == 2){
+					salaryBean.setIssue_pay(salaryBean.getIssue_pay()+attend.getType().getAmerce());
+				}
+				else if (attend.getType().getId() == 3){
+					salaryBean.setSick_pay(salaryBean.getSick_pay()+attend.getType().getAmerce());
+				}
+				else if (attend.getType().getId() == 4){
+					salaryBean.setLate_pay(salaryBean.getLate_pay()+attend.getType().getAmerce());
+				}
+				else if (attend.getType().getId() == 5){
+					salaryBean.setEarly_pay(salaryBean.getEarly_pay()+attend.getType().getAmerce());
+				}
+				else if (attend.getType().getId() == 6){
+					salaryBean.setUnAttend_pay(salaryBean.getUnAttend_pay()+attend.getType().getAmerce());
+				}
+				else if (attend.getType().getId() == 7){
+					salaryBean.setWork_pay(salaryBean.getWork_pay()+attend.getType().getAmerce());
+				}
+				else {}
+			}
+			result.add(salaryBean);
 		}
 		return result;
 	}
@@ -297,13 +320,13 @@ public class ItrManagerImpl
 
 			Application app = appDao.findLatestByAtt(att);
 			if (app != null){
-				AppBean appBean = new AppBean(app.getType().getName(),app.isResult());
-				//出勤记录相关的最新的申请记录
-				attendBean.setAppBean(appBean);
+				attendBean.setApp_type(app.getType().getName());
+				attendBean.setApp_progress(app.isResult()?"已处理":"尚未处理");
 				if(app.isResult()){
 					//最新的申请记录相关的批复
 					CheckBack cb = app.getCheck();
-					appBean.setCheckBackBean(new CheckBackBean( cb.isResult() , cb.getReason() ));
+					attendBean.setGranted(cb.isResult()?"已同意":"被驳回");
+					attendBean.setReason(cb.getReason());
 				}
 			}
 			result.add(attendBean);
