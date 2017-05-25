@@ -14,7 +14,11 @@ import lombok.Setter;
 @NoArgsConstructor
 public class MgrBean {
     private static final long serialVersionUID = 48L;
-    private String mgrName;
-    private String mgrPass;
-    private String mgrDept;
+    private int id;
+    private String real_name;
+    private String empName;
+    private String empPass;
+    private String tel;
+    private String email;
+    private String dept;
 }

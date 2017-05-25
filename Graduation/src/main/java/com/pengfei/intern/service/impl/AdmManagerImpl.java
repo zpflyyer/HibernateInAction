@@ -1,18 +1,23 @@
 package com.pengfei.intern.service.impl;
 
+import com.pengfei.intern.dao.AttendDao;
 import com.pengfei.intern.dao.InternDao;
 import com.pengfei.intern.dao.ManagerDao;
+import com.pengfei.intern.dao.PaymentDao;
+import com.pengfei.intern.domain.Attend;
 import com.pengfei.intern.domain.Intern;
 import com.pengfei.intern.domain.Manager;
+import com.pengfei.intern.domain.Payment;
 import com.pengfei.intern.exception.HrException;
 import com.pengfei.intern.service.AdmManager;
-import com.pengfei.intern.vo.ItrBean;
-import com.pengfei.intern.vo.MgrBean;
+import com.pengfei.intern.vo.*;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 /**
@@ -25,16 +30,17 @@ public class AdmManagerImpl implements AdmManager {
     private InternDao itrDao;
     @Autowired
     private ManagerDao mgrDao;
+    @Autowired
+    private AttendDao attendDao;
+    @Autowired
+    private PaymentDao paymentDao;
     @Override
     public List<MgrBean> getAllMgr() {
         List<Manager> managerList = mgrDao.findAll(Manager.class);
         List<MgrBean> mgrBeanList = new ArrayList<>();
         for (Manager mgr:
              managerList) {
-            MgrBean mgrBean = new MgrBean();
-            mgrBean.setMgrName(mgr.getName());
-            mgrBean.setMgrPass(mgr.getPass());
-            mgrBean.setMgrDept(mgr.getDept());
+            MgrBean mgrBean = new MgrBean(mgr.getId(),mgr.getReal_name(),mgr.getName(),mgr.getPass(),mgr.getTel(),mgr.getEmail(),mgr.getDept());
             mgrBeanList.add(mgrBean);
         }
         return mgrBeanList;
@@ -43,19 +49,75 @@ public class AdmManagerImpl implements AdmManager {
     @Override
     public List<ItrBean> getAllItr() {
         List<Intern> internList = itrDao.findAll(Intern.class);
-        List<ItrBean> itrBeanList = new ArrayList<>();
-        for (Intern itr:
+        List<ItrBean> result = new ArrayList<>();
+        for (Intern e:
              internList) {
-            if (!(itr instanceof Manager)) {
-                ItrBean itrBean = new ItrBean();
-                itrBean.setEmpName(itr.getName());
-                itrBean.setEmpPass(itr.getPass());
-                itrBean.setAmount(itr.getSalary());
-                itrBean.setDept(itr.getManager().getDept());
-                itrBeanList.add(itrBean);
+            if (!(e instanceof Manager)) {
+                List<AttendBean> attendBeans = new ArrayList<>();
+                for (Attend a : attendDao.findByEmpAll(e)) {
+                    attendBeans.add(new AttendBean(a.getId(),a.getDutyDay(),a.getType().getName(),a.getPunchTime()));
+                }
+                ItrBean itrBean = new ItrBean(e.getId(),e.getName(),
+                        e.getPass(), e.getSalary(),e.getTel(),e.getEmail(),e.getBoard(),e.getReal_name(),e.getId_num(),attendBeans);
+                itrBean.setDept(e.getManager().getDept());
+                result.add(itrBean);
             }
         }
-        return itrBeanList;
+        return result;
+    }
+
+    @Override
+    public List<SalaryBean> getSalByMonth() {
+        List<SalaryBean> result = new ArrayList<>();
+        Calendar c = Calendar.getInstance();
+        c.add(Calendar.MONTH , -1);
+        SimpleDateFormat sdf = new  SimpleDateFormat("yyyy-MM");
+        String month = sdf.format(c.getTime());
+        for (Intern itr:
+                itrDao.findAll(Intern.class)) {
+            if (!(itr instanceof  Manager)){
+                Payment p = paymentDao.findByMonthAndEmp(month , itr);
+                if (p != null)
+                {
+                    SalaryBean salaryBean = new SalaryBean(itr.getId(),itr.getReal_name(), p.getAmount(), itr.getSalary());
+                    List<Attend> attendList = attendDao.findByEmpAndMonth(itr,month);
+                    for (Attend attend:
+                            attendList) {
+                        if (attend.getType().getId() == 2){
+                            salaryBean.setIssue_pay(salaryBean.getIssue_pay()+attend.getType().getAmerce());
+                        }
+                        else if (attend.getType().getId() == 3){
+                            salaryBean.setSick_pay(salaryBean.getSick_pay()+attend.getType().getAmerce());
+                        }
+                        else if (attend.getType().getId() == 4){
+                            salaryBean.setLate_pay(salaryBean.getLate_pay()+attend.getType().getAmerce());
+                        }
+                        else if (attend.getType().getId() == 5){
+                            salaryBean.setEarly_pay(salaryBean.getEarly_pay()+attend.getType().getAmerce());
+                        }
+                        else if (attend.getType().getId() == 6){
+                            salaryBean.setUnAttend_pay(salaryBean.getUnAttend_pay()+attend.getType().getAmerce());
+                        }
+                        else if (attend.getType().getId() == 7){
+                            salaryBean.setWork_pay(salaryBean.getWork_pay()+attend.getType().getAmerce());
+                        }
+                        else {}
+                    }
+                    result.add(salaryBean);
+                }
+            }
+        }
+        return result;
+    }
+
+    @Override
+    public List<DeptBean> getAllDept() {
+        List<DeptBean> deptBeanList = new ArrayList<>();
+        for (Manager mgr:
+             mgrDao.findAll(Manager.class)) {
+            deptBeanList.add(new DeptBean(mgr.getDept(),mgr.getDept()));
+        }
+        return deptBeanList;
     }
 
     @Override
@@ -97,14 +159,22 @@ public class AdmManagerImpl implements AdmManager {
     }
 
     @Override
-    public boolean updEmp(String name, String pass, Double salary) throws HrException {
-        if (itrDao.findByName(name) == null){
+    public boolean updEmp(String empName,String real_name,String empPass,double salary,String tel,String email,String id_number,String dept) {
+        Intern intern = itrDao.findByName(empName);
+        if (intern == null){
             return false;
         }
         else {
-            Intern intern = itrDao.findByName(name);
-            intern.setPass(pass);
+            intern.setReal_name(real_name);
+            intern.setPass(empPass);
             intern.setSalary(salary);
+            intern.setTel(tel);
+            intern.setEmail(email);
+            intern.setId_num(id_number);
+            Manager mgr = mgrDao.findByDept(dept);
+            if (mgr != null) {
+                intern.setManager(mgr);
+            }
             return true;
         }
     }
@@ -131,15 +201,16 @@ public class AdmManagerImpl implements AdmManager {
     }
 
     @Override
-    public boolean updMgr(String name, String pass, double salary, String dept) {
+    public boolean updMgr(String name,String real_name, String empPass, String tel, String email,String dept) {
         Manager manager = mgrDao.findByName(name);
         if (manager== null){
             return false;
         }
         else {
-            manager.setName(name);
-            manager.setPass(pass);
-            manager.setSalary(salary);
+            manager.setReal_name(real_name);
+            manager.setPass(empPass);
+            manager.setTel(tel);
+            manager.setEmail(email);
             manager.setDept(dept);
             return true;
         }

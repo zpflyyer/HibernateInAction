@@ -1,7 +1,9 @@
 package com.pengfei.intern.service;
 
+import com.pengfei.intern.vo.DeptBean;
 import com.pengfei.intern.vo.ItrBean;
 import com.pengfei.intern.vo.MgrBean;
+import com.pengfei.intern.vo.SalaryBean;
 
 import java.util.List;
 
@@ -11,11 +13,13 @@ import java.util.List;
 public interface AdmManager {
     List<MgrBean> getAllMgr();
     List<ItrBean> getAllItr();
+    List<SalaryBean> getSalByMonth();
+    List<DeptBean> getAllDept();
     boolean mergeItr(String itr,String mgr);
     boolean addEmp(String name, String pass, double salary, String mgr);
     boolean delEmp(String name);
-    boolean updEmp(String name, String pass, Double salary);
+    boolean updEmp(String empName,String real_name,String empPass,double salary,String tel,String email,String id_number,String dept);
     boolean addMgr(String name, String pass, double salary,String dept);
     boolean delMgr(String name);
-    boolean updMgr(String name,String pass,double salary,String dept);
+    boolean updMgr(String name,String real_name,String empPass,String tel,String email,String dept);
 }

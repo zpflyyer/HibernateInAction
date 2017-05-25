@@ -109,11 +109,11 @@ public class IndexController {
         else if(result == LOGIN_ADM){
             session.setAttribute("user",manager.getName());
             session.setAttribute("user_level","admin");
-            modelAndView.addObject("employeeList",admManager.getAllItr());
-            modelAndView.addObject("mgrList",admManager.getAllMgr());
+//            modelAndView.addObject("employeeList",admManager.getAllItr());
+//            modelAndView.addObject("mgrList",admManager.getAllMgr());
             modelAndView.addObject("username",username);
             modelAndView.addObject("role","admin");
-            modelAndView.setViewName("admin");
+            modelAndView.setViewName("admin2");
         }
         else {
             modelAndView.addObject("message","用户名/密码不匹配");

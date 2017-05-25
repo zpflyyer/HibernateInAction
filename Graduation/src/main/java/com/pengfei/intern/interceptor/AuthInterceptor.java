@@ -28,9 +28,9 @@ public class AuthInterceptor implements HandlerInterceptor {
         }
 
         boolean flag = false;
-        String manager = (String)httpServletRequest.getSession().getAttribute("user");
+        String user = (String)httpServletRequest.getSession().getAttribute("user");
         String level = (String)httpServletRequest.getSession().getAttribute("user_level");
-        if (manager == null || level == null){
+        if (user == null || level == null){
             httpServletRequest.setAttribute("message","Äú»¹Î´µÇÂ¼");
             //ÖØ¶¨Ïòµ½µÇÂ¼Ò³
             httpServletRequest.setAttribute("message","Î´µÇÂ¼£¡");

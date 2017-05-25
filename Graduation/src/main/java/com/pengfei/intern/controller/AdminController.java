@@ -2,6 +2,10 @@ package com.pengfei.intern.controller;
 
 import com.pengfei.intern.domain.Response;
 import com.pengfei.intern.service.AdmManager;
+import com.pengfei.intern.vo.DeptBean;
+import com.pengfei.intern.vo.ItrBean;
+import com.pengfei.intern.vo.MgrBean;
+import com.pengfei.intern.vo.SalaryBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,6 +15,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import java.util.List;
 
 /**
  * Created by zhaopen on 5/19/2017.
@@ -70,13 +75,18 @@ public class AdminController {
     @ResponseBody
     @RequestMapping(method = RequestMethod.POST,value = "/updItr")
     Response updItr(HttpSession session, HttpServletRequest request,
-                    @RequestParam("name") String name,
-                    @RequestParam("pass") String pass,
-                    @RequestParam("salary") String salary){
+                    @RequestParam("empName") String empName,
+                    @RequestParam("real_name") String real_name,
+                    @RequestParam("empPass") String empPass,
+                    @RequestParam("amount") double amount,
+                    @RequestParam("tel") String tel,
+                    @RequestParam("email") String email,
+                    @RequestParam("id_number") String id_number,
+                    @RequestParam("dept") String dept){
         System.out.println("updItr() called!");
         Response response = new Response();
 
-        boolean result = admManager.updEmp(name,pass,Double.valueOf(salary));
+        boolean result = admManager.updEmp(empName,real_name,empPass,amount,tel,email,id_number,dept);
         if (result){
             response.setResponse("updated");
         }
@@ -136,13 +146,15 @@ public class AdminController {
     @RequestMapping(method = RequestMethod.POST,value = "/updMgr")
     Response updMgr(HttpSession session, HttpServletRequest request,
                     @RequestParam("name") String name,
-                    @RequestParam("pass") String pass,
-                    @RequestParam("salary") String salary,
+                    @RequestParam("real_name") String real_name,
+                    @RequestParam("empPass") String empPass,
+                    @RequestParam("tel") String tel,
+                    @RequestParam("email") String email,
                     @RequestParam("dept") String dept){
         System.out.println("updMgr() called!");
         Response response = new Response();
 
-        boolean result = admManager.updMgr(name,pass,Double.valueOf(salary),dept);
+        boolean result = admManager.updMgr(name,real_name,empPass,tel,email,dept);
         if (result){
             response.setResponse("updated");
         }
@@ -171,5 +183,33 @@ public class AdminController {
             response.setResponse("failed");
         }
         return response;
+    }
+
+    @ResponseBody
+    @RequestMapping(method = RequestMethod.POST,value = "/getAllItr")
+    List<ItrBean> getAllItr(HttpSession session, HttpServletRequest request){
+        System.out.println("getAllItr() called!");
+        return admManager.getAllItr();
+    }
+
+    @ResponseBody
+    @RequestMapping(method = RequestMethod.POST,value = "/getSals")
+    List<SalaryBean> getSals(HttpSession session, HttpServletRequest request){
+        System.out.println("getSals() called!");
+        return admManager.getSalByMonth();
+    }
+
+    @ResponseBody
+    @RequestMapping(method = RequestMethod.POST,value = "/getAllMgr")
+    List<MgrBean> getAllMgr(HttpSession session, HttpServletRequest request){
+        System.out.println("getAllMgr() called!");
+        return admManager.getAllMgr();
+    }
+
+    @ResponseBody
+    @RequestMapping(method = RequestMethod.POST,value = "/getAllDept")
+    List<DeptBean> getAllDept(HttpSession session, HttpServletRequest request){
+        System.out.println("getAllDept() called!");
+        return admManager.getAllDept();
     }
 }

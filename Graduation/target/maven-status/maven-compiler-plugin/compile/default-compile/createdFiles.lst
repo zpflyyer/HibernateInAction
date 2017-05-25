@@ -28,6 +28,7 @@ com\pengfei\intern\service\ItrManager.class
 com\pengfei\intern\vo\SalaryBean.class
 com\pengfei\intern\vo\MgrBean.class
 com\pengfei\intern\domain\Attend.class
+com\pengfei\intern\vo\DeptBean.class
 com\pengfei\intern\vo\AppBean.class
 com\pengfei\intern\service\impl\AdmManagerImpl.class
 com\pengfei\intern\domain\Task.class
