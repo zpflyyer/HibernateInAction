@@ -9,4 +9,5 @@ import java.util.List;
  */
 public interface AdminDao extends BaseDao<Admin> {
     List<Admin> findByNameAndPass(Admin admin);
+    Admin findByName(String name);
 }

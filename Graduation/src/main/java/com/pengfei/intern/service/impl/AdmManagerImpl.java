@@ -135,21 +135,32 @@ public class AdmManagerImpl implements AdmManager {
     }
 
     @Override
-    public boolean addEmp(String name, String pass, double salary, String dept) {
+    public ItrBean addEmp(String real_name,String name, String pass,String tel,String email,String id_number ,double salary, String dept) {
         Intern intern = new Intern();
         Manager manager = mgrDao.findByDept(dept);
         if (itrDao.findByName(name) != null){
-            return false;
+            return null;
         }
         else {
-            if (manager != null) {
-                intern.setManager(manager);
+            if (manager == null) {
+                return null;
             }
+            Calendar c = Calendar.getInstance();
+            intern.setBoard(c.getTime());
+            intern.setReal_name(real_name);
+            intern.setManager(manager);
             intern.setName(name);
             intern.setPass(pass);
             intern.setSalary(salary);
+            intern.setTel(tel);
+            intern.setEmail(email);
+            intern.setId_num(id_number);
             itrDao.save(intern);
-            return true;
+            intern = itrDao.findByName(name);
+            ItrBean itrBean = new ItrBean(intern.getId(),intern.getName(),
+                    intern.getPass(), intern.getSalary(),intern.getTel(),intern.getEmail(),intern.getBoard(),intern.getReal_name(),intern.getId_num());
+            itrBean.setDept(intern.getManager().getDept());
+            return itrBean;
         }
     }
 

@@ -28,9 +28,7 @@ import javax.servlet.http.HttpSession;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import static com.pengfei.intern.service.ItrManager.LOGIN_ADM;
-import static com.pengfei.intern.service.ItrManager.LOGIN_EMP;
-import static com.pengfei.intern.service.ItrManager.LOGIN_MGR;
+import static com.pengfei.intern.service.ItrManager.*;
 
 /**
  * Created by zhaopen on 4/30/2017.
@@ -109,10 +107,9 @@ public class IndexController {
         else if(result == LOGIN_ADM){
             session.setAttribute("user",manager.getName());
             session.setAttribute("user_level","admin");
-//            modelAndView.addObject("employeeList",admManager.getAllItr());
-//            modelAndView.addObject("mgrList",admManager.getAllMgr());
             modelAndView.addObject("username",username);
             modelAndView.addObject("role","admin");
+            modelAndView.addObject("deptList",admManager.getAllDept());
             modelAndView.setViewName("admin2");
         }
         else {
@@ -125,8 +122,30 @@ public class IndexController {
 
     @RequestMapping(value = "/logout")
     String logOut(HttpSession session){
+        System.out.println("logOut() called!");
         session.invalidate();
         return "redirect:" + "/";
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "/pwdChange",method = RequestMethod.POST)
+    Response pwdChange(HttpSession session,
+                       @RequestParam("pwd_old") String pwd_old,
+                       @RequestParam("pwd_new") String pwd_new,
+                       @RequestParam("pwd_new1") String pwd_new1){
+        System.out.println("pwdChange() called!");
+        Response response = new Response();
+        response.setResponse("falied");
+        Manager manager = new Manager();
+        String name = (String)session.getAttribute("user");
+        manager.setName(name);
+        manager.setPass(pwd_old);
+        if (itrManager.validLogin(manager)!= LOGIN_FAIL){
+            if (itrManager.pwdChange(name,pwd_new)) {
+                response.setResponse("succeed");
+            }
+        }
+        return response;
     }
 
     @ResponseBody

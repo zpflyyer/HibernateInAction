@@ -29,7 +29,7 @@
                              </span> <span class="text-muted text-xs block">${username}<b class="caret"></b></span> </span> </a>
                         <ul class="dropdown-menu animated fadeInRight m-t-xs">
                             <li><a href="profile.html">我的资料</a></li>
-                            <li><a href="mailbox.html">修改密码</a></li>
+                            <li><a data-toggle="modal" data-target="#edit_pwd">修改密码</a></li>
                             <li class="divider"></li>
                             <li><a href="${context}/logout">登出</a></li>
                         </ul>
@@ -557,10 +557,66 @@
         </div>
       </div>
     </div>
-
+    <div class="modal fade" id="edit_pwd" tabindex="-1" role="dialog" aria-labelledby="myModalLabel_pwd">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title text-danger" id="myModalLabel_pwd" >添加实习生</h4>
+          </div>
+          <div class="modal-body">
+             <form>
+                <div class="form-group">
+                    <label for="pwd_old" class="control-label">旧密码:</label>
+                    <input type="password" class="form-control" id="pwd_old">
+                </div>
+                <div class="form-group">
+                    <label for="pwd_new" class="control-label">新密码:</label>
+                    <input type="password" class="form-control" id="pwd_new">
+                </div>
+                <div class="form-group">
+                    <label for="pwd_new1" class="control-label">确认新密码:</label>
+                    <input type="password" class="form-control" id="pwd_new1">
+                </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+            <button type="button" id="pwd_tip_y" class="btn btn-primary btn-warning" data-dismiss="modal">确认更改密码</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- Page-Level Scripts -->
     <script>
         $('.container-fluid').height($(window).height());
+        $("#edit_pwd").on("show.bs.modal",function(e){
+            $(this).find("#pwd_tip_y").off("click").on("click",function(){
+	            var pwd_old = $("#pwd_old").val();
+	            var pwd_new = $("#pwd_new").val();
+	            var pwd_new1 = $("#pwd_new1").val();
+                var postData_pwd = {
+                    "pwd_old" : pwd_old,
+                    "pwd_new" : pwd_new,
+                    "pwd_new1" : pwd_new1
+                };
+                $.ajax({
+                    type: "post",
+                    url: '${context}/pwdChange',
+                    data: postData_pwd,
+                    success: function (data, status) {
+                        if (status == "success") {
+                            alert("您的密码已经修改，请妥善保存");
+                        }
+                    },
+                    error: function () {
+                        alert("修改密码失败");
+                    },
+                    complete: function () {
+                    }
+                });
+            });
+        });
         $("#unatt_table").bootstrapTable({
             columns: [{
                 checkbox:true

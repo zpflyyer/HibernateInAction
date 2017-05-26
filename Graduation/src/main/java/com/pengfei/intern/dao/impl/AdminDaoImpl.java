@@ -16,4 +16,10 @@ public class AdminDaoImpl extends BaseDaoImpl<Admin> implements AdminDao {
         return find("select a from Admin a where a.name = ?0 and a.pass=?1"
                 , admin.getName() , admin.getPass());
     }
+
+    @Override
+    public Admin findByName(String name) {
+        return find("select a from Admin a where a.name = ?0"
+                , name).get(0);
+    }
 }

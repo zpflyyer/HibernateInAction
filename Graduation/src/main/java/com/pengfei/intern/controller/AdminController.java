@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -31,22 +32,17 @@ public class AdminController {
      */
     @ResponseBody
     @RequestMapping(method = RequestMethod.POST,value = "/addItr")
-    Response addItr(HttpSession session, HttpServletRequest request,
+    ItrBean addItr(HttpSession session, HttpServletRequest request,
+                     @RequestParam("real_name") String real_name,
                      @RequestParam("name") String name,
                      @RequestParam("pass") String pass,
-                     @RequestParam("salary") String salary,
-                     @RequestParam("dept") String dept){
+                     @RequestParam("id_number") String id_number,
+                    @RequestParam("tel") String tel,
+                    @RequestParam("email") String email,
+                    @RequestParam("dept") String dept,
+                    @RequestParam("salary") String salary){
         System.out.println("addItr() called!");
-        Response response = new Response();
-
-        boolean result = admManager.addEmp(name,pass,Double.valueOf(salary),dept);
-        if (result){
-            response.setResponse("added");
-        }
-        else {
-            response.setResponse("failed");
-        }
-        return response;
+        return admManager.addEmp(real_name,name,pass,tel,email,id_number,Double.valueOf(salary),dept);
     }
 
     /*

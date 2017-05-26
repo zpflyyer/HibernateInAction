@@ -434,5 +434,15 @@ public class ItrManagerImpl
 		return false;
 	}
 
-
+	@Override
+	public boolean pwdChange(String name, String pwd_new) {
+		Admin admin = adminDao.findByName(name);
+		if (admin != null)
+		{
+			admin.setPass(pwd_new);
+			adminDao.update(admin);
+			return true;
+		}
+		return false;
+	}
 }

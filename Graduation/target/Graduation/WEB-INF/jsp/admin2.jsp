@@ -29,7 +29,7 @@
                              </span> <span class="text-muted text-xs block">${username}<b class="caret"></b></span> </span> </a>
                         <ul class="dropdown-menu animated fadeInRight m-t-xs">
                             <li><a href="profile.html">我的资料</a></li>
-                            <li><a href="mailbox.html">修改密码</a></li>
+                            <li><a data-toggle="modal" data-target="#edit_pwd">修改密码</a></li>
                             <li class="divider"></li>
                             <li><a href="${context}/logout">登出</a></li>
                         </ul>
@@ -40,10 +40,7 @@
                 </li>
                 <li><a href="#emp_tab" aria-controls="emp_tab" role="tab" data-toggle="tab"><i class="fa fa-user"></i> <span class="nav-label">实习生管理</span></a></li>
                 <li><a href="#mgr_tab" aria-controls="emgr_tab" role="tab" data-toggle="tab"><i class="fa fa-user"></i> <span class="nav-label">经理管理</span></a></li>
-             	<li><a href="#sal_tab" aria-controls="sal_tab" role="tab" data-toggle="tab"><i class="fa fa-calendar"></i><span class="nav-label">发薪记录</span></a></li>  
-			    <li><a href="#appli_tab" aria-controls="appli_tab" role="tab" data-toggle="tab"><i class="fa fa-edit"></i><span class="nav-label">处理申请</span><span class="label label-warning pull-right">8</span></a></li>
-			    <li><a href="#assign_tab" aria-controls="assign_tab" class="active" role="tab" data-toggle="tab"><i class="fa fa-tasks"></i><span class="nav-label">分配任务</span></a></li>
-			    <li><a href="#task_tab" aria-controls="task_tab"  role="tab" data-toggle="tab"><i class="fa fa-calculator"></i><span class="nav-label">进度管理</span><span class="label label-info pull-right">4</span></a></li>
+             	<li><a href="#sal_tab" aria-controls="sal_tab" role="tab" data-toggle="tab"><i class="fa fa-calendar"></i><span class="nav-label">发薪记录</span></a></li>
             	
                 <!--<li>
                     <a href="table_data_tables.html#"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">薪资发放记录</span><span class="fa arrow"></span></a>
@@ -235,7 +232,7 @@
 								            </div>
 								            <div class="ibox-content">
 									            <div class="">
-									            	<a  class="btn btn-primary ">添加实习生</a>
+									            	<a class="btn btn-primary " data-toggle="modal" data-target="#add_modal">添加实习生</a>
 									            </div>
 									            <table class="table table-striped table-bordered table-hover " id="emp_table" >
 						            			</table>
@@ -286,9 +283,6 @@
 								                </div>
 								            </div>
 								            <div class="ibox-content">
-									            <div class="">
-									            	<a  class="btn btn-primary ">添加经理</a>
-									            </div>
 									            <table class="table table-striped table-bordered table-hover " id="mgr_table" >
 						            			</table>
 						            		</div>
@@ -317,189 +311,38 @@
 				            <div class="row">
 					            <div class="col-lg-12">
 					            	<div class="ibox float-e-margins">
-								            <div class="ibox-title">
-								                <h5>发新纪录表</h5>
-								                <div class="ibox-tools">
-								                    <a class="collapse-link">
-								                        <i class="fa fa-chevron-up"></i>
-								                    </a>
-								                    <a class="dropdown-toggle" data-toggle="dropdown" href="table_data_tables.html#">
-								                        <i class="fa fa-wrench"></i>
-								                    </a>
-								                    <ul class="dropdown-menu dropdown-user">
-								                        <li><a href="table_data_tables.html#">Config option 1</a>
-								                        </li>
-								                        <li><a href="table_data_tables.html#">Config option 2</a>
-								                        </li>
-								                    </ul>
-								                    <a class="close-link">
-								                        <i class="fa fa-times"></i>
-								                    </a>
-								                </div>
-								            </div>
-								            <div class="ibox-content">
-									            <!--<div class="">
-									            	<a  class="btn btn-primary ">添加实习生</a>
-									            </div>-->
-									            <table class="table table-striped table-bordered table-hover " id="sal_table" >
-						            			</table>
-						            		</div>
+                                        <div class="ibox-title">
+                                            <h5>发新纪录表</h5>
+                                            <div class="ibox-tools">
+                                                <a class="collapse-link">
+                                                    <i class="fa fa-chevron-up"></i>
+                                                </a>
+                                                <a class="dropdown-toggle" data-toggle="dropdown" href="table_data_tables.html#">
+                                                    <i class="fa fa-wrench"></i>
+                                                </a>
+                                                <ul class="dropdown-menu dropdown-user">
+                                                    <li><a href="table_data_tables.html#">Config option 1</a>
+                                                    </li>
+                                                    <li><a href="table_data_tables.html#">Config option 2</a>
+                                                    </li>
+                                                </ul>
+                                                <a class="close-link">
+                                                    <i class="fa fa-times"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="ibox-content">
+                                            <!--<div class="">
+                                                <a  class="btn btn-primary ">添加实习生</a>
+                                            </div>-->
+                                            <table class="table table-striped table-bordered table-hover " id="sal_table" >
+                                            </table>
+                                        </div>
 					            	</div>
 					            </div>
 				            </div>
 				        </div>
-			        </div>	
-		        	<div role="tabpanel" class="tab-pane" id="appli_tab">
-			            <div class="row wrapper border-bottom white-bg page-heading">
-			                <div class="col-lg-10">
-			                    <h2>申请处理</h2>
-			                    <ol class="breadcrumb">
-			                        <li>
-			                            <a href="#">首页</a>
-			                        </li>
-			                        <li class="active">
-			                            <strong>申请处理</strong>
-			                        </li>
-			                    </ol>
-			                </div>
-			                <div class="col-lg-2">
-			                </div>
-			            </div>
-				        <div class="wrapper wrapper-content animated fadeInRight">
-				            <div class="row">
-					            <div class="col-lg-12">
-					            	<div class="ibox float-e-margins">
-								            <div class="ibox-title">
-								                <h5>考勤异常申请汇总</h5>
-								                <div class="ibox-tools">
-								                    <a class="collapse-link">
-								                        <i class="fa fa-chevron-up"></i>
-								                    </a>
-								                    <a class="dropdown-toggle" data-toggle="dropdown" href="table_data_tables.html#">
-								                        <i class="fa fa-wrench"></i>
-								                    </a>
-								                    <ul class="dropdown-menu dropdown-user">
-								                        <li><a href="table_data_tables.html#">Config option 1</a>
-								                        </li>
-								                        <li><a href="table_data_tables.html#">Config option 2</a>
-								                        </li>
-								                    </ul>
-								                    <a class="close-link">
-								                        <i class="fa fa-times"></i>
-								                    </a>
-								                </div>
-								            </div>
-								            <div class="ibox-content">
-									            <!--<div class="">
-									            	<a  class="btn btn-primary ">添加实习生</a>
-									            </div>-->
-									            <table class="table table-striped table-bordered table-hover " id="app_table" >
-						            			</table>
-						            		</div>
-					            	</div>
-					            </div>
-				            </div>
-				        </div>
-			        </div>	
-		        	<div role="tabpanel" class="tab-pane active" id="assign_tab">
-			            <div class="row wrapper border-bottom white-bg page-heading">
-			                <div class="col-lg-10">
-			                    <h2>任务分配</h2>
-			                    <ol class="breadcrumb">
-			                        <li>
-			                            <a href="#">首页</a>
-			                        </li>
-			                        <li class="active">
-			                            <strong>任务分配</strong>
-			                        </li>
-			                    </ol>
-			                </div>
-			                <div class="col-lg-2">
-			                </div>
-			            </div>
-				        <div class="wrapper wrapper-content animated fadeInRight">
-				            <div class="row">
-					            <div class="col-lg-12">
-					            	<div class="ibox float-e-margins">
-								            <div class="ibox-title">
-								                <h5>分配新任务</h5>
-								                <div class="ibox-tools">
-								                    <a class="collapse-link">
-								                        <i class="fa fa-chevron-up"></i>
-								                    </a>
-								                    <a class="dropdown-toggle" data-toggle="dropdown" href="table_data_tables.html#">
-								                        <i class="fa fa-wrench"></i>
-								                    </a>
-								                    <ul class="dropdown-menu dropdown-user">
-								                        <li><a href="table_data_tables.html#">Config option 1</a>
-								                        </li>
-								                        <li><a href="table_data_tables.html#">Config option 2</a>
-								                        </li>
-								                    </ul>
-								                    <a class="close-link">
-								                        <i class="fa fa-times"></i>
-								                    </a>
-								                </div>
-								            </div>
-								            <div class="ibox-content">
-						            		</div>
-					            	</div>
-					            </div>
-				            </div>
-				        </div>
-			        </div>	
-		        	<div role="tabpanel" class="tab-pane" id="task_tab">
-			            <div class="row wrapper border-bottom white-bg page-heading">
-			                <div class="col-lg-10">
-			                    <h2>进度管理</h2>
-			                    <ol class="breadcrumb">
-			                        <li>
-			                            <a href="#">首页</a>
-			                        </li>
-			                        <li class="active">
-			                            <strong>进度管理</strong>
-			                        </li>
-			                    </ol>
-			                </div>
-			                <div class="col-lg-2">
-			                </div>
-			            </div>
-				        <div class="wrapper wrapper-content animated fadeInRight">
-				            <div class="row">
-					            <div class="col-lg-12">
-					            	<div class="ibox float-e-margins">
-								            <div class="ibox-title">
-								                <h5>进度表</h5>
-								                <div class="ibox-tools">
-								                    <a class="collapse-link">
-								                        <i class="fa fa-chevron-up"></i>
-								                    </a>
-								                    <a class="dropdown-toggle" data-toggle="dropdown" href="table_data_tables.html#">
-								                        <i class="fa fa-wrench"></i>
-								                    </a>
-								                    <ul class="dropdown-menu dropdown-user">
-								                        <li><a href="table_data_tables.html#">Config option 1</a>
-								                        </li>
-								                        <li><a href="table_data_tables.html#">Config option 2</a>
-								                        </li>
-								                    </ul>
-								                    <a class="close-link">
-								                        <i class="fa fa-times"></i>
-								                    </a>
-								                </div>
-								            </div>
-								            <div class="ibox-content">
-									            <!--<div class="">
-									            	<a  class="btn btn-primary ">添加实习生</a>
-									            </div>-->
-									            <table class="table table-striped table-bordered table-hover " id="task_table" >
-						            			</table>
-						            		</div>
-					            	</div>
-					            </div>
-				            </div>
-				        </div>
-			        </div>			        
+			        </div>
 		        </div>
 		        <div class="footer">
 		            <div class="pull-right">
@@ -572,9 +415,160 @@
       </div>
     </div>
 
+    <div class="modal fade" id="add_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel_edit">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title text-danger" id="myModalLabel_edit" >添加实习生</h4>
+          </div>
+          <div class="modal-body" id="edit_tip">
+             <div class="form-group">
+                <label for="add_dept" class="control-label">部门</label>
+                <select class="form-control"  id="add_dept">
+                    <c:forEach var="dept" items="${deptList}" varStatus="status">
+                        <option value="${dept.value}">${dept.text}</option>
+                    </c:forEach>
+                </select>
+             </div>
+             <form>
+                <div class="form-group">
+                    <label for="add_real_name" class="control-label">姓名:</label>
+                    <input type="text" class="form-control" id="add_real_name">
+                </div>
+                <div class="form-group">
+                    <label for="add_name" class="control-label">登录名:</label>
+                    <input type="text" class="form-control" id="add_name">
+                </div>
+                <div class="form-group">
+                    <label for="add_pass" class="control-label">密码:</label>
+                    <input type="password" class="form-control" id="add_pass">
+                </div>
+                <div class="form-group">
+                    <label for="add_tel" class="control-label">电话:</label>
+                    <input type="number" class="form-control" id="add_tel">
+                </div>
+                <div class="form-group">
+                    <label for="add_email" class="control-label">邮箱:</label>
+                    <input type="email" class="form-control" id="add_email">
+                </div>
+                <div class="form-group">
+                    <label for="add_id_number" class="control-label">证件号码:</label>
+                    <input type="number" class="form-control" id="add_id_number">
+                </div>
+                <div class="form-group">
+                    <label for="add_salary" class="control-label">薪资:</label>
+                    <input type="number" class="form-control" id="add_salary">
+                </div>
+                </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+            <button type="button" id="edit_tip_y" class="btn btn-primary btn-warning" data-dismiss="modal">提交更新</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="edit_pwd" tabindex="-1" role="dialog" aria-labelledby="myModalLabel_pwd">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title text-danger" id="myModalLabel_pwd" >添加实习生</h4>
+          </div>
+          <div class="modal-body">
+             <form>
+                <div class="form-group">
+                    <label for="pwd_old" class="control-label">旧密码:</label>
+                    <input type="password" class="form-control" id="pwd_old">
+                </div>
+                <div class="form-group">
+                    <label for="pwd_new" class="control-label">新密码:</label>
+                    <input type="password" class="form-control" id="pwd_new">
+                </div>
+                <div class="form-group">
+                    <label for="pwd_new1" class="control-label">确认新密码:</label>
+                    <input type="password" class="form-control" id="pwd_new1">
+                </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+            <button type="button" id="pwd_tip_y" class="btn btn-primary btn-warning" data-dismiss="modal">确认更改密码</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- Page-Level Scripts -->
     <script>
         $('.container-fluid').height($(window).height());
+        $("#add_modal").on("show.bs.modal",function(e){
+            $(this).find("#edit_tip_y").off("click").on("click",function(){
+	            var real_name = $("#add_real_name").val();
+	            var name = $("#add_name").val();
+	            var pass = $("#add_pass").val();
+	            var tel = $("#add_tel").val();
+	            var id_number = $("#add_id_number").val();
+	            var email = $("#add_email").val();
+	            var dept = $("#add_dept").val();
+	            var salary = $("#add_salary").val();
+                var postData_add = {
+                    "real_name" : real_name,
+                    "name" : name,
+                    "pass" : pass,
+                    "tel" : tel,
+                    "id_number" : id_number,
+                    "email" : email,
+                    "dept" : dept,
+                    "salary" : salary
+                };
+                $.ajax({
+                    type: "post",
+                    url: '${context}/admin/addItr',
+                    data: postData_add,
+                    success: function (data, status) {
+                        if (status == "success") {
+                            alert(JSON.stringify(data))
+                            $("#emp_table").bootstrapTable("insertRow",{idnex:0, row:data});
+                        }
+                    },
+                    error: function () {
+                        alert("Error");
+                    },
+                    complete: function () {
+                    }
+                });
+            });
+        });
+        $("#edit_pwd").on("show.bs.modal",function(e){
+            $(this).find("#pwd_tip_y").off("click").on("click",function(){
+	            var pwd_old = $("#pwd_old").val();
+	            var pwd_new = $("#pwd_new").val();
+	            var pwd_new1 = $("#pwd_new1").val();
+                var postData_pwd = {
+                    "pwd_old" : pwd_old,
+                    "pwd_new" : pwd_new,
+                    "pwd_new1" : pwd_new1
+                };
+                $.ajax({
+                    type: "post",
+                    url: '${context}/pwdChange',
+                    data: postData_pwd,
+                    success: function (data, status) {
+                        if (status == "success") {
+                            alert("您的密码已经修改，请妥善保存");
+                        }
+                    },
+                    error: function () {
+                        alert("修改密码失败");
+                    },
+                    complete: function () {
+                    }
+                });
+            });
+        });
         $("#emp_table").bootstrapTable({
             columns: [{
                 checkbox:true
@@ -788,6 +782,7 @@
                     title: '部门',
                     validate: function (v) {
                         if (!v) return '部门信息不能为空';
+                    }
                   }
             }],
             url: '${context}/admin/getAllMgr',

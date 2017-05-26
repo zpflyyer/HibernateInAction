@@ -138,4 +138,6 @@ public interface ItrManager
 
 	boolean askLeave(String from,String to,String itr,int type,String reason);
 
+	boolean pwdChange(String name,String pwd_new);
+
 }

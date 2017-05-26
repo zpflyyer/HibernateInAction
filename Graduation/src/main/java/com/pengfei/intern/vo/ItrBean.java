@@ -29,6 +29,11 @@ public class ItrBean implements Serializable
 	private String id_number;
 
 	public ItrBean(int id,String empName, String empPass, double amount, String tel, String email, Date board,String real_name,String id_number, List<AttendBean> attendBeans){
+		this(id,empName,empPass,amount,tel,email,board,real_name,id_number);
+		this.attendBeans = attendBeans;
+	}
+
+	public ItrBean(int id,String empName, String empPass, double amount, String tel, String email, Date board,String real_name,String id_number){
 		this.id = id;
 		this.empName = empName;
 		this.empPass = empPass;
@@ -41,6 +46,5 @@ public class ItrBean implements Serializable
 		calendar.setTime(board);
 		calendar.add(Calendar.MONTH,1);
 		this.board = new SimpleDateFormat("yyyy-mm-dd").format(calendar.getTime());
-		this.attendBeans = attendBeans;
 	}
 }
