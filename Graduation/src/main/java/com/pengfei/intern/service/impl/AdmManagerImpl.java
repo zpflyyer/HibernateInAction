@@ -1,13 +1,7 @@
 package com.pengfei.intern.service.impl;
 
-import com.pengfei.intern.dao.AttendDao;
-import com.pengfei.intern.dao.InternDao;
-import com.pengfei.intern.dao.ManagerDao;
-import com.pengfei.intern.dao.PaymentDao;
-import com.pengfei.intern.domain.Attend;
-import com.pengfei.intern.domain.Intern;
-import com.pengfei.intern.domain.Manager;
-import com.pengfei.intern.domain.Payment;
+import com.pengfei.intern.dao.*;
+import com.pengfei.intern.domain.*;
 import com.pengfei.intern.exception.HrException;
 import com.pengfei.intern.service.AdmManager;
 import com.pengfei.intern.vo.*;
@@ -34,6 +28,8 @@ public class AdmManagerImpl implements AdmManager {
     private AttendDao attendDao;
     @Autowired
     private PaymentDao paymentDao;
+    @Autowired
+    private AttendTypeDao attendTypeDao;
     @Override
     public List<MgrBean> getAllMgr() {
         List<Manager> managerList = mgrDao.findAll(Manager.class);
@@ -165,6 +161,24 @@ public class AdmManagerImpl implements AdmManager {
     }
 
     @Override
+    public TypeBean addType(String name, double amerce) {
+        AttendType aType = new AttendType();
+        if (attendTypeDao.findByName(name) != null){
+            return null;
+        }
+        else{
+            aType.setName(name);
+            aType.setAmerce(amerce);
+            attendTypeDao.save(aType);
+        }
+        aType = attendTypeDao.findByName(name);
+        if (aType != null){
+            return new TypeBean(aType.getId(),aType.getName(),aType.getAmerce());
+        }
+        return null;
+    }
+
+    @Override
     public boolean delEmp(String name) throws HrException {
         return itrDao.deleteByName(name);
     }
@@ -225,5 +239,28 @@ public class AdmManagerImpl implements AdmManager {
             manager.setDept(dept);
             return true;
         }
+    }
+
+    @Override
+    public List<TypeBean> getAllType() {
+        List<AttendType> attendTypeList = attendTypeDao.findAll(AttendType.class);
+        List<TypeBean> typeBeanList  = new ArrayList<>();
+        for (AttendType atype:
+             attendTypeList) {
+            typeBeanList.add(new TypeBean(atype.getId(),atype.getName(),atype.getAmerce()));
+        }
+        return typeBeanList;
+    }
+
+    @Override
+    public boolean updType(int id, String name, Double amerce) {
+        AttendType atype = attendTypeDao.get(AttendType.class,id);
+        if (atype != null){
+            atype.setName(name);
+            atype.setAmerce(amerce);
+            attendTypeDao.update(atype);
+            return true;
+        }
+        return false;
     }
 }

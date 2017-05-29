@@ -134,7 +134,7 @@ public interface ItrManager
 	 * @param job_id
 	 * @return 完成的结果
 	 */
-	boolean finishJob(int job_id,boolean finished);
+	boolean acceptJob(int job_id,String accepted);
 
 	boolean askLeave(String from,String to,String itr,int type,String reason);
 

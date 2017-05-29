@@ -28,7 +28,6 @@
                             <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">${role}</strong>
                              </span> <span class="text-muted text-xs block">${username}<b class="caret"></b></span> </span> </a>
                         <ul class="dropdown-menu animated fadeInRight m-t-xs">
-                            <li><a href="profile.html">我的资料</a></li>
                             <li><a data-toggle="modal" data-target="#edit_pwd">修改密码</a></li>
                             <li class="divider"></li>
                             <li><a href="${context}/logout">登出</a></li>
@@ -40,10 +39,9 @@
                 </li>
                 <li><a href="#unatt_tab" aria-controls="unatt_tab" role="tab" data-toggle="tab"><i class="fa fa-user"></i> <span class="nav-label">考勤异常</span></a></li>
              	<li><a href="#punch_tab" aria-controls="punch_tab" role="tab" data-toggle="tab"><i class="fa fa-calendar"></i><span class="nav-label">打卡</span></a></li>
-			    <li><a href="#sal_tab" aria-controls="sal_tab" role="tab" data-toggle="tab"><i class="fa fa-edit"></i><span class="nav-label">发薪纪录</span><span class="label label-warning pull-right">8</span></a></li>
+			    <li><a href="#sal_tab" aria-controls="sal_tab" role="tab" data-toggle="tab"><i class="fa fa-edit"></i><span class="nav-label">发薪纪录</span></a></li>
 			    <li><a href="#job_tab" aria-controls="job_tab" class="active" role="tab" data-toggle="tab"><i class="fa fa-tasks"></i><span class="nav-label">我的任务</span></a></li>
-			    <li><a href="#task_tab" aria-controls="task_tab"  role="tab" data-toggle="tab"><i class="fa fa-calculator"></i><span class="nav-label">进度管理</span><span class="label label-info pull-right">4</span></a></li>
-            	
+
                 <!--<li>
                     <a href="table_data_tables.html#"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">薪资发放记录</span><span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level collapse nav-tab">
@@ -88,101 +86,6 @@
 			                <li>
 			                    <span class="m-r-sm text-muted welcome-message">欢迎使用实习生管理系统.</span>
 			                </li>
-			                <li class="dropdown">
-			                    <a class="dropdown-toggle count-info" data-toggle="dropdown" href="table_data_tables.html#">
-			                        <i class="fa fa-envelope"></i>  <span class="label label-warning">16</span>
-			                    </a>
-			                    <ul class="dropdown-menu dropdown-messages">
-			                        <li>
-			                            <div class="dropdown-messages-box">
-			                                <a href="profile.html" class="pull-left">
-			                                    <img alt="image" class="img-circle" src="${context}/img/a7.jpg">
-			                                </a>
-			                                <div class="media-body">
-			                                    <small class="pull-right">46h ago</small>
-			                                    <strong>Mike Loreipsum</strong> started following <strong>Monica Smith</strong>. <br>
-			                                    <small class="text-muted">3 days ago at 7:58 pm - 10.06.2014</small>
-			                                </div>
-			                            </div>
-			                        </li>
-			                        <li class="divider"></li>
-			                        <li>
-			                            <div class="dropdown-messages-box">
-			                                <a href="profile.html" class="pull-left">
-			                                    <img alt="image" class="img-circle" src="${context}/img/a4.jpg">
-			                                </a>
-			                                <div class="media-body ">
-			                                    <small class="pull-right text-navy">5h ago</small>
-			                                    <strong>Chris Johnatan Overtunk</strong> started following <strong>Monica Smith</strong>. <br>
-			                                    <small class="text-muted">Yesterday 1:21 pm - 11.06.2014</small>
-			                                </div>
-			                            </div>
-			                        </li>
-			                        <li class="divider"></li>
-			                        <li>
-			                            <div class="dropdown-messages-box">
-			                                <a href="profile.html" class="pull-left">
-			                                    <img alt="image" class="img-circle" src="${context}/img/profile.jpg">
-			                                </a>
-			                                <div class="media-body ">
-			                                    <small class="pull-right">23h ago</small>
-			                                    <strong>Monica Smith</strong> love <strong>Kim Smith</strong>. <br>
-			                                    <small class="text-muted">2 days ago at 2:30 am - 11.06.2014</small>
-			                                </div>
-			                            </div>
-			                        </li>
-			                        <li class="divider"></li>
-			                        <li>
-			                            <div class="text-center link-block">
-			                                <a href="mailbox.html">
-			                                    <i class="fa fa-envelope"></i> <strong>查看所有申请</strong>
-			                                </a>
-			                            </div>
-			                        </li>
-			                    </ul>
-			                </li>
-			                <li class="dropdown">
-			                    <a class="dropdown-toggle count-info" data-toggle="dropdown" href="table_data_tables.html#">
-			                        <i class="fa fa-bell"></i>  <span class="label label-primary">8</span>
-			                    </a>
-			                    <ul class="dropdown-menu dropdown-alerts">
-			                        <li>
-			                            <a href="mailbox.html">
-			                                <div>
-			                                    <i class="fa fa-envelope fa-fw"></i> You have 16 messages
-			                                    <span class="pull-right text-muted small">4 minutes ago</span>
-			                                </div>
-			                            </a>
-			                        </li>
-			                        <li class="divider"></li>
-			                        <li>
-			                            <a href="profile.html">
-			                                <div>
-			                                    <i class="fa fa-twitter fa-fw"></i> 3 New Followers
-			                                    <span class="pull-right text-muted small">12 minutes ago</span>
-			                                </div>
-			                            </a>
-			                        </li>
-			                        <li class="divider"></li>
-			                        <li>
-			                            <a href="grid_options.html">
-			                                <div>
-			                                    <i class="fa fa-upload fa-fw"></i> Server Rebooted
-			                                    <span class="pull-right text-muted small">4 minutes ago</span>
-			                                </div>
-			                            </a>
-			                        </li>
-			                        <li class="divider"></li>
-			                        <li>
-			                            <div class="text-center link-block">
-			                                <a href="notifications.html">
-			                                    <strong>查看所有通知</strong>
-			                                    <i class="fa fa-angle-right"></i>
-			                                </a>
-			                            </div>
-			                        </li>
-			                    </ul>
-			                </li>
 			                <li>
 			                    <a href="${context}/logout">
 			                        <i class="fa fa-sign-out"></i> 退出登录
@@ -192,7 +95,7 @@
 			        </nav>
 		        </div>
 		        <div class="tab-content">
-		        	<div role="tabpanel" class="tab-pane" id="unatt_tab">
+		        	<div role="tabpanel" class="tab-pane active" id="unatt_tab">
 			            <div class="row wrapper border-bottom white-bg page-heading">
 			                <div class="col-lg-10">
 			                    <h2>考勤异常</h2>
@@ -457,9 +360,6 @@
 			        </div>
 		        </div>
 		        <div class="footer">
-		            <div class="pull-right">
-		                10GB of <strong>250GB</strong> Free.
-		            </div>
 		            <div>
 		                <strong>Copyright</strong> Example Company &copy; 2014-2015
 		            </div>
@@ -752,6 +652,22 @@
                  title: '分派日期',
                  align:'center'
             },{
+                field: 'accepted',
+                title: '接受情况',
+                align: 'center',
+                editable: {
+                     type: "select",
+                     source: [{ value: '已接受', text: "已接受" }, { value: '不接受', text: "不接受" }],
+                     title: "接受任务",
+                     emptytext: "接受",
+                     placeholder: "",
+                     mode: "popup"
+                }
+            },{
+                field: 'accept_date',
+                title: '接受时间',
+                align: 'center'
+            },{
                 field: 'finished',
                 title: '完成情况',
                 align:'center'
@@ -780,7 +696,22 @@
             paginationPreText:'<',
             paginationNextText:'>',
             clickToSelect:false,
-            maintainSelected:false
+            maintainSelected:false,
+　　　　　　 onEditableSave: function (field, row, oldValue, $el) {
+                $.ajax({
+                    type: "post",
+                    url: '${context}/employee/accept',
+                    data: row,
+                    success: function (data, status) {
+                        if (status == "success") {
+                            alert("操作成功");
+                        }
+                    },
+                    error: function () {
+                        alert("Error");
+                    }
+                });
+            }
         });
         function appOperateFormatter(value, row, index) {
           return "<button class='btn btn-link'  id='"+row.id+"_app"+"' data-toggle='modal' data-att_date='"+row.dutyDay+"' data-att_id='"+row.id+"' data-target='#myModal_app'>申请</button>";
@@ -801,9 +732,7 @@
                 $.post("${context}/employee/addApp",postData_app,
                 function(data,statusText){
                     var response=eval("(" + data + ")").response;
-                    alert(response);
                     if(statusText=="success"&&response=="added"){
-                    		alert("已申请，待处理");
                         $("#"+att_id+"_app").get(0).innerHTML="已申请，待处理";
                         $("#"+att_id+"_app").attr("disabled",true);
                      }

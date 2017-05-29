@@ -2,10 +2,7 @@ package com.pengfei.intern.controller;
 
 import com.pengfei.intern.domain.Response;
 import com.pengfei.intern.service.AdmManager;
-import com.pengfei.intern.vo.DeptBean;
-import com.pengfei.intern.vo.ItrBean;
-import com.pengfei.intern.vo.MgrBean;
-import com.pengfei.intern.vo.SalaryBean;
+import com.pengfei.intern.vo.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -141,7 +138,7 @@ public class AdminController {
     @ResponseBody
     @RequestMapping(method = RequestMethod.POST,value = "/updMgr")
     Response updMgr(HttpSession session, HttpServletRequest request,
-                    @RequestParam("name") String name,
+                    @RequestParam("empName") String empName,
                     @RequestParam("real_name") String real_name,
                     @RequestParam("empPass") String empPass,
                     @RequestParam("tel") String tel,
@@ -150,7 +147,7 @@ public class AdminController {
         System.out.println("updMgr() called!");
         Response response = new Response();
 
-        boolean result = admManager.updMgr(name,real_name,empPass,tel,email,dept);
+        boolean result = admManager.updMgr(empName,real_name,empPass,tel,email,dept);
         if (result){
             response.setResponse("updated");
         }
@@ -208,4 +205,37 @@ public class AdminController {
         System.out.println("getAllDept() called!");
         return admManager.getAllDept();
     }
+
+    @ResponseBody
+    @RequestMapping(method = RequestMethod.POST,value = "/getAllType")
+    List<TypeBean> getAllType(HttpSession session, HttpServletRequest request){
+        System.out.println("getAllType() called!");
+        return admManager.getAllType();
+    }
+
+    @ResponseBody
+    @RequestMapping(method = RequestMethod.POST,value = "/updType")
+    Response updType(HttpSession session, HttpServletRequest request
+        ,@RequestParam("id") int id
+        ,@RequestParam("name") String name
+        ,@RequestParam("amerce") double amerce){
+        Response response = new Response("failed");
+        System.out.println("updType() called!");
+        if (admManager.updType(id,name,amerce)){
+            response.setResponse("success");
+        }
+        return response;
+    }
+
+    @ResponseBody
+    @RequestMapping(method = RequestMethod.POST,value = "/addType")
+    TypeBean addType(HttpSession session, HttpServletRequest request
+            ,@RequestParam("name") String name
+            ,@RequestParam("amerce") double amerce){
+        System.out.println("addType() called!");
+
+        return admManager.addType(name,amerce);
+    }
+
+
 }

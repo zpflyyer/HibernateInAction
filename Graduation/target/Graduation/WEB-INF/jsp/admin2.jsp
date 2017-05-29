@@ -28,20 +28,20 @@
                             <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">${role}</strong>
                              </span> <span class="text-muted text-xs block">${username}<b class="caret"></b></span> </span> </a>
                         <ul class="dropdown-menu animated fadeInRight m-t-xs">
-                            <li><a href="profile.html">我的资料</a></li>
                             <li><a data-toggle="modal" data-target="#edit_pwd">修改密码</a></li>
                             <li class="divider"></li>
                             <li><a href="${context}/logout">登出</a></li>
                         </ul>
                     </div>
                     <div class="logo-element">
-                        IN+
+                        IMS
                     </div>
                 </li>
                 <li><a href="#emp_tab" aria-controls="emp_tab" role="tab" data-toggle="tab"><i class="fa fa-user"></i> <span class="nav-label">实习生管理</span></a></li>
-                <li><a href="#mgr_tab" aria-controls="emgr_tab" role="tab" data-toggle="tab"><i class="fa fa-user"></i> <span class="nav-label">经理管理</span></a></li>
+                <li><a href="#mgr_tab" aria-controls="mgr_tab" role="tab" data-toggle="tab"><i class="fa fa-user"></i> <span class="nav-label">经理管理</span></a></li>
              	<li><a href="#sal_tab" aria-controls="sal_tab" role="tab" data-toggle="tab"><i class="fa fa-calendar"></i><span class="nav-label">发薪记录</span></a></li>
-            	
+            	<li><a href="#fan_tab" aria-controls="fan_tab" role="tab" data-toggle="tab"><i class="fa fa-calendar"></i><span class="nav-label">薪资制度管理</span></a></li>
+
                 <!--<li>
                     <a href="table_data_tables.html#"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">薪资发放记录</span><span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level collapse nav-tab">
@@ -86,101 +86,6 @@
 			                <li>
 			                    <span class="m-r-sm text-muted welcome-message">欢迎使用实习生管理系统.</span>
 			                </li>
-			                <li class="dropdown">
-			                    <a class="dropdown-toggle count-info" data-toggle="dropdown" href="table_data_tables.html#">
-			                        <i class="fa fa-envelope"></i>  <span class="label label-warning">16</span>
-			                    </a>
-			                    <ul class="dropdown-menu dropdown-messages">
-			                        <li>
-			                            <div class="dropdown-messages-box">
-			                                <a href="profile.html" class="pull-left">
-			                                    <img alt="image" class="img-circle" src="${context}/img/a7.jpg">
-			                                </a>
-			                                <div class="media-body">
-			                                    <small class="pull-right">46h ago</small>
-			                                    <strong>Mike Loreipsum</strong> started following <strong>Monica Smith</strong>. <br>
-			                                    <small class="text-muted">3 days ago at 7:58 pm - 10.06.2014</small>
-			                                </div>
-			                            </div>
-			                        </li>
-			                        <li class="divider"></li>
-			                        <li>
-			                            <div class="dropdown-messages-box">
-			                                <a href="profile.html" class="pull-left">
-			                                    <img alt="image" class="img-circle" src="${context}/img/a4.jpg">
-			                                </a>
-			                                <div class="media-body ">
-			                                    <small class="pull-right text-navy">5h ago</small>
-			                                    <strong>Chris Johnatan Overtunk</strong> started following <strong>Monica Smith</strong>. <br>
-			                                    <small class="text-muted">Yesterday 1:21 pm - 11.06.2014</small>
-			                                </div>
-			                            </div>
-			                        </li>
-			                        <li class="divider"></li>
-			                        <li>
-			                            <div class="dropdown-messages-box">
-			                                <a href="profile.html" class="pull-left">
-			                                    <img alt="image" class="img-circle" src="${context}/img/profile.jpg">
-			                                </a>
-			                                <div class="media-body ">
-			                                    <small class="pull-right">23h ago</small>
-			                                    <strong>Monica Smith</strong> love <strong>Kim Smith</strong>. <br>
-			                                    <small class="text-muted">2 days ago at 2:30 am - 11.06.2014</small>
-			                                </div>
-			                            </div>
-			                        </li>
-			                        <li class="divider"></li>
-			                        <li>
-			                            <div class="text-center link-block">
-			                                <a href="mailbox.html">
-			                                    <i class="fa fa-envelope"></i> <strong>查看所有申请</strong>
-			                                </a>
-			                            </div>
-			                        </li>
-			                    </ul>
-			                </li>
-			                <li class="dropdown">
-			                    <a class="dropdown-toggle count-info" data-toggle="dropdown" href="table_data_tables.html#">
-			                        <i class="fa fa-bell"></i>  <span class="label label-primary">8</span>
-			                    </a>
-			                    <ul class="dropdown-menu dropdown-alerts">
-			                        <li>
-			                            <a href="mailbox.html">
-			                                <div>
-			                                    <i class="fa fa-envelope fa-fw"></i> You have 16 messages
-			                                    <span class="pull-right text-muted small">4 minutes ago</span>
-			                                </div>
-			                            </a>
-			                        </li>
-			                        <li class="divider"></li>
-			                        <li>
-			                            <a href="profile.html">
-			                                <div>
-			                                    <i class="fa fa-twitter fa-fw"></i> 3 New Followers
-			                                    <span class="pull-right text-muted small">12 minutes ago</span>
-			                                </div>
-			                            </a>
-			                        </li>
-			                        <li class="divider"></li>
-			                        <li>
-			                            <a href="grid_options.html">
-			                                <div>
-			                                    <i class="fa fa-upload fa-fw"></i> Server Rebooted
-			                                    <span class="pull-right text-muted small">4 minutes ago</span>
-			                                </div>
-			                            </a>
-			                        </li>
-			                        <li class="divider"></li>
-			                        <li>
-			                            <div class="text-center link-block">
-			                                <a href="notifications.html">
-			                                    <strong>查看所有通知</strong>
-			                                    <i class="fa fa-angle-right"></i>
-			                                </a>
-			                            </div>
-			                        </li>
-			                    </ul>
-			                </li>
 			                <li>
 			                    <a href="${context}/logout">
 			                        <i class="fa fa-sign-out"></i> 退出登录
@@ -190,7 +95,7 @@
 			        </nav>
 		        </div>
 		        <div class="tab-content">
-		        	<div role="tabpanel" class="tab-pane" id="emp_tab">
+		        	<div role="tabpanel" class="tab-pane active" id="emp_tab">
 			            <div class="row wrapper border-bottom white-bg page-heading">
 			                <div class="col-lg-10">
 			                    <h2>实习生管理</h2>
@@ -312,7 +217,7 @@
 					            <div class="col-lg-12">
 					            	<div class="ibox float-e-margins">
                                         <div class="ibox-title">
-                                            <h5>发新纪录表</h5>
+                                            <h5>发薪纪录表</h5>
                                             <div class="ibox-tools">
                                                 <a class="collapse-link">
                                                     <i class="fa fa-chevron-up"></i>
@@ -343,13 +248,62 @@
 				            </div>
 				        </div>
 			        </div>
+		        	<div role="tabpanel" class="tab-pane" id="fan_tab">
+			            <div class="row wrapper border-bottom white-bg page-heading">
+			                <div class="col-lg-10">
+			                    <h2>薪资制度管理</h2>
+			                    <ol class="breadcrumb">
+			                        <li>
+			                            <a href="#">首页</a>
+			                        </li>
+			                        <li class="active">
+			                            <strong>薪资制度管理</strong>
+			                        </li>
+			                    </ol>
+			                </div>
+			                <div class="col-lg-2">
+			                </div>
+			            </div>
+				        <div class="wrapper wrapper-content animated fadeInRight">
+				            <div class="row">
+					            <div class="col-lg-12">
+					            	<div class="ibox float-e-margins">
+                                        <div class="ibox-title">
+                                            <h5>薪资制度</h5>
+                                            <div class="ibox-tools">
+                                                <a class="collapse-link">
+                                                    <i class="fa fa-chevron-up"></i>
+                                                </a>
+                                                <a class="dropdown-toggle" data-toggle="dropdown" href="table_data_tables.html#">
+                                                    <i class="fa fa-wrench"></i>
+                                                </a>
+                                                <ul class="dropdown-menu dropdown-user">
+                                                    <li><a href="table_data_tables.html#">Config option 1</a>
+                                                    </li>
+                                                    <li><a href="table_data_tables.html#">Config option 2</a>
+                                                    </li>
+                                                </ul>
+                                                <a class="close-link">
+                                                    <i class="fa fa-times"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="ibox-content">
+                                            <div class="">
+                                                <a  class="btn btn-primary " data-toggle="modal" data-target="#type_modal">添加考勤类型</a>
+                                            </div>
+                                            <table class="table table-striped table-bordered table-hover " id="fan_table" >
+                                            </table>
+                                        </div>
+					            	</div>
+					            </div>
+				            </div>
+				        </div>
+			        </div>
 		        </div>
 		        <div class="footer">
-		            <div class="pull-right">
-		                10GB of <strong>250GB</strong> Free.
-		            </div>
 		            <div>
-		                <strong>Copyright</strong> Example Company &copy; 2014-2015
+		                <strong class="pull-center">Copyright</strong> Example Company &copy; 2014-2015
 		            </div>
 		        </div>
 		
@@ -471,12 +425,40 @@
       </div>
     </div>
 
+    <div class="modal fade" id="type_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel_type">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title text-danger" id="myModalLabel_type" >添加考勤类型</h4>
+          </div>
+          <div class="modal-body" id="type_tip">
+             <form>
+                <div class="form-group">
+                    <label for="type_name" class="control-label">考勤名称:</label>
+                    <input type="text" class="form-control" id="type_name">
+                </div>
+                <div class="form-group">
+                    <label for="type_amerce" class="control-label">薪资增/扣:</label>
+                    <input type="number" class="form-control" id="type_amerce">
+                </div>
+                </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+            <button type="button" id="type_tip_y" class="btn btn-primary btn-warning" data-dismiss="modal">添加</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="modal fade" id="edit_pwd" tabindex="-1" role="dialog" aria-labelledby="myModalLabel_pwd">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title text-danger" id="myModalLabel_pwd" >添加实习生</h4>
+            <h4 class="modal-title text-danger" id="myModalLabel_pwd" >修改密码</h4>
           </div>
           <div class="modal-body">
              <form>
@@ -530,8 +512,32 @@
                     data: postData_add,
                     success: function (data, status) {
                         if (status == "success") {
-                            alert(JSON.stringify(data))
-                            $("#emp_table").bootstrapTable("insertRow",{idnex:0, row:data});
+                            $("#emp_table").bootstrapTable("insertRow",{index:0, row:data});
+                        }
+                    },
+                    error: function () {
+                        alert("Error");
+                    },
+                    complete: function () {
+                    }
+                });
+            });
+        });
+        $("#type_modal").on("show.bs.modal",function(e){
+            $(this).find("#type_tip_y").off("click").on("click",function(){
+	            var name = $("#type_name").val();
+	            var amerce = $("#type_amerce").val();
+                var postData_type = {
+                    "name" : name,
+                    "amerce" : amerce
+                };
+                $.ajax({
+                    type: "post",
+                    url: '${context}/admin/addType',
+                    data: postData_type,
+                    success: function (data, status) {
+                        if (status == "success") {
+                            $("#fan_table").bootstrapTable("insertRow",{index:0, row:data});
                         }
                     },
                     error: function () {
@@ -883,6 +889,72 @@
             paginationNextText:'>',
             clickToSelect:false,
             maintainSelected:false
+        });
+        $("#fan_table").bootstrapTable({
+            columns: [{
+                checkbox:true
+            },
+            {
+                field: 'id',
+                title: '编号',
+                align:'center'
+            },{
+                field: 'name',
+                title: '出勤类型',
+                align:'center',
+                editable: {
+                      type: 'text',
+                      title: '出勤类型',
+                      validate: function (v) {
+                          if (!v) return '出勤类型不能为空';
+                      }
+                }
+            },{
+                field: 'amerce',
+                title: '奖/扣薪额',
+                align:'center',
+                editable: {
+                      type: 'number',
+                      title: '奖/扣薪额',
+                      validate: function (v) {
+                          if (!v) return '奖/扣薪额不能为空';
+                      }
+                }
+            }],
+            url: '${context}/admin/getAllType',
+            method: 'post',
+            search:true,
+            striped:true,
+            sortName: "id",
+            pageList:'[3,5,10]',
+            pagination:true,
+            searchOnEnterKey:true,
+            showColumns:true,
+            showToggle:true,
+            showPaginationSwitch:true,
+            searchAlign:'left',
+            paginationHAlign:'right',
+            paginationPreText:'<',
+            paginationNextText:'>',
+            clickToSelect:false,
+            maintainSelected:false,
+　　　　　　 onEditableSave: function (field, row, oldValue, $el) {
+                $.ajax({
+                    type: "post",
+                    url: '${context}/admin/updType',
+                    data: row,
+                    success: function (data, status) {
+                        if (status == "success") {
+                            alert("编辑成功");
+                        }
+                    },
+                    error: function () {
+                        alert("Error");
+                    },
+                    complete: function () {
+                    }
+                });
+            }
         });
     </script>
 

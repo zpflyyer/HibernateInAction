@@ -30,6 +30,12 @@ public class Job {
     @Column(name = "finished",length = 500)
     private boolean finished;
 
+    @Column(name = "accepted")
+    private String accepted;
+
+    @Column(name = "accept_date")
+    private String accept_date;
+
     @ManyToOne(targetEntity = Task.class)
     @JoinColumn(name = "task_id",nullable = false)
     private Task task;
@@ -38,10 +44,12 @@ public class Job {
     @JoinColumn(name = "intern_id",nullable = false)
     private Intern intern;
 
-    public Job(Task task,Intern intern,int grade,boolean finished){
+    public Job(Task task,Intern intern,int grade,boolean finished,String accepted,String accept_date){
         this.task = task;
         this.intern = intern;
         this.grade = grade;
         this.finished = finished;
+        this.accepted = accepted;
+        this.accept_date = accept_date;
     }
 }

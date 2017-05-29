@@ -275,7 +275,7 @@ public class MgrManagerImpl
 		taskDao.save(task);
 		for (String itr:
 			 internList) {
-			Job job = new Job(task,empDao.findByName(itr),0,false);
+			Job job = new Job(task,empDao.findByName(itr),0,false,"Œ¥Ω” ‹","");
 			jobDao.save(job);
 		}
 		return true;
@@ -291,7 +291,7 @@ public class MgrManagerImpl
 			List<Job> jobList = jobDao.getAllByTask(task);
 			for (Job job:
 				 jobList) {
-				JobBean jobBean = new JobBean(task.getTitle(),job.getId(),job.getGrade(),job.isFinished(),job.getIntern().getReal_name());
+				JobBean jobBean = new JobBean(task.getTitle(),job.getId(),job.getGrade(),job.isFinished(),job.getAccepted(),job.getAccept_date(),job.getIntern().getReal_name());
 				jobBeanList.add(jobBean);
 			}
 		}

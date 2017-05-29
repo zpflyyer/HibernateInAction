@@ -28,21 +28,20 @@
                             <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">${role}</strong>
                              </span> <span class="text-muted text-xs block">${username}<b class="caret"></b></span> </span> </a>
                         <ul class="dropdown-menu animated fadeInRight m-t-xs">
-                            <li><a href="profile.html">我的资料</a></li>
                             <li><a data-toggle="modal" data-target="#edit_pwd">修改密码</a></li>
                             <li class="divider"></li>
                             <li><a href="${context}/logout">登出</a></li>
                         </ul>
                     </div>
                     <div class="logo-element">
-                        IN+
+                        IMS
                     </div>
                 </li>
                 <li><a href="#emp_tab" aria-controls="emp_tab" role="tab" data-toggle="tab"><i class="fa fa-user"></i> <span class="nav-label">实习生管理</span></a></li>
              	<li><a href="#sal_tab" aria-controls="sal_tab" role="tab" data-toggle="tab"><i class="fa fa-calendar"></i><span class="nav-label">发薪记录</span></a></li>  
-			    <li><a href="#appli_tab" aria-controls="appli_tab" role="tab" data-toggle="tab"><i class="fa fa-edit"></i><span class="nav-label">处理申请</span><span class="label label-warning pull-right">8</span></a></li>
+			    <li><a href="#appli_tab" aria-controls="appli_tab" role="tab" data-toggle="tab"><i class="fa fa-edit"></i><span class="nav-label">处理申请</span></a></li>
 			    <li><a href="#assign_tab" aria-controls="assign_tab" class="active" role="tab" data-toggle="tab"><i class="fa fa-tasks"></i><span class="nav-label">分配任务</span></a></li>
-			    <li><a href="#task_tab" aria-controls="task_tab"  role="tab" data-toggle="tab"><i class="fa fa-calculator"></i><span class="nav-label">进度管理</span><span class="label label-info pull-right">4</span></a></li>
+			    <li><a href="#task_tab" aria-controls="task_tab"  role="tab" data-toggle="tab"><i class="fa fa-calculator"></i><span class="nav-label">进度管理</span></a></li>
             	
                 <!--<li>
                     <a href="table_data_tables.html#"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">薪资发放记录</span><span class="fa arrow"></span></a>
@@ -56,7 +55,7 @@
                 </li>
 
                 <li>
-                    <a href="table_data_tables.html#"><i class="fa fa-edit"></i> <span class="nav-label">签核申请</span></span><span class="label label-info pull-right">8</span></a>
+                    <a href="table_data_tables.html#"><i class="fa fa-edit"></i> <span class="nav-label">签核申请</span></span></a>
                     <ul class="nav nav-second-level collapse">
                         <li><a href="form_basic.html"><i class="fa fa-file-text"></i>请假签核 <span class="label label-primary ">2</span></a></li>
                         <li><a href="form_advanced.html"><i class="fa fa-question"></i>考勤异议申请 <span class="label label-warning ">6</span></a></li>
@@ -87,101 +86,6 @@
 			            <ul class="nav navbar-top-links navbar-right">
 			                <li>
 			                    <span class="m-r-sm text-muted welcome-message">欢迎使用实习生管理系统.</span>
-			                </li>
-			                <li class="dropdown">
-			                    <a class="dropdown-toggle count-info" data-toggle="dropdown" href="table_data_tables.html#">
-			                        <i class="fa fa-envelope"></i>  <span class="label label-warning">16</span>
-			                    </a>
-			                    <ul class="dropdown-menu dropdown-messages">
-			                        <li>
-			                            <div class="dropdown-messages-box">
-			                                <a href="profile.html" class="pull-left">
-			                                    <img alt="image" class="img-circle" src="${context}/img/a7.jpg">
-			                                </a>
-			                                <div class="media-body">
-			                                    <small class="pull-right">46h ago</small>
-			                                    <strong>Mike Loreipsum</strong> started following <strong>Monica Smith</strong>. <br>
-			                                    <small class="text-muted">3 days ago at 7:58 pm - 10.06.2014</small>
-			                                </div>
-			                            </div>
-			                        </li>
-			                        <li class="divider"></li>
-			                        <li>
-			                            <div class="dropdown-messages-box">
-			                                <a href="profile.html" class="pull-left">
-			                                    <img alt="image" class="img-circle" src="${context}/img/a4.jpg">
-			                                </a>
-			                                <div class="media-body ">
-			                                    <small class="pull-right text-navy">5h ago</small>
-			                                    <strong>Chris Johnatan Overtunk</strong> started following <strong>Monica Smith</strong>. <br>
-			                                    <small class="text-muted">Yesterday 1:21 pm - 11.06.2014</small>
-			                                </div>
-			                            </div>
-			                        </li>
-			                        <li class="divider"></li>
-			                        <li>
-			                            <div class="dropdown-messages-box">
-			                                <a href="profile.html" class="pull-left">
-			                                    <img alt="image" class="img-circle" src="${context}/img/profile.jpg">
-			                                </a>
-			                                <div class="media-body ">
-			                                    <small class="pull-right">23h ago</small>
-			                                    <strong>Monica Smith</strong> love <strong>Kim Smith</strong>. <br>
-			                                    <small class="text-muted">2 days ago at 2:30 am - 11.06.2014</small>
-			                                </div>
-			                            </div>
-			                        </li>
-			                        <li class="divider"></li>
-			                        <li>
-			                            <div class="text-center link-block">
-			                                <a href="mailbox.html">
-			                                    <i class="fa fa-envelope"></i> <strong>查看所有申请</strong>
-			                                </a>
-			                            </div>
-			                        </li>
-			                    </ul>
-			                </li>
-			                <li class="dropdown">
-			                    <a class="dropdown-toggle count-info" data-toggle="dropdown" href="table_data_tables.html#">
-			                        <i class="fa fa-bell"></i>  <span class="label label-primary">8</span>
-			                    </a>
-			                    <ul class="dropdown-menu dropdown-alerts">
-			                        <li>
-			                            <a href="mailbox.html">
-			                                <div>
-			                                    <i class="fa fa-envelope fa-fw"></i> You have 16 messages
-			                                    <span class="pull-right text-muted small">4 minutes ago</span>
-			                                </div>
-			                            </a>
-			                        </li>
-			                        <li class="divider"></li>
-			                        <li>
-			                            <a href="profile.html">
-			                                <div>
-			                                    <i class="fa fa-twitter fa-fw"></i> 3 New Followers
-			                                    <span class="pull-right text-muted small">12 minutes ago</span>
-			                                </div>
-			                            </a>
-			                        </li>
-			                        <li class="divider"></li>
-			                        <li>
-			                            <a href="grid_options.html">
-			                                <div>
-			                                    <i class="fa fa-upload fa-fw"></i> Server Rebooted
-			                                    <span class="pull-right text-muted small">4 minutes ago</span>
-			                                </div>
-			                            </a>
-			                        </li>
-			                        <li class="divider"></li>
-			                        <li>
-			                            <div class="text-center link-block">
-			                                <a href="notifications.html">
-			                                    <strong>查看所有通知</strong>
-			                                    <i class="fa fa-angle-right"></i>
-			                                </a>
-			                            </div>
-			                        </li>
-			                    </ul>
 			                </li>
 			                <li>
 			                    <a href="${context}/logout">
@@ -233,9 +137,6 @@
 								                </div>
 								            </div>
 								            <div class="ibox-content">
-									            <div class="">
-									            	<a  class="btn btn-primary ">添加实习生</a>
-									            </div>
 									            <table class="table table-striped table-bordered table-hover " id="emp_table" >
 						            			</table>
 						            		</div>
@@ -265,7 +166,7 @@
 					            <div class="col-lg-12">
 					            	<div class="ibox float-e-margins">
 								            <div class="ibox-title">
-								                <h5>发新纪录表</h5>
+								                <h5>发薪纪录表</h5>
 								                <div class="ibox-tools">
 								                    <a class="collapse-link">
 								                        <i class="fa fa-chevron-up"></i>
@@ -491,9 +392,6 @@
 			        </div>			        
 		        </div>
 		        <div class="footer">
-		            <div class="pull-right">
-		                10GB of <strong>250GB</strong> Free.
-		            </div>
 		            <div>
 		                <strong>Copyright</strong> Example Company &copy; 2014-2015
 		            </div>
@@ -651,17 +549,7 @@
             }, {
                 field: 'amount',
                 title: '薪水',
-                align:'center',
-                editable: {
-                        type: 'number',
-                        title: '薪水',
-                        validate: function (v) {
-                            if (!v) return '薪水不能为空';
-                            if (isNaN(v)) return '薪水必须是数字';
-                            var age = parseInt(v);
-                            if (age <= 0) return '薪水必须是正整数';
-                        }
-                }
+                align:'center'
             }, {
                  field: 'tel',
                  title: '电话',
@@ -856,6 +744,26 @@
                 title: '实习生',
                 align:'center'
             },{
+                field: 'accepted',
+                title: '接受情况',
+                align: 'center'
+            },{
+                field: 'accept_date',
+                title: '接受时间',
+                align: 'center'
+            },{
+                 field: 'finished',
+                 title: '完成情况',
+                 align:'center',
+                 editable: {
+                      type: "select",
+                      source: [{ value: true, text: "完成" }, { value: false, text: "未完成" }],
+                      title: "评价",
+                      emptytext: "已处理",
+                      placeholder: "进行处理",
+                      mode: "popup"
+                 }
+            },{
                 field: 'grade',
                 title: '分数',
                 align:'center',
@@ -867,18 +775,6 @@
                             if (val < 0) return '评分必须大于等于0';
                             else if(val > 100) return '评分不能大于100';
                         }
-                }
-            },{
-                field: 'finished',
-                title: '完成情况',
-                align:'center',
-                editable: {
-                     type: "select",
-                     source: [{ value: true, text: "完成" }, { value: false, text: "未完成" }],
-                     title: "评价",
-                     emptytext: "已处理",
-                     placeholder: "进行处理",
-                     mode: "popup"
                 }
             }],
             url: '${context}/manager/getTaskByMgr',

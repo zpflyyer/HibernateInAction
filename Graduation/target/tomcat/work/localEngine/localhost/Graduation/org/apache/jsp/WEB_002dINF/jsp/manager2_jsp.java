@@ -237,7 +237,6 @@ public final class manager2_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${username}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
       out.write("<b class=\"caret\"></b></span> </span> </a>\r\n");
       out.write("                        <ul class=\"dropdown-menu animated fadeInRight m-t-xs\">\r\n");
-      out.write("                            <li><a href=\"profile.html\">我的资料</a></li>\r\n");
       out.write("                            <li><a data-toggle=\"modal\" data-target=\"#edit_pwd\">修改密码</a></li>\r\n");
       out.write("                            <li class=\"divider\"></li>\r\n");
       out.write("                            <li><a href=\"");
@@ -246,14 +245,14 @@ public final class manager2_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                        </ul>\r\n");
       out.write("                    </div>\r\n");
       out.write("                    <div class=\"logo-element\">\r\n");
-      out.write("                        IN+\r\n");
+      out.write("                        IMS\r\n");
       out.write("                    </div>\r\n");
       out.write("                </li>\r\n");
       out.write("                <li><a href=\"#emp_tab\" aria-controls=\"emp_tab\" role=\"tab\" data-toggle=\"tab\"><i class=\"fa fa-user\"></i> <span class=\"nav-label\">实习生管理</span></a></li>\r\n");
       out.write("             \t<li><a href=\"#sal_tab\" aria-controls=\"sal_tab\" role=\"tab\" data-toggle=\"tab\"><i class=\"fa fa-calendar\"></i><span class=\"nav-label\">发薪记录</span></a></li>  \r\n");
-      out.write("\t\t\t    <li><a href=\"#appli_tab\" aria-controls=\"appli_tab\" role=\"tab\" data-toggle=\"tab\"><i class=\"fa fa-edit\"></i><span class=\"nav-label\">处理申请</span><span class=\"label label-warning pull-right\">8</span></a></li>\r\n");
+      out.write("\t\t\t    <li><a href=\"#appli_tab\" aria-controls=\"appli_tab\" role=\"tab\" data-toggle=\"tab\"><i class=\"fa fa-edit\"></i><span class=\"nav-label\">处理申请</span></a></li>\r\n");
       out.write("\t\t\t    <li><a href=\"#assign_tab\" aria-controls=\"assign_tab\" class=\"active\" role=\"tab\" data-toggle=\"tab\"><i class=\"fa fa-tasks\"></i><span class=\"nav-label\">分配任务</span></a></li>\r\n");
-      out.write("\t\t\t    <li><a href=\"#task_tab\" aria-controls=\"task_tab\"  role=\"tab\" data-toggle=\"tab\"><i class=\"fa fa-calculator\"></i><span class=\"nav-label\">进度管理</span><span class=\"label label-info pull-right\">4</span></a></li>\r\n");
+      out.write("\t\t\t    <li><a href=\"#task_tab\" aria-controls=\"task_tab\"  role=\"tab\" data-toggle=\"tab\"><i class=\"fa fa-calculator\"></i><span class=\"nav-label\">进度管理</span></a></li>\r\n");
       out.write("            \t\r\n");
       out.write("                <!--<li>\r\n");
       out.write("                    <a href=\"table_data_tables.html#\"><i class=\"fa fa-bar-chart-o\"></i> <span class=\"nav-label\">薪资发放记录</span><span class=\"fa arrow\"></span></a>\r\n");
@@ -267,7 +266,7 @@ public final class manager2_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                </li>\r\n");
       out.write("\r\n");
       out.write("                <li>\r\n");
-      out.write("                    <a href=\"table_data_tables.html#\"><i class=\"fa fa-edit\"></i> <span class=\"nav-label\">签核申请</span></span><span class=\"label label-info pull-right\">8</span></a>\r\n");
+      out.write("                    <a href=\"table_data_tables.html#\"><i class=\"fa fa-edit\"></i> <span class=\"nav-label\">签核申请</span></span></a>\r\n");
       out.write("                    <ul class=\"nav nav-second-level collapse\">\r\n");
       out.write("                        <li><a href=\"form_basic.html\"><i class=\"fa fa-file-text\"></i>请假签核 <span class=\"label label-primary \">2</span></a></li>\r\n");
       out.write("                        <li><a href=\"form_advanced.html\"><i class=\"fa fa-question\"></i>考勤异议申请 <span class=\"label label-warning \">6</span></a></li>\r\n");
@@ -298,107 +297,6 @@ public final class manager2_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\t            <ul class=\"nav navbar-top-links navbar-right\">\r\n");
       out.write("\t\t\t                <li>\r\n");
       out.write("\t\t\t                    <span class=\"m-r-sm text-muted welcome-message\">欢迎使用实习生管理系统.</span>\r\n");
-      out.write("\t\t\t                </li>\r\n");
-      out.write("\t\t\t                <li class=\"dropdown\">\r\n");
-      out.write("\t\t\t                    <a class=\"dropdown-toggle count-info\" data-toggle=\"dropdown\" href=\"table_data_tables.html#\">\r\n");
-      out.write("\t\t\t                        <i class=\"fa fa-envelope\"></i>  <span class=\"label label-warning\">16</span>\r\n");
-      out.write("\t\t\t                    </a>\r\n");
-      out.write("\t\t\t                    <ul class=\"dropdown-menu dropdown-messages\">\r\n");
-      out.write("\t\t\t                        <li>\r\n");
-      out.write("\t\t\t                            <div class=\"dropdown-messages-box\">\r\n");
-      out.write("\t\t\t                                <a href=\"profile.html\" class=\"pull-left\">\r\n");
-      out.write("\t\t\t                                    <img alt=\"image\" class=\"img-circle\" src=\"");
-      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${context}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-      out.write("/img/a7.jpg\">\r\n");
-      out.write("\t\t\t                                </a>\r\n");
-      out.write("\t\t\t                                <div class=\"media-body\">\r\n");
-      out.write("\t\t\t                                    <small class=\"pull-right\">46h ago</small>\r\n");
-      out.write("\t\t\t                                    <strong>Mike Loreipsum</strong> started following <strong>Monica Smith</strong>. <br>\r\n");
-      out.write("\t\t\t                                    <small class=\"text-muted\">3 days ago at 7:58 pm - 10.06.2014</small>\r\n");
-      out.write("\t\t\t                                </div>\r\n");
-      out.write("\t\t\t                            </div>\r\n");
-      out.write("\t\t\t                        </li>\r\n");
-      out.write("\t\t\t                        <li class=\"divider\"></li>\r\n");
-      out.write("\t\t\t                        <li>\r\n");
-      out.write("\t\t\t                            <div class=\"dropdown-messages-box\">\r\n");
-      out.write("\t\t\t                                <a href=\"profile.html\" class=\"pull-left\">\r\n");
-      out.write("\t\t\t                                    <img alt=\"image\" class=\"img-circle\" src=\"");
-      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${context}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-      out.write("/img/a4.jpg\">\r\n");
-      out.write("\t\t\t                                </a>\r\n");
-      out.write("\t\t\t                                <div class=\"media-body \">\r\n");
-      out.write("\t\t\t                                    <small class=\"pull-right text-navy\">5h ago</small>\r\n");
-      out.write("\t\t\t                                    <strong>Chris Johnatan Overtunk</strong> started following <strong>Monica Smith</strong>. <br>\r\n");
-      out.write("\t\t\t                                    <small class=\"text-muted\">Yesterday 1:21 pm - 11.06.2014</small>\r\n");
-      out.write("\t\t\t                                </div>\r\n");
-      out.write("\t\t\t                            </div>\r\n");
-      out.write("\t\t\t                        </li>\r\n");
-      out.write("\t\t\t                        <li class=\"divider\"></li>\r\n");
-      out.write("\t\t\t                        <li>\r\n");
-      out.write("\t\t\t                            <div class=\"dropdown-messages-box\">\r\n");
-      out.write("\t\t\t                                <a href=\"profile.html\" class=\"pull-left\">\r\n");
-      out.write("\t\t\t                                    <img alt=\"image\" class=\"img-circle\" src=\"");
-      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${context}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-      out.write("/img/profile.jpg\">\r\n");
-      out.write("\t\t\t                                </a>\r\n");
-      out.write("\t\t\t                                <div class=\"media-body \">\r\n");
-      out.write("\t\t\t                                    <small class=\"pull-right\">23h ago</small>\r\n");
-      out.write("\t\t\t                                    <strong>Monica Smith</strong> love <strong>Kim Smith</strong>. <br>\r\n");
-      out.write("\t\t\t                                    <small class=\"text-muted\">2 days ago at 2:30 am - 11.06.2014</small>\r\n");
-      out.write("\t\t\t                                </div>\r\n");
-      out.write("\t\t\t                            </div>\r\n");
-      out.write("\t\t\t                        </li>\r\n");
-      out.write("\t\t\t                        <li class=\"divider\"></li>\r\n");
-      out.write("\t\t\t                        <li>\r\n");
-      out.write("\t\t\t                            <div class=\"text-center link-block\">\r\n");
-      out.write("\t\t\t                                <a href=\"mailbox.html\">\r\n");
-      out.write("\t\t\t                                    <i class=\"fa fa-envelope\"></i> <strong>查看所有申请</strong>\r\n");
-      out.write("\t\t\t                                </a>\r\n");
-      out.write("\t\t\t                            </div>\r\n");
-      out.write("\t\t\t                        </li>\r\n");
-      out.write("\t\t\t                    </ul>\r\n");
-      out.write("\t\t\t                </li>\r\n");
-      out.write("\t\t\t                <li class=\"dropdown\">\r\n");
-      out.write("\t\t\t                    <a class=\"dropdown-toggle count-info\" data-toggle=\"dropdown\" href=\"table_data_tables.html#\">\r\n");
-      out.write("\t\t\t                        <i class=\"fa fa-bell\"></i>  <span class=\"label label-primary\">8</span>\r\n");
-      out.write("\t\t\t                    </a>\r\n");
-      out.write("\t\t\t                    <ul class=\"dropdown-menu dropdown-alerts\">\r\n");
-      out.write("\t\t\t                        <li>\r\n");
-      out.write("\t\t\t                            <a href=\"mailbox.html\">\r\n");
-      out.write("\t\t\t                                <div>\r\n");
-      out.write("\t\t\t                                    <i class=\"fa fa-envelope fa-fw\"></i> You have 16 messages\r\n");
-      out.write("\t\t\t                                    <span class=\"pull-right text-muted small\">4 minutes ago</span>\r\n");
-      out.write("\t\t\t                                </div>\r\n");
-      out.write("\t\t\t                            </a>\r\n");
-      out.write("\t\t\t                        </li>\r\n");
-      out.write("\t\t\t                        <li class=\"divider\"></li>\r\n");
-      out.write("\t\t\t                        <li>\r\n");
-      out.write("\t\t\t                            <a href=\"profile.html\">\r\n");
-      out.write("\t\t\t                                <div>\r\n");
-      out.write("\t\t\t                                    <i class=\"fa fa-twitter fa-fw\"></i> 3 New Followers\r\n");
-      out.write("\t\t\t                                    <span class=\"pull-right text-muted small\">12 minutes ago</span>\r\n");
-      out.write("\t\t\t                                </div>\r\n");
-      out.write("\t\t\t                            </a>\r\n");
-      out.write("\t\t\t                        </li>\r\n");
-      out.write("\t\t\t                        <li class=\"divider\"></li>\r\n");
-      out.write("\t\t\t                        <li>\r\n");
-      out.write("\t\t\t                            <a href=\"grid_options.html\">\r\n");
-      out.write("\t\t\t                                <div>\r\n");
-      out.write("\t\t\t                                    <i class=\"fa fa-upload fa-fw\"></i> Server Rebooted\r\n");
-      out.write("\t\t\t                                    <span class=\"pull-right text-muted small\">4 minutes ago</span>\r\n");
-      out.write("\t\t\t                                </div>\r\n");
-      out.write("\t\t\t                            </a>\r\n");
-      out.write("\t\t\t                        </li>\r\n");
-      out.write("\t\t\t                        <li class=\"divider\"></li>\r\n");
-      out.write("\t\t\t                        <li>\r\n");
-      out.write("\t\t\t                            <div class=\"text-center link-block\">\r\n");
-      out.write("\t\t\t                                <a href=\"notifications.html\">\r\n");
-      out.write("\t\t\t                                    <strong>查看所有通知</strong>\r\n");
-      out.write("\t\t\t                                    <i class=\"fa fa-angle-right\"></i>\r\n");
-      out.write("\t\t\t                                </a>\r\n");
-      out.write("\t\t\t                            </div>\r\n");
-      out.write("\t\t\t                        </li>\r\n");
-      out.write("\t\t\t                    </ul>\r\n");
       out.write("\t\t\t                </li>\r\n");
       out.write("\t\t\t                <li>\r\n");
       out.write("\t\t\t                    <a href=\"");
@@ -452,9 +350,6 @@ public final class manager2_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\t\t\t\t\t\t                </div>\r\n");
       out.write("\t\t\t\t\t\t\t\t            </div>\r\n");
       out.write("\t\t\t\t\t\t\t\t            <div class=\"ibox-content\">\r\n");
-      out.write("\t\t\t\t\t\t\t\t\t            <div class=\"\">\r\n");
-      out.write("\t\t\t\t\t\t\t\t\t            \t<a  class=\"btn btn-primary \">添加实习生</a>\r\n");
-      out.write("\t\t\t\t\t\t\t\t\t            </div>\r\n");
       out.write("\t\t\t\t\t\t\t\t\t            <table class=\"table table-striped table-bordered table-hover \" id=\"emp_table\" >\r\n");
       out.write("\t\t\t\t\t\t            \t\t\t</table>\r\n");
       out.write("\t\t\t\t\t\t            \t\t</div>\r\n");
@@ -484,7 +379,7 @@ public final class manager2_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\t\t\t            <div class=\"col-lg-12\">\r\n");
       out.write("\t\t\t\t\t            \t<div class=\"ibox float-e-margins\">\r\n");
       out.write("\t\t\t\t\t\t\t\t            <div class=\"ibox-title\">\r\n");
-      out.write("\t\t\t\t\t\t\t\t                <h5>发新纪录表</h5>\r\n");
+      out.write("\t\t\t\t\t\t\t\t                <h5>发薪纪录表</h5>\r\n");
       out.write("\t\t\t\t\t\t\t\t                <div class=\"ibox-tools\">\r\n");
       out.write("\t\t\t\t\t\t\t\t                    <a class=\"collapse-link\">\r\n");
       out.write("\t\t\t\t\t\t\t\t                        <i class=\"fa fa-chevron-up\"></i>\r\n");
@@ -613,15 +508,15 @@ public final class manager2_jsp extends org.apache.jasper.runtime.HttpJspBase
       org.springframework.web.servlet.tags.form.FormTag _jspx_th_form_005fform_005f0 = (org.springframework.web.servlet.tags.form.FormTag) _005fjspx_005ftagPool_005fform_005fform_0026_005fstyle_005fmodelAttribute_005fmethod_005fclass_005faction.get(org.springframework.web.servlet.tags.form.FormTag.class);
       _jspx_th_form_005fform_005f0.setPageContext(_jspx_page_context);
       _jspx_th_form_005fform_005f0.setParent(null);
-      // /WEB-INF/jsp/manager2.jsp(392,27) name = modelAttribute type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /WEB-INF/jsp/manager2.jsp(293,27) name = modelAttribute type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_form_005fform_005f0.setModelAttribute("task_vo");
-      // /WEB-INF/jsp/manager2.jsp(392,27) null
+      // /WEB-INF/jsp/manager2.jsp(293,27) null
       _jspx_th_form_005fform_005f0.setDynamicAttribute(null, "class", new String("form-horizontal"));
-      // /WEB-INF/jsp/manager2.jsp(392,27) name = action type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /WEB-INF/jsp/manager2.jsp(293,27) name = action type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_form_005fform_005f0.setAction((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${context}/manager/assign", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-      // /WEB-INF/jsp/manager2.jsp(392,27) name = method type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /WEB-INF/jsp/manager2.jsp(293,27) name = method type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_form_005fform_005f0.setMethod("post");
-      // /WEB-INF/jsp/manager2.jsp(392,27) null
+      // /WEB-INF/jsp/manager2.jsp(293,27) null
       _jspx_th_form_005fform_005f0.setDynamicAttribute(null, "style", new String("padding: 35px;"));
       int[] _jspx_push_body_count_form_005fform_005f0 = new int[] { 0 };
       try {
@@ -634,7 +529,7 @@ public final class manager2_jsp extends org.apache.jasper.runtime.HttpJspBase
             org.springframework.web.servlet.tags.form.ErrorsTag _jspx_th_form_005ferrors_005f0 = (org.springframework.web.servlet.tags.form.ErrorsTag) _005fjspx_005ftagPool_005fform_005ferrors_0026_005fpath_005fnobody.get(org.springframework.web.servlet.tags.form.ErrorsTag.class);
             _jspx_th_form_005ferrors_005f0.setPageContext(_jspx_page_context);
             _jspx_th_form_005ferrors_005f0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_005fform_005f0);
-            // /WEB-INF/jsp/manager2.jsp(393,49) name = path type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+            // /WEB-INF/jsp/manager2.jsp(294,49) name = path type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
             _jspx_th_form_005ferrors_005f0.setPath("title");
             int[] _jspx_push_body_count_form_005ferrors_005f0 = new int[] { 0 };
             try {
@@ -667,7 +562,7 @@ public final class manager2_jsp extends org.apache.jasper.runtime.HttpJspBase
             org.springframework.web.servlet.tags.form.ErrorsTag _jspx_th_form_005ferrors_005f1 = (org.springframework.web.servlet.tags.form.ErrorsTag) _005fjspx_005ftagPool_005fform_005ferrors_0026_005fpath_005fnobody.get(org.springframework.web.servlet.tags.form.ErrorsTag.class);
             _jspx_th_form_005ferrors_005f1.setPageContext(_jspx_page_context);
             _jspx_th_form_005ferrors_005f1.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_005fform_005f0);
-            // /WEB-INF/jsp/manager2.jsp(402,49) name = path type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+            // /WEB-INF/jsp/manager2.jsp(303,49) name = path type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
             _jspx_th_form_005ferrors_005f1.setPath("content");
             int[] _jspx_push_body_count_form_005ferrors_005f1 = new int[] { 0 };
             try {
@@ -700,7 +595,7 @@ public final class manager2_jsp extends org.apache.jasper.runtime.HttpJspBase
             org.springframework.web.servlet.tags.form.ErrorsTag _jspx_th_form_005ferrors_005f2 = (org.springframework.web.servlet.tags.form.ErrorsTag) _005fjspx_005ftagPool_005fform_005ferrors_0026_005fpath_005fnobody.get(org.springframework.web.servlet.tags.form.ErrorsTag.class);
             _jspx_th_form_005ferrors_005f2.setPageContext(_jspx_page_context);
             _jspx_th_form_005ferrors_005f2.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_005fform_005f0);
-            // /WEB-INF/jsp/manager2.jsp(411,49) name = path type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+            // /WEB-INF/jsp/manager2.jsp(312,49) name = path type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
             _jspx_th_form_005ferrors_005f2.setPath("deadline");
             int[] _jspx_push_body_count_form_005ferrors_005f2 = new int[] { 0 };
             try {
@@ -733,7 +628,7 @@ public final class manager2_jsp extends org.apache.jasper.runtime.HttpJspBase
             org.springframework.web.servlet.tags.form.ErrorsTag _jspx_th_form_005ferrors_005f3 = (org.springframework.web.servlet.tags.form.ErrorsTag) _005fjspx_005ftagPool_005fform_005ferrors_0026_005fpath_005fnobody.get(org.springframework.web.servlet.tags.form.ErrorsTag.class);
             _jspx_th_form_005ferrors_005f3.setPageContext(_jspx_page_context);
             _jspx_th_form_005ferrors_005f3.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_005fform_005f0);
-            // /WEB-INF/jsp/manager2.jsp(420,49) name = path type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+            // /WEB-INF/jsp/manager2.jsp(321,49) name = path type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
             _jspx_th_form_005ferrors_005f3.setPath("internList");
             int[] _jspx_push_body_count_form_005ferrors_005f3 = new int[] { 0 };
             try {
@@ -841,9 +736,6 @@ public final class manager2_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\t        </div>\t\t\t        \r\n");
       out.write("\t\t        </div>\r\n");
       out.write("\t\t        <div class=\"footer\">\r\n");
-      out.write("\t\t            <div class=\"pull-right\">\r\n");
-      out.write("\t\t                10GB of <strong>250GB</strong> Free.\r\n");
-      out.write("\t\t            </div>\r\n");
       out.write("\t\t            <div>\r\n");
       out.write("\t\t                <strong>Copyright</strong> Example Company &copy; 2014-2015\r\n");
       out.write("\t\t            </div>\r\n");
@@ -1003,17 +895,7 @@ public final class manager2_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            }, {\r\n");
       out.write("                field: 'amount',\r\n");
       out.write("                title: '薪水',\r\n");
-      out.write("                align:'center',\r\n");
-      out.write("                editable: {\r\n");
-      out.write("                        type: 'number',\r\n");
-      out.write("                        title: '薪水',\r\n");
-      out.write("                        validate: function (v) {\r\n");
-      out.write("                            if (!v) return '薪水不能为空';\r\n");
-      out.write("                            if (isNaN(v)) return '薪水必须是数字';\r\n");
-      out.write("                            var age = parseInt(v);\r\n");
-      out.write("                            if (age <= 0) return '薪水必须是正整数';\r\n");
-      out.write("                        }\r\n");
-      out.write("                }\r\n");
+      out.write("                align:'center'\r\n");
       out.write("            }, {\r\n");
       out.write("                 field: 'tel',\r\n");
       out.write("                 title: '电话',\r\n");
@@ -1216,6 +1098,26 @@ public final class manager2_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                title: '实习生',\r\n");
       out.write("                align:'center'\r\n");
       out.write("            },{\r\n");
+      out.write("                field: 'accepted',\r\n");
+      out.write("                title: '接受情况',\r\n");
+      out.write("                align: 'center'\r\n");
+      out.write("            },{\r\n");
+      out.write("                field: 'accept_date',\r\n");
+      out.write("                title: '接受时间',\r\n");
+      out.write("                align: 'center'\r\n");
+      out.write("            },{\r\n");
+      out.write("                 field: 'finished',\r\n");
+      out.write("                 title: '完成情况',\r\n");
+      out.write("                 align:'center',\r\n");
+      out.write("                 editable: {\r\n");
+      out.write("                      type: \"select\",\r\n");
+      out.write("                      source: [{ value: true, text: \"完成\" }, { value: false, text: \"未完成\" }],\r\n");
+      out.write("                      title: \"评价\",\r\n");
+      out.write("                      emptytext: \"已处理\",\r\n");
+      out.write("                      placeholder: \"进行处理\",\r\n");
+      out.write("                      mode: \"popup\"\r\n");
+      out.write("                 }\r\n");
+      out.write("            },{\r\n");
       out.write("                field: 'grade',\r\n");
       out.write("                title: '分数',\r\n");
       out.write("                align:'center',\r\n");
@@ -1227,18 +1129,6 @@ public final class manager2_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                            if (val < 0) return '评分必须大于等于0';\r\n");
       out.write("                            else if(val > 100) return '评分不能大于100';\r\n");
       out.write("                        }\r\n");
-      out.write("                }\r\n");
-      out.write("            },{\r\n");
-      out.write("                field: 'finished',\r\n");
-      out.write("                title: '完成情况',\r\n");
-      out.write("                align:'center',\r\n");
-      out.write("                editable: {\r\n");
-      out.write("                     type: \"select\",\r\n");
-      out.write("                     source: [{ value: true, text: \"完成\" }, { value: false, text: \"未完成\" }],\r\n");
-      out.write("                     title: \"评价\",\r\n");
-      out.write("                     emptytext: \"已处理\",\r\n");
-      out.write("                     placeholder: \"进行处理\",\r\n");
-      out.write("                     mode: \"popup\"\r\n");
       out.write("                }\r\n");
       out.write("            }],\r\n");
       out.write("            url: '");
@@ -1395,15 +1285,15 @@ public final class manager2_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.springframework.web.servlet.tags.form.InputTag _jspx_th_form_005finput_005f0 = (org.springframework.web.servlet.tags.form.InputTag) _005fjspx_005ftagPool_005fform_005finput_0026_005ftype_005fplaceholder_005fpath_005fclass_005faria_002ddescribedby_005fnobody.get(org.springframework.web.servlet.tags.form.InputTag.class);
     _jspx_th_form_005finput_005f0.setPageContext(_jspx_page_context);
     _jspx_th_form_005finput_005f0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_005fform_005f0);
-    // /WEB-INF/jsp/manager2.jsp(399,37) name = path type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/jsp/manager2.jsp(300,37) name = path type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_form_005finput_005f0.setPath("title");
-    // /WEB-INF/jsp/manager2.jsp(399,37) null
+    // /WEB-INF/jsp/manager2.jsp(300,37) null
     _jspx_th_form_005finput_005f0.setDynamicAttribute(null, "type", new String("text"));
-    // /WEB-INF/jsp/manager2.jsp(399,37) null
+    // /WEB-INF/jsp/manager2.jsp(300,37) null
     _jspx_th_form_005finput_005f0.setDynamicAttribute(null, "class", new String("form-control"));
-    // /WEB-INF/jsp/manager2.jsp(399,37) null
+    // /WEB-INF/jsp/manager2.jsp(300,37) null
     _jspx_th_form_005finput_005f0.setDynamicAttribute(null, "placeholder", new String("题目"));
-    // /WEB-INF/jsp/manager2.jsp(399,37) null
+    // /WEB-INF/jsp/manager2.jsp(300,37) null
     _jspx_th_form_005finput_005f0.setDynamicAttribute(null, "aria-describedby", new String("title_icon"));
     int[] _jspx_push_body_count_form_005finput_005f0 = new int[] { 0 };
     try {
@@ -1430,15 +1320,15 @@ public final class manager2_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.springframework.web.servlet.tags.form.TextareaTag _jspx_th_form_005ftextarea_005f0 = (org.springframework.web.servlet.tags.form.TextareaTag) _005fjspx_005ftagPool_005fform_005ftextarea_0026_005ftype_005fplaceholder_005fpath_005fclass_005faria_002ddescribedby_005fnobody.get(org.springframework.web.servlet.tags.form.TextareaTag.class);
     _jspx_th_form_005ftextarea_005f0.setPageContext(_jspx_page_context);
     _jspx_th_form_005ftextarea_005f0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_005fform_005f0);
-    // /WEB-INF/jsp/manager2.jsp(408,37) name = path type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/jsp/manager2.jsp(309,37) name = path type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_form_005ftextarea_005f0.setPath("content");
-    // /WEB-INF/jsp/manager2.jsp(408,37) null
+    // /WEB-INF/jsp/manager2.jsp(309,37) null
     _jspx_th_form_005ftextarea_005f0.setDynamicAttribute(null, "type", new String("text"));
-    // /WEB-INF/jsp/manager2.jsp(408,37) null
+    // /WEB-INF/jsp/manager2.jsp(309,37) null
     _jspx_th_form_005ftextarea_005f0.setDynamicAttribute(null, "class", new String("form-control"));
-    // /WEB-INF/jsp/manager2.jsp(408,37) null
+    // /WEB-INF/jsp/manager2.jsp(309,37) null
     _jspx_th_form_005ftextarea_005f0.setDynamicAttribute(null, "placeholder", new String("内容"));
-    // /WEB-INF/jsp/manager2.jsp(408,37) null
+    // /WEB-INF/jsp/manager2.jsp(309,37) null
     _jspx_th_form_005ftextarea_005f0.setDynamicAttribute(null, "aria-describedby", new String("content_icon"));
     int[] _jspx_push_body_count_form_005ftextarea_005f0 = new int[] { 0 };
     try {
@@ -1465,15 +1355,15 @@ public final class manager2_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.springframework.web.servlet.tags.form.InputTag _jspx_th_form_005finput_005f1 = (org.springframework.web.servlet.tags.form.InputTag) _005fjspx_005ftagPool_005fform_005finput_0026_005ftype_005fplaceholder_005fpath_005fclass_005faria_002ddescribedby_005fnobody.get(org.springframework.web.servlet.tags.form.InputTag.class);
     _jspx_th_form_005finput_005f1.setPageContext(_jspx_page_context);
     _jspx_th_form_005finput_005f1.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_005fform_005f0);
-    // /WEB-INF/jsp/manager2.jsp(417,37) name = path type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/jsp/manager2.jsp(318,37) name = path type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_form_005finput_005f1.setPath("deadline");
-    // /WEB-INF/jsp/manager2.jsp(417,37) null
+    // /WEB-INF/jsp/manager2.jsp(318,37) null
     _jspx_th_form_005finput_005f1.setDynamicAttribute(null, "type", new String("date"));
-    // /WEB-INF/jsp/manager2.jsp(417,37) null
+    // /WEB-INF/jsp/manager2.jsp(318,37) null
     _jspx_th_form_005finput_005f1.setDynamicAttribute(null, "class", new String("form-control"));
-    // /WEB-INF/jsp/manager2.jsp(417,37) null
+    // /WEB-INF/jsp/manager2.jsp(318,37) null
     _jspx_th_form_005finput_005f1.setDynamicAttribute(null, "placeholder", new String("截止日期"));
-    // /WEB-INF/jsp/manager2.jsp(417,37) null
+    // /WEB-INF/jsp/manager2.jsp(318,37) null
     _jspx_th_form_005finput_005f1.setDynamicAttribute(null, "aria-describedby", new String("deadline_icon"));
     int[] _jspx_push_body_count_form_005finput_005f1 = new int[] { 0 };
     try {
@@ -1500,11 +1390,11 @@ public final class manager2_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_005fforEach_005f0 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _005fjspx_005ftagPool_005fc_005fforEach_0026_005fvarStatus_005fvar_005fitems.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
     _jspx_th_c_005fforEach_005f0.setPageContext(_jspx_page_context);
     _jspx_th_c_005fforEach_005f0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_005fform_005f0);
-    // /WEB-INF/jsp/manager2.jsp(426,37) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/jsp/manager2.jsp(327,37) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_c_005fforEach_005f0.setVar("emp");
-    // /WEB-INF/jsp/manager2.jsp(426,37) name = items type = java.lang.Object reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/jsp/manager2.jsp(327,37) name = items type = java.lang.Object reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_c_005fforEach_005f0.setItems((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${employeeList}", java.lang.Object.class, (PageContext)_jspx_page_context, null, false));
-    // /WEB-INF/jsp/manager2.jsp(426,37) name = varStatus type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/jsp/manager2.jsp(327,37) name = varStatus type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_c_005fforEach_005f0.setVarStatus("status");
     int[] _jspx_push_body_count_c_005fforEach_005f0 = new int[] { 0 };
     try {
@@ -1546,11 +1436,11 @@ public final class manager2_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.springframework.web.servlet.tags.form.CheckboxTag _jspx_th_form_005fcheckbox_005f0 = (org.springframework.web.servlet.tags.form.CheckboxTag) _005fjspx_005ftagPool_005fform_005fcheckbox_0026_005fvalue_005fstyle_005fpath_005fnobody.get(org.springframework.web.servlet.tags.form.CheckboxTag.class);
     _jspx_th_form_005fcheckbox_005f0.setPageContext(_jspx_page_context);
     _jspx_th_form_005fcheckbox_005f0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_005fforEach_005f0);
-    // /WEB-INF/jsp/manager2.jsp(427,41) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/jsp/manager2.jsp(328,41) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_form_005fcheckbox_005f0.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${emp.empName}", java.lang.Object.class, (PageContext)_jspx_page_context, null, false));
-    // /WEB-INF/jsp/manager2.jsp(427,41) name = path type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    // /WEB-INF/jsp/manager2.jsp(328,41) name = path type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_form_005fcheckbox_005f0.setPath("internList");
-    // /WEB-INF/jsp/manager2.jsp(427,41) null
+    // /WEB-INF/jsp/manager2.jsp(328,41) null
     _jspx_th_form_005fcheckbox_005f0.setDynamicAttribute(null, "style", new String("margin-left:15px;"));
     int[] _jspx_push_body_count_form_005fcheckbox_005f0 = new int[] { 0 };
     try {

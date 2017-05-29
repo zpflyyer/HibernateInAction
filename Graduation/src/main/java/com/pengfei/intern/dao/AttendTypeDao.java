@@ -7,4 +7,5 @@ import java.util.*;
 
 public interface AttendTypeDao extends BaseDao<AttendType>
 {
+    AttendType findByName(String name);
 }

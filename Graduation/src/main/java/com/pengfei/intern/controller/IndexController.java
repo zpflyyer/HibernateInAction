@@ -108,7 +108,7 @@ public class IndexController {
             session.setAttribute("user",manager.getName());
             session.setAttribute("user_level","admin");
             modelAndView.addObject("username",username);
-            modelAndView.addObject("role","admin");
+            modelAndView.addObject("role","π‹¿Ì‘±");
             modelAndView.addObject("deptList",admManager.getAllDept());
             modelAndView.setViewName("admin2");
         }

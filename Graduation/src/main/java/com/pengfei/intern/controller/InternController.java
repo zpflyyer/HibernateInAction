@@ -73,18 +73,18 @@ public class InternController {
     }
 
     /*
-    method3:处理完成工作 url=${context}/employee/finishjob
+    method3:处理接受工作 url=${context}/employee/finishjob
      */
     @ResponseBody
-    @RequestMapping(method = RequestMethod.POST,value = "/finishjob")
-    Response finishJob(HttpSession session,
+    @RequestMapping(method = RequestMethod.POST,value = "/accept")
+    Response acceptJob(HttpSession session,
                        @RequestParam("job_id") int job_id,
-                       @RequestParam("finished") boolean finished){
-        System.out.println("finishJob() called!");
+                       @RequestParam("accepted") String accepted){
+        System.out.println("acceptJob() called!");
         Response response = new Response();
         String user = (String) session.getAttribute("user");
 
-        if(itrManager.finishJob(job_id,finished)){
+        if(itrManager.acceptJob(job_id,accepted)){
             response.setResponse("succeed");
             return response;
         }
@@ -115,6 +115,8 @@ public class InternController {
         String itr = (String)session.getAttribute("user");
         return itrManager.getJobByIntern(itr);
     }
+
+
 
 }
 

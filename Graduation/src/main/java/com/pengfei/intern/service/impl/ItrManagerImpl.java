@@ -392,7 +392,7 @@ public class ItrManagerImpl
 		for (Job job :
 				jobList) {
 			Task task = job.getTask();
-			JobBean jobBean = new JobBean(job.getId(),job.getGrade(),job.isFinished()
+			JobBean jobBean = new JobBean(job.getId(),job.getGrade(),job.isFinished(),job.getAccepted(),job.getAccept_date()
 					, task.getTitle(),task.getContent(),task.getAssign_date(),task.getDeadline()
 					,itr);
 			jobBeanList.add(jobBean);
@@ -401,9 +401,11 @@ public class ItrManagerImpl
 	}
 
 	@Override
-	public boolean finishJob(int job_id, boolean finished) {
+	public boolean acceptJob(int job_id, String accepted) {
 		Job job = jobDao.get(Job.class,job_id);
-		job.setFinished(finished);
+		job.setAccepted(accepted);
+		Calendar c = Calendar.getInstance();
+		job.setAccept_date(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format( c.getTime() ));
 		jobDao.update(job);
 		return true;
 	}
