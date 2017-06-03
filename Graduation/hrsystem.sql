@@ -56,9 +56,9 @@ DROP TABLE IF EXISTS `attend_type_tb`;
 CREATE TABLE `attend_type_tb` (
   `type_id` int(11) NOT NULL AUTO_INCREMENT,
   `amerce_amount` double NOT NULL,
-  `type_name` varchar(50) NOT NULL,
+  `type_name` varchar(50) CHARACTER SET utf8 NOT NULL,
   PRIMARY KEY (`type_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=gbk;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -67,7 +67,7 @@ CREATE TABLE `attend_type_tb` (
 
 LOCK TABLES `attend_type_tb` WRITE;
 /*!40000 ALTER TABLE `attend_type_tb` DISABLE KEYS */;
-INSERT INTO `attend_type_tb` VALUES (1,0,''),(2,-20,''),(3,-10,''),(4,-10,''),(5,-10,''),(6,-30,''),(7,10,'');
+INSERT INTO `attend_type_tb` VALUES (1,0,'正常'),(2,-60,'事假'),(3,-50,'病假'),(4,-30,'迟到'),(5,-70,'早退'),(6,-100,'旷工'),(7,300,'出差');
 /*!40000 ALTER TABLE `attend_type_tb` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -166,7 +166,7 @@ CREATE TABLE `intern_tb` (
 
 LOCK TABLES `intern_tb` WRITE;
 /*!40000 ALTER TABLE `intern_tb` DISABLE KEYS */;
-INSERT INTO `intern_tb` VALUES (1,2,'David','eded',4500,NULL,'DB','2016-01-03 01:01:01','34634563','David@163.com','David','1199508064678'),(2,2,'ppd','weblogic',4500,NULL,'Server','2016-01-03 01:01:01','34634563','ppd@163.com','ppd','2199508064678'),(3,1,'mysql','mysql',4500,1,NULL,'2016-01-03 01:01:01','34634563','mysql@163.com','mysql','3199508064678'),(4,1,'hsql','hsql',4500,1,NULL,'2016-01-03 01:01:01','34634563','hsql@163.com','hsql','4199508064678'),(6,1,'jetty','efw',4500,2,NULL,'2016-01-03 01:01:01','34634563','jetty@163.com','jetty','6199508064678'),(9,1,'John','123',4500,2,NULL,'2016-01-03 01:01:01','34634563','John@163.com','John','9199508064678'),(19,1,'fefre','bgs',4500,2,NULL,'2016-01-03 01:01:01','34634563','fefre@163.com','fefre','19199508064678'),(25,1,'vfd','dfc',4500,2,NULL,'2016-01-03 01:01:01','34634563','vfd@163.com','vfd','25199508064678'),(27,1,'steven','qwe',4500,2,NULL,'2016-01-03 01:01:01','34634563','steven@163.com','steven','27199508064678'),(29,1,'fdfd','345',4500,2,NULL,'2016-01-03 01:01:01','34634563','fdfd@163.com','fdfd','29199508064678'),(30,1,'night','123',4500,2,NULL,'2016-01-03 01:01:01','34634563','night@163.com','night','30199508064678'),(31,0,'admin','admin',4500,NULL,NULL,'2016-01-03 01:01:01','34634563','admin@163.com','admin','31199508064678');
+INSERT INTO `intern_tb` VALUES (1,2,'David','321',4500,NULL,'大数据','2016-01-03 01:01:01','34634563','David@163.com','David','1199508064678'),(2,2,'ppd','123',4500,NULL,'风控','2016-01-03 01:01:01','34634563','ppd@163.com','ppd','2199508064678'),(3,1,'mysql','mysql',4500,1,NULL,'2016-01-03 01:01:01','34634563','mysql@163.com','mysql','3199508064678'),(4,1,'hsql','hsql',4500,1,NULL,'2016-01-03 01:01:01','34634563','hsql@163.com','hsql','4199508064678'),(6,1,'jetty','efw',4500,2,NULL,'2016-01-03 01:01:01','34634563','jetty@163.com','jetty','6199508064678'),(9,1,'John','321',4500,2,NULL,'2016-01-03 01:01:01','34634563','John@163.com','John','9199508064678'),(19,1,'fefre','bgs',4500,1,NULL,'2016-01-03 01:01:01','34634563','fefre@163.com','fefre','19199508064678'),(25,1,'vfd','dfc',4500,1,NULL,'2016-01-03 01:01:01','34634563','vfd@163.com','vfd','25199508064678'),(27,1,'steven','qwe',4500,2,NULL,'2016-01-03 01:01:01','34634563','steven@163.com','steven','27199508064678'),(29,1,'fdfd','345',4500,2,NULL,'2016-01-03 01:01:01','34634563','fdfd@163.com','fdfd','29199508064678'),(30,1,'night','123',4500,2,NULL,'2016-01-03 01:01:01','34634563','night@163.com','night','30199508064678'),(31,0,'admin','admin',4500,NULL,NULL,'2016-01-03 01:01:01','34634563','admin@163.com','admin','31199508064678');
 /*!40000 ALTER TABLE `intern_tb` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -190,7 +190,7 @@ CREATE TABLE `job_tb` (
   KEY `intern_id` (`intern_id`),
   CONSTRAINT `job_tb_ibfk_1` FOREIGN KEY (`task_id`) REFERENCES `task_tb` (`task_id`),
   CONSTRAINT `job_tb_ibfk_2` FOREIGN KEY (`intern_id`) REFERENCES `intern_tb` (`emp_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -199,7 +199,7 @@ CREATE TABLE `job_tb` (
 
 LOCK TABLES `job_tb` WRITE;
 /*!40000 ALTER TABLE `job_tb` DISABLE KEYS */;
-INSERT INTO `job_tb` VALUES (1,100,1,1,27,NULL,NULL),(2,0,0,1,9,NULL,NULL),(3,0,0,1,19,NULL,NULL);
+INSERT INTO `job_tb` VALUES (1,100,1,1,27,'未接受',NULL),(2,0,0,1,9,'已接受','2017-06-03 17:55:33'),(3,0,0,1,19,'未接受',NULL),(4,100,1,2,9,'已接受','2017-06-03 18:00:55');
 /*!40000 ALTER TABLE `job_tb` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -227,7 +227,7 @@ CREATE TABLE `salary_tb` (
 
 LOCK TABLES `salary_tb` WRITE;
 /*!40000 ALTER TABLE `salary_tb` DISABLE KEYS */;
-INSERT INTO `salary_tb` VALUES (1,'2017-04',3435,6),(2,'2017-04',3435,9);
+INSERT INTO `salary_tb` VALUES (1,'2017-05',4130,6),(2,'2017-05',4650,9);
 /*!40000 ALTER TABLE `salary_tb` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -257,7 +257,7 @@ CREATE TABLE `task_tb` (
 
 LOCK TABLES `task_tb` WRITE;
 /*!40000 ALTER TABLE `task_tb` DISABLE KEYS */;
-INSERT INTO `task_tb` VALUES (1,'jenkins builder job','please build jenkins code on jenkins...','2017-05-16','2017-05-22',2);
+INSERT INTO `task_tb` VALUES (1,'jenkins builder job','please build jenkins code on jenkins...','2017-05-16','2017-05-22',2),(2,'tyfg','ctyftr','2017-06-03','2017-06-08',2);
 /*!40000 ALTER TABLE `task_tb` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -270,4 +270,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-06-03 16:05:59
+-- Dump completed on 2017-06-03 18:15:19
